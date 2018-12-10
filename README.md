@@ -1,4 +1,4 @@
-# CQL Execution Examples
+# CDS Server for cql execution
 
 This repository is intended to include examples showing how to use the
 [cql-execution](https://github.com/cqframework/cql-execution)
@@ -17,32 +17,55 @@ its corresponding modules.  These examples are NOT clinically validated and shou
 To use this project, you should perform the following steps:
 
 1. Install [Node.js](https://nodejs.org/en/download/)
-2. Install [Yarn](https://yarnpkg.com/en/docs/install)
-3. Execute the following from this project's root directory: `yarn`
+2. Run 'npm install' inside the cloned project folder
+2. Run 'node server.js'
 
 # Running the Example
 
-The first time you run the example, you need to download the referenced value sets from the Value Set Authority Center
-(VSAC).  This requires your username and password:
+The first time you run the example, It may take a while as it will download valuesets from vsac. from the second time you should get the response immediately.
 
-```bash
-$ node index.js myUmlsUserName myUmlsPassword
-```
+To execute a CQL one should post a call with the following data:
 
-NOTE: You can also set the credentials by setting `UMLS_USER_NAME` and `UMLS_PASSWORD` environment variables, instead
-of passing the credentials on the command line.
+Request URL: http://<server_url[here:localhost:3000]>/execute_cql
+Request Type: application/json
+Request Method: POST
+Request body: {"cql":"<CQL_NAME>","patientFhir":<PATIENT_DATA>}}
 
-After running once with your credentials, the downloaded value set definitions are cached.  After that, you should be
-able to run without credentials:
-
-```bash
-$ node index.js
-```
-
-# Linting the Code
-
-To encourage quality and consistency within the code base, all code should pass eslint without any warnings.  Many text editors can be configured to automatically flag eslint violations.  We also provide an npm script for running eslint on the project.  To run eslint, execute the following command:
-
-```
-$ yarn lint
-```
+For Example:
+{"cql":"AdultLiverTransplantation","patientFhir":{
+  "resourceType": "Bundle",
+  "id": "Prathima",
+  "type": "collection",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "Prathima",
+        "gender": "female",
+        "birthDate": "2008-09-18"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "6-1",
+        "clinicalStatus": "active",
+        "verificationStatus": "confirmed",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "708248004",
+              "display": "End Stage Liver Disease (disorder)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/Prathima"
+        },
+        "onsetDateTime": "2017-05-30"
+      }
+    }
+  ]
+}
+}
