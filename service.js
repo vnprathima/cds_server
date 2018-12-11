@@ -17,7 +17,7 @@ exports.executeCql = function (req, res, ) {
     body = '' ;
     req.on('data', function (chunk) {
         body += chunk.toString();
-        console.log("Input Body---",chunk.toString());
+        // console.log("Input Body---",chunk.toString());
     });
     req.on('end', function () {
         postBody = JSON.parse(body);
@@ -96,4 +96,10 @@ exports.invalidRequest = function (req, res) {
     res.statusCode = 404;
     res.setHeader('Content-Type', 'text/plain');
     res.end('Invalid Request');
+};
+
+exports.invalidAuthorization = function (req, res) {
+    res.statusCode = 401;
+    res.setHeader('Content-Type', 'text/plain');
+    res.end('Invalid Authorization!!');
 };
