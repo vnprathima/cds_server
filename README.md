@@ -65,6 +65,26 @@ For Example:
         },
         "onsetDateTime": "2017-05-30"
       }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "6-2",
+        "subject": {
+          "reference": "Patient/Prathima"
+        },
+        "status": "completed",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "18027006",
+              "display": "Transplantation of liver (procedure)"
+            }
+          ]
+        },
+        "performedDateTime": "2017-05-30"
+      }
     }
   ]
 }
