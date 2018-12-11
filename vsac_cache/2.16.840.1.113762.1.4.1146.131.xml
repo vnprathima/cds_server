@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns0:RetrieveValueSetResponse xmlns:ns0="urn:ihe:iti:svs:2008" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <ns0:ValueSet ID="2.16.840.1.113762.1.4.1146.131" displayName="Acute Hepatitis B Virus Infection (Disorders) (ICD10CM)" version="20181031">
+        <ns0:ConceptList>
+            <ns0:Concept code="B16" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute hepatitis B"/>
+            <ns0:Concept code="B16.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute hepatitis B with delta-agent with hepatic coma"/>
+            <ns0:Concept code="B16.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute hepatitis B with delta-agent without hepatic coma"/>
+            <ns0:Concept code="B16.2" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute hepatitis B without delta-agent with hepatic coma"/>
+            <ns0:Concept code="B16.9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute hepatitis B without delta-agent and without hepatic coma"/>
+        </ns0:ConceptList>
+    </ns0:ValueSet>
+</ns0:RetrieveValueSetResponse>
