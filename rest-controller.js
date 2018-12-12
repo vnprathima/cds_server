@@ -16,7 +16,9 @@ module.exports = http.createServer((req, res) => {
             const authURL = "https://54.227.173.76:8443/auth/realms/ClientFhirServer/protocol/openid-connect/token/introspect";
             var Client = require('node-rest-client').Client;
             var client = new Client();
-            var params = {token: req.headers.authorization,
+            var token = req.headers.authorization;
+            token = token.replace("Bearer ", "");
+            var params = {token: token,
                         client_id: "app-token",
                         client_secret: "237b167a-c4d0-4861-856d-6decf5426022"};
             const inputParams = Object.keys(params).map((key) => {
