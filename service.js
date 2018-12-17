@@ -39,8 +39,8 @@ exports.executeCql = function (req, res, ) {
 
         // Set up the library
         var cql_json_file = postBody.cql +'_requirements.json';
-        if (postBody.request_type){
-            cql_json_file = postBody.cql + '_' + postBody.request_type +'.json';
+        if (postBody.request_for){
+            cql_json_file = postBody.cql + '_' + postBody.request_for +'.json';
         } 
         const elmFile = JSON.parse(fs.readFileSync(path.join(__dirname, 'cqls', cql_json_file), 'utf8'));
         const libraries = {
@@ -82,10 +82,10 @@ exports.executeCql = function (req, res, ) {
                 console.log(`${id}:`);
                 res.statusCode = 200;
                 res.setHeader('Content-Type', 'application/json');
-                if (postBody.request_type == 'requirements'){
+                if (postBody.request_for == 'requirements'){
                     console.log(`\tRequirements: ${result.Requirements}`);
                     res.end(JSON.stringify(result.Requirements) + '\n');
-                } else if (postBody.request_type == 'decision'){
+                } else if (postBody.request_for == 'decision'){
                     console.log(`\tCoverage: ${result.Coverage}`);
                     res.end(JSON.stringify({"Coverage":result.Coverage}) + '\n');
                 }

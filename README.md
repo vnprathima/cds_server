@@ -29,7 +29,7 @@ To execute a CQL one should post a call with the following data:
 Request URL: http://<server_url[here:localhost:3000]>/execute_cql
 Request Type: application/json
 Request Method: POST
-Request body: {"cql":"<CQL_NAME>","patientFhir":<PATIENT_DATA>}}
+Request body: {"cql":"<CQL_NAME>","request_for":"decision<String for getting the coverage decision>/requirements<String for getting the list requirements>","patientFhir":<PATIENT_DATA>}}
 
 For Example:
 {"cql":"AdultLiverTransplantation","patientFhir":{
