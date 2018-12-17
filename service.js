@@ -38,7 +38,10 @@ exports.executeCql = function (req, res, ) {
         console.log('\\-------------------------------------------------------------------------------');
 
         // Set up the library
-        const cql_json_file = postBody.cql + '.json';
+        var cql_json_file = postBody.cql +'_requirements.json';
+        if (postBody.request_type){
+            cql_json_file = postBody.cql + '_' + postBody.request_type +'.json';
+        } 
         const elmFile = JSON.parse(fs.readFileSync(path.join(__dirname, 'cqls', cql_json_file), 'utf8'));
         const libraries = {
         FHIRHelpers: JSON.parse(fs.readFileSync(path.join(__dirname, 'fhir-helpers', 'v1.0.2', 'FHIRHelpers.json'), 'utf8'))
@@ -77,10 +80,15 @@ exports.executeCql = function (req, res, ) {
             for (const id in results.patientResults) {
                 const result = results.patientResults[id];
                 console.log(`${id}:`);
-                console.log(`\tCovered: ${result.Coverage}`);
                 res.statusCode = 200;
                 res.setHeader('Content-Type', 'application/json');
-                res.end(JSON.stringify(result) + '\n');
+                if (postBody.request_type == 'requirements'){
+                    console.log(`\tRequirements: ${result.Requirements}`);
+                    res.end(JSON.stringify(result.Requirements) + '\n');
+                } else if (postBody.request_type == 'decision'){
+                    console.log(`\tCoverage: ${result.Coverage}`);
+                    res.end(JSON.stringify({"Coverage":result.Coverage}) + '\n');
+                }
             }
         })
         .catch( (err) => {

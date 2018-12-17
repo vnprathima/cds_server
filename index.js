@@ -5,9 +5,10 @@ const cqlfhir = require('cql-exec-fhir');
 const cqlvsac = require('cql-exec-vsac');
 
 let vsacUser, vsacPass;
-if (process.argv.length == 4) {
-  [vsacUser, vsacPass] = process.argv.slice(2);
-}
+// if (process.argv.length == 4) {
+//   [vsacUser, vsacPass] = process.argv.slice(2);
+// }
+[vsacUser, vsacPass] = ["prathyanusha","Anusha56"];
 
 console.log('/-------------------------------------------------------------------------------');
 console.log('| Example:   Adult Liver Transplantation');

@@ -1,0 +1,549 @@
+{
+    "library": {
+        "identifier": {
+            "id": "AdultLiverTransplantation",
+            "version": "1"
+        },
+        "schemaIdentifier": {
+            "id": "urn:hl7-org:elm",
+            "version": "r1"
+        },
+        "usings": {
+            "def": [
+                {
+                    "localIdentifier": "System",
+                    "uri": "urn:hl7-org:elm-types:r1"
+                },
+                {
+                    "localId": "1",
+                    "localIdentifier": "FHIR",
+                    "uri": "http://hl7.org/fhir",
+                    "version": "1.8"
+                }
+            ]
+        },
+        "codeSystems": {
+            "def": [
+                {
+                    "localId": "2",
+                    "name": "SNOMEDCT",
+                    "id": "http://snomed.info/sct",
+                    "accessLevel": "Public"
+                },
+                {
+                    "localId": "3",
+                    "name": "HCPCS",
+                    "id": "https://hcpcs.codes/",
+                    "accessLevel": "Public"
+                },
+                {
+                    "localId": "4",
+                    "name": "NUCCPT",
+                    "id": "",
+                    "accessLevel": "Public"
+                }
+            ]
+        },
+        "valueSets": {
+            "def": [
+                {
+                    "localId": "5",
+                    "name": "Aftercare for liver transplant done (situation)",
+                    "id": "2.16.840.1.113883.3.88.12.3221.7.4",
+                    "accessLevel": "Public"
+                },
+                {
+                    "localId": "6",
+                    "name": "Prescription medication started (situation)",
+                    "id": "2.16.840.1.113762.1.4.1096.101",
+                    "accessLevel": "Public"
+                },
+                {
+                    "localId": "7",
+                    "name": "End Stage Liver Disease",
+                    "id": "2.16.840.1.113883.3.88.12.3221.7.4",
+                    "accessLevel": "Public"
+                }
+            ]
+        },
+        "codes": {
+            "def": [
+                {
+                    "localId": "9",
+                    "name": "Follow-up arranged (finding) code",
+                    "id": "183616001",
+                    "display": "Follow-up arranged",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "8",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "11",
+                    "name": "Immunosuppressive therapy for transplant (procedure) code",
+                    "id": "7447008",
+                    "display": "Immunosuppressive therapy for transplant",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "10",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "13",
+                    "name": "Postoperative follow-up visit (procedure) code",
+                    "id": "439740005",
+                    "display": "Postoperative follow-up visit",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "12",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "15",
+                    "name": "Prescription medication started (situation) code",
+                    "id": "432861000124103",
+                    "display": "Prescription medication started",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "14",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "17",
+                    "name": "Ambulatory Health Care Facilities; Clinic/Center, Federally Qualified Health Center (FQHC) code",
+                    "id": "261QF0400X",
+                    "display": "Ambulatory Health Care Facilities; Clinic/Center, Federally Qualified Health Center (FQHC)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "16",
+                        "name": "NUCCPT"
+                    }
+                },
+                {
+                    "localId": "19",
+                    "name": "Transplantation of liver (procedure) code",
+                    "id": "18027006",
+                    "display": "Transplantation of liver (procedure)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "18",
+                        "name": "SNOMEDCT"
+                    }
+                }
+            ]
+        },
+        "concepts": {
+            "def": [
+                {
+                    "localId": "21",
+                    "name": "Transplantation of liver (procedure)",
+                    "display": "Transplantation of liver (procedure)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "20",
+                            "name": "Transplantation of liver (procedure) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "23",
+                    "name": "Follow-up arranged",
+                    "display": "Follow-up arranged",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "22",
+                            "name": "Follow-up arranged (finding) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "25",
+                    "name": "Immunosuppressive therapy for transplant",
+                    "display": "Immunosuppressive therapy for transplant",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "24",
+                            "name": "Immunosuppressive therapy for transplant (procedure) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "27",
+                    "name": "Postoperative follow-up visit",
+                    "display": "Postoperative follow-up visit",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "26",
+                            "name": "Postoperative follow-up visit (procedure) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "29",
+                    "name": "Prescription medication started",
+                    "display": "Prescription medication started",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "28",
+                            "name": "Prescription medication started (situation) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "31",
+                    "name": "Ambulatory Health Care Facilities; Clinic/Center, Federally Qualified Health Center (FQHC)",
+                    "display": "Ambulatory Health Care Facilities; Clinic/Center, Federally Qualified Health Center (FQHC)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "30",
+                            "name": "Ambulatory Health Care Facilities; Clinic/Center, Federally Qualified Health Center (FQHC) code"
+                        }
+                    ]
+                }
+            ]
+        },
+        "statements": {
+            "def": [
+                {
+                    "name": "Patient",
+                    "context": "Patient",
+                    "expression": {
+                        "type": "SingletonFrom",
+                        "operand": {
+                            "dataType": "{http://hl7.org/fhir}Patient",
+                            "type": "Retrieve"
+                        }
+                    }
+                },
+                {
+                    "localId": "38",
+                    "name": "Documents",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "38",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Documents\"",
+                                            ":\r\n\t"
+                                        ]
+                                    },
+                                    {
+                                        "r": "37",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Condition\"",
+                                                            ": "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "32",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"End Stage Liver Disease\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ", "
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Procedure\"",
+                                                            ": "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "33",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Transplantation of liver (procedure)\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ", "
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Location\"",
+                                                            ":"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "34",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Ambulatory Health Care Facilities; Clinic/Center, Federally Qualified Health Center (FQHC)\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ","
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"EpisodeOfCare\"",
+                                                            ": "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "35",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Aftercare for liver transplant done (situation)\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ", "
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"MedicationStatement\"",
+                                                            ": "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "36",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Prescription medication started (situation)\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "}"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "37",
+                        "type": "Tuple",
+                        "element": [
+                            {
+                                "name": "Condition",
+                                "value": {
+                                    "localId": "32",
+                                    "name": "End Stage Liver Disease",
+                                    "type": "ValueSetRef"
+                                }
+                            },
+                            {
+                                "name": "Procedure",
+                                "value": {
+                                    "localId": "33",
+                                    "name": "Transplantation of liver (procedure)",
+                                    "type": "ConceptRef"
+                                }
+                            },
+                            {
+                                "name": "Location",
+                                "value": {
+                                    "localId": "34",
+                                    "name": "Ambulatory Health Care Facilities; Clinic/Center, Federally Qualified Health Center (FQHC)",
+                                    "type": "ConceptRef"
+                                }
+                            },
+                            {
+                                "name": "EpisodeOfCare",
+                                "value": {
+                                    "localId": "35",
+                                    "name": "Aftercare for liver transplant done (situation)",
+                                    "type": "ValueSetRef"
+                                }
+                            },
+                            {
+                                "name": "MedicationStatement",
+                                "value": {
+                                    "localId": "36",
+                                    "name": "Prescription medication started (situation)",
+                                    "type": "ValueSetRef"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "40",
+                    "name": "AttachableDocuments",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "40",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"AttachableDocuments\"",
+                                            ":\r\n\t"
+                                        ]
+                                    },
+                                    {
+                                        "r": "39",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "'Seven Element Order'"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "39",
+                        "valueType": "{urn:hl7-org:elm-types:r1}String",
+                        "value": "Seven Element Order",
+                        "type": "Literal"
+                    }
+                },
+                {
+                    "localId": "44",
+                    "name": "Requirements",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "44",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Requirements\"",
+                                            ":\r\n\t"
+                                        ]
+                                    },
+                                    {
+                                        "r": "43",
+                                        "s": [
+                                            {
+                                                "r": "41",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Documents\""
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    " union "
+                                                ]
+                                            },
+                                            {
+                                                "r": "42",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"AttachableDocuments\""
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "43",
+                        "type": "Union",
+                        "operand": [
+                            {
+                                "type": "ToList",
+                                "operand": {
+                                    "localId": "41",
+                                    "name": "Documents",
+                                    "type": "ExpressionRef"
+                                }
+                            },
+                            {
+                                "type": "ToList",
+                                "operand": {
+                                    "localId": "42",
+                                    "name": "AttachableDocuments",
+                                    "type": "ExpressionRef"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,2795 @@
+{
+    "library": {
+        "annotation": [
+            {
+                "startLine": 86,
+                "startChar": 3,
+                "endLine": 86,
+                "endChar": 73,
+                "message": "Retrieve has a terminology target but does not specify a code path and the type of the retrieve does not have a primary code path defined.",
+                "errorType": "semantic",
+                "errorSeverity": "warning",
+                "type": "CqlToElmError"
+            },
+            {
+                "startLine": 86,
+                "startChar": 3,
+                "endLine": 86,
+                "endChar": 73,
+                "message": "Could not resolve membership operator for terminology target of the retrieve.",
+                "errorType": "semantic",
+                "errorSeverity": "warning",
+                "type": "CqlToElmError"
+            },
+            {
+                "startLine": 90,
+                "startChar": 9,
+                "endLine": 90,
+                "endChar": 48,
+                "message": "Retrieve has a terminology target but does not specify a code path and the type of the retrieve does not have a primary code path defined.",
+                "errorType": "semantic",
+                "errorSeverity": "warning",
+                "type": "CqlToElmError"
+            },
+            {
+                "startLine": 90,
+                "startChar": 9,
+                "endLine": 90,
+                "endChar": 48,
+                "message": "Could not resolve membership operator for terminology target of the retrieve.",
+                "errorType": "semantic",
+                "errorSeverity": "warning",
+                "type": "CqlToElmError"
+            },
+            {
+                "startLine": 91,
+                "startChar": 12,
+                "endLine": 91,
+                "endChar": 47,
+                "message": "Retrieve has a terminology target but does not specify a code path and the type of the retrieve does not have a primary code path defined.",
+                "errorType": "semantic",
+                "errorSeverity": "warning",
+                "type": "CqlToElmError"
+            },
+            {
+                "startLine": 91,
+                "startChar": 12,
+                "endLine": 91,
+                "endChar": 47,
+                "message": "Could not resolve membership operator for terminology target of the retrieve.",
+                "errorType": "semantic",
+                "errorSeverity": "warning",
+                "type": "CqlToElmError"
+            },
+            {
+                "startLine": 92,
+                "startChar": 12,
+                "endLine": 92,
+                "endChar": 46,
+                "message": "Retrieve has a terminology target but does not specify a code path and the type of the retrieve does not have a primary code path defined.",
+                "errorType": "semantic",
+                "errorSeverity": "warning",
+                "type": "CqlToElmError"
+            },
+            {
+                "startLine": 92,
+                "startChar": 12,
+                "endLine": 92,
+                "endChar": 46,
+                "message": "Could not resolve membership operator for terminology target of the retrieve.",
+                "errorType": "semantic",
+                "errorSeverity": "warning",
+                "type": "CqlToElmError"
+            },
+            {
+                "startLine": 93,
+                "startChar": 12,
+                "endLine": 93,
+                "endChar": 54,
+                "message": "Retrieve has a terminology target but does not specify a code path and the type of the retrieve does not have a primary code path defined.",
+                "errorType": "semantic",
+                "errorSeverity": "warning",
+                "type": "CqlToElmError"
+            },
+            {
+                "startLine": 93,
+                "startChar": 12,
+                "endLine": 93,
+                "endChar": 54,
+                "message": "Could not resolve membership operator for terminology target of the retrieve.",
+                "errorType": "semantic",
+                "errorSeverity": "warning",
+                "type": "CqlToElmError"
+            },
+            {
+                "startLine": 94,
+                "startChar": 12,
+                "endLine": 94,
+                "endChar": 48,
+                "message": "Retrieve has a terminology target but does not specify a code path and the type of the retrieve does not have a primary code path defined.",
+                "errorType": "semantic",
+                "errorSeverity": "warning",
+                "type": "CqlToElmError"
+            },
+            {
+                "startLine": 94,
+                "startChar": 12,
+                "endLine": 94,
+                "endChar": 48,
+                "message": "Could not resolve membership operator for terminology target of the retrieve.",
+                "errorType": "semantic",
+                "errorSeverity": "warning",
+                "type": "CqlToElmError"
+            },
+            {
+                "startLine": 95,
+                "startChar": 12,
+                "endLine": 95,
+                "endChar": 62,
+                "message": "Retrieve has a terminology target but does not specify a code path and the type of the retrieve does not have a primary code path defined.",
+                "errorType": "semantic",
+                "errorSeverity": "warning",
+                "type": "CqlToElmError"
+            },
+            {
+                "startLine": 95,
+                "startChar": 12,
+                "endLine": 95,
+                "endChar": 62,
+                "message": "Could not resolve membership operator for terminology target of the retrieve.",
+                "errorType": "semantic",
+                "errorSeverity": "warning",
+                "type": "CqlToElmError"
+            },
+            {
+                "startLine": 96,
+                "startChar": 12,
+                "endLine": 96,
+                "endChar": 51,
+                "message": "Retrieve has a terminology target but does not specify a code path and the type of the retrieve does not have a primary code path defined.",
+                "errorType": "semantic",
+                "errorSeverity": "warning",
+                "type": "CqlToElmError"
+            },
+            {
+                "startLine": 96,
+                "startChar": 12,
+                "endLine": 96,
+                "endChar": 51,
+                "message": "Could not resolve membership operator for terminology target of the retrieve.",
+                "errorType": "semantic",
+                "errorSeverity": "warning",
+                "type": "CqlToElmError"
+            },
+            {
+                "startLine": 97,
+                "startChar": 12,
+                "endLine": 97,
+                "endChar": 57,
+                "message": "Retrieve has a terminology target but does not specify a code path and the type of the retrieve does not have a primary code path defined.",
+                "errorType": "semantic",
+                "errorSeverity": "warning",
+                "type": "CqlToElmError"
+            },
+            {
+                "startLine": 97,
+                "startChar": 12,
+                "endLine": 97,
+                "endChar": 57,
+                "message": "Could not resolve membership operator for terminology target of the retrieve.",
+                "errorType": "semantic",
+                "errorSeverity": "warning",
+                "type": "CqlToElmError"
+            },
+            {
+                "startLine": 98,
+                "startChar": 12,
+                "endLine": 98,
+                "endChar": 51,
+                "message": "Retrieve has a terminology target but does not specify a code path and the type of the retrieve does not have a primary code path defined.",
+                "errorType": "semantic",
+                "errorSeverity": "warning",
+                "type": "CqlToElmError"
+            },
+            {
+                "startLine": 98,
+                "startChar": 12,
+                "endLine": 98,
+                "endChar": 51,
+                "message": "Could not resolve membership operator for terminology target of the retrieve.",
+                "errorType": "semantic",
+                "errorSeverity": "warning",
+                "type": "CqlToElmError"
+            }
+        ],
+        "identifier": {
+            "id": "AdultLiverTransplantation",
+            "version": "1"
+        },
+        "schemaIdentifier": {
+            "id": "urn:hl7-org:elm",
+            "version": "r1"
+        },
+        "usings": {
+            "def": [
+                {
+                    "localIdentifier": "System",
+                    "uri": "urn:hl7-org:elm-types:r1"
+                },
+                {
+                    "localId": "1",
+                    "localIdentifier": "FHIR",
+                    "uri": "http://hl7.org/fhir",
+                    "version": "1.8"
+                }
+            ]
+        },
+        "codeSystems": {
+            "def": [
+                {
+                    "localId": "2",
+                    "name": "SNOMEDCT",
+                    "id": "http://snomed.info/sct",
+                    "accessLevel": "Public"
+                },
+                {
+                    "localId": "3",
+                    "name": "HCPCS",
+                    "id": "https://hcpcs.codes/",
+                    "accessLevel": "Public"
+                },
+                {
+                    "localId": "4",
+                    "name": "ICD9CM",
+                    "id": "https://www.cdc.gov/nchs/icd/icd9.htm",
+                    "accessLevel": "Public"
+                },
+                {
+                    "localId": "5",
+                    "name": "RXNORM",
+                    "id": "https://www.nlm.nih.gov/research/umls/rxnorm/",
+                    "accessLevel": "Public"
+                }
+            ]
+        },
+        "valueSets": {
+            "def": [
+                {
+                    "localId": "6",
+                    "name": "Sandimmune",
+                    "id": "2.16.840.1.113762.1.4.1010.7",
+                    "accessLevel": "Public"
+                },
+                {
+                    "localId": "7",
+                    "name": "Imuran",
+                    "id": "2.16.840.1.113762.1.4.1010.7",
+                    "accessLevel": "Public"
+                },
+                {
+                    "localId": "8",
+                    "name": "ATGAM",
+                    "id": "2.16.840.1.113762.1.4.1010.7",
+                    "accessLevel": "Public"
+                },
+                {
+                    "localId": "9",
+                    "name": "Muromonab-CD3",
+                    "id": "2.16.840.1.113762.1.4.1010.7",
+                    "accessLevel": "Public"
+                },
+                {
+                    "localId": "10",
+                    "name": "Prograf",
+                    "id": "2.16.840.1.113762.1.4.1010.7",
+                    "accessLevel": "Public"
+                },
+                {
+                    "localId": "11",
+                    "name": "mycophenolate mofetil",
+                    "id": "2.16.840.1.113762.1.4.1010.7",
+                    "accessLevel": "Public"
+                },
+                {
+                    "localId": "12",
+                    "name": "Daclizumab",
+                    "id": "2.16.840.1.113762.1.4.1010.7",
+                    "accessLevel": "Public"
+                },
+                {
+                    "localId": "13",
+                    "name": "Cyclophosphamide",
+                    "id": "2.16.840.1.113762.1.4.1010.7",
+                    "accessLevel": "Public"
+                },
+                {
+                    "localId": "14",
+                    "name": "Prednisone",
+                    "id": "2.16.840.1.113762.1.4.1010.7",
+                    "accessLevel": "Public"
+                }
+            ]
+        },
+        "codes": {
+            "def": [
+                {
+                    "localId": "16",
+                    "name": "Diabetic foot examination (regime/therapy) code",
+                    "id": "401191002",
+                    "display": "Diabetic foot examination (regime/therapy)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "15",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "18",
+                    "name": "End Stage Liver Disease code",
+                    "id": "708248004",
+                    "display": "End Stage Liver Disease",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "17",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "20",
+                    "name": "Chronic pain due to malignancy (finding) code",
+                    "id": "10181000119102",
+                    "display": "Chronic pain due to malignancy (finding)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "19",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "22",
+                    "name": "Transplantation of liver (procedure) code",
+                    "id": "18027006",
+                    "display": "Transplantation of liver (procedure)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "21",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "24",
+                    "name": "Secondary neuroendocrine tumor of liver code",
+                    "id": "209.72",
+                    "display": "Secondary neuroendocrine tumor of liver",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "23",
+                        "name": "ICD9CM"
+                    }
+                },
+                {
+                    "localId": "26",
+                    "name": "Metastasis from malignant tumor of liver (disorder) code",
+                    "id": "315000005",
+                    "display": "Metastasis from malignant tumor of liver (disorder)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "25",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "28",
+                    "name": "Carcinoma in situ of extrahepatic bile ducts (disorder) code",
+                    "id": "92589000",
+                    "display": "Carcinoma in situ of extrahepatic bile ducts (disorder)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "27",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "30",
+                    "name": "Cholangiocarcinoma of biliary tract (disorder) code",
+                    "id": "312104005",
+                    "display": "Cholangiocarcinoma of biliary tract (disorder)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "29",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "32",
+                    "name": "Tumor surgically unresectable (finding) code",
+                    "id": "711361003",
+                    "display": "Tumor surgically unresectable (finding)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "31",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "34",
+                    "name": "Hemangioendothelioma of liver (disorder) code",
+                    "id": "427744002",
+                    "display": "Hemangioendothelioma of liver (disorder)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "33",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "36",
+                    "name": "Aftercare for liver transplant done (situation) code",
+                    "id": "96601000119101",
+                    "display": "Aftercare for liver transplant done (situation)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "35",
+                        "name": "SNOMEDCT"
+                    }
+                }
+            ]
+        },
+        "concepts": {
+            "def": [
+                {
+                    "localId": "38",
+                    "name": "End Stage Liver Disease",
+                    "display": "End Stage Liver Disease",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "37",
+                            "name": "End Stage Liver Disease code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "40",
+                    "name": "Chronic pain due to malignancy (finding)",
+                    "display": "Chronic pain due to malignancy (finding)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "39",
+                            "name": "Chronic pain due to malignancy (finding) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "42",
+                    "name": "Transplantation of liver (procedure)",
+                    "display": "Transplantation of liver (procedure)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "41",
+                            "name": "Transplantation of liver (procedure) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "44",
+                    "name": "Secondary neuroendocrine tumor of liver",
+                    "display": "Secondary neuroendocrine tumor of liver",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "43",
+                            "name": "Secondary neuroendocrine tumor of liver code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "46",
+                    "name": "Metastasis from malignant tumor of liver (disorder)",
+                    "display": "Metastasis from malignant tumor of liver (disorder)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "45",
+                            "name": "Metastasis from malignant tumor of liver (disorder) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "48",
+                    "name": "Carcinoma in situ of extrahepatic bile ducts (disorder)",
+                    "display": "Carcinoma in situ of extrahepatic bile ducts (disorder)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "47",
+                            "name": "Carcinoma in situ of extrahepatic bile ducts (disorder) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "50",
+                    "name": "Cholangiocarcinoma of biliary tract (disorder)",
+                    "display": "Cholangiocarcinoma of biliary tract (disorder)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "49",
+                            "name": "Cholangiocarcinoma of biliary tract (disorder) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "52",
+                    "name": "Tumor surgically unresectable (finding)",
+                    "display": "Tumor surgically unresectable (finding)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "51",
+                            "name": "Tumor surgically unresectable (finding) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "54",
+                    "name": "Hemangioendothelioma of liver (disorder)",
+                    "display": "Hemangioendothelioma of liver (disorder)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "53",
+                            "name": "Hemangioendothelioma of liver (disorder) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "56",
+                    "name": "Aftercare for liver transplant done (situation)",
+                    "display": "Aftercare for liver transplant done (situation)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "55",
+                            "name": "Aftercare for liver transplant done (situation) code"
+                        }
+                    ]
+                }
+            ]
+        },
+        "statements": {
+            "def": [
+                {
+                    "name": "Patient",
+                    "context": "Patient",
+                    "expression": {
+                        "type": "SingletonFrom",
+                        "operand": {
+                            "dataType": "{http://hl7.org/fhir}Patient",
+                            "type": "Retrieve"
+                        }
+                    }
+                },
+                {
+                    "localId": "66",
+                    "name": "Livertransplant",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "66",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Livertransplant\"",
+                                            ":\n\t"
+                                        ]
+                                    },
+                                    {
+                                        "r": "65",
+                                        "s": [
+                                            {
+                                                "r": "61",
+                                                "s": [
+                                                    {
+                                                        "r": "58",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "exists"
+                                                                ]
+                                                            },
+                                                            {
+                                                                "r": "57",
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "("
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "57",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "[",
+                                                                                    "Condition",
+                                                                                    ": "
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "s": [
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "\"End Stage Liver Disease\""
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "value": [
+                                                                                    "]"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "value": [
+                                                                            ")"
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            "\n\tand "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "60",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "exists"
+                                                                ]
+                                                            },
+                                                            {
+                                                                "r": "59",
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "("
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "59",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "[",
+                                                                                    "Procedure",
+                                                                                    ": "
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "s": [
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "\"Transplantation of liver (procedure)\""
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "value": [
+                                                                                    "]"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "value": [
+                                                                            ")"
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n\tand "
+                                                ]
+                                            },
+                                            {
+                                                "r": "64",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "not "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "63",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "exists"
+                                                                ]
+                                                            },
+                                                            {
+                                                                "r": "62",
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "("
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "62",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "[",
+                                                                                    "Condition",
+                                                                                    ": "
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "s": [
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "\"Chronic pain due to malignancy (finding)\""
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "value": [
+                                                                                    "]"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "value": [
+                                                                            ")"
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "65",
+                        "type": "And",
+                        "operand": [
+                            {
+                                "localId": "61",
+                                "type": "And",
+                                "operand": [
+                                    {
+                                        "localId": "58",
+                                        "type": "Exists",
+                                        "operand": {
+                                            "localId": "57",
+                                            "dataType": "{http://hl7.org/fhir}Condition",
+                                            "codeProperty": "code",
+                                            "type": "Retrieve",
+                                            "codes": {
+                                                "type": "ToList",
+                                                "operand": {
+                                                    "name": "End Stage Liver Disease",
+                                                    "type": "ConceptRef"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "localId": "60",
+                                        "type": "Exists",
+                                        "operand": {
+                                            "localId": "59",
+                                            "dataType": "{http://hl7.org/fhir}Procedure",
+                                            "codeProperty": "code",
+                                            "type": "Retrieve",
+                                            "codes": {
+                                                "type": "ToList",
+                                                "operand": {
+                                                    "name": "Transplantation of liver (procedure)",
+                                                    "type": "ConceptRef"
+                                                }
+                                            }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "localId": "64",
+                                "type": "Not",
+                                "operand": {
+                                    "localId": "63",
+                                    "type": "Exists",
+                                    "operand": {
+                                        "localId": "62",
+                                        "dataType": "{http://hl7.org/fhir}Condition",
+                                        "codeProperty": "code",
+                                        "type": "Retrieve",
+                                        "codes": {
+                                            "type": "ToList",
+                                            "operand": {
+                                                "name": "Chronic pain due to malignancy (finding)",
+                                                "type": "ConceptRef"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "78",
+                    "name": "neuroendocrinetumor",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "78",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"neuroendocrinetumor\"",
+                                            ":\n\t"
+                                        ]
+                                    },
+                                    {
+                                        "r": "77",
+                                        "s": [
+                                            {
+                                                "r": "74",
+                                                "s": [
+                                                    {
+                                                        "r": "71",
+                                                        "s": [
+                                                            {
+                                                                "r": "68",
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "exists"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "67",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "("
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "r": "67",
+                                                                                "s": [
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "[",
+                                                                                            "Condition",
+                                                                                            ":"
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "s": [
+                                                                                            {
+                                                                                                "value": [
+                                                                                                    "\"End Stage Liver Disease\""
+                                                                                                ]
+                                                                                            }
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "]"
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "value": [
+                                                                                    ")"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n\tand "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "r": "70",
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "exists"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "69",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "("
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "r": "69",
+                                                                                "s": [
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "[",
+                                                                                            "Condition",
+                                                                                            ":"
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "s": [
+                                                                                            {
+                                                                                                "value": [
+                                                                                                    "\"Secondary neuroendocrine tumor of liver\""
+                                                                                                ]
+                                                                                            }
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "]"
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "value": [
+                                                                                    ")"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            "\n\tand "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "73",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "exists"
+                                                                ]
+                                                            },
+                                                            {
+                                                                "r": "72",
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "("
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "72",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "[",
+                                                                                    "Condition",
+                                                                                    ":"
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "s": [
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "\"Metastasis from malignant tumor of liver (disorder)\""
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "value": [
+                                                                                    "]"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "value": [
+                                                                            ")"
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n\tand "
+                                                ]
+                                            },
+                                            {
+                                                "r": "76",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "exists"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "75",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "("
+                                                                ]
+                                                            },
+                                                            {
+                                                                "r": "75",
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "[",
+                                                                            "Procedure",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "\"Transplantation of liver (procedure)\""
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "value": [
+                                                                            "]"
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    ")"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "77",
+                        "type": "And",
+                        "operand": [
+                            {
+                                "localId": "74",
+                                "type": "And",
+                                "operand": [
+                                    {
+                                        "localId": "71",
+                                        "type": "And",
+                                        "operand": [
+                                            {
+                                                "localId": "68",
+                                                "type": "Exists",
+                                                "operand": {
+                                                    "localId": "67",
+                                                    "dataType": "{http://hl7.org/fhir}Condition",
+                                                    "codeProperty": "code",
+                                                    "type": "Retrieve",
+                                                    "codes": {
+                                                        "type": "ToList",
+                                                        "operand": {
+                                                            "name": "End Stage Liver Disease",
+                                                            "type": "ConceptRef"
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "localId": "70",
+                                                "type": "Exists",
+                                                "operand": {
+                                                    "localId": "69",
+                                                    "dataType": "{http://hl7.org/fhir}Condition",
+                                                    "codeProperty": "code",
+                                                    "type": "Retrieve",
+                                                    "codes": {
+                                                        "type": "ToList",
+                                                        "operand": {
+                                                            "name": "Secondary neuroendocrine tumor of liver",
+                                                            "type": "ConceptRef"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "localId": "73",
+                                        "type": "Exists",
+                                        "operand": {
+                                            "localId": "72",
+                                            "dataType": "{http://hl7.org/fhir}Condition",
+                                            "codeProperty": "code",
+                                            "type": "Retrieve",
+                                            "codes": {
+                                                "type": "ToList",
+                                                "operand": {
+                                                    "name": "Metastasis from malignant tumor of liver (disorder)",
+                                                    "type": "ConceptRef"
+                                                }
+                                            }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "localId": "76",
+                                "type": "Exists",
+                                "operand": {
+                                    "localId": "75",
+                                    "dataType": "{http://hl7.org/fhir}Procedure",
+                                    "codeProperty": "code",
+                                    "type": "Retrieve",
+                                    "codes": {
+                                        "type": "ToList",
+                                        "operand": {
+                                            "name": "Transplantation of liver (procedure)",
+                                            "type": "ConceptRef"
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "93",
+                    "name": "Cholangiocarcinoma",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "93",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Cholangiocarcinoma\"",
+                                            ":\n\t"
+                                        ]
+                                    },
+                                    {
+                                        "r": "92",
+                                        "s": [
+                                            {
+                                                "r": "89",
+                                                "s": [
+                                                    {
+                                                        "r": "86",
+                                                        "s": [
+                                                            {
+                                                                "r": "83",
+                                                                "s": [
+                                                                    {
+                                                                        "r": "80",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "exists"
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "r": "79",
+                                                                                "s": [
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "("
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "r": "79",
+                                                                                        "s": [
+                                                                                            {
+                                                                                                "value": [
+                                                                                                    "[",
+                                                                                                    "Condition",
+                                                                                                    ": "
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "s": [
+                                                                                                    {
+                                                                                                        "value": [
+                                                                                                            "\"End Stage Liver Disease\""
+                                                                                                        ]
+                                                                                                    }
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "value": [
+                                                                                                    "]"
+                                                                                                ]
+                                                                                            }
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "value": [
+                                                                                            ")"
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "value": [
+                                                                            "\n\tand "
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "82",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "exists"
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "r": "81",
+                                                                                "s": [
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "("
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "r": "81",
+                                                                                        "s": [
+                                                                                            {
+                                                                                                "value": [
+                                                                                                    "[",
+                                                                                                    "Condition",
+                                                                                                    ": "
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "s": [
+                                                                                                    {
+                                                                                                        "value": [
+                                                                                                            "\"Carcinoma in situ of extrahepatic bile ducts (disorder)\""
+                                                                                                        ]
+                                                                                                    }
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "value": [
+                                                                                                    "]"
+                                                                                                ]
+                                                                                            }
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "value": [
+                                                                                            ")"
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n\tand "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "r": "85",
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "exists"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "84",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "("
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "r": "84",
+                                                                                "s": [
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "[",
+                                                                                            "Condition",
+                                                                                            ": "
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "s": [
+                                                                                            {
+                                                                                                "value": [
+                                                                                                    "\"Cholangiocarcinoma of biliary tract (disorder)\""
+                                                                                                ]
+                                                                                            }
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "]"
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "value": [
+                                                                                    ")"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            "\n\tand "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "88",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "exists"
+                                                                ]
+                                                            },
+                                                            {
+                                                                "r": "87",
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "("
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "87",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "[",
+                                                                                    "Condition",
+                                                                                    ": "
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "s": [
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "\"Tumor surgically unresectable (finding)\""
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "value": [
+                                                                                    "]"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "value": [
+                                                                            ")"
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n\tand "
+                                                ]
+                                            },
+                                            {
+                                                "r": "91",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "exists"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "90",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "("
+                                                                ]
+                                                            },
+                                                            {
+                                                                "r": "90",
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "[",
+                                                                            "Procedure",
+                                                                            ": "
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "\"Transplantation of liver (procedure)\""
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "value": [
+                                                                            "]"
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    ")"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "92",
+                        "type": "And",
+                        "operand": [
+                            {
+                                "localId": "89",
+                                "type": "And",
+                                "operand": [
+                                    {
+                                        "localId": "86",
+                                        "type": "And",
+                                        "operand": [
+                                            {
+                                                "localId": "83",
+                                                "type": "And",
+                                                "operand": [
+                                                    {
+                                                        "localId": "80",
+                                                        "type": "Exists",
+                                                        "operand": {
+                                                            "localId": "79",
+                                                            "dataType": "{http://hl7.org/fhir}Condition",
+                                                            "codeProperty": "code",
+                                                            "type": "Retrieve",
+                                                            "codes": {
+                                                                "type": "ToList",
+                                                                "operand": {
+                                                                    "name": "End Stage Liver Disease",
+                                                                    "type": "ConceptRef"
+                                                                }
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "localId": "82",
+                                                        "type": "Exists",
+                                                        "operand": {
+                                                            "localId": "81",
+                                                            "dataType": "{http://hl7.org/fhir}Condition",
+                                                            "codeProperty": "code",
+                                                            "type": "Retrieve",
+                                                            "codes": {
+                                                                "type": "ToList",
+                                                                "operand": {
+                                                                    "name": "Carcinoma in situ of extrahepatic bile ducts (disorder)",
+                                                                    "type": "ConceptRef"
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "localId": "85",
+                                                "type": "Exists",
+                                                "operand": {
+                                                    "localId": "84",
+                                                    "dataType": "{http://hl7.org/fhir}Condition",
+                                                    "codeProperty": "code",
+                                                    "type": "Retrieve",
+                                                    "codes": {
+                                                        "type": "ToList",
+                                                        "operand": {
+                                                            "name": "Cholangiocarcinoma of biliary tract (disorder)",
+                                                            "type": "ConceptRef"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "localId": "88",
+                                        "type": "Exists",
+                                        "operand": {
+                                            "localId": "87",
+                                            "dataType": "{http://hl7.org/fhir}Condition",
+                                            "codeProperty": "code",
+                                            "type": "Retrieve",
+                                            "codes": {
+                                                "type": "ToList",
+                                                "operand": {
+                                                    "name": "Tumor surgically unresectable (finding)",
+                                                    "type": "ConceptRef"
+                                                }
+                                            }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "localId": "91",
+                                "type": "Exists",
+                                "operand": {
+                                    "localId": "90",
+                                    "dataType": "{http://hl7.org/fhir}Procedure",
+                                    "codeProperty": "code",
+                                    "type": "Retrieve",
+                                    "codes": {
+                                        "type": "ToList",
+                                        "operand": {
+                                            "name": "Transplantation of liver (procedure)",
+                                            "type": "ConceptRef"
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "96",
+                    "name": "Hemangioendothelioma",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "96",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Hemangioendothelioma\"",
+                                            ":\n\t"
+                                        ]
+                                    },
+                                    {
+                                        "r": "95",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "exists"
+                                                ]
+                                            },
+                                            {
+                                                "r": "94",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "("
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "94",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "[",
+                                                                    "Condition",
+                                                                    ": "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"Hemangioendothelioma of liver (disorder)\""
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "]"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            ")"
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "95",
+                        "type": "Exists",
+                        "operand": {
+                            "localId": "94",
+                            "dataType": "{http://hl7.org/fhir}Condition",
+                            "codeProperty": "code",
+                            "type": "Retrieve",
+                            "codes": {
+                                "type": "ToList",
+                                "operand": {
+                                    "name": "Hemangioendothelioma of liver (disorder)",
+                                    "type": "ConceptRef"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "localId": "102",
+                    "name": "Malignancies",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "102",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Malignancies\"",
+                                            ":\n\t"
+                                        ]
+                                    },
+                                    {
+                                        "r": "101",
+                                        "s": [
+                                            {
+                                                "r": "99",
+                                                "s": [
+                                                    {
+                                                        "r": "97",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "Cholangiocarcinoma"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            "\n\tor "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "98",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "neuroendocrinetumor"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n\tor "
+                                                ]
+                                            },
+                                            {
+                                                "r": "100",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "Hemangioendothelioma"
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "101",
+                        "type": "Or",
+                        "operand": [
+                            {
+                                "localId": "99",
+                                "type": "Or",
+                                "operand": [
+                                    {
+                                        "localId": "97",
+                                        "name": "Cholangiocarcinoma",
+                                        "type": "ExpressionRef"
+                                    },
+                                    {
+                                        "localId": "98",
+                                        "name": "neuroendocrinetumor",
+                                        "type": "ExpressionRef"
+                                    }
+                                ]
+                            },
+                            {
+                                "localId": "100",
+                                "name": "Hemangioendothelioma",
+                                "type": "ExpressionRef"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "108",
+                    "name": "Followup",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "108",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Followup\"",
+                                            ":\n\t"
+                                        ]
+                                    },
+                                    {
+                                        "r": "107",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "exists"
+                                                ]
+                                            },
+                                            {
+                                                "r": "106",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "(\n\t\t"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "106",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "[",
+                                                                    "ClinicalImpression",
+                                                                    ": "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"Aftercare for liver transplant done (situation)\""
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "]"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            "\n\t)"
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "107",
+                        "type": "Exists",
+                        "operand": {
+                            "localId": "106",
+                            "dataType": "{http://hl7.org/fhir}ClinicalImpression",
+                            "type": "Retrieve",
+                            "codes": {
+                                "name": "Aftercare for liver transplant done (situation)",
+                                "type": "ConceptRef"
+                            }
+                        }
+                    }
+                },
+                {
+                    "localId": "137",
+                    "name": "ImmunosuppressiveDrugs",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "137",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"ImmunosuppressiveDrugs\"",
+                                            ":\n\t"
+                                        ]
+                                    },
+                                    {
+                                        "r": "136",
+                                        "s": [
+                                            {
+                                                "r": "133",
+                                                "s": [
+                                                    {
+                                                        "r": "130",
+                                                        "s": [
+                                                            {
+                                                                "r": "127",
+                                                                "s": [
+                                                                    {
+                                                                        "r": "124",
+                                                                        "s": [
+                                                                            {
+                                                                                "r": "121",
+                                                                                "s": [
+                                                                                    {
+                                                                                        "r": "118",
+                                                                                        "s": [
+                                                                                            {
+                                                                                                "r": "115",
+                                                                                                "s": [
+                                                                                                    {
+                                                                                                        "r": "112",
+                                                                                                        "s": [
+                                                                                                            {
+                                                                                                                "value": [
+                                                                                                                    "exists"
+                                                                                                                ]
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "r": "111",
+                                                                                                                "s": [
+                                                                                                                    {
+                                                                                                                        "value": [
+                                                                                                                            "("
+                                                                                                                        ]
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "r": "111",
+                                                                                                                        "s": [
+                                                                                                                            {
+                                                                                                                                "value": [
+                                                                                                                                    "[",
+                                                                                                                                    "MedicationAdministration",
+                                                                                                                                    ": "
+                                                                                                                                ]
+                                                                                                                            },
+                                                                                                                            {
+                                                                                                                                "s": [
+                                                                                                                                    {
+                                                                                                                                        "value": [
+                                                                                                                                            "\"Sandimmune\""
+                                                                                                                                        ]
+                                                                                                                                    }
+                                                                                                                                ]
+                                                                                                                            },
+                                                                                                                            {
+                                                                                                                                "value": [
+                                                                                                                                    "]"
+                                                                                                                                ]
+                                                                                                                            }
+                                                                                                                        ]
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "value": [
+                                                                                                                            ")"
+                                                                                                                        ]
+                                                                                                                    }
+                                                                                                                ]
+                                                                                                            }
+                                                                                                        ]
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "value": [
+                                                                                                            "\n\tor "
+                                                                                                        ]
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "r": "114",
+                                                                                                        "s": [
+                                                                                                            {
+                                                                                                                "value": [
+                                                                                                                    "exists"
+                                                                                                                ]
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "r": "113",
+                                                                                                                "s": [
+                                                                                                                    {
+                                                                                                                        "value": [
+                                                                                                                            "("
+                                                                                                                        ]
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "r": "113",
+                                                                                                                        "s": [
+                                                                                                                            {
+                                                                                                                                "value": [
+                                                                                                                                    "[",
+                                                                                                                                    "MedicationAdministration",
+                                                                                                                                    ": "
+                                                                                                                                ]
+                                                                                                                            },
+                                                                                                                            {
+                                                                                                                                "s": [
+                                                                                                                                    {
+                                                                                                                                        "value": [
+                                                                                                                                            "\"Imuran\""
+                                                                                                                                        ]
+                                                                                                                                    }
+                                                                                                                                ]
+                                                                                                                            },
+                                                                                                                            {
+                                                                                                                                "value": [
+                                                                                                                                    "]"
+                                                                                                                                ]
+                                                                                                                            }
+                                                                                                                        ]
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "value": [
+                                                                                                                            ")"
+                                                                                                                        ]
+                                                                                                                    }
+                                                                                                                ]
+                                                                                                            }
+                                                                                                        ]
+                                                                                                    }
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "value": [
+                                                                                                    "\n\tor "
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "r": "117",
+                                                                                                "s": [
+                                                                                                    {
+                                                                                                        "value": [
+                                                                                                            "exists"
+                                                                                                        ]
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "r": "116",
+                                                                                                        "s": [
+                                                                                                            {
+                                                                                                                "value": [
+                                                                                                                    "("
+                                                                                                                ]
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "r": "116",
+                                                                                                                "s": [
+                                                                                                                    {
+                                                                                                                        "value": [
+                                                                                                                            "[",
+                                                                                                                            "MedicationAdministration",
+                                                                                                                            ": "
+                                                                                                                        ]
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "s": [
+                                                                                                                            {
+                                                                                                                                "value": [
+                                                                                                                                    "\"ATGAM\""
+                                                                                                                                ]
+                                                                                                                            }
+                                                                                                                        ]
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "value": [
+                                                                                                                            "]"
+                                                                                                                        ]
+                                                                                                                    }
+                                                                                                                ]
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "value": [
+                                                                                                                    ")"
+                                                                                                                ]
+                                                                                                            }
+                                                                                                        ]
+                                                                                                    }
+                                                                                                ]
+                                                                                            }
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "\n\tor "
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "r": "120",
+                                                                                        "s": [
+                                                                                            {
+                                                                                                "value": [
+                                                                                                    "exists"
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "r": "119",
+                                                                                                "s": [
+                                                                                                    {
+                                                                                                        "value": [
+                                                                                                            "("
+                                                                                                        ]
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "r": "119",
+                                                                                                        "s": [
+                                                                                                            {
+                                                                                                                "value": [
+                                                                                                                    "[",
+                                                                                                                    "MedicationAdministration",
+                                                                                                                    ": "
+                                                                                                                ]
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "s": [
+                                                                                                                    {
+                                                                                                                        "value": [
+                                                                                                                            "\"Muromonab-CD3\""
+                                                                                                                        ]
+                                                                                                                    }
+                                                                                                                ]
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "value": [
+                                                                                                                    "]"
+                                                                                                                ]
+                                                                                                            }
+                                                                                                        ]
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "value": [
+                                                                                                            ")"
+                                                                                                        ]
+                                                                                                    }
+                                                                                                ]
+                                                                                            }
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "value": [
+                                                                                    "\n\tor "
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "r": "123",
+                                                                                "s": [
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "exists"
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "r": "122",
+                                                                                        "s": [
+                                                                                            {
+                                                                                                "value": [
+                                                                                                    "("
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "r": "122",
+                                                                                                "s": [
+                                                                                                    {
+                                                                                                        "value": [
+                                                                                                            "[",
+                                                                                                            "MedicationAdministration",
+                                                                                                            ": "
+                                                                                                        ]
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "s": [
+                                                                                                            {
+                                                                                                                "value": [
+                                                                                                                    "\"Prograf\""
+                                                                                                                ]
+                                                                                                            }
+                                                                                                        ]
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "value": [
+                                                                                                            "]"
+                                                                                                        ]
+                                                                                                    }
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "value": [
+                                                                                                    ")"
+                                                                                                ]
+                                                                                            }
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "value": [
+                                                                            "\n\tor "
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "126",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "exists"
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "r": "125",
+                                                                                "s": [
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "("
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "r": "125",
+                                                                                        "s": [
+                                                                                            {
+                                                                                                "value": [
+                                                                                                    "[",
+                                                                                                    "MedicationAdministration",
+                                                                                                    ": "
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "s": [
+                                                                                                    {
+                                                                                                        "value": [
+                                                                                                            "\"mycophenolate mofetil\""
+                                                                                                        ]
+                                                                                                    }
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "value": [
+                                                                                                    "]"
+                                                                                                ]
+                                                                                            }
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "value": [
+                                                                                            ")"
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n\tor "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "r": "129",
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "exists"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "128",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "("
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "r": "128",
+                                                                                "s": [
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "[",
+                                                                                            "MedicationAdministration",
+                                                                                            ": "
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "s": [
+                                                                                            {
+                                                                                                "value": [
+                                                                                                    "\"Daclizumab\""
+                                                                                                ]
+                                                                                            }
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "]"
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "value": [
+                                                                                    ")"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            "\n\tor "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "132",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "exists"
+                                                                ]
+                                                            },
+                                                            {
+                                                                "r": "131",
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "("
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "131",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "[",
+                                                                                    "MedicationAdministration",
+                                                                                    ": "
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "s": [
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "\"Cyclophosphamide\""
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "value": [
+                                                                                    "]"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "value": [
+                                                                            ")"
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n\tor "
+                                                ]
+                                            },
+                                            {
+                                                "r": "135",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "exists"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "134",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "("
+                                                                ]
+                                                            },
+                                                            {
+                                                                "r": "134",
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "[",
+                                                                            "MedicationAdministration",
+                                                                            ": "
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "\"Prednisone\""
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "value": [
+                                                                            "]"
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    ")"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "136",
+                        "type": "Or",
+                        "operand": [
+                            {
+                                "localId": "133",
+                                "type": "Or",
+                                "operand": [
+                                    {
+                                        "localId": "130",
+                                        "type": "Or",
+                                        "operand": [
+                                            {
+                                                "localId": "127",
+                                                "type": "Or",
+                                                "operand": [
+                                                    {
+                                                        "localId": "124",
+                                                        "type": "Or",
+                                                        "operand": [
+                                                            {
+                                                                "localId": "121",
+                                                                "type": "Or",
+                                                                "operand": [
+                                                                    {
+                                                                        "localId": "118",
+                                                                        "type": "Or",
+                                                                        "operand": [
+                                                                            {
+                                                                                "localId": "115",
+                                                                                "type": "Or",
+                                                                                "operand": [
+                                                                                    {
+                                                                                        "localId": "112",
+                                                                                        "type": "Exists",
+                                                                                        "operand": {
+                                                                                            "localId": "111",
+                                                                                            "dataType": "{http://hl7.org/fhir}MedicationAdministration",
+                                                                                            "type": "Retrieve",
+                                                                                            "codes": {
+                                                                                                "name": "Sandimmune",
+                                                                                                "type": "ValueSetRef"
+                                                                                            }
+                                                                                        }
+                                                                                    },
+                                                                                    {
+                                                                                        "localId": "114",
+                                                                                        "type": "Exists",
+                                                                                        "operand": {
+                                                                                            "localId": "113",
+                                                                                            "dataType": "{http://hl7.org/fhir}MedicationAdministration",
+                                                                                            "type": "Retrieve",
+                                                                                            "codes": {
+                                                                                                "name": "Imuran",
+                                                                                                "type": "ValueSetRef"
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "localId": "117",
+                                                                                "type": "Exists",
+                                                                                "operand": {
+                                                                                    "localId": "116",
+                                                                                    "dataType": "{http://hl7.org/fhir}MedicationAdministration",
+                                                                                    "type": "Retrieve",
+                                                                                    "codes": {
+                                                                                        "name": "ATGAM",
+                                                                                        "type": "ValueSetRef"
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "localId": "120",
+                                                                        "type": "Exists",
+                                                                        "operand": {
+                                                                            "localId": "119",
+                                                                            "dataType": "{http://hl7.org/fhir}MedicationAdministration",
+                                                                            "type": "Retrieve",
+                                                                            "codes": {
+                                                                                "name": "Muromonab-CD3",
+                                                                                "type": "ValueSetRef"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "localId": "123",
+                                                                "type": "Exists",
+                                                                "operand": {
+                                                                    "localId": "122",
+                                                                    "dataType": "{http://hl7.org/fhir}MedicationAdministration",
+                                                                    "type": "Retrieve",
+                                                                    "codes": {
+                                                                        "name": "Prograf",
+                                                                        "type": "ValueSetRef"
+                                                                    }
+                                                                }
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "localId": "126",
+                                                        "type": "Exists",
+                                                        "operand": {
+                                                            "localId": "125",
+                                                            "dataType": "{http://hl7.org/fhir}MedicationAdministration",
+                                                            "type": "Retrieve",
+                                                            "codes": {
+                                                                "name": "mycophenolate mofetil",
+                                                                "type": "ValueSetRef"
+                                                            }
+                                                        }
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "localId": "129",
+                                                "type": "Exists",
+                                                "operand": {
+                                                    "localId": "128",
+                                                    "dataType": "{http://hl7.org/fhir}MedicationAdministration",
+                                                    "type": "Retrieve",
+                                                    "codes": {
+                                                        "name": "Daclizumab",
+                                                        "type": "ValueSetRef"
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "localId": "132",
+                                        "type": "Exists",
+                                        "operand": {
+                                            "localId": "131",
+                                            "dataType": "{http://hl7.org/fhir}MedicationAdministration",
+                                            "type": "Retrieve",
+                                            "codes": {
+                                                "name": "Cyclophosphamide",
+                                                "type": "ValueSetRef"
+                                            }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "localId": "135",
+                                "type": "Exists",
+                                "operand": {
+                                    "localId": "134",
+                                    "dataType": "{http://hl7.org/fhir}MedicationAdministration",
+                                    "type": "Retrieve",
+                                    "codes": {
+                                        "name": "Prednisone",
+                                        "type": "ValueSetRef"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "140",
+                    "name": "Covered",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "140",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Covered\"",
+                                            ":\n\t"
+                                        ]
+                                    },
+                                    {
+                                        "r": "139",
+                                        "s": [
+                                            {
+                                                "r": "110",
+                                                "s": [
+                                                    {
+                                                        "r": "105",
+                                                        "s": [
+                                                            {
+                                                                "r": "103",
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "Livertransplant"
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    " or "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "r": "104",
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "Malignancies"
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            " or "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "109",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "Followup"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    " or "
+                                                ]
+                                            },
+                                            {
+                                                "r": "138",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "ImmunosuppressiveDrugs"
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "139",
+                        "type": "Or",
+                        "operand": [
+                            {
+                                "localId": "110",
+                                "type": "Or",
+                                "operand": [
+                                    {
+                                        "localId": "105",
+                                        "type": "Or",
+                                        "operand": [
+                                            {
+                                                "localId": "103",
+                                                "name": "Livertransplant",
+                                                "type": "ExpressionRef"
+                                            },
+                                            {
+                                                "localId": "104",
+                                                "name": "Malignancies",
+                                                "type": "ExpressionRef"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "localId": "109",
+                                        "name": "Followup",
+                                        "type": "ExpressionRef"
+                                    }
+                                ]
+                            },
+                            {
+                                "localId": "138",
+                                "name": "ImmunosuppressiveDrugs",
+                                "type": "ExpressionRef"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "142",
+                    "name": "Coverage",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "142",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Coverage\"",
+                                            ":\n\t"
+                                        ]
+                                    },
+                                    {
+                                        "r": "141",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "\"Covered\""
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "141",
+                        "name": "Covered",
+                        "type": "ExpressionRef"
+                    }
+                }
+            ]
+        }
+    }
+}
