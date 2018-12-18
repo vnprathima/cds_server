@@ -82,11 +82,11 @@ exports.executeCql = function (req, res, ) {
                 console.log(`${id}:`);
                 res.statusCode = 200;
                 res.setHeader('Content-Type', 'application/json');
-                if (postBody.request_type == 'requirements'){
+                if (postBody.request_for == 'requirements'){
                     // console.log(`\tRequirements: ${result.Requirements}`);
                     // console.log("Session: %j", result.Requirements);
                     res.end(JSON.stringify({"requirements":result.Requirements}) + '\n');
-                } else if (postBody.request_type == 'decision'){
+                } else if (postBody.request_for == 'decision'){
                     console.log(`\tCoverage: ${result.Coverage}`);
                     res.end(JSON.stringify({"Coverage":result.Coverage}) + '\n');
                 }
