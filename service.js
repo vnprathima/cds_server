@@ -83,8 +83,9 @@ exports.executeCql = function (req, res, ) {
                 res.statusCode = 200;
                 res.setHeader('Content-Type', 'application/json');
                 if (postBody.request_type == 'requirements'){
-                    console.log(`\tRequirements: ${result.Requirements}`);
-                    res.end(JSON.stringify(result.Requirements) + '\n');
+                    // console.log(`\tRequirements: ${result.Requirements}`);
+                    // console.log("Session: %j", result.Requirements);
+                    res.end(JSON.stringify({"requirements":result.Requirements}) + '\n');
                 } else if (postBody.request_type == 'decision'){
                     console.log(`\tCoverage: ${result.Coverage}`);
                     res.end(JSON.stringify({"Coverage":result.Coverage}) + '\n');
