@@ -44,93 +44,104 @@
                 }
             ]
         },
-        "valueSets": {
-            "def": [
-                {
-                    "localId": "5",
-                    "name": "Aftercare for liver transplant done (situation)",
-                    "id": "2.16.840.1.113883.3.88.12.3221.7.4",
-                    "accessLevel": "Public"
-                },
-                {
-                    "localId": "6",
-                    "name": "Prescription medication started (situation)",
-                    "id": "2.16.840.1.113762.1.4.1096.101",
-                    "accessLevel": "Public"
-                },
-                {
-                    "localId": "7",
-                    "name": "End Stage Liver Disease",
-                    "id": "2.16.840.1.113883.3.88.12.3221.7.4",
-                    "accessLevel": "Public"
-                }
-            ]
-        },
         "codes": {
             "def": [
                 {
-                    "localId": "9",
+                    "localId": "6",
+                    "name": "End Stage Liver Disease code",
+                    "id": "708248004",
+                    "display": "End Stage Liver Disease",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "5",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "8",
                     "name": "Follow-up arranged (finding) code",
                     "id": "183616001",
                     "display": "Follow-up arranged",
                     "accessLevel": "Public",
                     "codeSystem": {
-                        "localId": "8",
+                        "localId": "7",
                         "name": "SNOMEDCT"
                     }
                 },
                 {
-                    "localId": "11",
+                    "localId": "10",
                     "name": "Immunosuppressive therapy for transplant (procedure) code",
                     "id": "7447008",
                     "display": "Immunosuppressive therapy for transplant",
                     "accessLevel": "Public",
                     "codeSystem": {
-                        "localId": "10",
+                        "localId": "9",
                         "name": "SNOMEDCT"
                     }
                 },
                 {
-                    "localId": "13",
+                    "localId": "12",
                     "name": "Postoperative follow-up visit (procedure) code",
                     "id": "439740005",
                     "display": "Postoperative follow-up visit",
                     "accessLevel": "Public",
                     "codeSystem": {
-                        "localId": "12",
+                        "localId": "11",
                         "name": "SNOMEDCT"
                     }
                 },
                 {
-                    "localId": "15",
+                    "localId": "14",
                     "name": "Prescription medication started (situation) code",
                     "id": "432861000124103",
                     "display": "Prescription medication started",
                     "accessLevel": "Public",
                     "codeSystem": {
-                        "localId": "14",
+                        "localId": "13",
                         "name": "SNOMEDCT"
                     }
                 },
                 {
-                    "localId": "17",
+                    "localId": "16",
                     "name": "Ambulatory Health Care Facilities; Clinic/Center, Federally Qualified Health Center (FQHC) code",
                     "id": "261QF0400X",
                     "display": "Ambulatory Health Care Facilities; Clinic/Center, Federally Qualified Health Center (FQHC)",
                     "accessLevel": "Public",
                     "codeSystem": {
-                        "localId": "16",
+                        "localId": "15",
                         "name": "NUCCPT"
                     }
                 },
                 {
-                    "localId": "19",
+                    "localId": "18",
                     "name": "Transplantation of liver (procedure) code",
                     "id": "18027006",
                     "display": "Transplantation of liver (procedure)",
                     "accessLevel": "Public",
                     "codeSystem": {
-                        "localId": "18",
+                        "localId": "17",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "20",
+                    "name": "Aftercare for liver transplant done (situation) code",
+                    "id": "96601000119101",
+                    "display": "Aftercare for liver transplant done",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "19",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "22",
+                    "name": "Prescription (procedure) code",
+                    "id": "16076005",
+                    "display": "Prescription",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "21",
                         "name": "SNOMEDCT"
                     }
                 }
@@ -139,74 +150,110 @@
         "concepts": {
             "def": [
                 {
-                    "localId": "21",
+                    "localId": "24",
+                    "name": "End Stage Liver Disease",
+                    "display": "End Stage Liver Disease",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "23",
+                            "name": "End Stage Liver Disease code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "26",
                     "name": "Transplantation of liver (procedure)",
                     "display": "Transplantation of liver (procedure)",
                     "accessLevel": "Public",
                     "code": [
                         {
-                            "localId": "20",
+                            "localId": "25",
                             "name": "Transplantation of liver (procedure) code"
                         }
                     ]
                 },
                 {
-                    "localId": "23",
+                    "localId": "28",
                     "name": "Follow-up arranged",
                     "display": "Follow-up arranged",
                     "accessLevel": "Public",
                     "code": [
                         {
-                            "localId": "22",
+                            "localId": "27",
                             "name": "Follow-up arranged (finding) code"
                         }
                     ]
                 },
                 {
-                    "localId": "25",
+                    "localId": "30",
                     "name": "Immunosuppressive therapy for transplant",
                     "display": "Immunosuppressive therapy for transplant",
                     "accessLevel": "Public",
                     "code": [
                         {
-                            "localId": "24",
+                            "localId": "29",
                             "name": "Immunosuppressive therapy for transplant (procedure) code"
                         }
                     ]
                 },
                 {
-                    "localId": "27",
+                    "localId": "32",
                     "name": "Postoperative follow-up visit",
                     "display": "Postoperative follow-up visit",
                     "accessLevel": "Public",
                     "code": [
                         {
-                            "localId": "26",
+                            "localId": "31",
                             "name": "Postoperative follow-up visit (procedure) code"
                         }
                     ]
                 },
                 {
-                    "localId": "29",
+                    "localId": "34",
                     "name": "Prescription medication started",
                     "display": "Prescription medication started",
                     "accessLevel": "Public",
                     "code": [
                         {
-                            "localId": "28",
+                            "localId": "33",
                             "name": "Prescription medication started (situation) code"
                         }
                     ]
                 },
                 {
-                    "localId": "31",
+                    "localId": "36",
                     "name": "Ambulatory Health Care Facilities; Clinic/Center, Federally Qualified Health Center (FQHC)",
                     "display": "Ambulatory Health Care Facilities; Clinic/Center, Federally Qualified Health Center (FQHC)",
                     "accessLevel": "Public",
                     "code": [
                         {
-                            "localId": "30",
+                            "localId": "35",
                             "name": "Ambulatory Health Care Facilities; Clinic/Center, Federally Qualified Health Center (FQHC) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "38",
+                    "name": "Aftercare for liver transplant done",
+                    "display": "Aftercare for liver transplant done",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "37",
+                            "name": "Aftercare for liver transplant done (situation) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "40",
+                    "name": "Prescription",
+                    "display": "Prescription",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "39",
+                            "name": "Prescription (procedure) code"
                         }
                     ]
                 }
@@ -226,7 +273,7 @@
                     }
                 },
                 {
-                    "localId": "38",
+                    "localId": "47",
                     "name": "Documents",
                     "context": "Patient",
                     "accessLevel": "Public",
@@ -234,17 +281,17 @@
                         {
                             "type": "Annotation",
                             "s": {
-                                "r": "38",
+                                "r": "47",
                                 "s": [
                                     {
                                         "value": [
                                             "define ",
                                             "\"Documents\"",
-                                            ":\r\n\t"
+                                            ":\n\t"
                                         ]
                                     },
                                     {
-                                        "r": "37",
+                                        "r": "46",
                                         "s": [
                                             {
                                                 "value": [
@@ -260,7 +307,7 @@
                                                         ]
                                                     },
                                                     {
-                                                        "r": "32",
+                                                        "r": "41",
                                                         "s": [
                                                             {
                                                                 "value": [
@@ -285,7 +332,7 @@
                                                         ]
                                                     },
                                                     {
-                                                        "r": "33",
+                                                        "r": "42",
                                                         "s": [
                                                             {
                                                                 "value": [
@@ -310,7 +357,7 @@
                                                         ]
                                                     },
                                                     {
-                                                        "r": "34",
+                                                        "r": "43",
                                                         "s": [
                                                             {
                                                                 "value": [
@@ -335,11 +382,11 @@
                                                         ]
                                                     },
                                                     {
-                                                        "r": "35",
+                                                        "r": "44",
                                                         "s": [
                                                             {
                                                                 "value": [
-                                                                    "\"Aftercare for liver transplant done (situation)\""
+                                                                    "\"Aftercare for liver transplant done\""
                                                                 ]
                                                             }
                                                         ]
@@ -360,11 +407,11 @@
                                                         ]
                                                     },
                                                     {
-                                                        "r": "36",
+                                                        "r": "45",
                                                         "s": [
                                                             {
                                                                 "value": [
-                                                                    "\"Prescription medication started (situation)\""
+                                                                    "\"Prescription\""
                                                                 ]
                                                             }
                                                         ]
@@ -383,21 +430,21 @@
                         }
                     ],
                     "expression": {
-                        "localId": "37",
+                        "localId": "46",
                         "type": "Tuple",
                         "element": [
                             {
                                 "name": "Condition",
                                 "value": {
-                                    "localId": "32",
+                                    "localId": "41",
                                     "name": "End Stage Liver Disease",
-                                    "type": "ValueSetRef"
+                                    "type": "ConceptRef"
                                 }
                             },
                             {
                                 "name": "Procedure",
                                 "value": {
-                                    "localId": "33",
+                                    "localId": "42",
                                     "name": "Transplantation of liver (procedure)",
                                     "type": "ConceptRef"
                                 }
@@ -405,7 +452,7 @@
                             {
                                 "name": "Location",
                                 "value": {
-                                    "localId": "34",
+                                    "localId": "43",
                                     "name": "Ambulatory Health Care Facilities; Clinic/Center, Federally Qualified Health Center (FQHC)",
                                     "type": "ConceptRef"
                                 }
@@ -413,24 +460,24 @@
                             {
                                 "name": "EpisodeOfCare",
                                 "value": {
-                                    "localId": "35",
-                                    "name": "Aftercare for liver transplant done (situation)",
-                                    "type": "ValueSetRef"
+                                    "localId": "44",
+                                    "name": "Aftercare for liver transplant done",
+                                    "type": "ConceptRef"
                                 }
                             },
                             {
                                 "name": "MedicationStatement",
                                 "value": {
-                                    "localId": "36",
-                                    "name": "Prescription medication started (situation)",
-                                    "type": "ValueSetRef"
+                                    "localId": "45",
+                                    "name": "Prescription",
+                                    "type": "ConceptRef"
                                 }
                             }
                         ]
                     }
                 },
                 {
-                    "localId": "40",
+                    "localId": "49",
                     "name": "AttachableDocuments",
                     "context": "Patient",
                     "accessLevel": "Public",
@@ -438,17 +485,17 @@
                         {
                             "type": "Annotation",
                             "s": {
-                                "r": "40",
+                                "r": "49",
                                 "s": [
                                     {
                                         "value": [
                                             "define ",
                                             "\"AttachableDocuments\"",
-                                            ":\r\n\t"
+                                            ":\n\t"
                                         ]
                                     },
                                     {
-                                        "r": "39",
+                                        "r": "48",
                                         "s": [
                                             {
                                                 "value": [
@@ -462,14 +509,14 @@
                         }
                     ],
                     "expression": {
-                        "localId": "39",
+                        "localId": "48",
                         "valueType": "{urn:hl7-org:elm-types:r1}String",
                         "value": "Seven Element Order",
                         "type": "Literal"
                     }
                 },
                 {
-                    "localId": "44",
+                    "localId": "53",
                     "name": "Requirements",
                     "context": "Patient",
                     "accessLevel": "Public",
@@ -477,20 +524,20 @@
                         {
                             "type": "Annotation",
                             "s": {
-                                "r": "44",
+                                "r": "53",
                                 "s": [
                                     {
                                         "value": [
                                             "define ",
                                             "\"Requirements\"",
-                                            ":\r\n\t"
+                                            ":\n\t"
                                         ]
                                     },
                                     {
-                                        "r": "43",
+                                        "r": "52",
                                         "s": [
                                             {
-                                                "r": "41",
+                                                "r": "50",
                                                 "s": [
                                                     {
                                                         "value": [
@@ -505,7 +552,7 @@
                                                 ]
                                             },
                                             {
-                                                "r": "42",
+                                                "r": "51",
                                                 "s": [
                                                     {
                                                         "value": [
@@ -521,13 +568,13 @@
                         }
                     ],
                     "expression": {
-                        "localId": "43",
+                        "localId": "52",
                         "type": "Union",
                         "operand": [
                             {
                                 "type": "ToList",
                                 "operand": {
-                                    "localId": "41",
+                                    "localId": "50",
                                     "name": "Documents",
                                     "type": "ExpressionRef"
                                 }
@@ -535,7 +582,7 @@
                             {
                                 "type": "ToList",
                                 "operand": {
-                                    "localId": "42",
+                                    "localId": "51",
                                     "name": "AttachableDocuments",
                                     "type": "ExpressionRef"
                                 }
