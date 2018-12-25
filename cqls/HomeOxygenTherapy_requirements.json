@@ -1,0 +1,2209 @@
+{
+    "library": {
+        "annotation": [
+            {
+                "startLine": 95,
+                "startChar": 2,
+                "endLine": 95,
+                "endChar": 51,
+                "message": "Retrieve has a terminology target but does not specify a code path and the type of the retrieve does not have a primary code path defined.",
+                "errorType": "semantic",
+                "errorSeverity": "warning",
+                "type": "CqlToElmError"
+            },
+            {
+                "startLine": 95,
+                "startChar": 2,
+                "endLine": 95,
+                "endChar": 51,
+                "message": "Could not resolve membership operator for terminology target of the retrieve.",
+                "errorType": "semantic",
+                "errorSeverity": "warning",
+                "type": "CqlToElmError"
+            }
+        ],
+        "identifier": {
+            "id": "HomeOxygenTherapy",
+            "version": "1"
+        },
+        "schemaIdentifier": {
+            "id": "urn:hl7-org:elm",
+            "version": "r1"
+        },
+        "usings": {
+            "def": [
+                {
+                    "localIdentifier": "System",
+                    "uri": "urn:hl7-org:elm-types:r1"
+                },
+                {
+                    "localId": "1",
+                    "localIdentifier": "FHIR",
+                    "uri": "http://hl7.org/fhir",
+                    "version": "1.8"
+                }
+            ]
+        },
+        "codeSystems": {
+            "def": [
+                {
+                    "localId": "2",
+                    "name": "SNOMEDCT",
+                    "id": "http://snomed.info/sct",
+                    "accessLevel": "Public"
+                },
+                {
+                    "localId": "3",
+                    "name": "HCPCS",
+                    "id": "https://hcpcs.codes/",
+                    "accessLevel": "Public"
+                },
+                {
+                    "localId": "4",
+                    "name": "ICD9CM",
+                    "id": "https://www.cdc.gov/nchs/icd/icd9.htm",
+                    "accessLevel": "Public"
+                },
+                {
+                    "localId": "5",
+                    "name": "EntityNamePartQualifier",
+                    "id": "2.16.840.1.113883.11.20.9.26",
+                    "accessLevel": "Public"
+                },
+                {
+                    "localId": "6",
+                    "name": "LOINC",
+                    "id": "2.16.840.1.113762.1.4.1099.13",
+                    "accessLevel": "Public"
+                },
+                {
+                    "localId": "7",
+                    "name": "NUCCPT",
+                    "id": "2.16.840.1.114222.4.11.1066",
+                    "accessLevel": "Public"
+                }
+            ]
+        },
+        "codes": {
+            "def": [
+                {
+                    "localId": "9",
+                    "name": "Equipment related features (finding) code",
+                    "id": "405655001",
+                    "display": "Equipment related features (finding)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "8",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "11",
+                    "name": "Equipment requirement (finding) code",
+                    "id": "698532002",
+                    "display": "Equipment requirement (finding)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "10",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "13",
+                    "name": "Equipment in use (finding) code",
+                    "id": "397917005",
+                    "display": "Equipment in use (finding)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "12",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "15",
+                    "name": "Durable medical equipment education, guidance, and counseling (procedure) code",
+                    "id": "410286008",
+                    "display": "Durable medical equipment education, guidance, and counseling (procedure)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "14",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "17",
+                    "name": "Past history of procedure (situation) code",
+                    "id": "416940007",
+                    "display": "Past history of procedure (situation)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "16",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "19",
+                    "name": "Functional movement disorder (disorder) code",
+                    "id": "718362003",
+                    "display": "Functional movement disorder (disorder)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "18",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "21",
+                    "name": "Secondary diagnosis code",
+                    "id": "81885-6",
+                    "display": "Secondary diagnosis",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "20",
+                        "name": "LOINC"
+                    }
+                },
+                {
+                    "localId": "23",
+                    "name": "Primary diagnosis code",
+                    "id": "18630-4",
+                    "display": "Primary diagnosis",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "22",
+                        "name": "LOINC"
+                    }
+                },
+                {
+                    "localId": "25",
+                    "name": "Procedure aiding diagnosis (procedure) code",
+                    "id": "165167006",
+                    "display": "Procedure aiding diagnosis (procedure)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "24",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "27",
+                    "name": "Blood gas analysis (procedure) code",
+                    "id": "278297009",
+                    "display": "Blood gas analysis (procedure)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "26",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "29",
+                    "name": "Encounter Face to Face code",
+                    "id": "20160302",
+                    "display": "Encounter Face to Face",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "28",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "31",
+                    "name": "Seen by physician (finding) code",
+                    "id": "305660003",
+                    "display": "Seen by physician (finding)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "30",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "33",
+                    "name": "Seen by clinical nurse specialist (finding) code",
+                    "id": "305733002",
+                    "display": "Seen by clinical nurse specialist (finding)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "32",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "35",
+                    "name": "Seen by nurse practitioner (finding) code",
+                    "id": "305757002",
+                    "display": "Seen by nurse practitioner (finding)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "34",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "37",
+                    "name": "Referred by physician assistant (finding) code",
+                    "id": "2051000124106",
+                    "display": "Referred by physician assistant (finding)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "36",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "39",
+                    "name": "Home oxygen therapy (procedure) code",
+                    "id": "426990007",
+                    "display": "Home oxygen therapy (procedure)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "38",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "41",
+                    "name": "Encounter Inpatient code",
+                    "id": "20170504",
+                    "display": "Encounter Inpatient",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "40",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "43",
+                    "name": "Encounter Hospital Outpatient code",
+                    "id": "20151013",
+                    "display": "Encounter Hospital Outpatient",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "42",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "45",
+                    "name": "initial code",
+                    "id": "IN",
+                    "display": "initial",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "44",
+                        "name": "EntityNamePartQualifier"
+                    }
+                },
+                {
+                    "localId": "47",
+                    "name": "title code",
+                    "id": "TITLE",
+                    "display": "title",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "46",
+                        "name": "EntityNamePartQualifier"
+                    }
+                },
+                {
+                    "localId": "49",
+                    "name": "Checking patient identity (procedure) code",
+                    "id": "710958003",
+                    "display": "Checking patient identity (procedure)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "48",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "51",
+                    "name": "Confirming patient identity prior to procedure (procedure) code",
+                    "id": "372040007",
+                    "display": "Confirming patient identity prior to procedure (procedure)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "50",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "53",
+                    "name": "Attending physician (occupation) code",
+                    "id": "405279007",
+                    "display": "Attending physician (occupation)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "52",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "55",
+                    "name": "National provider ID code",
+                    "id": "45952-9",
+                    "display": "National provider ID",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "54",
+                        "name": "LOINC"
+                    }
+                },
+                {
+                    "localId": "57",
+                    "name": "Illness (finding) code",
+                    "id": "39104002",
+                    "display": "Illness (finding)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "56",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "59",
+                    "name": "Patient's condition worsened (finding) code",
+                    "id": "271299001",
+                    "display": "Patients condition worsened (finding)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "58",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "61",
+                    "name": "Patient's condition improved (finding) code",
+                    "id": "268910001",
+                    "display": "Patients condition improved (finding)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "60",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "63",
+                    "name": "Conditional prognosis (finding) code",
+                    "id": "60484009",
+                    "display": "Conditional prognosis (finding)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "62",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "65",
+                    "name": "Mobile in home (finding) code",
+                    "id": "302000008",
+                    "display": "Mobile in home (finding)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "64",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "67",
+                    "name": "Gathering of past medical history (procedure) code",
+                    "id": "451571000124102",
+                    "display": "Gathering of past medical history (procedure)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "66",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "69",
+                    "name": "Therapeutic regimen (regime/therapy) code",
+                    "id": "133877004",
+                    "display": "Therapeutic regimen (regime/therapy)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "68",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "71",
+                    "name": "Administration of prescribed medications based on arterial blood gas results (procedure) code",
+                    "id": "370774005",
+                    "display": "Administration of prescribed medications based on arterial blood gas results (procedure)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "70",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "73",
+                    "name": "Ambulatory Health Care Facilities; Clinic/Center, Federally Qualified Health Center (FQHC) code",
+                    "id": "261QF0400X",
+                    "display": "Ambulatory Health Care Facilities; Clinic/Center, Federally Qualified Health Center (FQHC)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "72",
+                        "name": "NUCCPT"
+                    }
+                },
+                {
+                    "localId": "75",
+                    "name": "Evaluating interventions (procedure) code",
+                    "id": "225303001",
+                    "display": "Evaluating interventions (procedure)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "74",
+                        "name": "SNOMEDCT"
+                    }
+                }
+            ]
+        },
+        "concepts": {
+            "def": [
+                {
+                    "localId": "77",
+                    "name": "Equipment related features (finding)",
+                    "display": "Equipment related features (finding)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "76",
+                            "name": "Equipment related features (finding) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "79",
+                    "name": "Equipment requirement (finding)",
+                    "display": "Equipment requirement (finding)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "78",
+                            "name": "Equipment requirement (finding) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "81",
+                    "name": "Equipment in use (finding)",
+                    "display": "Equipment in use (finding)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "80",
+                            "name": "Equipment in use (finding) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "83",
+                    "name": "Durable medical equipment education, guidance, and counseling (procedure)",
+                    "display": "Durable medical equipment education, guidance, and counseling (procedure)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "82",
+                            "name": "Durable medical equipment education, guidance, and counseling (procedure) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "85",
+                    "name": "Past history of procedure (situation)",
+                    "display": "Past history of procedure (situation)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "84",
+                            "name": "Past history of procedure (situation) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "87",
+                    "name": "Evaluating interventions (procedure)",
+                    "display": "Evaluating interventions (procedure)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "86",
+                            "name": "Evaluating interventions (procedure) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "89",
+                    "name": "Functional movement disorder (disorder)",
+                    "display": "Functional movement disorder (disorder)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "88",
+                            "name": "Functional movement disorder (disorder) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "91",
+                    "name": "Ambulatory Health Care Facilities; Clinic/Center, Federally Qualified Health Center (FQHC)",
+                    "display": "Ambulatory Health Care Facilities; Clinic/Center, Federally Qualified Health Center (FQHC)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "90",
+                            "name": "Ambulatory Health Care Facilities; Clinic/Center, Federally Qualified Health Center (FQHC) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "93",
+                    "name": "Secondary diagnosis",
+                    "display": "Secondary diagnosis",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "92",
+                            "name": "Secondary diagnosis code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "95",
+                    "name": "Primary diagnosis",
+                    "display": "Primary diagnosis",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "94",
+                            "name": "Primary diagnosis code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "97",
+                    "name": "Procedure aiding diagnosis (procedure)",
+                    "display": "Procedure aiding diagnosis (procedure)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "96",
+                            "name": "Procedure aiding diagnosis (procedure) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "99",
+                    "name": "Blood gas analysis (procedure)",
+                    "display": "Blood gas analysis (procedure)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "98",
+                            "name": "Blood gas analysis (procedure) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "101",
+                    "name": "Encounter Face to Face",
+                    "display": "Encounter Face to Face",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "100",
+                            "name": "Encounter Face to Face code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "103",
+                    "name": "Seen by physician (finding)",
+                    "display": "Seen by physician (finding)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "102",
+                            "name": "Seen by physician (finding) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "105",
+                    "name": "Seen by clinical nurse specialist (finding)",
+                    "display": "Seen by clinical nurse specialist (finding)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "104",
+                            "name": "Seen by clinical nurse specialist (finding) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "107",
+                    "name": "Seen by nurse practitioner (finding)",
+                    "display": "Seen by nurse practitioner (finding)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "106",
+                            "name": "Seen by nurse practitioner (finding) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "109",
+                    "name": "Referred by physician assistant (finding)",
+                    "display": "Referred by physician assistant (finding)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "108",
+                            "name": "Referred by physician assistant (finding) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "111",
+                    "name": "Home oxygen therapy (procedure)",
+                    "display": "Home oxygen therapy (procedure)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "110",
+                            "name": "Home oxygen therapy (procedure) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "113",
+                    "name": "Encounter Inpatient",
+                    "display": "Encounter Inpatient",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "112",
+                            "name": "Encounter Inpatient code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "115",
+                    "name": "Encounter Hospital Outpatient",
+                    "display": "Encounter Hospital Outpatient",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "114",
+                            "name": "Encounter Hospital Outpatient code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "117",
+                    "name": "initial",
+                    "display": "initial",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "116",
+                            "name": "initial code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "119",
+                    "name": "title",
+                    "display": "title",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "118",
+                            "name": "title code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "121",
+                    "name": "Checking patient identity (procedure)",
+                    "display": "Checking patient identity (procedure)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "120",
+                            "name": "Checking patient identity (procedure) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "123",
+                    "name": "Confirming patient identity prior to procedure (procedure)",
+                    "display": "Confirming patient identity prior to procedure (procedure)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "122",
+                            "name": "Confirming patient identity prior to procedure (procedure) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "125",
+                    "name": "Attending physician (occupation)",
+                    "display": "Attending physician (occupation)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "124",
+                            "name": "Attending physician (occupation) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "127",
+                    "name": "National provider ID",
+                    "display": "National provider ID",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "126",
+                            "name": "National provider ID code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "129",
+                    "name": "Illness (finding)",
+                    "display": "Illness (finding)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "128",
+                            "name": "Illness (finding) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "131",
+                    "name": "Patient's condition worsened (finding)",
+                    "display": "Patient's condition worsened (finding)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "130",
+                            "name": "Patient's condition worsened (finding) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "133",
+                    "name": "Patient's condition improved (finding)",
+                    "display": "Patient's condition improved (finding)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "132",
+                            "name": "Patient's condition improved (finding) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "135",
+                    "name": "Conditional prognosis (finding)",
+                    "display": "Conditional prognosis (finding)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "134",
+                            "name": "Conditional prognosis (finding) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "137",
+                    "name": "Mobile in home (finding)",
+                    "display": "Mobile in home (finding)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "136",
+                            "name": "Mobile in home (finding) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "139",
+                    "name": "Gathering of past medical history (procedure)",
+                    "display": "Gathering of past medical history (procedure)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "138",
+                            "name": "Gathering of past medical history (procedure) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "141",
+                    "name": "Therapeutic regimen (regime/therapy)",
+                    "display": "Therapeutic regimen (regime/therapy)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "140",
+                            "name": "Therapeutic regimen (regime/therapy) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "143",
+                    "name": "Administration of prescribed medications based on arterial blood gas results (procedure)",
+                    "display": "Administration of prescribed medications based on arterial blood gas results (procedure)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "142",
+                            "name": "Administration of prescribed medications based on arterial blood gas results (procedure) code"
+                        }
+                    ]
+                }
+            ]
+        },
+        "statements": {
+            "def": [
+                {
+                    "name": "Patient",
+                    "context": "Patient",
+                    "expression": {
+                        "type": "SingletonFrom",
+                        "operand": {
+                            "dataType": "{http://hl7.org/fhir}Patient",
+                            "type": "Retrieve"
+                        }
+                    }
+                },
+                {
+                    "localId": "156",
+                    "name": "Physician",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "156",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Physician\"",
+                                            ":\n\t"
+                                        ]
+                                    },
+                                    {
+                                        "r": "155",
+                                        "s": [
+                                            {
+                                                "s": [
+                                                    {
+                                                        "r": "145",
+                                                        "s": [
+                                                            {
+                                                                "r": "144",
+                                                                "s": [
+                                                                    {
+                                                                        "r": "144",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "[",
+                                                                                    "Practitioner",
+                                                                                    ": "
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "s": [
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "\"Attending physician (occupation)\""
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "value": [
+                                                                                    "]"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    " ",
+                                                                    "P"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n\t"
+                                                ]
+                                            },
+                                            {
+                                                "r": "150",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "where "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "150",
+                                                        "s": [
+                                                            {
+                                                                "r": "148",
+                                                                "s": [
+                                                                    {
+                                                                        "r": "147",
+                                                                        "s": [
+                                                                            {
+                                                                                "r": "146",
+                                                                                "s": [
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "P"
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "value": [
+                                                                                    "."
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "r": "147",
+                                                                                "s": [
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "identifier"
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "value": [
+                                                                            "."
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "148",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "id"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    " ",
+                                                                    "=",
+                                                                    " "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "r": "149",
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"National provider ID\""
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n\t"
+                                                ]
+                                            },
+                                            {
+                                                "r": "154",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "return "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "153",
+                                                        "s": [
+                                                            {
+                                                                "r": "152",
+                                                                "s": [
+                                                                    {
+                                                                        "r": "151",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "P"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "value": [
+                                                                            "."
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "152",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "qualification"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "."
+                                                                ]
+                                                            },
+                                                            {
+                                                                "r": "153",
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "code"
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "155",
+                        "type": "Query",
+                        "source": [
+                            {
+                                "localId": "145",
+                                "alias": "P",
+                                "expression": {
+                                    "localId": "144",
+                                    "dataType": "{http://hl7.org/fhir}Practitioner",
+                                    "type": "Retrieve",
+                                    "codes": {
+                                        "name": "Attending physician (occupation)",
+                                        "type": "ConceptRef"
+                                    }
+                                }
+                            }
+                        ],
+                        "relationship": [],
+                        "where": {
+                            "localId": "150",
+                            "type": "Equal",
+                            "operand": [
+                                {
+                                    "localId": "148",
+                                    "type": "Query",
+                                    "source": [
+                                        {
+                                            "alias": "$this",
+                                            "expression": {
+                                                "localId": "147",
+                                                "path": "identifier",
+                                                "scope": "P",
+                                                "type": "Property"
+                                            }
+                                        }
+                                    ],
+                                    "where": {
+                                        "type": "Not",
+                                        "operand": {
+                                            "type": "IsNull",
+                                            "operand": {
+                                                "path": "id",
+                                                "type": "Property",
+                                                "source": {
+                                                    "name": "$this",
+                                                    "type": "AliasRef"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "return": {
+                                        "expression": {
+                                            "path": "id",
+                                            "type": "Property",
+                                            "source": {
+                                                "name": "$this",
+                                                "type": "AliasRef"
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "localId": "149",
+                                    "name": "National provider ID",
+                                    "type": "ConceptRef"
+                                }
+                            ]
+                        },
+                        "return": {
+                            "localId": "154",
+                            "expression": {
+                                "localId": "153",
+                                "type": "Query",
+                                "source": [
+                                    {
+                                        "alias": "$this",
+                                        "expression": {
+                                            "localId": "152",
+                                            "path": "qualification",
+                                            "scope": "P",
+                                            "type": "Property"
+                                        }
+                                    }
+                                ],
+                                "where": {
+                                    "type": "Not",
+                                    "operand": {
+                                        "type": "IsNull",
+                                        "operand": {
+                                            "path": "code",
+                                            "type": "Property",
+                                            "source": {
+                                                "name": "$this",
+                                                "type": "AliasRef"
+                                            }
+                                        }
+                                    }
+                                },
+                                "return": {
+                                    "expression": {
+                                        "path": "code",
+                                        "type": "Property",
+                                        "source": {
+                                            "name": "$this",
+                                            "type": "AliasRef"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "localId": "158",
+                    "name": "Practitioner Signature",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "158",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Practitioner Signature\"",
+                                            ":\n\t"
+                                        ]
+                                    },
+                                    {
+                                        "r": "157",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "'e-prescription containing digital Signature of the Pratitioner and date'"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "157",
+                        "valueType": "{urn:hl7-org:elm-types:r1}String",
+                        "value": "e-prescription containing digital Signature of the Pratitioner and date",
+                        "type": "Literal"
+                    }
+                },
+                {
+                    "localId": "185",
+                    "name": "WOPD Details Required",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "185",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"WOPD Details Required\"",
+                                            ":\n\t"
+                                        ]
+                                    },
+                                    {
+                                        "r": "184",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Patient\"",
+                                                            ":"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "159",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Patient\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n\t"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Practitioner\"",
+                                                            ":"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "160",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Physician\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n\t"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"DeviceRequest\"",
+                                                            ":"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "161",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Equipment requirement (finding)\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n\t"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"DeviceUseStatement\"",
+                                                            ":"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "162",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Equipment in use (finding)\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n\t"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Observation\"",
+                                                            ": "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "163",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Equipment related features (finding)\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n\t"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Procedure\"",
+                                                            ": "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "164",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Home oxygen therapy (procedure)\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n\t"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Organization\"",
+                                                            ":"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "165",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"National provider ID\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n\t"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Procedure\"",
+                                                            ": "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "166",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Durable medical equipment education, guidance, and counseling (procedure)\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n\t"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Encounter\"",
+                                                            ": "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "167",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Encounter Face to Face\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n\t"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Encounter\"",
+                                                            ": "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "168",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Seen by physician (finding)\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n\t"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Encounter\"",
+                                                            ": "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "169",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Seen by clinical nurse specialist (finding)\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n\t"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Encounter\"",
+                                                            ": "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "170",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Seen by nurse practitioner (finding)\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n\t"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Encounter\"",
+                                                            ": "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "171",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Referred by physician assistant (finding)\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n\t"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"DiagnosticReport\"",
+                                                            ":"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "172",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Primary diagnosis\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n\t"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Condition\"",
+                                                            ":"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "173",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Illness (finding)\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n\t"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Observation\"",
+                                                            ": "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "174",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Patient's condition worsened (finding)\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n\t"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Observation\"",
+                                                            ": "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "175",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Patient's condition improved (finding)\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n\t"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Observation\"",
+                                                            ": "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "176",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Mobile in home (finding)\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n\t"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"ClinicalImpression\"",
+                                                            ":"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "177",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Conditional prognosis (finding)\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n\t"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Procedure\"",
+                                                            ": "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "178",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Blood gas analysis (procedure)\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n\t"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"MedicationAdministration\"",
+                                                            ":"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "179",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Administration of prescribed medications based on arterial blood gas results (procedure)\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n\t"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Condition\"",
+                                                            ": "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "180",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Functional movement disorder (disorder)\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n\t"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Procedure\"",
+                                                            ": "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "181",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Evaluating interventions (procedure)\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n\t"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Observation\"",
+                                                            ": "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "182",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Past history of procedure (situation)\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n\t"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Procedure\"",
+                                                            ": "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "183",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Gathering of past medical history (procedure)\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n\t}"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "184",
+                        "type": "Tuple",
+                        "element": [
+                            {
+                                "name": "Patient",
+                                "value": {
+                                    "localId": "159",
+                                    "name": "Patient",
+                                    "type": "ExpressionRef"
+                                }
+                            },
+                            {
+                                "name": "Practitioner",
+                                "value": {
+                                    "localId": "160",
+                                    "name": "Physician",
+                                    "type": "ExpressionRef"
+                                }
+                            },
+                            {
+                                "name": "DeviceRequest",
+                                "value": {
+                                    "localId": "161",
+                                    "name": "Equipment requirement (finding)",
+                                    "type": "ConceptRef"
+                                }
+                            },
+                            {
+                                "name": "DeviceUseStatement",
+                                "value": {
+                                    "localId": "162",
+                                    "name": "Equipment in use (finding)",
+                                    "type": "ConceptRef"
+                                }
+                            },
+                            {
+                                "name": "Observation",
+                                "value": {
+                                    "localId": "163",
+                                    "name": "Equipment related features (finding)",
+                                    "type": "ConceptRef"
+                                }
+                            },
+                            {
+                                "name": "Procedure",
+                                "value": {
+                                    "localId": "164",
+                                    "name": "Home oxygen therapy (procedure)",
+                                    "type": "ConceptRef"
+                                }
+                            },
+                            {
+                                "name": "Organization",
+                                "value": {
+                                    "localId": "165",
+                                    "name": "National provider ID",
+                                    "type": "ConceptRef"
+                                }
+                            },
+                            {
+                                "name": "Procedure",
+                                "value": {
+                                    "localId": "166",
+                                    "name": "Durable medical equipment education, guidance, and counseling (procedure)",
+                                    "type": "ConceptRef"
+                                }
+                            },
+                            {
+                                "name": "Encounter",
+                                "value": {
+                                    "localId": "167",
+                                    "name": "Encounter Face to Face",
+                                    "type": "ConceptRef"
+                                }
+                            },
+                            {
+                                "name": "Encounter",
+                                "value": {
+                                    "localId": "168",
+                                    "name": "Seen by physician (finding)",
+                                    "type": "ConceptRef"
+                                }
+                            },
+                            {
+                                "name": "Encounter",
+                                "value": {
+                                    "localId": "169",
+                                    "name": "Seen by clinical nurse specialist (finding)",
+                                    "type": "ConceptRef"
+                                }
+                            },
+                            {
+                                "name": "Encounter",
+                                "value": {
+                                    "localId": "170",
+                                    "name": "Seen by nurse practitioner (finding)",
+                                    "type": "ConceptRef"
+                                }
+                            },
+                            {
+                                "name": "Encounter",
+                                "value": {
+                                    "localId": "171",
+                                    "name": "Referred by physician assistant (finding)",
+                                    "type": "ConceptRef"
+                                }
+                            },
+                            {
+                                "name": "DiagnosticReport",
+                                "value": {
+                                    "localId": "172",
+                                    "name": "Primary diagnosis",
+                                    "type": "ConceptRef"
+                                }
+                            },
+                            {
+                                "name": "Condition",
+                                "value": {
+                                    "localId": "173",
+                                    "name": "Illness (finding)",
+                                    "type": "ConceptRef"
+                                }
+                            },
+                            {
+                                "name": "Observation",
+                                "value": {
+                                    "localId": "174",
+                                    "name": "Patient's condition worsened (finding)",
+                                    "type": "ConceptRef"
+                                }
+                            },
+                            {
+                                "name": "Observation",
+                                "value": {
+                                    "localId": "175",
+                                    "name": "Patient's condition improved (finding)",
+                                    "type": "ConceptRef"
+                                }
+                            },
+                            {
+                                "name": "Observation",
+                                "value": {
+                                    "localId": "176",
+                                    "name": "Mobile in home (finding)",
+                                    "type": "ConceptRef"
+                                }
+                            },
+                            {
+                                "name": "ClinicalImpression",
+                                "value": {
+                                    "localId": "177",
+                                    "name": "Conditional prognosis (finding)",
+                                    "type": "ConceptRef"
+                                }
+                            },
+                            {
+                                "name": "Procedure",
+                                "value": {
+                                    "localId": "178",
+                                    "name": "Blood gas analysis (procedure)",
+                                    "type": "ConceptRef"
+                                }
+                            },
+                            {
+                                "name": "MedicationAdministration",
+                                "value": {
+                                    "localId": "179",
+                                    "name": "Administration of prescribed medications based on arterial blood gas results (procedure)",
+                                    "type": "ConceptRef"
+                                }
+                            },
+                            {
+                                "name": "Condition",
+                                "value": {
+                                    "localId": "180",
+                                    "name": "Functional movement disorder (disorder)",
+                                    "type": "ConceptRef"
+                                }
+                            },
+                            {
+                                "name": "Procedure",
+                                "value": {
+                                    "localId": "181",
+                                    "name": "Evaluating interventions (procedure)",
+                                    "type": "ConceptRef"
+                                }
+                            },
+                            {
+                                "name": "Observation",
+                                "value": {
+                                    "localId": "182",
+                                    "name": "Past history of procedure (situation)",
+                                    "type": "ConceptRef"
+                                }
+                            },
+                            {
+                                "name": "Procedure",
+                                "value": {
+                                    "localId": "183",
+                                    "name": "Gathering of past medical history (procedure)",
+                                    "type": "ConceptRef"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "189",
+                    "name": "Requirements",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "189",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Requirements\"",
+                                            ":\n\t"
+                                        ]
+                                    },
+                                    {
+                                        "r": "188",
+                                        "s": [
+                                            {
+                                                "r": "186",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"WOPD Details Required\""
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n\tunion "
+                                                ]
+                                            },
+                                            {
+                                                "r": "187",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Practitioner Signature\""
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "188",
+                        "type": "Union",
+                        "operand": [
+                            {
+                                "type": "ToList",
+                                "operand": {
+                                    "localId": "186",
+                                    "name": "WOPD Details Required",
+                                    "type": "ExpressionRef"
+                                }
+                            },
+                            {
+                                "type": "ToList",
+                                "operand": {
+                                    "localId": "187",
+                                    "name": "Practitioner Signature",
+                                    "type": "ExpressionRef"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

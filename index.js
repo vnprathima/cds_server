@@ -18,7 +18,7 @@ if (vsacUser) {
 console.log('\\-------------------------------------------------------------------------------');
 
 // Set up the library
-const elmFile = JSON.parse(fs.readFileSync(path.join(__dirname, 'cqls', 'AdultLiverTransplantation_requirements.json'), 'utf8'));
+const elmFile = JSON.parse(fs.readFileSync(path.join(__dirname, 'cqls', 'HomeOxygenTherapy_requirements.json'), 'utf8'));
 const libraries = {
   FHIRHelpers: JSON.parse(fs.readFileSync(path.join(__dirname,  'fhir-helpers', 'v1.0.2', 'FHIRHelpers.json'), 'utf8'))
 };
