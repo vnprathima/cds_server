@@ -5079,7 +5079,7 @@
                 },
                 {
                     "localId": "462",
-                    "name": "Not Covered",
+                    "name": "NotCovered",
                     "context": "Patient",
                     "accessLevel": "Public",
                     "annotation": [
@@ -5091,7 +5091,7 @@
                                     {
                                         "value": [
                                             "define ",
-                                            "\"Not Covered\"",
+                                            "\"NotCovered\"",
                                             ":\n\t"
                                         ]
                                     },
@@ -7135,7 +7135,7 @@
                                                         "s": [
                                                             {
                                                                 "value": [
-                                                                    "\"Not Covered\""
+                                                                    "\"NotCovered\""
                                                                 ]
                                                             }
                                                         ]
@@ -7162,7 +7162,7 @@
                                 "type": "Not",
                                 "operand": {
                                     "localId": "464",
-                                    "name": "Not Covered",
+                                    "name": "NotCovered",
                                     "type": "ExpressionRef"
                                 }
                             }

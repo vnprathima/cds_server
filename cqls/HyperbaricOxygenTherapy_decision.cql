@@ -222,7 +222,7 @@ define "Covered":
     then true
     else false
 
-define "Not Covered":
+define "NotCovered":
 	exists([Condition: "Skin ulcer (disorder)"])
 	or exists([Condition: "Pressure ulcer (disorder)"])
 	or exists([Condition: "Stasis ulcer (disorder)"])
@@ -249,4 +249,4 @@ define "Not Covered":
 	or exists([Condition: "Cerebral edema (disorder)"])
 
 define "Coverage":
-	"Covered" and not "Not Covered"
+	"Covered" and not "NotCovered"

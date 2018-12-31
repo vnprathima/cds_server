@@ -2,349 +2,9 @@
     "library": {
         "annotation": [
             {
-                "startLine": 197,
-                "startChar": 6,
-                "endLine": 197,
-                "endChar": 52,
-                "message": "Could not resolve membership operator for terminology target of the retrieve.",
-                "errorType": "semantic",
-                "errorSeverity": "warning",
-                "type": "CqlToElmError"
-            },
-            {
-                "startLine": 197,
-                "startChar": 61,
-                "endLine": 197,
-                "endChar": 117,
-                "message": "Retrieve has a terminology target but does not specify a code path and the type of the retrieve does not have a primary code path defined.",
-                "errorType": "semantic",
-                "errorSeverity": "warning",
-                "type": "CqlToElmError"
-            },
-            {
-                "startLine": 197,
-                "startChar": 61,
-                "endLine": 197,
-                "endChar": 117,
-                "message": "Could not resolve membership operator for terminology target of the retrieve.",
-                "errorType": "semantic",
-                "errorSeverity": "warning",
-                "type": "CqlToElmError"
-            },
-            {
-                "startLine": 198,
-                "startChar": 6,
-                "endLine": 198,
-                "endChar": 49,
-                "message": "Could not resolve membership operator for terminology target of the retrieve.",
-                "errorType": "semantic",
-                "errorSeverity": "warning",
-                "type": "CqlToElmError"
-            },
-            {
-                "startLine": 198,
-                "startChar": 57,
-                "endLine": 198,
-                "endChar": 100,
-                "message": "Could not resolve membership operator for terminology target of the retrieve.",
-                "errorType": "semantic",
-                "errorSeverity": "warning",
-                "type": "CqlToElmError"
-            },
-            {
-                "startLine": 199,
-                "startChar": 6,
-                "endLine": 199,
-                "endChar": 49,
-                "message": "Could not resolve membership operator for terminology target of the retrieve.",
-                "errorType": "semantic",
-                "errorSeverity": "warning",
-                "type": "CqlToElmError"
-            },
-            {
-                "startLine": 199,
-                "startChar": 57,
-                "endLine": 199,
-                "endChar": 103,
-                "message": "Could not resolve membership operator for terminology target of the retrieve.",
-                "errorType": "semantic",
-                "errorSeverity": "warning",
-                "type": "CqlToElmError"
-            },
-            {
-                "startLine": 199,
-                "startChar": 111,
-                "endLine": 199,
-                "endChar": 154,
-                "message": "Could not resolve membership operator for terminology target of the retrieve.",
-                "errorType": "semantic",
-                "errorSeverity": "warning",
-                "type": "CqlToElmError"
-            },
-            {
-                "startLine": 200,
-                "startChar": 6,
-                "endLine": 200,
-                "endChar": 46,
-                "message": "Could not resolve membership operator for terminology target of the retrieve.",
-                "errorType": "semantic",
-                "errorSeverity": "warning",
-                "type": "CqlToElmError"
-            },
-            {
-                "startLine": 200,
-                "startChar": 54,
-                "endLine": 200,
-                "endChar": 110,
-                "message": "Retrieve has a terminology target but does not specify a code path and the type of the retrieve does not have a primary code path defined.",
-                "errorType": "semantic",
-                "errorSeverity": "warning",
-                "type": "CqlToElmError"
-            },
-            {
-                "startLine": 200,
-                "startChar": 54,
-                "endLine": 200,
-                "endChar": 110,
-                "message": "Could not resolve membership operator for terminology target of the retrieve.",
-                "errorType": "semantic",
-                "errorSeverity": "warning",
-                "type": "CqlToElmError"
-            },
-            {
-                "startLine": 200,
-                "startChar": 118,
-                "endLine": 200,
-                "endChar": 161,
-                "message": "Could not resolve membership operator for terminology target of the retrieve.",
-                "errorType": "semantic",
-                "errorSeverity": "warning",
-                "type": "CqlToElmError"
-            },
-            {
-                "startLine": 201,
-                "startChar": 6,
-                "endLine": 201,
-                "endChar": 55,
-                "message": "Could not resolve membership operator for terminology target of the retrieve.",
-                "errorType": "semantic",
-                "errorSeverity": "warning",
-                "type": "CqlToElmError"
-            },
-            {
-                "startLine": 201,
-                "startChar": 63,
-                "endLine": 201,
-                "endChar": 103,
-                "message": "Could not resolve membership operator for terminology target of the retrieve.",
-                "errorType": "semantic",
-                "errorSeverity": "warning",
-                "type": "CqlToElmError"
-            },
-            {
-                "startLine": 201,
-                "startChar": 110,
-                "endLine": 201,
-                "endChar": 177,
-                "message": "Could not resolve membership operator for terminology target of the retrieve.",
-                "errorType": "semantic",
-                "errorSeverity": "warning",
-                "type": "CqlToElmError"
-            },
-            {
-                "startLine": 201,
-                "startChar": 185,
-                "endLine": 201,
-                "endChar": 241,
-                "message": "Retrieve has a terminology target but does not specify a code path and the type of the retrieve does not have a primary code path defined.",
-                "errorType": "semantic",
-                "errorSeverity": "warning",
-                "type": "CqlToElmError"
-            },
-            {
-                "startLine": 201,
-                "startChar": 185,
-                "endLine": 201,
-                "endChar": 241,
-                "message": "Could not resolve membership operator for terminology target of the retrieve.",
-                "errorType": "semantic",
-                "errorSeverity": "warning",
-                "type": "CqlToElmError"
-            },
-            {
-                "startLine": 202,
-                "startChar": 6,
-                "endLine": 202,
-                "endChar": 55,
-                "message": "Could not resolve membership operator for terminology target of the retrieve.",
-                "errorType": "semantic",
-                "errorSeverity": "warning",
-                "type": "CqlToElmError"
-            },
-            {
-                "startLine": 202,
-                "startChar": 63,
-                "endLine": 202,
-                "endChar": 103,
-                "message": "Could not resolve membership operator for terminology target of the retrieve.",
-                "errorType": "semantic",
-                "errorSeverity": "warning",
-                "type": "CqlToElmError"
-            },
-            {
-                "startLine": 202,
-                "startChar": 110,
-                "endLine": 202,
-                "endChar": 177,
-                "message": "Could not resolve membership operator for terminology target of the retrieve.",
-                "errorType": "semantic",
-                "errorSeverity": "warning",
-                "type": "CqlToElmError"
-            },
-            {
-                "startLine": 202,
-                "startChar": 185,
-                "endLine": 202,
-                "endChar": 241,
-                "message": "Retrieve has a terminology target but does not specify a code path and the type of the retrieve does not have a primary code path defined.",
-                "errorType": "semantic",
-                "errorSeverity": "warning",
-                "type": "CqlToElmError"
-            },
-            {
-                "startLine": 202,
-                "startChar": 185,
-                "endLine": 202,
-                "endChar": 241,
-                "message": "Could not resolve membership operator for terminology target of the retrieve.",
-                "errorType": "semantic",
-                "errorSeverity": "warning",
-                "type": "CqlToElmError"
-            },
-            {
-                "startLine": 203,
-                "startChar": 6,
-                "endLine": 203,
-                "endChar": 62,
-                "message": "Could not resolve membership operator for terminology target of the retrieve.",
-                "errorType": "semantic",
-                "errorSeverity": "warning",
-                "type": "CqlToElmError"
-            },
-            {
-                "startLine": 204,
-                "startChar": 6,
-                "endLine": 204,
-                "endChar": 60,
-                "message": "Could not resolve membership operator for terminology target of the retrieve.",
-                "errorType": "semantic",
-                "errorSeverity": "warning",
-                "type": "CqlToElmError"
-            },
-            {
-                "startLine": 205,
-                "startChar": 6,
-                "endLine": 205,
-                "endChar": 61,
-                "message": "Could not resolve membership operator for terminology target of the retrieve.",
-                "errorType": "semantic",
-                "errorSeverity": "warning",
-                "type": "CqlToElmError"
-            },
-            {
-                "startLine": 206,
-                "startChar": 6,
-                "endLine": 206,
-                "endChar": 43,
-                "message": "Could not resolve membership operator for terminology target of the retrieve.",
-                "errorType": "semantic",
-                "errorSeverity": "warning",
-                "type": "CqlToElmError"
-            },
-            {
-                "startLine": 207,
-                "startChar": 6,
-                "endLine": 207,
-                "endChar": 43,
-                "message": "Could not resolve membership operator for terminology target of the retrieve.",
-                "errorType": "semantic",
-                "errorSeverity": "warning",
-                "type": "CqlToElmError"
-            },
-            {
-                "startLine": 208,
-                "startChar": 6,
-                "endLine": 208,
-                "endChar": 50,
-                "message": "Could not resolve membership operator for terminology target of the retrieve.",
-                "errorType": "semantic",
-                "errorSeverity": "warning",
-                "type": "CqlToElmError"
-            },
-            {
-                "startLine": 209,
-                "startChar": 6,
-                "endLine": 209,
-                "endChar": 46,
-                "message": "Could not resolve membership operator for terminology target of the retrieve.",
-                "errorType": "semantic",
-                "errorSeverity": "warning",
-                "type": "CqlToElmError"
-            },
-            {
-                "startLine": 209,
-                "startChar": 54,
-                "endLine": 209,
-                "endChar": 107,
-                "message": "Could not resolve membership operator for terminology target of the retrieve.",
-                "errorType": "semantic",
-                "errorSeverity": "warning",
-                "type": "CqlToElmError"
-            },
-            {
                 "startLine": 210,
-                "startChar": 6,
-                "endLine": 210,
-                "endChar": 52,
-                "message": "Could not resolve membership operator for terminology target of the retrieve.",
-                "errorType": "semantic",
-                "errorSeverity": "warning",
-                "type": "CqlToElmError"
-            },
-            {
-                "startLine": 211,
-                "startChar": 6,
-                "endLine": 211,
-                "endChar": 64,
-                "message": "Could not resolve membership operator for terminology target of the retrieve.",
-                "errorType": "semantic",
-                "errorSeverity": "warning",
-                "type": "CqlToElmError"
-            },
-            {
-                "startLine": 212,
-                "startChar": 6,
-                "endLine": 212,
-                "endChar": 62,
-                "message": "Could not resolve membership operator for terminology target of the retrieve.",
-                "errorType": "semantic",
-                "errorSeverity": "warning",
-                "type": "CqlToElmError"
-            },
-            {
-                "startLine": 213,
-                "startChar": 6,
-                "endLine": 213,
-                "endChar": 54,
-                "message": "Could not resolve membership operator for terminology target of the retrieve.",
-                "errorType": "semantic",
-                "errorSeverity": "warning",
-                "type": "CqlToElmError"
-            },
-            {
-                "startLine": 217,
                 "startChar": 9,
-                "endLine": 217,
+                "endLine": 210,
                 "endChar": 60,
                 "message": "Could not resolve membership operator for terminology target of the retrieve.",
                 "errorType": "semantic",
@@ -2068,7 +1728,7 @@
         "statements": {
             "def": [
                 {
-                    "localId": "335",
+                    "localId": "317",
                     "name": "Requirements",
                     "context": "Patient",
                     "accessLevel": "Public",
@@ -2076,63 +1736,52 @@
                         {
                             "type": "Annotation",
                             "s": {
-                                "r": "335",
+                                "r": "317",
                                 "s": [
                                     {
                                         "value": [
                                             "define ",
                                             "\"Requirements\"",
-                                            ":\r\n    "
+                                            ":\n    "
                                         ]
                                     },
                                     {
-                                        "r": "334",
+                                        "r": "316",
                                         "s": [
                                             {
                                                 "value": [
-                                                    "{\r\n    "
+                                                    "{\n    "
                                                 ]
                                             },
                                             {
-                                                "r": "293",
                                                 "s": [
                                                     {
                                                         "value": [
-                                                            "("
+                                                            "\"Condition\"",
+                                                            " : "
                                                         ]
                                                     },
                                                     {
-                                                        "r": "293",
+                                                        "r": "310",
                                                         "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{"
+                                                                ]
+                                                            },
                                                             {
                                                                 "r": "291",
                                                                 "s": [
                                                                     {
                                                                         "value": [
-                                                                            "[",
-                                                                            "Condition",
-                                                                            ": "
-                                                                        ]
-                                                                    },
-                                                                    {
-                                                                        "s": [
-                                                                            {
-                                                                                "value": [
-                                                                                    "\"Chronic osteomyelitis (disorder)\""
-                                                                                ]
-                                                                            }
-                                                                        ]
-                                                                    },
-                                                                    {
-                                                                        "value": [
-                                                                            "]"
+                                                                            "\"Chronic osteomyelitis (disorder)\""
                                                                         ]
                                                                     }
                                                                 ]
                                                             },
                                                             {
                                                                 "value": [
-                                                                    " union  "
+                                                                    ","
                                                                 ]
                                                             },
                                                             {
@@ -2140,81 +1789,44 @@
                                                                 "s": [
                                                                     {
                                                                         "value": [
-                                                                            "[",
-                                                                            "Observation",
-                                                                            ": "
-                                                                        ]
-                                                                    },
-                                                                    {
-                                                                        "s": [
-                                                                            {
-                                                                                "value": [
-                                                                                    "\"Absent response to treatment (situation)\""
-                                                                                ]
-                                                                            }
-                                                                        ]
-                                                                    },
-                                                                    {
-                                                                        "value": [
-                                                                            "]"
-                                                                        ]
-                                                                    }
-                                                                ]
-                                                            }
-                                                        ]
-                                                    },
-                                                    {
-                                                        "value": [
-                                                            ")"
-                                                        ]
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "value": [
-                                                    ",\r\n    "
-                                                ]
-                                            },
-                                            {
-                                                "r": "296",
-                                                "s": [
-                                                    {
-                                                        "value": [
-                                                            "("
-                                                        ]
-                                                    },
-                                                    {
-                                                        "r": "296",
-                                                        "s": [
-                                                            {
-                                                                "r": "294",
-                                                                "s": [
-                                                                    {
-                                                                        "value": [
-                                                                            "[",
-                                                                            "Condition",
-                                                                            ": "
-                                                                        ]
-                                                                    },
-                                                                    {
-                                                                        "s": [
-                                                                            {
-                                                                                "value": [
-                                                                                    "\"Osteoradionecrosis (disorder)\""
-                                                                                ]
-                                                                            }
-                                                                        ]
-                                                                    },
-                                                                    {
-                                                                        "value": [
-                                                                            "]"
+                                                                            "\"Osteoradionecrosis (disorder)\""
                                                                         ]
                                                                     }
                                                                 ]
                                                             },
                                                             {
                                                                 "value": [
-                                                                    " union "
+                                                                    ", "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "r": "293",
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"Soft tissues (body structure)\""
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    ",\n                    "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "r": "294",
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"Radionecrosis of skin (disorder)\""
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    ", "
                                                                 ]
                                                             },
                                                             {
@@ -2222,604 +1834,48 @@
                                                                 "s": [
                                                                     {
                                                                         "value": [
-                                                                            "[",
-                                                                            "Procedure",
-                                                                            ": "
-                                                                        ]
-                                                                    },
-                                                                    {
-                                                                        "s": [
-                                                                            {
-                                                                                "value": [
-                                                                                    "\"General treatment (procedure)\""
-                                                                                ]
-                                                                            }
-                                                                        ]
-                                                                    },
-                                                                    {
-                                                                        "value": [
-                                                                            "]"
-                                                                        ]
-                                                                    }
-                                                                ]
-                                                            }
-                                                        ]
-                                                    },
-                                                    {
-                                                        "value": [
-                                                            ")"
-                                                        ]
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "value": [
-                                                    ",\r\n    "
-                                                ]
-                                            },
-                                            {
-                                                "r": "301",
-                                                "s": [
-                                                    {
-                                                        "value": [
-                                                            "("
-                                                        ]
-                                                    },
-                                                    {
-                                                        "r": "301",
-                                                        "s": [
-                                                            {
-                                                                "r": "299",
-                                                                "s": [
-                                                                    {
-                                                                        "r": "297",
-                                                                        "s": [
-                                                                            {
-                                                                                "value": [
-                                                                                    "[",
-                                                                                    "Condition",
-                                                                                    ": "
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "s": [
-                                                                                    {
-                                                                                        "value": [
-                                                                                            "\"Soft tissues (body structure)\""
-                                                                                        ]
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "value": [
-                                                                                    "]"
-                                                                                ]
-                                                                            }
-                                                                        ]
-                                                                    },
-                                                                    {
-                                                                        "value": [
-                                                                            " union "
-                                                                        ]
-                                                                    },
-                                                                    {
-                                                                        "r": "298",
-                                                                        "s": [
-                                                                            {
-                                                                                "value": [
-                                                                                    "[",
-                                                                                    "Condition",
-                                                                                    ": "
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "s": [
-                                                                                    {
-                                                                                        "value": [
-                                                                                            "\"Radionecrosis of skin (disorder)\""
-                                                                                        ]
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "value": [
-                                                                                    "]"
-                                                                                ]
-                                                                            }
+                                                                            "\"Actinomycosis, unspecified\""
                                                                         ]
                                                                     }
                                                                 ]
                                                             },
                                                             {
                                                                 "value": [
-                                                                    " union "
+                                                                    ", "
                                                                 ]
                                                             },
                                                             {
-                                                                "r": "300",
+                                                                "r": "296",
                                                                 "s": [
                                                                     {
                                                                         "value": [
-                                                                            "[",
-                                                                            "Procedure",
-                                                                            ": "
-                                                                        ]
-                                                                    },
-                                                                    {
-                                                                        "s": [
-                                                                            {
-                                                                                "value": [
-                                                                                    "\"General treatment (procedure)\""
-                                                                                ]
-                                                                            }
-                                                                        ]
-                                                                    },
-                                                                    {
-                                                                        "value": [
-                                                                            "]"
-                                                                        ]
-                                                                    }
-                                                                ]
-                                                            }
-                                                        ]
-                                                    },
-                                                    {
-                                                        "value": [
-                                                            ")"
-                                                        ]
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "value": [
-                                                    ",\r\n    "
-                                                ]
-                                            },
-                                            {
-                                                "r": "306",
-                                                "s": [
-                                                    {
-                                                        "value": [
-                                                            "("
-                                                        ]
-                                                    },
-                                                    {
-                                                        "r": "306",
-                                                        "s": [
-                                                            {
-                                                                "r": "304",
-                                                                "s": [
-                                                                    {
-                                                                        "r": "302",
-                                                                        "s": [
-                                                                            {
-                                                                                "value": [
-                                                                                    "[",
-                                                                                    "Condition",
-                                                                                    ": "
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "s": [
-                                                                                    {
-                                                                                        "value": [
-                                                                                            "\"Actinomycosis, unspecified\""
-                                                                                        ]
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "value": [
-                                                                                    "]"
-                                                                                ]
-                                                                            }
-                                                                        ]
-                                                                    },
-                                                                    {
-                                                                        "value": [
-                                                                            " union "
-                                                                        ]
-                                                                    },
-                                                                    {
-                                                                        "r": "303",
-                                                                        "s": [
-                                                                            {
-                                                                                "value": [
-                                                                                    "[",
-                                                                                    "Observation",
-                                                                                    ": "
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "s": [
-                                                                                    {
-                                                                                        "value": [
-                                                                                            "\"Absent response to treatment (situation)\""
-                                                                                        ]
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "value": [
-                                                                                    "]"
-                                                                                ]
-                                                                            }
+                                                                            "\"Diabetes mellitus type 1 (disorder)\""
                                                                         ]
                                                                     }
                                                                 ]
                                                             },
                                                             {
                                                                 "value": [
-                                                                    " union "
+                                                                    ",\n                    "
                                                                 ]
                                                             },
                                                             {
-                                                                "r": "305",
+                                                                "r": "297",
                                                                 "s": [
                                                                     {
                                                                         "value": [
-                                                                            "[",
-                                                                            "Procedure",
-                                                                            ": "
-                                                                        ]
-                                                                    },
-                                                                    {
-                                                                        "s": [
-                                                                            {
-                                                                                "value": [
-                                                                                    "\"General treatment (procedure)\""
-                                                                                ]
-                                                                            }
-                                                                        ]
-                                                                    },
-                                                                    {
-                                                                        "value": [
-                                                                            "]"
-                                                                        ]
-                                                                    }
-                                                                ]
-                                                            }
-                                                        ]
-                                                    },
-                                                    {
-                                                        "value": [
-                                                            ")"
-                                                        ]
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "value": [
-                                                    ",\r\n    "
-                                                ]
-                                            },
-                                            {
-                                                "r": "313",
-                                                "s": [
-                                                    {
-                                                        "value": [
-                                                            "("
-                                                        ]
-                                                    },
-                                                    {
-                                                        "r": "313",
-                                                        "s": [
-                                                            {
-                                                                "r": "311",
-                                                                "s": [
-                                                                    {
-                                                                        "r": "309",
-                                                                        "s": [
-                                                                            {
-                                                                                "r": "307",
-                                                                                "s": [
-                                                                                    {
-                                                                                        "value": [
-                                                                                            "[",
-                                                                                            "Condition",
-                                                                                            ": "
-                                                                                        ]
-                                                                                    },
-                                                                                    {
-                                                                                        "s": [
-                                                                                            {
-                                                                                                "value": [
-                                                                                                    "\"Diabetes mellitus type 1 (disorder)\""
-                                                                                                ]
-                                                                                            }
-                                                                                        ]
-                                                                                    },
-                                                                                    {
-                                                                                        "value": [
-                                                                                            "]"
-                                                                                        ]
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "value": [
-                                                                                    " union "
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "r": "308",
-                                                                                "s": [
-                                                                                    {
-                                                                                        "value": [
-                                                                                            "[",
-                                                                                            "Condition",
-                                                                                            ": "
-                                                                                        ]
-                                                                                    },
-                                                                                    {
-                                                                                        "s": [
-                                                                                            {
-                                                                                                "value": [
-                                                                                                    "\"Wagner syndrome (disorder)\""
-                                                                                                ]
-                                                                                            }
-                                                                                        ]
-                                                                                    },
-                                                                                    {
-                                                                                        "value": [
-                                                                                            "]"
-                                                                                        ]
-                                                                                    }
-                                                                                ]
-                                                                            }
-                                                                        ]
-                                                                    },
-                                                                    {
-                                                                        "value": [
-                                                                            " union"
-                                                                        ]
-                                                                    },
-                                                                    {
-                                                                        "r": "310",
-                                                                        "s": [
-                                                                            {
-                                                                                "value": [
-                                                                                    "[",
-                                                                                    "Procedure",
-                                                                                    ": "
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "s": [
-                                                                                    {
-                                                                                        "value": [
-                                                                                            "\"Providing care according to standard (regime/therapy)\""
-                                                                                        ]
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "value": [
-                                                                                    "]"
-                                                                                ]
-                                                                            }
+                                                                            "\"Diabetes mellitus type 2 (disorder)\""
                                                                         ]
                                                                     }
                                                                 ]
                                                             },
                                                             {
                                                                 "value": [
-                                                                    " union "
+                                                                    ", "
                                                                 ]
                                                             },
                                                             {
-                                                                "r": "312",
-                                                                "s": [
-                                                                    {
-                                                                        "value": [
-                                                                            "[",
-                                                                            "Observation",
-                                                                            ": "
-                                                                        ]
-                                                                    },
-                                                                    {
-                                                                        "s": [
-                                                                            {
-                                                                                "value": [
-                                                                                    "\"Absent response to treatment (situation)\""
-                                                                                ]
-                                                                            }
-                                                                        ]
-                                                                    },
-                                                                    {
-                                                                        "value": [
-                                                                            "]"
-                                                                        ]
-                                                                    }
-                                                                ]
-                                                            }
-                                                        ]
-                                                    },
-                                                    {
-                                                        "value": [
-                                                            ")"
-                                                        ]
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "value": [
-                                                    ",\r\n    "
-                                                ]
-                                            },
-                                            {
-                                                "r": "320",
-                                                "s": [
-                                                    {
-                                                        "value": [
-                                                            "("
-                                                        ]
-                                                    },
-                                                    {
-                                                        "r": "320",
-                                                        "s": [
-                                                            {
-                                                                "r": "318",
-                                                                "s": [
-                                                                    {
-                                                                        "r": "316",
-                                                                        "s": [
-                                                                            {
-                                                                                "r": "314",
-                                                                                "s": [
-                                                                                    {
-                                                                                        "value": [
-                                                                                            "[",
-                                                                                            "Condition",
-                                                                                            ": "
-                                                                                        ]
-                                                                                    },
-                                                                                    {
-                                                                                        "s": [
-                                                                                            {
-                                                                                                "value": [
-                                                                                                    "\"Diabetes mellitus type 2 (disorder)\""
-                                                                                                ]
-                                                                                            }
-                                                                                        ]
-                                                                                    },
-                                                                                    {
-                                                                                        "value": [
-                                                                                            "]"
-                                                                                        ]
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "value": [
-                                                                                    " union "
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "r": "315",
-                                                                                "s": [
-                                                                                    {
-                                                                                        "value": [
-                                                                                            "[",
-                                                                                            "Condition",
-                                                                                            ": "
-                                                                                        ]
-                                                                                    },
-                                                                                    {
-                                                                                        "s": [
-                                                                                            {
-                                                                                                "value": [
-                                                                                                    "\"Wagner syndrome (disorder)\""
-                                                                                                ]
-                                                                                            }
-                                                                                        ]
-                                                                                    },
-                                                                                    {
-                                                                                        "value": [
-                                                                                            "]"
-                                                                                        ]
-                                                                                    }
-                                                                                ]
-                                                                            }
-                                                                        ]
-                                                                    },
-                                                                    {
-                                                                        "value": [
-                                                                            " union"
-                                                                        ]
-                                                                    },
-                                                                    {
-                                                                        "r": "317",
-                                                                        "s": [
-                                                                            {
-                                                                                "value": [
-                                                                                    "[",
-                                                                                    "Procedure",
-                                                                                    ": "
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "s": [
-                                                                                    {
-                                                                                        "value": [
-                                                                                            "\"Providing care according to standard (regime/therapy)\""
-                                                                                        ]
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                "value": [
-                                                                                    "]"
-                                                                                ]
-                                                                            }
-                                                                        ]
-                                                                    }
-                                                                ]
-                                                            },
-                                                            {
-                                                                "value": [
-                                                                    " union "
-                                                                ]
-                                                            },
-                                                            {
-                                                                "r": "319",
-                                                                "s": [
-                                                                    {
-                                                                        "value": [
-                                                                            "[",
-                                                                            "Observation",
-                                                                            ": "
-                                                                        ]
-                                                                    },
-                                                                    {
-                                                                        "s": [
-                                                                            {
-                                                                                "value": [
-                                                                                    "\"Absent response to treatment (situation)\""
-                                                                                ]
-                                                                            }
-                                                                        ]
-                                                                    },
-                                                                    {
-                                                                        "value": [
-                                                                            "]"
-                                                                        ]
-                                                                    }
-                                                                ]
-                                                            }
-                                                        ]
-                                                    },
-                                                    {
-                                                        "value": [
-                                                            ")"
-                                                        ]
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "value": [
-                                                    ",\r\n    "
-                                                ]
-                                            },
-                                            {
-                                                "r": "321",
-                                                "s": [
-                                                    {
-                                                        "value": [
-                                                            "("
-                                                        ]
-                                                    },
-                                                    {
-                                                        "r": "321",
-                                                        "s": [
-                                                            {
-                                                                "value": [
-                                                                    "[",
-                                                                    "Condition",
-                                                                    ": "
-                                                                ]
-                                                            },
-                                                            {
+                                                                "r": "298",
                                                                 "s": [
                                                                     {
                                                                         "value": [
@@ -2830,42 +1886,11 @@
                                                             },
                                                             {
                                                                 "value": [
-                                                                    "]"
-                                                                ]
-                                                            }
-                                                        ]
-                                                    },
-                                                    {
-                                                        "value": [
-                                                            ")"
-                                                        ]
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "value": [
-                                                    ",\r\n    "
-                                                ]
-                                            },
-                                            {
-                                                "r": "322",
-                                                "s": [
-                                                    {
-                                                        "value": [
-                                                            "("
-                                                        ]
-                                                    },
-                                                    {
-                                                        "r": "322",
-                                                        "s": [
-                                                            {
-                                                                "value": [
-                                                                    "[",
-                                                                    "Condition",
-                                                                    ": "
+                                                                    ",\n                    "
                                                                 ]
                                                             },
                                                             {
+                                                                "r": "299",
                                                                 "s": [
                                                                     {
                                                                         "value": [
@@ -2876,42 +1901,11 @@
                                                             },
                                                             {
                                                                 "value": [
-                                                                    "]"
-                                                                ]
-                                                            }
-                                                        ]
-                                                    },
-                                                    {
-                                                        "value": [
-                                                            ")"
-                                                        ]
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "value": [
-                                                    ",\r\n    "
-                                                ]
-                                            },
-                                            {
-                                                "r": "323",
-                                                "s": [
-                                                    {
-                                                        "value": [
-                                                            "("
-                                                        ]
-                                                    },
-                                                    {
-                                                        "r": "323",
-                                                        "s": [
-                                                            {
-                                                                "value": [
-                                                                    "[",
-                                                                    "Condition",
-                                                                    ": "
+                                                                    ", "
                                                                 ]
                                                             },
                                                             {
+                                                                "r": "300",
                                                                 "s": [
                                                                     {
                                                                         "value": [
@@ -2922,42 +1916,11 @@
                                                             },
                                                             {
                                                                 "value": [
-                                                                    "]"
-                                                                ]
-                                                            }
-                                                        ]
-                                                    },
-                                                    {
-                                                        "value": [
-                                                            ")"
-                                                        ]
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "value": [
-                                                    ",\r\n    "
-                                                ]
-                                            },
-                                            {
-                                                "r": "324",
-                                                "s": [
-                                                    {
-                                                        "value": [
-                                                            "("
-                                                        ]
-                                                    },
-                                                    {
-                                                        "r": "324",
-                                                        "s": [
-                                                            {
-                                                                "value": [
-                                                                    "[",
-                                                                    "Condition",
-                                                                    ": "
+                                                                    ",\n                    "
                                                                 ]
                                                             },
                                                             {
+                                                                "r": "301",
                                                                 "s": [
                                                                     {
                                                                         "value": [
@@ -2968,42 +1931,11 @@
                                                             },
                                                             {
                                                                 "value": [
-                                                                    "]"
-                                                                ]
-                                                            }
-                                                        ]
-                                                    },
-                                                    {
-                                                        "value": [
-                                                            ")"
-                                                        ]
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "value": [
-                                                    ",\r\n    "
-                                                ]
-                                            },
-                                            {
-                                                "r": "325",
-                                                "s": [
-                                                    {
-                                                        "value": [
-                                                            "("
-                                                        ]
-                                                    },
-                                                    {
-                                                        "r": "325",
-                                                        "s": [
-                                                            {
-                                                                "value": [
-                                                                    "[",
-                                                                    "Condition",
-                                                                    ": "
+                                                                    ","
                                                                 ]
                                                             },
                                                             {
+                                                                "r": "302",
                                                                 "s": [
                                                                     {
                                                                         "value": [
@@ -3014,42 +1946,11 @@
                                                             },
                                                             {
                                                                 "value": [
-                                                                    "]"
-                                                                ]
-                                                            }
-                                                        ]
-                                                    },
-                                                    {
-                                                        "value": [
-                                                            ")"
-                                                        ]
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "value": [
-                                                    ",\r\n    "
-                                                ]
-                                            },
-                                            {
-                                                "r": "326",
-                                                "s": [
-                                                    {
-                                                        "value": [
-                                                            "("
-                                                        ]
-                                                    },
-                                                    {
-                                                        "r": "326",
-                                                        "s": [
-                                                            {
-                                                                "value": [
-                                                                    "[",
-                                                                    "Condition",
-                                                                    ": "
+                                                                    ", "
                                                                 ]
                                                             },
                                                             {
+                                                                "r": "303",
                                                                 "s": [
                                                                     {
                                                                         "value": [
@@ -3060,124 +1961,56 @@
                                                             },
                                                             {
                                                                 "value": [
-                                                                    "]"
+                                                                    ",\n                    "
                                                                 ]
-                                                            }
-                                                        ]
-                                                    },
-                                                    {
-                                                        "value": [
-                                                            ")"
-                                                        ]
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "value": [
-                                                    ",\r\n    "
-                                                ]
-                                            },
-                                            {
-                                                "r": "329",
-                                                "s": [
-                                                    {
-                                                        "value": [
-                                                            "("
-                                                        ]
-                                                    },
-                                                    {
-                                                        "r": "329",
-                                                        "s": [
+                                                            },
                                                             {
-                                                                "r": "327",
+                                                                "r": "304",
                                                                 "s": [
                                                                     {
                                                                         "value": [
-                                                                            "[",
-                                                                            "Condition",
-                                                                            ": "
-                                                                        ]
-                                                                    },
-                                                                    {
-                                                                        "s": [
-                                                                            {
-                                                                                "value": [
-                                                                                    "\"Crushing injury (disorder)\""
-                                                                                ]
-                                                                            }
-                                                                        ]
-                                                                    },
-                                                                    {
-                                                                        "value": [
-                                                                            "]"
+                                                                            "\"Wagner syndrome (disorder)\""
                                                                         ]
                                                                     }
                                                                 ]
                                                             },
                                                             {
                                                                 "value": [
-                                                                    " union "
+                                                                    ", "
                                                                 ]
                                                             },
                                                             {
-                                                                "r": "328",
+                                                                "r": "305",
                                                                 "s": [
                                                                     {
                                                                         "value": [
-                                                                            "[",
-                                                                            "Condition",
-                                                                            ": "
-                                                                        ]
-                                                                    },
-                                                                    {
-                                                                        "s": [
-                                                                            {
-                                                                                "value": [
-                                                                                    "\"Traumatic amputation of limb (disorder)\""
-                                                                                ]
-                                                                            }
-                                                                        ]
-                                                                    },
-                                                                    {
-                                                                        "value": [
-                                                                            "]"
+                                                                            "\"Crushing injury (disorder)\""
                                                                         ]
                                                                     }
                                                                 ]
-                                                            }
-                                                        ]
-                                                    },
-                                                    {
-                                                        "value": [
-                                                            ")"
-                                                        ]
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "value": [
-                                                    ",\r\n    "
-                                                ]
-                                            },
-                                            {
-                                                "r": "330",
-                                                "s": [
-                                                    {
-                                                        "value": [
-                                                            "("
-                                                        ]
-                                                    },
-                                                    {
-                                                        "r": "330",
-                                                        "s": [
+                                                            },
                                                             {
                                                                 "value": [
-                                                                    "[",
-                                                                    "Condition",
-                                                                    ": "
+                                                                    ", "
                                                                 ]
                                                             },
                                                             {
+                                                                "r": "306",
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"Traumatic amputation of limb (disorder)\""
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    ",\n                    "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "r": "307",
                                                                 "s": [
                                                                     {
                                                                         "value": [
@@ -3188,42 +2021,11 @@
                                                             },
                                                             {
                                                                 "value": [
-                                                                    "]"
-                                                                ]
-                                                            }
-                                                        ]
-                                                    },
-                                                    {
-                                                        "value": [
-                                                            ")"
-                                                        ]
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "value": [
-                                                    ",\r\n    "
-                                                ]
-                                            },
-                                            {
-                                                "r": "331",
-                                                "s": [
-                                                    {
-                                                        "value": [
-                                                            "("
-                                                        ]
-                                                    },
-                                                    {
-                                                        "r": "331",
-                                                        "s": [
-                                                            {
-                                                                "value": [
-                                                                    "[",
-                                                                    "Condition",
-                                                                    ": "
+                                                                    ", "
                                                                 ]
                                                             },
                                                             {
+                                                                "r": "308",
                                                                 "s": [
                                                                     {
                                                                         "value": [
@@ -3234,88 +2036,11 @@
                                                             },
                                                             {
                                                                 "value": [
-                                                                    "]"
-                                                                ]
-                                                            }
-                                                        ]
-                                                    },
-                                                    {
-                                                        "value": [
-                                                            ")"
-                                                        ]
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "value": [
-                                                    ",\r\n    "
-                                                ]
-                                            },
-                                            {
-                                                "r": "332",
-                                                "s": [
-                                                    {
-                                                        "value": [
-                                                            "("
-                                                        ]
-                                                    },
-                                                    {
-                                                        "r": "332",
-                                                        "s": [
-                                                            {
-                                                                "value": [
-                                                                    "[",
-                                                                    "Procedure",
-                                                                    ": "
+                                                                    ",\n                    "
                                                                 ]
                                                             },
                                                             {
-                                                                "s": [
-                                                                    {
-                                                                        "value": [
-                                                                            "\"Skin graft cutting/preparation (procedure)\""
-                                                                        ]
-                                                                    }
-                                                                ]
-                                                            },
-                                                            {
-                                                                "value": [
-                                                                    "]"
-                                                                ]
-                                                            }
-                                                        ]
-                                                    },
-                                                    {
-                                                        "value": [
-                                                            ")"
-                                                        ]
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "value": [
-                                                    ",\r\n    "
-                                                ]
-                                            },
-                                            {
-                                                "r": "333",
-                                                "s": [
-                                                    {
-                                                        "value": [
-                                                            "("
-                                                        ]
-                                                    },
-                                                    {
-                                                        "r": "333",
-                                                        "s": [
-                                                            {
-                                                                "value": [
-                                                                    "[",
-                                                                    "Condition",
-                                                                    ": "
-                                                                ]
-                                                            },
-                                                            {
+                                                                "r": "309",
                                                                 "s": [
                                                                     {
                                                                         "value": [
@@ -3326,21 +2051,111 @@
                                                             },
                                                             {
                                                                 "value": [
-                                                                    "]"
+                                                                    "}"
                                                                 ]
                                                             }
-                                                        ]
-                                                    },
-                                                    {
-                                                        "value": [
-                                                            ")"
                                                         ]
                                                     }
                                                 ]
                                             },
                                             {
                                                 "value": [
-                                                    "\r\n    }"
+                                                    ",\n    "
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Observation\"",
+                                                            " : "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "311",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Absent response to treatment (situation)\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n    "
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Procedure\"",
+                                                            " : "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "315",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{"
+                                                                ]
+                                                            },
+                                                            {
+                                                                "r": "312",
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"General treatment (procedure)\""
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    ", "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "r": "313",
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"Providing care according to standard (regime/therapy)\""
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    ", "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "r": "314",
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"Skin graft cutting/preparation (procedure)\""
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "}"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n    }"
                                                 ]
                                             }
                                         ]
@@ -3350,850 +2165,150 @@
                         }
                     ],
                     "expression": {
-                        "localId": "334",
-                        "type": "List",
+                        "localId": "316",
+                        "type": "Tuple",
                         "element": [
                             {
-                                "type": "Query",
-                                "source": [
-                                    {
-                                        "alias": "X",
-                                        "expression": {
+                                "name": "Condition",
+                                "value": {
+                                    "localId": "310",
+                                    "type": "List",
+                                    "element": [
+                                        {
+                                            "localId": "291",
+                                            "name": "Chronic osteomyelitis (disorder)",
+                                            "type": "ValueSetRef"
+                                        },
+                                        {
+                                            "localId": "292",
+                                            "name": "Osteoradionecrosis (disorder)",
+                                            "type": "ValueSetRef"
+                                        },
+                                        {
                                             "localId": "293",
-                                            "type": "Union",
-                                            "operand": [
-                                                {
-                                                    "type": "As",
-                                                    "operand": {
-                                                        "localId": "291",
-                                                        "dataType": "{http://hl7.org/fhir}Condition",
-                                                        "codeProperty": "code",
-                                                        "type": "Retrieve",
-                                                        "codes": {
-                                                            "name": "Chronic osteomyelitis (disorder)",
-                                                            "type": "ValueSetRef"
-                                                        }
-                                                    },
-                                                    "asTypeSpecifier": {
-                                                        "type": "ListTypeSpecifier",
-                                                        "elementType": {
-                                                            "type": [
-                                                                {
-                                                                    "name": "{http://hl7.org/fhir}Observation",
-                                                                    "type": "NamedTypeSpecifier"
-                                                                },
-                                                                {
-                                                                    "name": "{http://hl7.org/fhir}Condition",
-                                                                    "type": "NamedTypeSpecifier"
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "type": "As",
-                                                    "operand": {
-                                                        "localId": "292",
-                                                        "dataType": "{http://hl7.org/fhir}Observation",
-                                                        "type": "Retrieve",
-                                                        "codes": {
-                                                            "name": "Absent response to treatment (situation)",
-                                                            "type": "ValueSetRef"
-                                                        }
-                                                    },
-                                                    "asTypeSpecifier": {
-                                                        "type": "ListTypeSpecifier",
-                                                        "elementType": {
-                                                            "type": [
-                                                                {
-                                                                    "name": "{http://hl7.org/fhir}Observation",
-                                                                    "type": "NamedTypeSpecifier"
-                                                                },
-                                                                {
-                                                                    "name": "{http://hl7.org/fhir}Condition",
-                                                                    "type": "NamedTypeSpecifier"
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                }
-                                            ]
-                                        }
-                                    }
-                                ],
-                                "return": {
-                                    "distinct": false,
-                                    "expression": {
-                                        "asType": "{http://hl7.org/fhir}Condition",
-                                        "type": "As",
-                                        "operand": {
-                                            "name": "X",
-                                            "type": "AliasRef"
-                                        }
-                                    }
-                                }
-                            },
-                            {
-                                "type": "Query",
-                                "source": [
-                                    {
-                                        "alias": "X",
-                                        "expression": {
+                                            "name": "Soft tissues (body structure)",
+                                            "type": "ValueSetRef"
+                                        },
+                                        {
+                                            "localId": "294",
+                                            "name": "Radionecrosis of skin (disorder)",
+                                            "type": "ValueSetRef"
+                                        },
+                                        {
+                                            "localId": "295",
+                                            "name": "Actinomycosis, unspecified",
+                                            "type": "ValueSetRef"
+                                        },
+                                        {
                                             "localId": "296",
-                                            "type": "Union",
-                                            "operand": [
-                                                {
-                                                    "type": "As",
-                                                    "operand": {
-                                                        "localId": "294",
-                                                        "dataType": "{http://hl7.org/fhir}Condition",
-                                                        "codeProperty": "code",
-                                                        "type": "Retrieve",
-                                                        "codes": {
-                                                            "name": "Osteoradionecrosis (disorder)",
-                                                            "type": "ValueSetRef"
-                                                        }
-                                                    },
-                                                    "asTypeSpecifier": {
-                                                        "type": "ListTypeSpecifier",
-                                                        "elementType": {
-                                                            "type": [
-                                                                {
-                                                                    "name": "{http://hl7.org/fhir}Procedure",
-                                                                    "type": "NamedTypeSpecifier"
-                                                                },
-                                                                {
-                                                                    "name": "{http://hl7.org/fhir}Condition",
-                                                                    "type": "NamedTypeSpecifier"
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "type": "As",
-                                                    "operand": {
-                                                        "localId": "295",
-                                                        "dataType": "{http://hl7.org/fhir}Procedure",
-                                                        "codeProperty": "code",
-                                                        "type": "Retrieve",
-                                                        "codes": {
-                                                            "name": "General treatment (procedure)",
-                                                            "type": "ValueSetRef"
-                                                        }
-                                                    },
-                                                    "asTypeSpecifier": {
-                                                        "type": "ListTypeSpecifier",
-                                                        "elementType": {
-                                                            "type": [
-                                                                {
-                                                                    "name": "{http://hl7.org/fhir}Procedure",
-                                                                    "type": "NamedTypeSpecifier"
-                                                                },
-                                                                {
-                                                                    "name": "{http://hl7.org/fhir}Condition",
-                                                                    "type": "NamedTypeSpecifier"
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                }
-                                            ]
-                                        }
-                                    }
-                                ],
-                                "return": {
-                                    "distinct": false,
-                                    "expression": {
-                                        "asType": "{http://hl7.org/fhir}Condition",
-                                        "type": "As",
-                                        "operand": {
-                                            "name": "X",
-                                            "type": "AliasRef"
-                                        }
-                                    }
-                                }
-                            },
-                            {
-                                "type": "Query",
-                                "source": [
-                                    {
-                                        "alias": "X",
-                                        "expression": {
+                                            "name": "Diabetes mellitus type 1 (disorder)",
+                                            "type": "ValueSetRef"
+                                        },
+                                        {
+                                            "localId": "297",
+                                            "name": "Diabetes mellitus type 2 (disorder)",
+                                            "type": "ValueSetRef"
+                                        },
+                                        {
+                                            "localId": "298",
+                                            "name": "Toxic effect of carbon monoxide (disorder)",
+                                            "type": "ValueSetRef"
+                                        },
+                                        {
+                                            "localId": "299",
+                                            "name": "Decompression sickness type I (disorder)",
+                                            "type": "ValueSetRef"
+                                        },
+                                        {
+                                            "localId": "300",
+                                            "name": "Decompression sickness type II (disorder)",
+                                            "type": "ValueSetRef"
+                                        },
+                                        {
                                             "localId": "301",
-                                            "type": "Union",
-                                            "operand": [
-                                                {
-                                                    "type": "As",
-                                                    "operand": {
-                                                        "localId": "299",
-                                                        "type": "Union",
-                                                        "operand": [
-                                                            {
-                                                                "localId": "297",
-                                                                "dataType": "{http://hl7.org/fhir}Condition",
-                                                                "codeProperty": "code",
-                                                                "type": "Retrieve",
-                                                                "codes": {
-                                                                    "name": "Soft tissues (body structure)",
-                                                                    "type": "ValueSetRef"
-                                                                }
-                                                            },
-                                                            {
-                                                                "localId": "298",
-                                                                "dataType": "{http://hl7.org/fhir}Condition",
-                                                                "codeProperty": "code",
-                                                                "type": "Retrieve",
-                                                                "codes": {
-                                                                    "name": "Radionecrosis of skin (disorder)",
-                                                                    "type": "ValueSetRef"
-                                                                }
-                                                            }
-                                                        ]
-                                                    },
-                                                    "asTypeSpecifier": {
-                                                        "type": "ListTypeSpecifier",
-                                                        "elementType": {
-                                                            "type": [
-                                                                {
-                                                                    "name": "{http://hl7.org/fhir}Procedure",
-                                                                    "type": "NamedTypeSpecifier"
-                                                                },
-                                                                {
-                                                                    "name": "{http://hl7.org/fhir}Condition",
-                                                                    "type": "NamedTypeSpecifier"
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "type": "As",
-                                                    "operand": {
-                                                        "localId": "300",
-                                                        "dataType": "{http://hl7.org/fhir}Procedure",
-                                                        "codeProperty": "code",
-                                                        "type": "Retrieve",
-                                                        "codes": {
-                                                            "name": "General treatment (procedure)",
-                                                            "type": "ValueSetRef"
-                                                        }
-                                                    },
-                                                    "asTypeSpecifier": {
-                                                        "type": "ListTypeSpecifier",
-                                                        "elementType": {
-                                                            "type": [
-                                                                {
-                                                                    "name": "{http://hl7.org/fhir}Procedure",
-                                                                    "type": "NamedTypeSpecifier"
-                                                                },
-                                                                {
-                                                                    "name": "{http://hl7.org/fhir}Condition",
-                                                                    "type": "NamedTypeSpecifier"
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                }
-                                            ]
-                                        }
-                                    }
-                                ],
-                                "return": {
-                                    "distinct": false,
-                                    "expression": {
-                                        "asType": "{http://hl7.org/fhir}Condition",
-                                        "type": "As",
-                                        "operand": {
-                                            "name": "X",
-                                            "type": "AliasRef"
-                                        }
-                                    }
-                                }
-                            },
-                            {
-                                "type": "Query",
-                                "source": [
-                                    {
-                                        "alias": "X",
-                                        "expression": {
-                                            "localId": "306",
-                                            "type": "Union",
-                                            "operand": [
-                                                {
-                                                    "type": "As",
-                                                    "operand": {
-                                                        "localId": "304",
-                                                        "type": "Union",
-                                                        "operand": [
-                                                            {
-                                                                "type": "As",
-                                                                "operand": {
-                                                                    "localId": "302",
-                                                                    "dataType": "{http://hl7.org/fhir}Condition",
-                                                                    "codeProperty": "code",
-                                                                    "type": "Retrieve",
-                                                                    "codes": {
-                                                                        "name": "Actinomycosis, unspecified",
-                                                                        "type": "ValueSetRef"
-                                                                    }
-                                                                },
-                                                                "asTypeSpecifier": {
-                                                                    "type": "ListTypeSpecifier",
-                                                                    "elementType": {
-                                                                        "type": [
-                                                                            {
-                                                                                "name": "{http://hl7.org/fhir}Observation",
-                                                                                "type": "NamedTypeSpecifier"
-                                                                            },
-                                                                            {
-                                                                                "name": "{http://hl7.org/fhir}Condition",
-                                                                                "type": "NamedTypeSpecifier"
-                                                                            }
-                                                                        ]
-                                                                    }
-                                                                }
-                                                            },
-                                                            {
-                                                                "type": "As",
-                                                                "operand": {
-                                                                    "localId": "303",
-                                                                    "dataType": "{http://hl7.org/fhir}Observation",
-                                                                    "type": "Retrieve",
-                                                                    "codes": {
-                                                                        "name": "Absent response to treatment (situation)",
-                                                                        "type": "ValueSetRef"
-                                                                    }
-                                                                },
-                                                                "asTypeSpecifier": {
-                                                                    "type": "ListTypeSpecifier",
-                                                                    "elementType": {
-                                                                        "type": [
-                                                                            {
-                                                                                "name": "{http://hl7.org/fhir}Observation",
-                                                                                "type": "NamedTypeSpecifier"
-                                                                            },
-                                                                            {
-                                                                                "name": "{http://hl7.org/fhir}Condition",
-                                                                                "type": "NamedTypeSpecifier"
-                                                                            }
-                                                                        ]
-                                                                    }
-                                                                }
-                                                            }
-                                                        ]
-                                                    },
-                                                    "asTypeSpecifier": {
-                                                        "type": "ListTypeSpecifier",
-                                                        "elementType": {
-                                                            "type": [
-                                                                {
-                                                                    "name": "{http://hl7.org/fhir}Procedure",
-                                                                    "type": "NamedTypeSpecifier"
-                                                                },
-                                                                {
-                                                                    "name": "{http://hl7.org/fhir}Observation",
-                                                                    "type": "NamedTypeSpecifier"
-                                                                },
-                                                                {
-                                                                    "name": "{http://hl7.org/fhir}Condition",
-                                                                    "type": "NamedTypeSpecifier"
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "type": "As",
-                                                    "operand": {
-                                                        "localId": "305",
-                                                        "dataType": "{http://hl7.org/fhir}Procedure",
-                                                        "codeProperty": "code",
-                                                        "type": "Retrieve",
-                                                        "codes": {
-                                                            "name": "General treatment (procedure)",
-                                                            "type": "ValueSetRef"
-                                                        }
-                                                    },
-                                                    "asTypeSpecifier": {
-                                                        "type": "ListTypeSpecifier",
-                                                        "elementType": {
-                                                            "type": [
-                                                                {
-                                                                    "name": "{http://hl7.org/fhir}Procedure",
-                                                                    "type": "NamedTypeSpecifier"
-                                                                },
-                                                                {
-                                                                    "name": "{http://hl7.org/fhir}Observation",
-                                                                    "type": "NamedTypeSpecifier"
-                                                                },
-                                                                {
-                                                                    "name": "{http://hl7.org/fhir}Condition",
-                                                                    "type": "NamedTypeSpecifier"
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                }
-                                            ]
-                                        }
-                                    }
-                                ],
-                                "return": {
-                                    "distinct": false,
-                                    "expression": {
-                                        "asType": "{http://hl7.org/fhir}Condition",
-                                        "type": "As",
-                                        "operand": {
-                                            "name": "X",
-                                            "type": "AliasRef"
-                                        }
-                                    }
-                                }
-                            },
-                            {
-                                "type": "Query",
-                                "source": [
-                                    {
-                                        "alias": "X",
-                                        "expression": {
-                                            "localId": "313",
-                                            "type": "Union",
-                                            "operand": [
-                                                {
-                                                    "type": "As",
-                                                    "operand": {
-                                                        "localId": "311",
-                                                        "type": "Union",
-                                                        "operand": [
-                                                            {
-                                                                "type": "As",
-                                                                "operand": {
-                                                                    "localId": "309",
-                                                                    "type": "Union",
-                                                                    "operand": [
-                                                                        {
-                                                                            "localId": "307",
-                                                                            "dataType": "{http://hl7.org/fhir}Condition",
-                                                                            "codeProperty": "code",
-                                                                            "type": "Retrieve",
-                                                                            "codes": {
-                                                                                "name": "Diabetes mellitus type 1 (disorder)",
-                                                                                "type": "ValueSetRef"
-                                                                            }
-                                                                        },
-                                                                        {
-                                                                            "localId": "308",
-                                                                            "dataType": "{http://hl7.org/fhir}Condition",
-                                                                            "codeProperty": "code",
-                                                                            "type": "Retrieve",
-                                                                            "codes": {
-                                                                                "name": "Wagner syndrome (disorder)",
-                                                                                "type": "ValueSetRef"
-                                                                            }
-                                                                        }
-                                                                    ]
-                                                                },
-                                                                "asTypeSpecifier": {
-                                                                    "type": "ListTypeSpecifier",
-                                                                    "elementType": {
-                                                                        "type": [
-                                                                            {
-                                                                                "name": "{http://hl7.org/fhir}Procedure",
-                                                                                "type": "NamedTypeSpecifier"
-                                                                            },
-                                                                            {
-                                                                                "name": "{http://hl7.org/fhir}Condition",
-                                                                                "type": "NamedTypeSpecifier"
-                                                                            }
-                                                                        ]
-                                                                    }
-                                                                }
-                                                            },
-                                                            {
-                                                                "type": "As",
-                                                                "operand": {
-                                                                    "localId": "310",
-                                                                    "dataType": "{http://hl7.org/fhir}Procedure",
-                                                                    "codeProperty": "code",
-                                                                    "type": "Retrieve",
-                                                                    "codes": {
-                                                                        "name": "Providing care according to standard (regime/therapy)",
-                                                                        "type": "ValueSetRef"
-                                                                    }
-                                                                },
-                                                                "asTypeSpecifier": {
-                                                                    "type": "ListTypeSpecifier",
-                                                                    "elementType": {
-                                                                        "type": [
-                                                                            {
-                                                                                "name": "{http://hl7.org/fhir}Procedure",
-                                                                                "type": "NamedTypeSpecifier"
-                                                                            },
-                                                                            {
-                                                                                "name": "{http://hl7.org/fhir}Condition",
-                                                                                "type": "NamedTypeSpecifier"
-                                                                            }
-                                                                        ]
-                                                                    }
-                                                                }
-                                                            }
-                                                        ]
-                                                    },
-                                                    "asTypeSpecifier": {
-                                                        "type": "ListTypeSpecifier",
-                                                        "elementType": {
-                                                            "type": [
-                                                                {
-                                                                    "name": "{http://hl7.org/fhir}Procedure",
-                                                                    "type": "NamedTypeSpecifier"
-                                                                },
-                                                                {
-                                                                    "name": "{http://hl7.org/fhir}Observation",
-                                                                    "type": "NamedTypeSpecifier"
-                                                                },
-                                                                {
-                                                                    "name": "{http://hl7.org/fhir}Condition",
-                                                                    "type": "NamedTypeSpecifier"
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "type": "As",
-                                                    "operand": {
-                                                        "localId": "312",
-                                                        "dataType": "{http://hl7.org/fhir}Observation",
-                                                        "type": "Retrieve",
-                                                        "codes": {
-                                                            "name": "Absent response to treatment (situation)",
-                                                            "type": "ValueSetRef"
-                                                        }
-                                                    },
-                                                    "asTypeSpecifier": {
-                                                        "type": "ListTypeSpecifier",
-                                                        "elementType": {
-                                                            "type": [
-                                                                {
-                                                                    "name": "{http://hl7.org/fhir}Procedure",
-                                                                    "type": "NamedTypeSpecifier"
-                                                                },
-                                                                {
-                                                                    "name": "{http://hl7.org/fhir}Observation",
-                                                                    "type": "NamedTypeSpecifier"
-                                                                },
-                                                                {
-                                                                    "name": "{http://hl7.org/fhir}Condition",
-                                                                    "type": "NamedTypeSpecifier"
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                }
-                                            ]
-                                        }
-                                    }
-                                ],
-                                "return": {
-                                    "distinct": false,
-                                    "expression": {
-                                        "asType": "{http://hl7.org/fhir}Condition",
-                                        "type": "As",
-                                        "operand": {
-                                            "name": "X",
-                                            "type": "AliasRef"
-                                        }
-                                    }
-                                }
-                            },
-                            {
-                                "type": "Query",
-                                "source": [
-                                    {
-                                        "alias": "X",
-                                        "expression": {
-                                            "localId": "320",
-                                            "type": "Union",
-                                            "operand": [
-                                                {
-                                                    "type": "As",
-                                                    "operand": {
-                                                        "localId": "318",
-                                                        "type": "Union",
-                                                        "operand": [
-                                                            {
-                                                                "type": "As",
-                                                                "operand": {
-                                                                    "localId": "316",
-                                                                    "type": "Union",
-                                                                    "operand": [
-                                                                        {
-                                                                            "localId": "314",
-                                                                            "dataType": "{http://hl7.org/fhir}Condition",
-                                                                            "codeProperty": "code",
-                                                                            "type": "Retrieve",
-                                                                            "codes": {
-                                                                                "name": "Diabetes mellitus type 2 (disorder)",
-                                                                                "type": "ValueSetRef"
-                                                                            }
-                                                                        },
-                                                                        {
-                                                                            "localId": "315",
-                                                                            "dataType": "{http://hl7.org/fhir}Condition",
-                                                                            "codeProperty": "code",
-                                                                            "type": "Retrieve",
-                                                                            "codes": {
-                                                                                "name": "Wagner syndrome (disorder)",
-                                                                                "type": "ValueSetRef"
-                                                                            }
-                                                                        }
-                                                                    ]
-                                                                },
-                                                                "asTypeSpecifier": {
-                                                                    "type": "ListTypeSpecifier",
-                                                                    "elementType": {
-                                                                        "type": [
-                                                                            {
-                                                                                "name": "{http://hl7.org/fhir}Procedure",
-                                                                                "type": "NamedTypeSpecifier"
-                                                                            },
-                                                                            {
-                                                                                "name": "{http://hl7.org/fhir}Condition",
-                                                                                "type": "NamedTypeSpecifier"
-                                                                            }
-                                                                        ]
-                                                                    }
-                                                                }
-                                                            },
-                                                            {
-                                                                "type": "As",
-                                                                "operand": {
-                                                                    "localId": "317",
-                                                                    "dataType": "{http://hl7.org/fhir}Procedure",
-                                                                    "codeProperty": "code",
-                                                                    "type": "Retrieve",
-                                                                    "codes": {
-                                                                        "name": "Providing care according to standard (regime/therapy)",
-                                                                        "type": "ValueSetRef"
-                                                                    }
-                                                                },
-                                                                "asTypeSpecifier": {
-                                                                    "type": "ListTypeSpecifier",
-                                                                    "elementType": {
-                                                                        "type": [
-                                                                            {
-                                                                                "name": "{http://hl7.org/fhir}Procedure",
-                                                                                "type": "NamedTypeSpecifier"
-                                                                            },
-                                                                            {
-                                                                                "name": "{http://hl7.org/fhir}Condition",
-                                                                                "type": "NamedTypeSpecifier"
-                                                                            }
-                                                                        ]
-                                                                    }
-                                                                }
-                                                            }
-                                                        ]
-                                                    },
-                                                    "asTypeSpecifier": {
-                                                        "type": "ListTypeSpecifier",
-                                                        "elementType": {
-                                                            "type": [
-                                                                {
-                                                                    "name": "{http://hl7.org/fhir}Procedure",
-                                                                    "type": "NamedTypeSpecifier"
-                                                                },
-                                                                {
-                                                                    "name": "{http://hl7.org/fhir}Observation",
-                                                                    "type": "NamedTypeSpecifier"
-                                                                },
-                                                                {
-                                                                    "name": "{http://hl7.org/fhir}Condition",
-                                                                    "type": "NamedTypeSpecifier"
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "type": "As",
-                                                    "operand": {
-                                                        "localId": "319",
-                                                        "dataType": "{http://hl7.org/fhir}Observation",
-                                                        "type": "Retrieve",
-                                                        "codes": {
-                                                            "name": "Absent response to treatment (situation)",
-                                                            "type": "ValueSetRef"
-                                                        }
-                                                    },
-                                                    "asTypeSpecifier": {
-                                                        "type": "ListTypeSpecifier",
-                                                        "elementType": {
-                                                            "type": [
-                                                                {
-                                                                    "name": "{http://hl7.org/fhir}Procedure",
-                                                                    "type": "NamedTypeSpecifier"
-                                                                },
-                                                                {
-                                                                    "name": "{http://hl7.org/fhir}Observation",
-                                                                    "type": "NamedTypeSpecifier"
-                                                                },
-                                                                {
-                                                                    "name": "{http://hl7.org/fhir}Condition",
-                                                                    "type": "NamedTypeSpecifier"
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                }
-                                            ]
-                                        }
-                                    }
-                                ],
-                                "return": {
-                                    "distinct": false,
-                                    "expression": {
-                                        "asType": "{http://hl7.org/fhir}Condition",
-                                        "type": "As",
-                                        "operand": {
-                                            "name": "X",
-                                            "type": "AliasRef"
-                                        }
-                                    }
-                                }
-                            },
-                            {
-                                "localId": "321",
-                                "dataType": "{http://hl7.org/fhir}Condition",
-                                "codeProperty": "code",
-                                "type": "Retrieve",
-                                "codes": {
-                                    "name": "Toxic effect of carbon monoxide (disorder)",
-                                    "type": "ValueSetRef"
-                                }
-                            },
-                            {
-                                "localId": "322",
-                                "dataType": "{http://hl7.org/fhir}Condition",
-                                "codeProperty": "code",
-                                "type": "Retrieve",
-                                "codes": {
-                                    "name": "Decompression sickness type I (disorder)",
-                                    "type": "ValueSetRef"
-                                }
-                            },
-                            {
-                                "localId": "323",
-                                "dataType": "{http://hl7.org/fhir}Condition",
-                                "codeProperty": "code",
-                                "type": "Retrieve",
-                                "codes": {
-                                    "name": "Decompression sickness type II (disorder)",
-                                    "type": "ValueSetRef"
-                                }
-                            },
-                            {
-                                "localId": "324",
-                                "dataType": "{http://hl7.org/fhir}Condition",
-                                "codeProperty": "code",
-                                "type": "Retrieve",
-                                "codes": {
-                                    "name": "Air embolism (disorder)",
-                                    "type": "ValueSetRef"
-                                }
-                            },
-                            {
-                                "localId": "325",
-                                "dataType": "{http://hl7.org/fhir}Condition",
-                                "codeProperty": "code",
-                                "type": "Retrieve",
-                                "codes": {
-                                    "name": "Gas gangrene (disorder)",
-                                    "type": "ValueSetRef"
-                                }
-                            },
-                            {
-                                "localId": "326",
-                                "dataType": "{http://hl7.org/fhir}Condition",
-                                "codeProperty": "code",
-                                "type": "Retrieve",
-                                "codes": {
-                                    "name": "Peripheral ischemia (disorder)",
-                                    "type": "ValueSetRef"
-                                }
-                            },
-                            {
-                                "localId": "329",
-                                "type": "Union",
-                                "operand": [
-                                    {
-                                        "localId": "327",
-                                        "dataType": "{http://hl7.org/fhir}Condition",
-                                        "codeProperty": "code",
-                                        "type": "Retrieve",
-                                        "codes": {
+                                            "name": "Air embolism (disorder)",
+                                            "type": "ValueSetRef"
+                                        },
+                                        {
+                                            "localId": "302",
+                                            "name": "Gas gangrene (disorder)",
+                                            "type": "ValueSetRef"
+                                        },
+                                        {
+                                            "localId": "303",
+                                            "name": "Peripheral ischemia (disorder)",
+                                            "type": "ValueSetRef"
+                                        },
+                                        {
+                                            "localId": "304",
+                                            "name": "Wagner syndrome (disorder)",
+                                            "type": "ValueSetRef"
+                                        },
+                                        {
+                                            "localId": "305",
                                             "name": "Crushing injury (disorder)",
                                             "type": "ValueSetRef"
-                                        }
-                                    },
-                                    {
-                                        "localId": "328",
-                                        "dataType": "{http://hl7.org/fhir}Condition",
-                                        "codeProperty": "code",
-                                        "type": "Retrieve",
-                                        "codes": {
+                                        },
+                                        {
+                                            "localId": "306",
                                             "name": "Traumatic amputation of limb (disorder)",
                                             "type": "ValueSetRef"
+                                        },
+                                        {
+                                            "localId": "307",
+                                            "name": "Necrotizing fasciitis (disorder)",
+                                            "type": "ValueSetRef"
+                                        },
+                                        {
+                                            "localId": "308",
+                                            "name": "Peripheral arterial insufficiency (disorder)",
+                                            "type": "ValueSetRef"
+                                        },
+                                        {
+                                            "localId": "309",
+                                            "name": "Toxic effect of cyanide (disorder)",
+                                            "type": "ValueSetRef"
                                         }
-                                    }
-                                ]
+                                    ]
+                                }
                             },
                             {
-                                "localId": "330",
-                                "dataType": "{http://hl7.org/fhir}Condition",
-                                "codeProperty": "code",
-                                "type": "Retrieve",
-                                "codes": {
-                                    "name": "Necrotizing fasciitis (disorder)",
+                                "name": "Observation",
+                                "value": {
+                                    "localId": "311",
+                                    "name": "Absent response to treatment (situation)",
                                     "type": "ValueSetRef"
                                 }
                             },
                             {
-                                "localId": "331",
-                                "dataType": "{http://hl7.org/fhir}Condition",
-                                "codeProperty": "code",
-                                "type": "Retrieve",
-                                "codes": {
-                                    "name": "Peripheral arterial insufficiency (disorder)",
-                                    "type": "ValueSetRef"
-                                }
-                            },
-                            {
-                                "localId": "332",
-                                "dataType": "{http://hl7.org/fhir}Procedure",
-                                "codeProperty": "code",
-                                "type": "Retrieve",
-                                "codes": {
-                                    "name": "Skin graft cutting/preparation (procedure)",
-                                    "type": "ValueSetRef"
-                                }
-                            },
-                            {
-                                "localId": "333",
-                                "dataType": "{http://hl7.org/fhir}Condition",
-                                "codeProperty": "code",
-                                "type": "Retrieve",
-                                "codes": {
-                                    "name": "Toxic effect of cyanide (disorder)",
-                                    "type": "ValueSetRef"
+                                "name": "Procedure",
+                                "value": {
+                                    "localId": "315",
+                                    "type": "List",
+                                    "element": [
+                                        {
+                                            "localId": "312",
+                                            "name": "General treatment (procedure)",
+                                            "type": "ValueSetRef"
+                                        },
+                                        {
+                                            "localId": "313",
+                                            "name": "Providing care according to standard (regime/therapy)",
+                                            "type": "ValueSetRef"
+                                        },
+                                        {
+                                            "localId": "314",
+                                            "name": "Skin graft cutting/preparation (procedure)",
+                                            "type": "ValueSetRef"
+                                        }
+                                    ]
                                 }
                             }
                         ]
                     }
                 },
                 {
-                    "localId": "338",
+                    "localId": "320",
                     "name": "PriorAuthorisation",
                     "context": "Patient",
                     "accessLevel": "Public",
@@ -4201,17 +2316,17 @@
                         {
                             "type": "Annotation",
                             "s": {
-                                "r": "338",
+                                "r": "320",
                                 "s": [
                                     {
                                         "value": [
                                             "define ",
                                             "\"PriorAuthorisation\"",
-                                            ":\r\n\t"
+                                            ":\n\t"
                                         ]
                                     },
                                     {
-                                        "r": "337",
+                                        "r": "319",
                                         "s": [
                                             {
                                                 "value": [
@@ -4219,7 +2334,7 @@
                                                 ]
                                             },
                                             {
-                                                "r": "336",
+                                                "r": "318",
                                                 "s": [
                                                     {
                                                         "value": [
@@ -4227,7 +2342,7 @@
                                                         ]
                                                     },
                                                     {
-                                                        "r": "336",
+                                                        "r": "318",
                                                         "s": [
                                                             {
                                                                 "value": [
@@ -4266,10 +2381,10 @@
                         }
                     ],
                     "expression": {
-                        "localId": "337",
+                        "localId": "319",
                         "type": "Exists",
                         "operand": {
-                            "localId": "336",
+                            "localId": "318",
                             "dataType": "{http://hl7.org/fhir}Procedure",
                             "codeProperty": "code",
                             "type": "Retrieve",

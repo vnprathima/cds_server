@@ -18,7 +18,7 @@ if (vsacUser) {
 console.log('\\-------------------------------------------------------------------------------');
 
 // Set up the library
-const elmFile = JSON.parse(fs.readFileSync(path.join(__dirname, 'cqls', 'HyperbaricOxygenTherapy_decision.json'), 'utf8'));
+const elmFile = JSON.parse(fs.readFileSync(path.join(__dirname, 'cqls', 'HyperbaricOxygenTherapy_requirements.json'), 'utf8'));
 const libraries = {
   FHIRHelpers: JSON.parse(fs.readFileSync(path.join(__dirname,  'fhir-helpers', 'v1.0.2', 'FHIRHelpers.json'), 'utf8'))
 };
@@ -112,7 +112,7 @@ codeService.ensureValueSets(valueSets, vsacUser, vsacPass)
     for (const id in results.patientResults) {
       const result = results.patientResults[id];
       console.log(`${id}:`);
-      console.log("REsult:",result);
+      console.log("REsult:",result.Requirements.Condition[0]);
     }
   })
   .catch( (err) => {

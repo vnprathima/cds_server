@@ -133,7 +133,7 @@ code "Multiple sclerosis (disorder) code": '24700007' from "SNOMEDCT" display 'M
 code "Arthritis (disorder) code": '3723001' from "SNOMEDCT" display 'Arthritis (disorder)'
 code "Cerebral edema (disorder) code": '2032001' from "SNOMEDCT" display 'Cerebral edema (disorder)'
 
-concept "Hyperbaric oxygen therapy (procedure) ": {"Hyperbaric oxygen therapy (procedure) code"}  display 'Hyperbaric oxygen therapy (procedure)'
+concept "Hyperbaric oxygen therapy": {"Hyperbaric oxygen therapy (procedure) code"}  display 'Hyperbaric oxygen therapy (procedure)'
 concept "Toxic effect of carbon monoxide (disorder) ": {"Toxic effect of carbon monoxide (disorder) code"}  display 'Toxic effect of carbon monoxide (disorder)'
 concept "Decompression sickness type I (disorder) ": {"Decompression sickness type I (disorder) code"}  display 'Decompression sickness type I (disorder)'
 concept "Decompression sickness type II (disorder) ": {"Decompression sickness type II (disorder) code"}  display 'Decompression sickness type II (disorder)'
@@ -194,28 +194,17 @@ concept "Cerebral edema (disorder) ": {"Cerebral edema (disorder) code"}  displa
 
 define "Requirements":
     {
-    ([Condition: "Chronic osteomyelitis (disorder)"] union  [Observation: "Absent response to treatment (situation)"]),
-    ([Condition: "Osteoradionecrosis (disorder)"] union [Procedure: "General treatment (procedure)"]),
-    ([Condition: "Soft tissues (body structure)"] union [Condition: "Radionecrosis of skin (disorder)"] union [Procedure: "General treatment (procedure)"]),
-    ([Condition: "Actinomycosis, unspecified"] union [Observation: "Absent response to treatment (situation)"] union [Procedure: "General treatment (procedure)"]),
-    ([Condition: "Diabetes mellitus type 1 (disorder)"] union [Condition: "Wagner syndrome (disorder)"] union[Procedure: "Providing care according to standard (regime/therapy)"] union [Observation: "Absent response to treatment (situation)"]),
-    ([Condition: "Diabetes mellitus type 2 (disorder)"] union [Condition: "Wagner syndrome (disorder)"] union[Procedure: "Providing care according to standard (regime/therapy)"] union [Observation: "Absent response to treatment (situation)"]),
-    ([Condition: "Toxic effect of carbon monoxide (disorder)"]),
-    ([Condition: "Decompression sickness type I (disorder)"]),
-    ([Condition: "Decompression sickness type II (disorder)"]),
-    ([Condition: "Air embolism (disorder)"]),
-    ([Condition: "Gas gangrene (disorder)"]),
-    ([Condition: "Peripheral ischemia (disorder)"]),
-    ([Condition: "Crushing injury (disorder)"] union [Condition: "Traumatic amputation of limb (disorder)"]),
-    ([Condition: "Necrotizing fasciitis (disorder)"]),
-    ([Condition: "Peripheral arterial insufficiency (disorder)"]),
-    ([Procedure: "Skin graft cutting/preparation (procedure)"]),
-    ([Condition: "Toxic effect of cyanide (disorder)"])
+    "Condition" : {"Chronic osteomyelitis (disorder)","Osteoradionecrosis (disorder)", "Soft tissues (body structure)",
+                    "Radionecrosis of skin (disorder)", "Actinomycosis, unspecified", "Diabetes mellitus type 1 (disorder)",
+                    "Diabetes mellitus type 2 (disorder)", "Toxic effect of carbon monoxide (disorder)",
+                    "Decompression sickness type I (disorder)", "Decompression sickness type II (disorder)",
+                    "Air embolism (disorder)","Gas gangrene (disorder)", "Peripheral ischemia (disorder)",
+                    "Wagner syndrome (disorder)", "Crushing injury (disorder)", "Traumatic amputation of limb (disorder)",
+                    "Necrotizing fasciitis (disorder)", "Peripheral arterial insufficiency (disorder)",
+                    "Toxic effect of cyanide (disorder)"},
+    "Observation" : "Absent response to treatment (situation)",
+    "Procedure" : {"General treatment (procedure)", "Providing care according to standard (regime/therapy)", "Skin graft cutting/preparation (procedure)"}
     }
     
 define "PriorAuthorisation":
 	exists([Procedure: "Hyperbaric oxygen therapy (procedure)"])
-    
-    
-    
-    
