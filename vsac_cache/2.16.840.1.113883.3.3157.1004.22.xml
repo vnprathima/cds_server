@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns0:RetrieveValueSetResponse xmlns:ns0="urn:ihe:iti:svs:2008" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <ns0:ValueSet ID="2.16.840.1.113883.3.3157.1004.22" displayName="Sickle Cell Disease" version="20180917">
+        <ns0:ConceptList>
+            <ns0:Concept code="127040003" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Sickle cell-hemoglobin SS disease (disorder)"/>
+            <ns0:Concept code="127041004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Sickle cell-beta-thalassemia (disorder)"/>
+            <ns0:Concept code="127045008" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Sickle cell anemia with coexistent alpha-thalassemia (disorder)"/>
+            <ns0:Concept code="127047000" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Sickle cell-hemoglobin Lepore disease (disorder)"/>
+            <ns0:Concept code="127048005" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Sickle cell-Hemoglobin O Arab disease (disorder)"/>
+            <ns0:Concept code="23269001" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Double heterozygous sickling disorder (disorder)"/>
+            <ns0:Concept code="25472008" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Sickle cell-hemoglobin D disease (disorder)"/>
+            <ns0:Concept code="35434009" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Sickle cell-hemoglobin C disease (disorder)"/>
+            <ns0:Concept code="36472007" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Sickle cell-thalassemia disease (disorder)"/>
+            <ns0:Concept code="38589006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Mixed hemoglobin disorder (disorder)"/>
+            <ns0:Concept code="416290001" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Hemoglobin S sickling disorder without crisis (disorder)"/>
+            <ns0:Concept code="416417002" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Hereditary hemoglobin S (disorder)"/>
+            <ns0:Concept code="416826005" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Sickle cell-thalassemia disease with crisis (disorder)"/>
+            <ns0:Concept code="417048006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Sickle cell-thalassemia disease without crisis (disorder)"/>
+            <ns0:Concept code="417279003" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Hemoglobin S sickling disorder with crisis (disorder)"/>
+            <ns0:Concept code="417357006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Sickling disorder due to hemoglobin S (disorder)"/>
+            <ns0:Concept code="417517009" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Sickle cell-hemoglobin C disease with crisis (disorder)"/>
+            <ns0:Concept code="417683006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Sickle cell-hemoglobin C disease without crisis (disorder)"/>
+            <ns0:Concept code="427306008" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Hereditary hemoglobinopathy (disorder)"/>
+            <ns0:Concept code="47024008" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Sickle cell-hemoglobin E disease (disorder)"/>
+            <ns0:Concept code="61777009" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Thalassemia-hemoglobin C disease (disorder)"/>
+            <ns0:Concept code="80141007" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Hemoglobinopathy (disorder)"/>
+            <ns0:Concept code="D57.00" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Hb-SS disease with crisis, unspecified"/>
+            <ns0:Concept code="D57.01" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Hb-SS disease with acute chest syndrome"/>
+            <ns0:Concept code="D57.02" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Hb-SS disease with splenic sequestration"/>
+            <ns0:Concept code="D57.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Sickle-cell disease without crisis"/>
+            <ns0:Concept code="D57.20" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Sickle-cell/Hb-C disease without crisis"/>
+            <ns0:Concept code="D57.211" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Sickle-cell/Hb-C disease with acute chest syndrome"/>
+            <ns0:Concept code="D57.212" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Sickle-cell/Hb-C disease with splenic sequestration"/>
+            <ns0:Concept code="D57.219" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Sickle-cell/Hb-C disease with crisis, unspecified"/>
+            <ns0:Concept code="D57.40" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Sickle-cell thalassemia without crisis"/>
+            <ns0:Concept code="D57.411" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Sickle-cell thalassemia with acute chest syndrome"/>
+            <ns0:Concept code="D57.412" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Sickle-cell thalassemia with splenic sequestration"/>
+            <ns0:Concept code="D57.419" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Sickle-cell thalassemia with crisis, unspecified"/>
+            <ns0:Concept code="D57.80" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other sickle-cell disorders without crisis"/>
+            <ns0:Concept code="D57.811" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other sickle-cell disorders with acute chest syndrome"/>
+            <ns0:Concept code="D57.812" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other sickle-cell disorders with splenic sequestration"/>
+            <ns0:Concept code="D57.819" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other sickle-cell disorders with crisis, unspecified"/>
+        </ns0:ConceptList>
+    </ns0:ValueSet>
+</ns0:RetrieveValueSetResponse>

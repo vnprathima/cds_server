@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns0:RetrieveValueSetResponse xmlns:ns0="urn:ihe:iti:svs:2008" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <ns0:ValueSet ID="2.16.840.1.113883.3.666.5.672" displayName="Septicemia" version="20180917">
+        <ns0:ConceptList>
+            <ns0:Concept code="038.0" codeSystem="2.16.840.1.113883.6.103" codeSystemName="ICD9CM" codeSystemVersion="2013" displayName="Streptococcal septicemia"/>
+            <ns0:Concept code="038.10" codeSystem="2.16.840.1.113883.6.103" codeSystemName="ICD9CM" codeSystemVersion="2013" displayName="Staphylococcal septicemia, unspecified"/>
+            <ns0:Concept code="038.11" codeSystem="2.16.840.1.113883.6.103" codeSystemName="ICD9CM" codeSystemVersion="2013" displayName="Methicillin susceptible Staphylococcus aureus septicemia"/>
+            <ns0:Concept code="038.12" codeSystem="2.16.840.1.113883.6.103" codeSystemName="ICD9CM" codeSystemVersion="2013" displayName="Methicillin resistant Staphylococcus aureus septicemia"/>
+            <ns0:Concept code="038.19" codeSystem="2.16.840.1.113883.6.103" codeSystemName="ICD9CM" codeSystemVersion="2013" displayName="Other staphylococcal septicemia"/>
+            <ns0:Concept code="038.2" codeSystem="2.16.840.1.113883.6.103" codeSystemName="ICD9CM" codeSystemVersion="2013" displayName="Pneumococcal septicemia [Streptococcus pneumoniae septicemia]"/>
+            <ns0:Concept code="038.3" codeSystem="2.16.840.1.113883.6.103" codeSystemName="ICD9CM" codeSystemVersion="2013" displayName="Septicemia due to anaerobes"/>
+            <ns0:Concept code="038.40" codeSystem="2.16.840.1.113883.6.103" codeSystemName="ICD9CM" codeSystemVersion="2013" displayName="Septicemia due to gram-negative organism, unspecified"/>
+            <ns0:Concept code="038.41" codeSystem="2.16.840.1.113883.6.103" codeSystemName="ICD9CM" codeSystemVersion="2013" displayName="Septicemia due to hemophilus influenzae [H. influenzae]"/>
+            <ns0:Concept code="038.42" codeSystem="2.16.840.1.113883.6.103" codeSystemName="ICD9CM" codeSystemVersion="2013" displayName="Septicemia due to escherichia coli [E. coli]"/>
+            <ns0:Concept code="038.43" codeSystem="2.16.840.1.113883.6.103" codeSystemName="ICD9CM" codeSystemVersion="2013" displayName="Septicemia due to pseudomonas"/>
+            <ns0:Concept code="038.44" codeSystem="2.16.840.1.113883.6.103" codeSystemName="ICD9CM" codeSystemVersion="2013" displayName="Septicemia due to serratia"/>
+            <ns0:Concept code="038.49" codeSystem="2.16.840.1.113883.6.103" codeSystemName="ICD9CM" codeSystemVersion="2013" displayName="Other septicemia due to gram-negative organisms"/>
+            <ns0:Concept code="038.8" codeSystem="2.16.840.1.113883.6.103" codeSystemName="ICD9CM" codeSystemVersion="2013" displayName="Other specified septicemias"/>
+            <ns0:Concept code="038.9" codeSystem="2.16.840.1.113883.6.103" codeSystemName="ICD9CM" codeSystemVersion="2013" displayName="Unspecified septicemia"/>
+            <ns0:Concept code="10001005" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Bacterial sepsis (disorder)"/>
+            <ns0:Concept code="18700001" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Septicemia caused by Chromobacterium (disorder)"/>
+            <ns0:Concept code="194394004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Gram positive sepsis (disorder)"/>
+            <ns0:Concept code="196111003" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Bacterial hemorrhagic septicemia (disorder)"/>
+            <ns0:Concept code="238150007" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Sepsis syndrome (disorder)"/>
+            <ns0:Concept code="238443004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Systemic fungal infection affecting skin (disorder)"/>
+            <ns0:Concept code="240385003" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Septicemic glanders (disorder)"/>
+            <ns0:Concept code="25042006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Tracheostomy sepsis (disorder)"/>
+            <ns0:Concept code="266096002" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Methicillin resistant Staphylococcus aureus infection (disorder)"/>
+            <ns0:Concept code="300985007" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Coliform septicemia (disorder)"/>
+            <ns0:Concept code="300986008" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Proteus septicemia (disorder)"/>
+            <ns0:Concept code="310649002" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Vancomycin resistant enterococcal septicemia (disorder)"/>
+            <ns0:Concept code="310669007" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Septicemia caused by enterococcus (disorder)"/>
+            <ns0:Concept code="371044001" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Transient respiratory distress with sepsis (disorder)"/>
+            <ns0:Concept code="402961006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Pseudomonas septicemia with skin involvement (disorder)"/>
+            <ns0:Concept code="41936006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Septicemia caused by Erysipelothrix insidiosa (disorder)"/>
+            <ns0:Concept code="443980004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Neutropenic sepsis (disorder)"/>
+            <ns0:Concept code="447684006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Sepsis caused by Erysipelothrix (disorder)"/>
+            <ns0:Concept code="447685007" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Sepsis caused by Haemophilus influenzae (disorder)"/>
+            <ns0:Concept code="447841007" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Sepsis caused by Candida (disorder)"/>
+            <ns0:Concept code="447843005" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Sepsis caused by anaerobic bacteria (disorder)"/>
+            <ns0:Concept code="447894003" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Sepsis caused by Staphylococcus (disorder)"/>
+            <ns0:Concept code="447897005" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Sepsis caused by Acinetobacter (disorder)"/>
+            <ns0:Concept code="447898000" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Sepsis caused by Actinomyces (disorder)"/>
+            <ns0:Concept code="447899008" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Sepsis caused by Escherichia coli (disorder)"/>
+            <ns0:Concept code="448417001" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Sepsis caused by Staphylococcus aureus (disorder)"/>
+            <ns0:Concept code="448418006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Sepsis caused by Streptococcus (disorder)"/>
+            <ns0:Concept code="448419003" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Sepsis caused by Streptococcus agalactiae (disorder)"/>
+            <ns0:Concept code="448420009" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Sepsis caused by Streptococcus group D (disorder)"/>
+            <ns0:Concept code="448421008" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Sepsis caused by Streptococcus pneumoniae (disorder)"/>
+            <ns0:Concept code="448422001" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Sepsis caused by Streptococcus suis (disorder)"/>
+            <ns0:Concept code="448483008" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Sepsis caused by Enterobacter (disorder)"/>
+            <ns0:Concept code="448812000" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Sepsis caused by methicillin resistant Staphylococcus aureus (disorder)"/>
+            <ns0:Concept code="448813005" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Sepsis caused by Pseudomonas (disorder)"/>
+            <ns0:Concept code="449082003" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Sepsis caused by Gram negative bacteria (disorder)"/>
+            <ns0:Concept code="449084002" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Sepsis caused by Serratia (disorder)"/>
+            <ns0:Concept code="449335002" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Sepsis caused by Listeria monocytogenes (disorder)"/>
+            <ns0:Concept code="449504009" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Sepsis caused by Streptococcus pyogenes (disorder)"/>
+            <ns0:Concept code="449505005" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Sepsis caused by coagulase negative Staphylococcus (disorder)"/>
+            <ns0:Concept code="449546000" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Sepsis caused by Haemophilus influenzae type B (disorder)"/>
+            <ns0:Concept code="51831006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Sepsis following infusion, injection, transfusion AND/OR vaccination (disorder)"/>
+            <ns0:Concept code="5567000" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Gas gangrene septicemia (disorder)"/>
+            <ns0:Concept code="79587009" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMEDCT" codeSystemVersion="2018-09" displayName="Septicemia caused by Bacteroides (disorder)"/>
+            <ns0:Concept code="995.91" codeSystem="2.16.840.1.113883.6.103" codeSystemName="ICD9CM" codeSystemVersion="2013" displayName="Sepsis"/>
+            <ns0:Concept code="995.92" codeSystem="2.16.840.1.113883.6.103" codeSystemName="ICD9CM" codeSystemVersion="2013" displayName="Severe sepsis"/>
+            <ns0:Concept code="A26.7" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Erysipelothrix sepsis"/>
+            <ns0:Concept code="A32.7" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Listerial sepsis"/>
+            <ns0:Concept code="A40.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Sepsis due to streptococcus, group A"/>
+            <ns0:Concept code="A40.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Sepsis due to streptococcus, group B"/>
+            <ns0:Concept code="A40.3" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Sepsis due to Streptococcus pneumoniae"/>
+            <ns0:Concept code="A40.8" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other streptococcal sepsis"/>
+            <ns0:Concept code="A40.9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Streptococcal sepsis, unspecified"/>
+            <ns0:Concept code="A41.01" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Sepsis due to Methicillin susceptible Staphylococcus aureus"/>
+            <ns0:Concept code="A41.02" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Sepsis due to Methicillin resistant Staphylococcus aureus"/>
+            <ns0:Concept code="A41.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Sepsis due to other specified staphylococcus"/>
+            <ns0:Concept code="A41.2" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Sepsis due to unspecified staphylococcus"/>
+            <ns0:Concept code="A41.3" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Sepsis due to Hemophilus influenzae"/>
+            <ns0:Concept code="A41.4" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Sepsis due to anaerobes"/>
+            <ns0:Concept code="A41.50" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Gram-negative sepsis, unspecified"/>
+            <ns0:Concept code="A41.51" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Sepsis due to Escherichia coli [E. coli]"/>
+            <ns0:Concept code="A41.52" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Sepsis due to Pseudomonas"/>
+            <ns0:Concept code="A41.53" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Sepsis due to Serratia"/>
+            <ns0:Concept code="A41.59" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other Gram-negative sepsis"/>
+            <ns0:Concept code="A41.81" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Sepsis due to Enterococcus"/>
+            <ns0:Concept code="A41.89" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other specified sepsis"/>
+            <ns0:Concept code="A41.9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Sepsis, unspecified organism"/>
+            <ns0:Concept code="A42.7" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Actinomycotic sepsis"/>
+            <ns0:Concept code="B37.7" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Candidal sepsis"/>
+            <ns0:Concept code="R65.20" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Severe sepsis without septic shock"/>
+            <ns0:Concept code="R65.21" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Severe sepsis with septic shock"/>
+        </ns0:ConceptList>
+    </ns0:ValueSet>
+</ns0:RetrieveValueSetResponse>
