@@ -1,0 +1,957 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns0:RetrieveValueSetResponse xmlns:ns0="urn:ihe:iti:svs:2008" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <ns0:ValueSet ID="2.16.840.1.113883.17.4077.2.2074" displayName="Infection" version="20181103">
+        <ns0:ConceptList>
+            <ns0:Concept code="A00.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cholera due to Vibrio cholerae 01, biovar cholerae"/>
+            <ns0:Concept code="A00.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cholera due to Vibrio cholerae 01, biovar eltor"/>
+            <ns0:Concept code="A00.9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cholera, unspecified"/>
+            <ns0:Concept code="A01.00" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Typhoid fever, unspecified"/>
+            <ns0:Concept code="A01.01" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Typhoid meningitis"/>
+            <ns0:Concept code="A01.02" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Typhoid fever with heart involvement"/>
+            <ns0:Concept code="A01.03" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Typhoid pneumonia"/>
+            <ns0:Concept code="A01.04" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Typhoid arthritis"/>
+            <ns0:Concept code="A01.05" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Typhoid osteomyelitis"/>
+            <ns0:Concept code="A01.09" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Typhoid fever with other complications"/>
+            <ns0:Concept code="A01.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Paratyphoid fever A"/>
+            <ns0:Concept code="A01.2" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Paratyphoid fever B"/>
+            <ns0:Concept code="A01.3" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Paratyphoid fever C"/>
+            <ns0:Concept code="A01.4" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Paratyphoid fever, unspecified"/>
+            <ns0:Concept code="A02.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Salmonella enteritis"/>
+            <ns0:Concept code="A02.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Salmonella sepsis"/>
+            <ns0:Concept code="A02.20" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Localized salmonella infection, unspecified"/>
+            <ns0:Concept code="A02.21" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Salmonella meningitis"/>
+            <ns0:Concept code="A02.22" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Salmonella pneumonia"/>
+            <ns0:Concept code="A02.23" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Salmonella arthritis"/>
+            <ns0:Concept code="A02.24" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Salmonella osteomyelitis"/>
+            <ns0:Concept code="A02.25" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Salmonella pyelonephritis"/>
+            <ns0:Concept code="A02.29" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Salmonella with other localized infection"/>
+            <ns0:Concept code="A02.8" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other specified salmonella infections"/>
+            <ns0:Concept code="A02.9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Salmonella infection, unspecified"/>
+            <ns0:Concept code="A03.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Shigellosis due to Shigella dysenteriae"/>
+            <ns0:Concept code="A03.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Shigellosis due to Shigella flexneri"/>
+            <ns0:Concept code="A03.2" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Shigellosis due to Shigella boydii"/>
+            <ns0:Concept code="A03.3" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Shigellosis due to Shigella sonnei"/>
+            <ns0:Concept code="A03.8" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other shigellosis"/>
+            <ns0:Concept code="A03.9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Shigellosis, unspecified"/>
+            <ns0:Concept code="A15.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Tuberculosis of lung"/>
+            <ns0:Concept code="A15.4" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Tuberculosis of intrathoracic lymph nodes"/>
+            <ns0:Concept code="A15.5" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Tuberculosis of larynx, trachea and bronchus"/>
+            <ns0:Concept code="A15.6" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Tuberculous pleurisy"/>
+            <ns0:Concept code="A15.7" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Primary respiratory tuberculosis"/>
+            <ns0:Concept code="A15.8" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other respiratory tuberculosis"/>
+            <ns0:Concept code="A15.9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Respiratory tuberculosis unspecified"/>
+            <ns0:Concept code="A17.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Tuberculous meningitis"/>
+            <ns0:Concept code="A17.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Meningeal tuberculoma"/>
+            <ns0:Concept code="A17.81" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Tuberculoma of brain and spinal cord"/>
+            <ns0:Concept code="A17.82" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Tuberculous meningoencephalitis"/>
+            <ns0:Concept code="A17.83" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Tuberculous neuritis"/>
+            <ns0:Concept code="A17.89" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other tuberculosis of nervous system"/>
+            <ns0:Concept code="A17.9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Tuberculosis of nervous system, unspecified"/>
+            <ns0:Concept code="A18.01" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Tuberculosis of spine"/>
+            <ns0:Concept code="A18.03" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Tuberculosis of other bones"/>
+            <ns0:Concept code="A18.2" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Tuberculous peripheral lymphadenopathy"/>
+            <ns0:Concept code="A18.4" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Tuberculosis of skin and subcutaneous tissue"/>
+            <ns0:Concept code="A18.50" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Tuberculosis of eye, unspecified"/>
+            <ns0:Concept code="A18.51" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Tuberculous episcleritis"/>
+            <ns0:Concept code="A18.52" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Tuberculous keratitis"/>
+            <ns0:Concept code="A18.53" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Tuberculous chorioretinitis"/>
+            <ns0:Concept code="A18.54" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Tuberculous iridocyclitis"/>
+            <ns0:Concept code="A18.59" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other tuberculosis of eye"/>
+            <ns0:Concept code="A18.6" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Tuberculosis of (inner) (middle) ear"/>
+            <ns0:Concept code="A18.81" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Tuberculosis of thyroid gland"/>
+            <ns0:Concept code="A18.84" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Tuberculosis of heart"/>
+            <ns0:Concept code="A18.85" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Tuberculosis of spleen"/>
+            <ns0:Concept code="A18.89" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Tuberculosis of other sites"/>
+            <ns0:Concept code="A19.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute miliary tuberculosis of a single specified site"/>
+            <ns0:Concept code="A19.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute miliary tuberculosis of multiple sites"/>
+            <ns0:Concept code="A19.2" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute miliary tuberculosis, unspecified"/>
+            <ns0:Concept code="A19.8" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other miliary tuberculosis"/>
+            <ns0:Concept code="A19.9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Miliary tuberculosis, unspecified"/>
+            <ns0:Concept code="A20.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Bubonic plague"/>
+            <ns0:Concept code="A20.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cellulocutaneous plague"/>
+            <ns0:Concept code="A20.2" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pneumonic plague"/>
+            <ns0:Concept code="A20.3" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Plague meningitis"/>
+            <ns0:Concept code="A20.7" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Septicemic plague"/>
+            <ns0:Concept code="A20.8" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other forms of plague"/>
+            <ns0:Concept code="A20.9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Plague, unspecified"/>
+            <ns0:Concept code="A21.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Ulceroglandular tularemia"/>
+            <ns0:Concept code="A21.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Oculoglandular tularemia"/>
+            <ns0:Concept code="A21.2" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pulmonary tularemia"/>
+            <ns0:Concept code="A21.3" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Gastrointestinal tularemia"/>
+            <ns0:Concept code="A21.7" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Generalized tularemia"/>
+            <ns0:Concept code="A21.8" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other forms of tularemia"/>
+            <ns0:Concept code="A21.9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Tularemia, unspecified"/>
+            <ns0:Concept code="A22.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cutaneous anthrax"/>
+            <ns0:Concept code="A22.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pulmonary anthrax"/>
+            <ns0:Concept code="A22.2" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Gastrointestinal anthrax"/>
+            <ns0:Concept code="A22.7" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Anthrax sepsis"/>
+            <ns0:Concept code="A22.8" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other forms of anthrax"/>
+            <ns0:Concept code="A22.9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Anthrax, unspecified"/>
+            <ns0:Concept code="A23.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Brucellosis due to Brucella melitensis"/>
+            <ns0:Concept code="A23.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Brucellosis due to Brucella abortus"/>
+            <ns0:Concept code="A23.2" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Brucellosis due to Brucella suis"/>
+            <ns0:Concept code="A23.3" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Brucellosis due to Brucella canis"/>
+            <ns0:Concept code="A23.8" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other brucellosis"/>
+            <ns0:Concept code="A23.9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Brucellosis, unspecified"/>
+            <ns0:Concept code="A24.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute and fulminating melioidosis"/>
+            <ns0:Concept code="A24.2" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Subacute and chronic melioidosis"/>
+            <ns0:Concept code="A24.3" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other melioidosis"/>
+            <ns0:Concept code="A24.9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Melioidosis, unspecified"/>
+            <ns0:Concept code="A25.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Spirillosis"/>
+            <ns0:Concept code="A25.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Streptobacillosis"/>
+            <ns0:Concept code="A25.9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Rat-bite fever, unspecified"/>
+            <ns0:Concept code="A26.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cutaneous erysipeloid"/>
+            <ns0:Concept code="A26.7" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Erysipelothrix sepsis"/>
+            <ns0:Concept code="A26.8" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other forms of erysipeloid"/>
+            <ns0:Concept code="A26.9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Erysipeloid, unspecified"/>
+            <ns0:Concept code="A27.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Leptospirosis icterohemorrhagica"/>
+            <ns0:Concept code="A27.89" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other forms of leptospirosis"/>
+            <ns0:Concept code="A27.9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Leptospirosis, unspecified"/>
+            <ns0:Concept code="A28.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pasteurellosis"/>
+            <ns0:Concept code="A28.2" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Extraintestinal yersiniosis"/>
+            <ns0:Concept code="A28.8" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other specified zoonotic bacterial diseases, not elsewhere classified"/>
+            <ns0:Concept code="A28.9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Zoonotic bacterial disease, unspecified"/>
+            <ns0:Concept code="A31.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pulmonary mycobacterial infection"/>
+            <ns0:Concept code="A31.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cutaneous mycobacterial infection"/>
+            <ns0:Concept code="A31.2" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Disseminated mycobacterium avium-intracellulare complex (DMAC)"/>
+            <ns0:Concept code="A31.8" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other mycobacterial infections"/>
+            <ns0:Concept code="A31.9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Mycobacterial infection, unspecified"/>
+            <ns0:Concept code="A32.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cutaneous listeriosis"/>
+            <ns0:Concept code="A32.11" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Listerial meningitis"/>
+            <ns0:Concept code="A32.12" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Listerial meningoencephalitis"/>
+            <ns0:Concept code="A32.7" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Listerial sepsis"/>
+            <ns0:Concept code="A32.81" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Oculoglandular listeriosis"/>
+            <ns0:Concept code="A32.82" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Listerial endocarditis"/>
+            <ns0:Concept code="A32.89" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other forms of listeriosis"/>
+            <ns0:Concept code="A32.9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Listeriosis, unspecified"/>
+            <ns0:Concept code="A35" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other tetanus"/>
+            <ns0:Concept code="A36.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pharyngeal diphtheria"/>
+            <ns0:Concept code="A36.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Nasopharyngeal diphtheria"/>
+            <ns0:Concept code="A36.2" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Laryngeal diphtheria"/>
+            <ns0:Concept code="A36.3" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cutaneous diphtheria"/>
+            <ns0:Concept code="A36.81" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Diphtheritic cardiomyopathy"/>
+            <ns0:Concept code="A36.82" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Diphtheritic radiculomyelitis"/>
+            <ns0:Concept code="A36.83" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Diphtheritic polyneuritis"/>
+            <ns0:Concept code="A36.84" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Diphtheritic tubulo-interstitial nephropathy"/>
+            <ns0:Concept code="A36.85" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Diphtheritic cystitis"/>
+            <ns0:Concept code="A36.86" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Diphtheritic conjunctivitis"/>
+            <ns0:Concept code="A36.89" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other diphtheritic complications"/>
+            <ns0:Concept code="A36.9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Diphtheria, unspecified"/>
+            <ns0:Concept code="A38.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Scarlet fever with otitis media"/>
+            <ns0:Concept code="A38.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Scarlet fever with myocarditis"/>
+            <ns0:Concept code="A38.8" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Scarlet fever with other complications"/>
+            <ns0:Concept code="A38.9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Scarlet fever, uncomplicated"/>
+            <ns0:Concept code="A39.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Meningococcal meningitis"/>
+            <ns0:Concept code="A39.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Waterhouse-Friderichsen syndrome"/>
+            <ns0:Concept code="A39.2" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute meningococcemia"/>
+            <ns0:Concept code="A39.4" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Meningococcemia, unspecified"/>
+            <ns0:Concept code="A39.50" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Meningococcal carditis, unspecified"/>
+            <ns0:Concept code="A39.51" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Meningococcal endocarditis"/>
+            <ns0:Concept code="A39.52" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Meningococcal myocarditis"/>
+            <ns0:Concept code="A39.53" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Meningococcal pericarditis"/>
+            <ns0:Concept code="A39.81" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Meningococcal encephalitis"/>
+            <ns0:Concept code="A39.82" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Meningococcal retrobulbar neuritis"/>
+            <ns0:Concept code="A39.83" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Meningococcal arthritis"/>
+            <ns0:Concept code="A39.84" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Postmeningococcal arthritis"/>
+            <ns0:Concept code="A39.89" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other meningococcal infections"/>
+            <ns0:Concept code="A39.9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Meningococcal infection, unspecified"/>
+            <ns0:Concept code="A40.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Sepsis due to streptococcus, group A"/>
+            <ns0:Concept code="A40.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Sepsis due to streptococcus, group B"/>
+            <ns0:Concept code="A40.3" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Sepsis due to Streptococcus pneumoniae"/>
+            <ns0:Concept code="A40.8" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other streptococcal sepsis"/>
+            <ns0:Concept code="A40.9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Streptococcal sepsis, unspecified"/>
+            <ns0:Concept code="A41.01" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Sepsis due to Methicillin susceptible Staphylococcus aureus"/>
+            <ns0:Concept code="A41.02" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Sepsis due to Methicillin resistant Staphylococcus aureus"/>
+            <ns0:Concept code="A41.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Sepsis due to other specified staphylococcus"/>
+            <ns0:Concept code="A41.2" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Sepsis due to unspecified staphylococcus"/>
+            <ns0:Concept code="A41.3" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Sepsis due to Hemophilus influenzae"/>
+            <ns0:Concept code="A41.4" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Sepsis due to anaerobes"/>
+            <ns0:Concept code="A41.50" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Gram-negative sepsis, unspecified"/>
+            <ns0:Concept code="A41.51" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Sepsis due to Escherichia coli [E. coli]"/>
+            <ns0:Concept code="A41.52" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Sepsis due to Pseudomonas"/>
+            <ns0:Concept code="A41.53" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Sepsis due to Serratia"/>
+            <ns0:Concept code="A41.59" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other Gram-negative sepsis"/>
+            <ns0:Concept code="A41.81" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Sepsis due to Enterococcus"/>
+            <ns0:Concept code="A41.89" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other specified sepsis"/>
+            <ns0:Concept code="A41.9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Sepsis, unspecified organism"/>
+            <ns0:Concept code="A42.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pulmonary actinomycosis"/>
+            <ns0:Concept code="A42.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Abdominal actinomycosis"/>
+            <ns0:Concept code="A42.2" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cervicofacial actinomycosis"/>
+            <ns0:Concept code="A42.7" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Actinomycotic sepsis"/>
+            <ns0:Concept code="A42.81" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Actinomycotic meningitis"/>
+            <ns0:Concept code="A42.82" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Actinomycotic encephalitis"/>
+            <ns0:Concept code="A42.89" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other forms of actinomycosis"/>
+            <ns0:Concept code="A42.9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Actinomycosis, unspecified"/>
+            <ns0:Concept code="A43.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pulmonary nocardiosis"/>
+            <ns0:Concept code="A43.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cutaneous nocardiosis"/>
+            <ns0:Concept code="A43.8" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other forms of nocardiosis"/>
+            <ns0:Concept code="A43.9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Nocardiosis, unspecified"/>
+            <ns0:Concept code="A46" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Erysipelas"/>
+            <ns0:Concept code="A48.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Gas gangrene"/>
+            <ns0:Concept code="A48.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Legionnaires' disease"/>
+            <ns0:Concept code="A48.2" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Nonpneumonic Legionnaires' disease [Pontiac fever]"/>
+            <ns0:Concept code="A48.3" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Toxic shock syndrome"/>
+            <ns0:Concept code="A48.4" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Brazilian purpuric fever"/>
+            <ns0:Concept code="A48.52" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Wound botulism"/>
+            <ns0:Concept code="A48.8" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other specified bacterial diseases"/>
+            <ns0:Concept code="A49.01" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Methicillin susceptible Staphylococcus aureus infection, unspecified site"/>
+            <ns0:Concept code="A49.02" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Methicillin resistant Staphylococcus aureus infection, unspecified site"/>
+            <ns0:Concept code="A49.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Streptococcal infection, unspecified site"/>
+            <ns0:Concept code="A49.2" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Hemophilus influenzae infection, unspecified site"/>
+            <ns0:Concept code="A49.3" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Mycoplasma infection, unspecified site"/>
+            <ns0:Concept code="A49.8" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other bacterial infections of unspecified site"/>
+            <ns0:Concept code="A49.9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Bacterial infection, unspecified"/>
+            <ns0:Concept code="A54.00" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Gonococcal infection of lower genitourinary tract, unspecified"/>
+            <ns0:Concept code="A54.01" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Gonococcal cystitis and urethritis, unspecified"/>
+            <ns0:Concept code="A54.02" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Gonococcal vulvovaginitis, unspecified"/>
+            <ns0:Concept code="A54.03" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Gonococcal cervicitis, unspecified"/>
+            <ns0:Concept code="A54.09" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other gonococcal infection of lower genitourinary tract"/>
+            <ns0:Concept code="A54.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Gonococcal infection of lower genitourinary tract with periurethral and accessory gland abscess"/>
+            <ns0:Concept code="A54.21" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Gonococcal infection of kidney and ureter"/>
+            <ns0:Concept code="A54.22" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Gonococcal prostatitis"/>
+            <ns0:Concept code="A54.23" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Gonococcal infection of other male genital organs"/>
+            <ns0:Concept code="A54.24" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Gonococcal female pelvic inflammatory disease"/>
+            <ns0:Concept code="A54.29" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other gonococcal genitourinary infections"/>
+            <ns0:Concept code="A54.30" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Gonococcal infection of eye, unspecified"/>
+            <ns0:Concept code="A54.31" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Gonococcal conjunctivitis"/>
+            <ns0:Concept code="A54.32" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Gonococcal iridocyclitis"/>
+            <ns0:Concept code="A54.33" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Gonococcal keratitis"/>
+            <ns0:Concept code="A54.39" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other gonococcal eye infection"/>
+            <ns0:Concept code="A54.40" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Gonococcal infection of musculoskeletal system, unspecified"/>
+            <ns0:Concept code="A54.41" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Gonococcal spondylopathy"/>
+            <ns0:Concept code="A54.42" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Gonococcal arthritis"/>
+            <ns0:Concept code="A54.43" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Gonococcal osteomyelitis"/>
+            <ns0:Concept code="A54.49" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Gonococcal infection of other musculoskeletal tissue"/>
+            <ns0:Concept code="A54.5" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Gonococcal pharyngitis"/>
+            <ns0:Concept code="A54.6" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Gonococcal infection of anus and rectum"/>
+            <ns0:Concept code="A54.81" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Gonococcal meningitis"/>
+            <ns0:Concept code="A54.82" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Gonococcal brain abscess"/>
+            <ns0:Concept code="A54.83" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Gonococcal heart infection"/>
+            <ns0:Concept code="A54.84" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Gonococcal pneumonia"/>
+            <ns0:Concept code="A54.85" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Gonococcal peritonitis"/>
+            <ns0:Concept code="A54.86" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Gonococcal sepsis"/>
+            <ns0:Concept code="A54.89" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other gonococcal infections"/>
+            <ns0:Concept code="A54.9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Gonococcal infection, unspecified"/>
+            <ns0:Concept code="A56.02" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Chlamydial vulvovaginitis"/>
+            <ns0:Concept code="A56.11" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Chlamydial female pelvic inflammatory disease"/>
+            <ns0:Concept code="A69.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Necrotizing ulcerative stomatitis"/>
+            <ns0:Concept code="B37.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pulmonary candidiasis"/>
+            <ns0:Concept code="B37.7" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Candidal sepsis"/>
+            <ns0:Concept code="B37.89" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other sites of candidiasis"/>
+            <ns0:Concept code="B40.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Chronic pulmonary blastomycosis"/>
+            <ns0:Concept code="B43.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pheomycotic brain abscess"/>
+            <ns0:Concept code="B43.2" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Subcutaneous pheomycotic abscess and cyst"/>
+            <ns0:Concept code="B95.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Streptococcus, group A, as the cause of diseases classified elsewhere"/>
+            <ns0:Concept code="B95.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Streptococcus, group B, as the cause of diseases classified elsewhere"/>
+            <ns0:Concept code="B95.2" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Enterococcus as the cause of diseases classified elsewhere"/>
+            <ns0:Concept code="B95.3" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Streptococcus pneumoniae as the cause of diseases classified elsewhere"/>
+            <ns0:Concept code="B95.4" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other streptococcus as the cause of diseases classified elsewhere"/>
+            <ns0:Concept code="B95.5" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Unspecified streptococcus as the cause of diseases classified elsewhere"/>
+            <ns0:Concept code="B95.61" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Methicillin susceptible Staphylococcus aureus infection as the cause of diseases classified elsewhere"/>
+            <ns0:Concept code="B95.62" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Methicillin resistant Staphylococcus aureus infection as the cause of diseases classified elsewhere"/>
+            <ns0:Concept code="B95.7" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other staphylococcus as the cause of diseases classified elsewhere"/>
+            <ns0:Concept code="B95.8" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Unspecified staphylococcus as the cause of diseases classified elsewhere"/>
+            <ns0:Concept code="B96.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Mycoplasma pneumoniae [M. pneumoniae] as the cause of diseases classified elsewhere"/>
+            <ns0:Concept code="B96.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Klebsiella pneumoniae [K. pneumoniae] as the cause of diseases classified elsewhere"/>
+            <ns0:Concept code="B96.20" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Unspecified Escherichia coli [E. coli] as the cause of diseases classified elsewhere"/>
+            <ns0:Concept code="B96.21" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Shiga toxin-producing Escherichia coli [E. coli] (STEC) O157 as the cause of diseases classified elsewhere"/>
+            <ns0:Concept code="B96.22" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other specified Shiga toxin-producing Escherichia coli [E. coli] (STEC) as the cause of diseases classified elsewhere"/>
+            <ns0:Concept code="B96.23" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Unspecified Shiga toxin-producing Escherichia coli [E. coli] (STEC) as the cause of diseases classified elsewhere"/>
+            <ns0:Concept code="B96.29" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other Escherichia coli [E. coli] as the cause of diseases classified elsewhere"/>
+            <ns0:Concept code="B96.3" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Hemophilus influenzae [H. influenzae] as the cause of diseases classified elsewhere"/>
+            <ns0:Concept code="B96.4" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Proteus (mirabilis) (morganii) as the cause of diseases classified elsewhere"/>
+            <ns0:Concept code="B96.5" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pseudomonas (aeruginosa) (mallei) (pseudomallei) as the cause of diseases classified elsewhere"/>
+            <ns0:Concept code="B96.6" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Bacteroides fragilis [B. fragilis] as the cause of diseases classified elsewhere"/>
+            <ns0:Concept code="B96.7" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Clostridium perfringens [C. perfringens] as the cause of diseases classified elsewhere"/>
+            <ns0:Concept code="B96.81" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Helicobacter pylori [H. pylori] as the cause of diseases classified elsewhere"/>
+            <ns0:Concept code="B96.82" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Vibrio vulnificus as the cause of diseases classified elsewhere"/>
+            <ns0:Concept code="B96.89" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other specified bacterial agents as the cause of diseases classified elsewhere"/>
+            <ns0:Concept code="G00.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Hemophilus meningitis"/>
+            <ns0:Concept code="G00.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pneumococcal meningitis"/>
+            <ns0:Concept code="G00.2" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Streptococcal meningitis"/>
+            <ns0:Concept code="G00.3" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Staphylococcal meningitis"/>
+            <ns0:Concept code="G00.8" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other bacterial meningitis"/>
+            <ns0:Concept code="G00.9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Bacterial meningitis, unspecified"/>
+            <ns0:Concept code="G01" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Meningitis in bacterial diseases classified elsewhere"/>
+            <ns0:Concept code="G02" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Meningitis in other infectious and parasitic diseases classified elsewhere"/>
+            <ns0:Concept code="G03.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Nonpyogenic meningitis"/>
+            <ns0:Concept code="G03.8" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Meningitis due to other specified causes"/>
+            <ns0:Concept code="G03.9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Meningitis, unspecified"/>
+            <ns0:Concept code="G04.2" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Bacterial meningoencephalitis and meningomyelitis, not elsewhere classified"/>
+            <ns0:Concept code="G06.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Intracranial abscess and granuloma"/>
+            <ns0:Concept code="G06.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Intraspinal abscess and granuloma"/>
+            <ns0:Concept code="G06.2" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Extradural and subdural abscess, unspecified"/>
+            <ns0:Concept code="G07" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Intracranial and intraspinal abscess and granuloma in diseases classified elsewhere"/>
+            <ns0:Concept code="G08" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Intracranial and intraspinal phlebitis and thrombophlebitis"/>
+            <ns0:Concept code="H05.011" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cellulitis of right orbit"/>
+            <ns0:Concept code="H05.012" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cellulitis of left orbit"/>
+            <ns0:Concept code="H05.013" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cellulitis of bilateral orbits"/>
+            <ns0:Concept code="H05.019" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cellulitis of unspecified orbit"/>
+            <ns0:Concept code="H05.021" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Osteomyelitis of right orbit"/>
+            <ns0:Concept code="H05.022" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Osteomyelitis of left orbit"/>
+            <ns0:Concept code="H05.023" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Osteomyelitis of bilateral orbits"/>
+            <ns0:Concept code="H05.029" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Osteomyelitis of unspecified orbit"/>
+            <ns0:Concept code="H60.20" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Malignant otitis externa, unspecified ear"/>
+            <ns0:Concept code="H60.21" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Malignant otitis externa, right ear"/>
+            <ns0:Concept code="H60.22" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Malignant otitis externa, left ear"/>
+            <ns0:Concept code="H60.23" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Malignant otitis externa, bilateral"/>
+            <ns0:Concept code="H70.001" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute mastoiditis without complications, right ear"/>
+            <ns0:Concept code="H70.002" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute mastoiditis without complications, left ear"/>
+            <ns0:Concept code="H70.003" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute mastoiditis without complications, bilateral"/>
+            <ns0:Concept code="H70.009" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute mastoiditis without complications, unspecified ear"/>
+            <ns0:Concept code="H70.011" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Subperiosteal abscess of mastoid, right ear"/>
+            <ns0:Concept code="H70.012" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Subperiosteal abscess of mastoid, left ear"/>
+            <ns0:Concept code="H70.013" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Subperiosteal abscess of mastoid, bilateral"/>
+            <ns0:Concept code="H70.019" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Subperiosteal abscess of mastoid, unspecified ear"/>
+            <ns0:Concept code="H70.091" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute mastoiditis with other complications, right ear"/>
+            <ns0:Concept code="H70.092" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute mastoiditis with other complications, left ear"/>
+            <ns0:Concept code="H70.093" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute mastoiditis with other complications, bilateral"/>
+            <ns0:Concept code="H70.099" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute mastoiditis with other complications, unspecified ear"/>
+            <ns0:Concept code="H70.891" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other mastoiditis and related conditions, right ear"/>
+            <ns0:Concept code="H70.892" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other mastoiditis and related conditions, left ear"/>
+            <ns0:Concept code="H70.893" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other mastoiditis and related conditions, bilateral"/>
+            <ns0:Concept code="H70.899" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other mastoiditis and related conditions, unspecified ear"/>
+            <ns0:Concept code="H70.90" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Unspecified mastoiditis, unspecified ear"/>
+            <ns0:Concept code="H70.91" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Unspecified mastoiditis, right ear"/>
+            <ns0:Concept code="H70.92" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Unspecified mastoiditis, left ear"/>
+            <ns0:Concept code="H70.93" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Unspecified mastoiditis, bilateral"/>
+            <ns0:Concept code="I32" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pericarditis in diseases classified elsewhere"/>
+            <ns0:Concept code="I33.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute and subacute infective endocarditis"/>
+            <ns0:Concept code="I33.9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute and subacute endocarditis, unspecified"/>
+            <ns0:Concept code="I39" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Endocarditis and heart valve disorders in diseases classified elsewhere"/>
+            <ns0:Concept code="J02.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Streptococcal pharyngitis"/>
+            <ns0:Concept code="J02.8" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute pharyngitis due to other specified organisms"/>
+            <ns0:Concept code="J03.00" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute streptococcal tonsillitis, unspecified"/>
+            <ns0:Concept code="J03.01" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute recurrent streptococcal tonsillitis"/>
+            <ns0:Concept code="J03.80" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute tonsillitis due to other specified organisms"/>
+            <ns0:Concept code="J03.81" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute recurrent tonsillitis due to other specified organisms"/>
+            <ns0:Concept code="J04.10" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute tracheitis without obstruction"/>
+            <ns0:Concept code="J04.11" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute tracheitis with obstruction"/>
+            <ns0:Concept code="J04.30" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Supraglottitis, unspecified, without obstruction"/>
+            <ns0:Concept code="J04.31" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Supraglottitis, unspecified, with obstruction"/>
+            <ns0:Concept code="J05.10" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute epiglottitis without obstruction"/>
+            <ns0:Concept code="J05.11" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute epiglottitis with obstruction"/>
+            <ns0:Concept code="J13" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pneumonia due to Streptococcus pneumoniae"/>
+            <ns0:Concept code="J14" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pneumonia due to Hemophilus influenzae"/>
+            <ns0:Concept code="J15.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pneumonia due to Klebsiella pneumoniae"/>
+            <ns0:Concept code="J15.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pneumonia due to Pseudomonas"/>
+            <ns0:Concept code="J15.20" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pneumonia due to staphylococcus, unspecified"/>
+            <ns0:Concept code="J15.211" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pneumonia due to Methicillin susceptible Staphylococcus aureus"/>
+            <ns0:Concept code="J15.212" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pneumonia due to Methicillin resistant Staphylococcus aureus"/>
+            <ns0:Concept code="J15.29" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pneumonia due to other staphylococcus"/>
+            <ns0:Concept code="J15.3" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pneumonia due to streptococcus, group B"/>
+            <ns0:Concept code="J15.4" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pneumonia due to other streptococci"/>
+            <ns0:Concept code="J15.5" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pneumonia due to Escherichia coli"/>
+            <ns0:Concept code="J15.6" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pneumonia due to other Gram-negative bacteria"/>
+            <ns0:Concept code="J15.8" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pneumonia due to other specified bacteria"/>
+            <ns0:Concept code="J15.9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Unspecified bacterial pneumonia"/>
+            <ns0:Concept code="J17" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pneumonia in diseases classified elsewhere"/>
+            <ns0:Concept code="J18.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Bronchopneumonia, unspecified organism"/>
+            <ns0:Concept code="J18.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Lobar pneumonia, unspecified organism"/>
+            <ns0:Concept code="J18.8" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other pneumonia, unspecified organism"/>
+            <ns0:Concept code="J18.9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pneumonia, unspecified organism"/>
+            <ns0:Concept code="J20.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute bronchitis due to Mycoplasma pneumoniae"/>
+            <ns0:Concept code="J20.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute bronchitis due to Hemophilus influenzae"/>
+            <ns0:Concept code="J20.2" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute bronchitis due to streptococcus"/>
+            <ns0:Concept code="J36" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Peritonsillar abscess"/>
+            <ns0:Concept code="J85.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Gangrene and necrosis of lung"/>
+            <ns0:Concept code="J85.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Abscess of lung with pneumonia"/>
+            <ns0:Concept code="J85.2" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Abscess of lung without pneumonia"/>
+            <ns0:Concept code="J85.3" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Abscess of mediastinum"/>
+            <ns0:Concept code="J86.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pyothorax with fistula"/>
+            <ns0:Concept code="J86.9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pyothorax without fistula"/>
+            <ns0:Concept code="K12.2" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cellulitis and abscess of mouth"/>
+            <ns0:Concept code="K35.2" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute appendicitis with generalized peritonitis"/>
+            <ns0:Concept code="K35.3" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute appendicitis with localized peritonitis"/>
+            <ns0:Concept code="K35.80" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Unspecified acute appendicitis"/>
+            <ns0:Concept code="K35.89" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other acute appendicitis"/>
+            <ns0:Concept code="K36" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other appendicitis"/>
+            <ns0:Concept code="K37" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Unspecified appendicitis"/>
+            <ns0:Concept code="K50.014" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Crohn's disease of small intestine with abscess"/>
+            <ns0:Concept code="K50.114" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Crohn's disease of large intestine with abscess"/>
+            <ns0:Concept code="K50.814" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Crohn's disease of both small and large intestine with abscess"/>
+            <ns0:Concept code="K50.914" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Crohn's disease, unspecified, with abscess"/>
+            <ns0:Concept code="K51.014" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Ulcerative (chronic) pancolitis with abscess"/>
+            <ns0:Concept code="K51.214" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Ulcerative (chronic) proctitis with abscess"/>
+            <ns0:Concept code="K51.314" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Ulcerative (chronic) rectosigmoiditis with abscess"/>
+            <ns0:Concept code="K51.414" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Inflammatory polyps of colon with abscess"/>
+            <ns0:Concept code="K51.514" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Left sided colitis with abscess"/>
+            <ns0:Concept code="K51.814" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other ulcerative colitis with abscess"/>
+            <ns0:Concept code="K51.914" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Ulcerative colitis, unspecified with abscess"/>
+            <ns0:Concept code="K57.00" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Diverticulitis of small intestine with perforation and abscess without bleeding"/>
+            <ns0:Concept code="K57.01" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Diverticulitis of small intestine with perforation and abscess with bleeding"/>
+            <ns0:Concept code="K57.12" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Diverticulitis of small intestine without perforation or abscess without bleeding"/>
+            <ns0:Concept code="K57.13" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Diverticulitis of small intestine without perforation or abscess with bleeding"/>
+            <ns0:Concept code="K57.20" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Diverticulitis of large intestine with perforation and abscess without bleeding"/>
+            <ns0:Concept code="K57.21" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Diverticulitis of large intestine with perforation and abscess with bleeding"/>
+            <ns0:Concept code="K57.32" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Diverticulitis of large intestine without perforation or abscess without bleeding"/>
+            <ns0:Concept code="K57.33" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Diverticulitis of large intestine without perforation or abscess with bleeding"/>
+            <ns0:Concept code="K57.40" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Diverticulitis of both small and large intestine with perforation and abscess without bleeding"/>
+            <ns0:Concept code="K57.41" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Diverticulitis of both small and large intestine with perforation and abscess with bleeding"/>
+            <ns0:Concept code="K57.52" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Diverticulitis of both small and large intestine without perforation or abscess without bleeding"/>
+            <ns0:Concept code="K57.53" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Diverticulitis of both small and large intestine without perforation or abscess with bleeding"/>
+            <ns0:Concept code="K57.80" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Diverticulitis of intestine, part unspecified, with perforation and abscess without bleeding"/>
+            <ns0:Concept code="K57.81" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Diverticulitis of intestine, part unspecified, with perforation and abscess with bleeding"/>
+            <ns0:Concept code="K57.92" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Diverticulitis of intestine, part unspecified, without perforation or abscess without bleeding"/>
+            <ns0:Concept code="K57.93" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Diverticulitis of intestine, part unspecified, without perforation or abscess with bleeding"/>
+            <ns0:Concept code="K61.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Anal abscess"/>
+            <ns0:Concept code="K61.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Rectal abscess"/>
+            <ns0:Concept code="K61.2" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Anorectal abscess"/>
+            <ns0:Concept code="K61.3" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Ischiorectal abscess"/>
+            <ns0:Concept code="K61.4" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Intrasphincteric abscess"/>
+            <ns0:Concept code="K63.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Abscess of intestine"/>
+            <ns0:Concept code="K63.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Perforation of intestine (nontraumatic)"/>
+            <ns0:Concept code="K65.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Generalized (acute) peritonitis"/>
+            <ns0:Concept code="K65.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Peritoneal abscess"/>
+            <ns0:Concept code="K65.2" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Spontaneous bacterial peritonitis"/>
+            <ns0:Concept code="K65.3" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Choleperitonitis"/>
+            <ns0:Concept code="K65.4" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Sclerosing mesenteritis"/>
+            <ns0:Concept code="K65.8" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other peritonitis"/>
+            <ns0:Concept code="K65.9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Peritonitis, unspecified"/>
+            <ns0:Concept code="K67" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Disorders of peritoneum in infectious diseases classified elsewhere"/>
+            <ns0:Concept code="K68.11" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Postprocedural retroperitoneal abscess"/>
+            <ns0:Concept code="K68.12" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Psoas muscle abscess"/>
+            <ns0:Concept code="K68.19" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other retroperitoneal abscess"/>
+            <ns0:Concept code="K75.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Abscess of liver"/>
+            <ns0:Concept code="K75.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Phlebitis of portal vein"/>
+            <ns0:Concept code="K81.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute cholecystitis"/>
+            <ns0:Concept code="K90.81" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Whipple's disease"/>
+            <ns0:Concept code="K95.01" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection due to gastric band procedure"/>
+            <ns0:Concept code="K95.81" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection due to other bariatric procedure"/>
+            <ns0:Concept code="L02.01" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cutaneous abscess of face"/>
+            <ns0:Concept code="L02.11" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cutaneous abscess of neck"/>
+            <ns0:Concept code="L02.211" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cutaneous abscess of abdominal wall"/>
+            <ns0:Concept code="L02.212" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cutaneous abscess of back [any part, except buttock]"/>
+            <ns0:Concept code="L02.213" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cutaneous abscess of chest wall"/>
+            <ns0:Concept code="L02.214" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cutaneous abscess of groin"/>
+            <ns0:Concept code="L02.215" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cutaneous abscess of perineum"/>
+            <ns0:Concept code="L02.216" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cutaneous abscess of umbilicus"/>
+            <ns0:Concept code="L02.219" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cutaneous abscess of trunk, unspecified"/>
+            <ns0:Concept code="L02.31" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cutaneous abscess of buttock"/>
+            <ns0:Concept code="L02.411" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cutaneous abscess of right axilla"/>
+            <ns0:Concept code="L02.412" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cutaneous abscess of left axilla"/>
+            <ns0:Concept code="L02.413" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cutaneous abscess of right upper limb"/>
+            <ns0:Concept code="L02.414" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cutaneous abscess of left upper limb"/>
+            <ns0:Concept code="L02.415" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cutaneous abscess of right lower limb"/>
+            <ns0:Concept code="L02.416" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cutaneous abscess of left lower limb"/>
+            <ns0:Concept code="L02.419" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cutaneous abscess of limb, unspecified"/>
+            <ns0:Concept code="L02.511" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cutaneous abscess of right hand"/>
+            <ns0:Concept code="L02.512" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cutaneous abscess of left hand"/>
+            <ns0:Concept code="L02.519" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cutaneous abscess of unspecified hand"/>
+            <ns0:Concept code="L02.611" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cutaneous abscess of right foot"/>
+            <ns0:Concept code="L02.612" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cutaneous abscess of left foot"/>
+            <ns0:Concept code="L02.619" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cutaneous abscess of unspecified foot"/>
+            <ns0:Concept code="L02.811" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cutaneous abscess of head [any part, except face]"/>
+            <ns0:Concept code="L02.818" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cutaneous abscess of other sites"/>
+            <ns0:Concept code="L02.91" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cutaneous abscess, unspecified"/>
+            <ns0:Concept code="L03.011" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cellulitis of right finger"/>
+            <ns0:Concept code="L03.012" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cellulitis of left finger"/>
+            <ns0:Concept code="L03.019" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cellulitis of unspecified finger"/>
+            <ns0:Concept code="L03.021" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute lymphangitis of right finger"/>
+            <ns0:Concept code="L03.022" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute lymphangitis of left finger"/>
+            <ns0:Concept code="L03.029" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute lymphangitis of unspecified finger"/>
+            <ns0:Concept code="L03.031" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cellulitis of right toe"/>
+            <ns0:Concept code="L03.032" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cellulitis of left toe"/>
+            <ns0:Concept code="L03.039" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cellulitis of unspecified toe"/>
+            <ns0:Concept code="L03.041" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute lymphangitis of right toe"/>
+            <ns0:Concept code="L03.042" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute lymphangitis of left toe"/>
+            <ns0:Concept code="L03.049" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute lymphangitis of unspecified toe"/>
+            <ns0:Concept code="L03.111" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cellulitis of right axilla"/>
+            <ns0:Concept code="L03.112" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cellulitis of left axilla"/>
+            <ns0:Concept code="L03.113" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cellulitis of right upper limb"/>
+            <ns0:Concept code="L03.114" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cellulitis of left upper limb"/>
+            <ns0:Concept code="L03.115" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cellulitis of right lower limb"/>
+            <ns0:Concept code="L03.116" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cellulitis of left lower limb"/>
+            <ns0:Concept code="L03.119" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cellulitis of unspecified part of limb"/>
+            <ns0:Concept code="L03.121" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute lymphangitis of right axilla"/>
+            <ns0:Concept code="L03.122" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute lymphangitis of left axilla"/>
+            <ns0:Concept code="L03.123" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute lymphangitis of right upper limb"/>
+            <ns0:Concept code="L03.124" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute lymphangitis of left upper limb"/>
+            <ns0:Concept code="L03.125" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute lymphangitis of right lower limb"/>
+            <ns0:Concept code="L03.126" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute lymphangitis of left lower limb"/>
+            <ns0:Concept code="L03.129" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute lymphangitis of unspecified part of limb"/>
+            <ns0:Concept code="L03.211" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cellulitis of face"/>
+            <ns0:Concept code="L03.212" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute lymphangitis of face"/>
+            <ns0:Concept code="L03.213" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Periorbital cellulitis"/>
+            <ns0:Concept code="L03.221" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cellulitis of neck"/>
+            <ns0:Concept code="L03.222" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute lymphangitis of neck"/>
+            <ns0:Concept code="L03.311" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cellulitis of abdominal wall"/>
+            <ns0:Concept code="L03.312" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cellulitis of back [any part except buttock]"/>
+            <ns0:Concept code="L03.313" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cellulitis of chest wall"/>
+            <ns0:Concept code="L03.314" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cellulitis of groin"/>
+            <ns0:Concept code="L03.315" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cellulitis of perineum"/>
+            <ns0:Concept code="L03.316" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cellulitis of umbilicus"/>
+            <ns0:Concept code="L03.317" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cellulitis of buttock"/>
+            <ns0:Concept code="L03.319" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cellulitis of trunk, unspecified"/>
+            <ns0:Concept code="L03.321" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute lymphangitis of abdominal wall"/>
+            <ns0:Concept code="L03.322" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute lymphangitis of back [any part except buttock]"/>
+            <ns0:Concept code="L03.323" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute lymphangitis of chest wall"/>
+            <ns0:Concept code="L03.324" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute lymphangitis of groin"/>
+            <ns0:Concept code="L03.325" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute lymphangitis of perineum"/>
+            <ns0:Concept code="L03.326" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute lymphangitis of umbilicus"/>
+            <ns0:Concept code="L03.327" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute lymphangitis of buttock"/>
+            <ns0:Concept code="L03.329" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute lymphangitis of trunk, unspecified"/>
+            <ns0:Concept code="L03.811" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cellulitis of head [any part, except face]"/>
+            <ns0:Concept code="L03.818" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cellulitis of other sites"/>
+            <ns0:Concept code="L03.891" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute lymphangitis of head [any part, except face]"/>
+            <ns0:Concept code="L03.898" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute lymphangitis of other sites"/>
+            <ns0:Concept code="L03.90" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cellulitis, unspecified"/>
+            <ns0:Concept code="L03.91" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute lymphangitis, unspecified"/>
+            <ns0:Concept code="L04.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute lymphadenitis of face, head and neck"/>
+            <ns0:Concept code="L04.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute lymphadenitis of trunk"/>
+            <ns0:Concept code="L04.2" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute lymphadenitis of upper limb"/>
+            <ns0:Concept code="L04.3" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute lymphadenitis of lower limb"/>
+            <ns0:Concept code="L04.8" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute lymphadenitis of other sites"/>
+            <ns0:Concept code="L04.9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute lymphadenitis, unspecified"/>
+            <ns0:Concept code="L05.01" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pilonidal cyst with abscess"/>
+            <ns0:Concept code="L05.02" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pilonidal sinus with abscess"/>
+            <ns0:Concept code="L05.91" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pilonidal cyst without abscess"/>
+            <ns0:Concept code="L05.92" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pilonidal sinus without abscess"/>
+            <ns0:Concept code="L08.81" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pyoderma vegetans"/>
+            <ns0:Concept code="L08.89" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other specified local infections of the skin and subcutaneous tissue"/>
+            <ns0:Concept code="L08.9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Local infection of the skin and subcutaneous tissue, unspecified"/>
+            <ns0:Concept code="L88" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pyoderma gangrenosum"/>
+            <ns0:Concept code="L92.8" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other granulomatous disorders of the skin and subcutaneous tissue"/>
+            <ns0:Concept code="L98.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pyogenic granuloma"/>
+            <ns0:Concept code="L98.3" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Eosinophilic cellulitis [Wells]"/>
+            <ns0:Concept code="M00.00" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Staphylococcal arthritis, unspecified joint"/>
+            <ns0:Concept code="M00.011" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Staphylococcal arthritis, right shoulder"/>
+            <ns0:Concept code="M00.012" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Staphylococcal arthritis, left shoulder"/>
+            <ns0:Concept code="M00.019" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Staphylococcal arthritis, unspecified shoulder"/>
+            <ns0:Concept code="M00.021" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Staphylococcal arthritis, right elbow"/>
+            <ns0:Concept code="M00.022" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Staphylococcal arthritis, left elbow"/>
+            <ns0:Concept code="M00.029" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Staphylococcal arthritis, unspecified elbow"/>
+            <ns0:Concept code="M00.031" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Staphylococcal arthritis, right wrist"/>
+            <ns0:Concept code="M00.032" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Staphylococcal arthritis, left wrist"/>
+            <ns0:Concept code="M00.039" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Staphylococcal arthritis, unspecified wrist"/>
+            <ns0:Concept code="M00.041" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Staphylococcal arthritis, right hand"/>
+            <ns0:Concept code="M00.042" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Staphylococcal arthritis, left hand"/>
+            <ns0:Concept code="M00.049" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Staphylococcal arthritis, unspecified hand"/>
+            <ns0:Concept code="M00.051" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Staphylococcal arthritis, right hip"/>
+            <ns0:Concept code="M00.052" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Staphylococcal arthritis, left hip"/>
+            <ns0:Concept code="M00.059" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Staphylococcal arthritis, unspecified hip"/>
+            <ns0:Concept code="M00.061" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Staphylococcal arthritis, right knee"/>
+            <ns0:Concept code="M00.062" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Staphylococcal arthritis, left knee"/>
+            <ns0:Concept code="M00.069" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Staphylococcal arthritis, unspecified knee"/>
+            <ns0:Concept code="M00.071" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Staphylococcal arthritis, right ankle and foot"/>
+            <ns0:Concept code="M00.072" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Staphylococcal arthritis, left ankle and foot"/>
+            <ns0:Concept code="M00.079" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Staphylococcal arthritis, unspecified ankle and foot"/>
+            <ns0:Concept code="M00.08" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Staphylococcal arthritis, vertebrae"/>
+            <ns0:Concept code="M00.09" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Staphylococcal polyarthritis"/>
+            <ns0:Concept code="M00.10" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pneumococcal arthritis, unspecified joint"/>
+            <ns0:Concept code="M00.111" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pneumococcal arthritis, right shoulder"/>
+            <ns0:Concept code="M00.112" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pneumococcal arthritis, left shoulder"/>
+            <ns0:Concept code="M00.119" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pneumococcal arthritis, unspecified shoulder"/>
+            <ns0:Concept code="M00.121" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pneumococcal arthritis, right elbow"/>
+            <ns0:Concept code="M00.122" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pneumococcal arthritis, left elbow"/>
+            <ns0:Concept code="M00.129" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pneumococcal arthritis, unspecified elbow"/>
+            <ns0:Concept code="M00.131" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pneumococcal arthritis, right wrist"/>
+            <ns0:Concept code="M00.132" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pneumococcal arthritis, left wrist"/>
+            <ns0:Concept code="M00.139" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pneumococcal arthritis, unspecified wrist"/>
+            <ns0:Concept code="M00.141" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pneumococcal arthritis, right hand"/>
+            <ns0:Concept code="M00.142" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pneumococcal arthritis, left hand"/>
+            <ns0:Concept code="M00.149" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pneumococcal arthritis, unspecified hand"/>
+            <ns0:Concept code="M00.151" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pneumococcal arthritis, right hip"/>
+            <ns0:Concept code="M00.152" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pneumococcal arthritis, left hip"/>
+            <ns0:Concept code="M00.159" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pneumococcal arthritis, unspecified hip"/>
+            <ns0:Concept code="M00.161" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pneumococcal arthritis, right knee"/>
+            <ns0:Concept code="M00.162" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pneumococcal arthritis, left knee"/>
+            <ns0:Concept code="M00.169" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pneumococcal arthritis, unspecified knee"/>
+            <ns0:Concept code="M00.171" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pneumococcal arthritis, right ankle and foot"/>
+            <ns0:Concept code="M00.172" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pneumococcal arthritis, left ankle and foot"/>
+            <ns0:Concept code="M00.179" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pneumococcal arthritis, unspecified ankle and foot"/>
+            <ns0:Concept code="M00.18" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pneumococcal arthritis, vertebrae"/>
+            <ns0:Concept code="M00.19" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pneumococcal polyarthritis"/>
+            <ns0:Concept code="M00.20" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other streptococcal arthritis, unspecified joint"/>
+            <ns0:Concept code="M00.211" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other streptococcal arthritis, right shoulder"/>
+            <ns0:Concept code="M00.212" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other streptococcal arthritis, left shoulder"/>
+            <ns0:Concept code="M00.219" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other streptococcal arthritis, unspecified shoulder"/>
+            <ns0:Concept code="M00.221" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other streptococcal arthritis, right elbow"/>
+            <ns0:Concept code="M00.222" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other streptococcal arthritis, left elbow"/>
+            <ns0:Concept code="M00.229" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other streptococcal arthritis, unspecified elbow"/>
+            <ns0:Concept code="M00.231" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other streptococcal arthritis, right wrist"/>
+            <ns0:Concept code="M00.232" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other streptococcal arthritis, left wrist"/>
+            <ns0:Concept code="M00.239" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other streptococcal arthritis, unspecified wrist"/>
+            <ns0:Concept code="M00.241" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other streptococcal arthritis, right hand"/>
+            <ns0:Concept code="M00.242" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other streptococcal arthritis, left hand"/>
+            <ns0:Concept code="M00.249" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other streptococcal arthritis, unspecified hand"/>
+            <ns0:Concept code="M00.251" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other streptococcal arthritis, right hip"/>
+            <ns0:Concept code="M00.252" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other streptococcal arthritis, left hip"/>
+            <ns0:Concept code="M00.259" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other streptococcal arthritis, unspecified hip"/>
+            <ns0:Concept code="M00.261" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other streptococcal arthritis, right knee"/>
+            <ns0:Concept code="M00.262" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other streptococcal arthritis, left knee"/>
+            <ns0:Concept code="M00.269" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other streptococcal arthritis, unspecified knee"/>
+            <ns0:Concept code="M00.271" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other streptococcal arthritis, right ankle and foot"/>
+            <ns0:Concept code="M00.272" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other streptococcal arthritis, left ankle and foot"/>
+            <ns0:Concept code="M00.279" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other streptococcal arthritis, unspecified ankle and foot"/>
+            <ns0:Concept code="M00.28" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other streptococcal arthritis, vertebrae"/>
+            <ns0:Concept code="M00.29" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other streptococcal polyarthritis"/>
+            <ns0:Concept code="M00.80" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Arthritis due to other bacteria, unspecified joint"/>
+            <ns0:Concept code="M00.811" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Arthritis due to other bacteria, right shoulder"/>
+            <ns0:Concept code="M00.812" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Arthritis due to other bacteria, left shoulder"/>
+            <ns0:Concept code="M00.819" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Arthritis due to other bacteria, unspecified shoulder"/>
+            <ns0:Concept code="M00.821" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Arthritis due to other bacteria, right elbow"/>
+            <ns0:Concept code="M00.822" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Arthritis due to other bacteria, left elbow"/>
+            <ns0:Concept code="M00.829" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Arthritis due to other bacteria, unspecified elbow"/>
+            <ns0:Concept code="M00.831" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Arthritis due to other bacteria, right wrist"/>
+            <ns0:Concept code="M00.832" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Arthritis due to other bacteria, left wrist"/>
+            <ns0:Concept code="M00.839" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Arthritis due to other bacteria, unspecified wrist"/>
+            <ns0:Concept code="M00.841" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Arthritis due to other bacteria, right hand"/>
+            <ns0:Concept code="M00.842" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Arthritis due to other bacteria, left hand"/>
+            <ns0:Concept code="M00.849" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Arthritis due to other bacteria, unspecified hand"/>
+            <ns0:Concept code="M00.851" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Arthritis due to other bacteria, right hip"/>
+            <ns0:Concept code="M00.852" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Arthritis due to other bacteria, left hip"/>
+            <ns0:Concept code="M00.859" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Arthritis due to other bacteria, unspecified hip"/>
+            <ns0:Concept code="M00.861" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Arthritis due to other bacteria, right knee"/>
+            <ns0:Concept code="M00.862" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Arthritis due to other bacteria, left knee"/>
+            <ns0:Concept code="M00.869" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Arthritis due to other bacteria, unspecified knee"/>
+            <ns0:Concept code="M00.871" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Arthritis due to other bacteria, right ankle and foot"/>
+            <ns0:Concept code="M00.872" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Arthritis due to other bacteria, left ankle and foot"/>
+            <ns0:Concept code="M00.879" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Arthritis due to other bacteria, unspecified ankle and foot"/>
+            <ns0:Concept code="M00.88" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Arthritis due to other bacteria, vertebrae"/>
+            <ns0:Concept code="M00.89" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Polyarthritis due to other bacteria"/>
+            <ns0:Concept code="M00.9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pyogenic arthritis, unspecified"/>
+            <ns0:Concept code="M46.20" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Osteomyelitis of vertebra, site unspecified"/>
+            <ns0:Concept code="M46.21" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Osteomyelitis of vertebra, occipito-atlanto-axial region"/>
+            <ns0:Concept code="M46.22" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Osteomyelitis of vertebra, cervical region"/>
+            <ns0:Concept code="M46.23" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Osteomyelitis of vertebra, cervicothoracic region"/>
+            <ns0:Concept code="M46.24" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Osteomyelitis of vertebra, thoracic region"/>
+            <ns0:Concept code="M46.25" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Osteomyelitis of vertebra, thoracolumbar region"/>
+            <ns0:Concept code="M46.26" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Osteomyelitis of vertebra, lumbar region"/>
+            <ns0:Concept code="M46.27" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Osteomyelitis of vertebra, lumbosacral region"/>
+            <ns0:Concept code="M46.28" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Osteomyelitis of vertebra, sacral and sacrococcygeal region"/>
+            <ns0:Concept code="M46.30" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of intervertebral disc (pyogenic), site unspecified"/>
+            <ns0:Concept code="M46.31" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of intervertebral disc (pyogenic), occipito-atlanto-axial region"/>
+            <ns0:Concept code="M46.32" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of intervertebral disc (pyogenic), cervical region"/>
+            <ns0:Concept code="M46.33" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of intervertebral disc (pyogenic), cervicothoracic region"/>
+            <ns0:Concept code="M46.34" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of intervertebral disc (pyogenic), thoracic region"/>
+            <ns0:Concept code="M46.35" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of intervertebral disc (pyogenic), thoracolumbar region"/>
+            <ns0:Concept code="M46.36" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of intervertebral disc (pyogenic), lumbar region"/>
+            <ns0:Concept code="M46.37" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of intervertebral disc (pyogenic), lumbosacral region"/>
+            <ns0:Concept code="M46.38" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of intervertebral disc (pyogenic), sacral and sacrococcygeal region"/>
+            <ns0:Concept code="M46.39" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of intervertebral disc (pyogenic), multiple sites in spine"/>
+            <ns0:Concept code="M60.009" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infective myositis, unspecified site"/>
+            <ns0:Concept code="M72.6" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Necrotizing fasciitis"/>
+            <ns0:Concept code="M86.00" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute hematogenous osteomyelitis, unspecified site"/>
+            <ns0:Concept code="M86.011" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute hematogenous osteomyelitis, right shoulder"/>
+            <ns0:Concept code="M86.012" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute hematogenous osteomyelitis, left shoulder"/>
+            <ns0:Concept code="M86.019" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute hematogenous osteomyelitis, unspecified shoulder"/>
+            <ns0:Concept code="M86.021" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute hematogenous osteomyelitis, right humerus"/>
+            <ns0:Concept code="M86.022" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute hematogenous osteomyelitis, left humerus"/>
+            <ns0:Concept code="M86.029" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute hematogenous osteomyelitis, unspecified humerus"/>
+            <ns0:Concept code="M86.031" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute hematogenous osteomyelitis, right radius and ulna"/>
+            <ns0:Concept code="M86.032" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute hematogenous osteomyelitis, left radius and ulna"/>
+            <ns0:Concept code="M86.039" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute hematogenous osteomyelitis, unspecified radius and ulna"/>
+            <ns0:Concept code="M86.041" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute hematogenous osteomyelitis, right hand"/>
+            <ns0:Concept code="M86.042" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute hematogenous osteomyelitis, left hand"/>
+            <ns0:Concept code="M86.049" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute hematogenous osteomyelitis, unspecified hand"/>
+            <ns0:Concept code="M86.051" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute hematogenous osteomyelitis, right femur"/>
+            <ns0:Concept code="M86.052" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute hematogenous osteomyelitis, left femur"/>
+            <ns0:Concept code="M86.059" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute hematogenous osteomyelitis, unspecified femur"/>
+            <ns0:Concept code="M86.061" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute hematogenous osteomyelitis, right tibia and fibula"/>
+            <ns0:Concept code="M86.062" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute hematogenous osteomyelitis, left tibia and fibula"/>
+            <ns0:Concept code="M86.069" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute hematogenous osteomyelitis, unspecified tibia and fibula"/>
+            <ns0:Concept code="M86.071" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute hematogenous osteomyelitis, right ankle and foot"/>
+            <ns0:Concept code="M86.072" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute hematogenous osteomyelitis, left ankle and foot"/>
+            <ns0:Concept code="M86.079" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute hematogenous osteomyelitis, unspecified ankle and foot"/>
+            <ns0:Concept code="M86.08" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute hematogenous osteomyelitis, other sites"/>
+            <ns0:Concept code="M86.09" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute hematogenous osteomyelitis, multiple sites"/>
+            <ns0:Concept code="M86.10" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other acute osteomyelitis, unspecified site"/>
+            <ns0:Concept code="M86.111" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other acute osteomyelitis, right shoulder"/>
+            <ns0:Concept code="M86.112" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other acute osteomyelitis, left shoulder"/>
+            <ns0:Concept code="M86.119" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other acute osteomyelitis, unspecified shoulder"/>
+            <ns0:Concept code="M86.121" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other acute osteomyelitis, right humerus"/>
+            <ns0:Concept code="M86.122" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other acute osteomyelitis, left humerus"/>
+            <ns0:Concept code="M86.129" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other acute osteomyelitis, unspecified humerus"/>
+            <ns0:Concept code="M86.131" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other acute osteomyelitis, right radius and ulna"/>
+            <ns0:Concept code="M86.132" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other acute osteomyelitis, left radius and ulna"/>
+            <ns0:Concept code="M86.139" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other acute osteomyelitis, unspecified radius and ulna"/>
+            <ns0:Concept code="M86.141" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other acute osteomyelitis, right hand"/>
+            <ns0:Concept code="M86.142" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other acute osteomyelitis, left hand"/>
+            <ns0:Concept code="M86.149" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other acute osteomyelitis, unspecified hand"/>
+            <ns0:Concept code="M86.151" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other acute osteomyelitis, right femur"/>
+            <ns0:Concept code="M86.152" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other acute osteomyelitis, left femur"/>
+            <ns0:Concept code="M86.159" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other acute osteomyelitis, unspecified femur"/>
+            <ns0:Concept code="M86.161" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other acute osteomyelitis, right tibia and fibula"/>
+            <ns0:Concept code="M86.162" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other acute osteomyelitis, left tibia and fibula"/>
+            <ns0:Concept code="M86.169" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other acute osteomyelitis, unspecified tibia and fibula"/>
+            <ns0:Concept code="M86.171" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other acute osteomyelitis, right ankle and foot"/>
+            <ns0:Concept code="M86.172" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other acute osteomyelitis, left ankle and foot"/>
+            <ns0:Concept code="M86.179" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other acute osteomyelitis, unspecified ankle and foot"/>
+            <ns0:Concept code="M86.18" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other acute osteomyelitis, other site"/>
+            <ns0:Concept code="M86.19" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other acute osteomyelitis, multiple sites"/>
+            <ns0:Concept code="M86.20" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Subacute osteomyelitis, unspecified site"/>
+            <ns0:Concept code="M86.211" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Subacute osteomyelitis, right shoulder"/>
+            <ns0:Concept code="M86.212" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Subacute osteomyelitis, left shoulder"/>
+            <ns0:Concept code="M86.219" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Subacute osteomyelitis, unspecified shoulder"/>
+            <ns0:Concept code="M86.221" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Subacute osteomyelitis, right humerus"/>
+            <ns0:Concept code="M86.222" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Subacute osteomyelitis, left humerus"/>
+            <ns0:Concept code="M86.229" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Subacute osteomyelitis, unspecified humerus"/>
+            <ns0:Concept code="M86.231" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Subacute osteomyelitis, right radius and ulna"/>
+            <ns0:Concept code="M86.232" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Subacute osteomyelitis, left radius and ulna"/>
+            <ns0:Concept code="M86.239" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Subacute osteomyelitis, unspecified radius and ulna"/>
+            <ns0:Concept code="M86.241" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Subacute osteomyelitis, right hand"/>
+            <ns0:Concept code="M86.242" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Subacute osteomyelitis, left hand"/>
+            <ns0:Concept code="M86.249" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Subacute osteomyelitis, unspecified hand"/>
+            <ns0:Concept code="M86.251" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Subacute osteomyelitis, right femur"/>
+            <ns0:Concept code="M86.252" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Subacute osteomyelitis, left femur"/>
+            <ns0:Concept code="M86.259" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Subacute osteomyelitis, unspecified femur"/>
+            <ns0:Concept code="M86.261" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Subacute osteomyelitis, right tibia and fibula"/>
+            <ns0:Concept code="M86.262" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Subacute osteomyelitis, left tibia and fibula"/>
+            <ns0:Concept code="M86.269" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Subacute osteomyelitis, unspecified tibia and fibula"/>
+            <ns0:Concept code="M86.271" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Subacute osteomyelitis, right ankle and foot"/>
+            <ns0:Concept code="M86.272" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Subacute osteomyelitis, left ankle and foot"/>
+            <ns0:Concept code="M86.279" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Subacute osteomyelitis, unspecified ankle and foot"/>
+            <ns0:Concept code="M86.28" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Subacute osteomyelitis, other site"/>
+            <ns0:Concept code="M86.29" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Subacute osteomyelitis, multiple sites"/>
+            <ns0:Concept code="M86.8X0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other osteomyelitis, multiple sites"/>
+            <ns0:Concept code="M86.8X1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other osteomyelitis, shoulder"/>
+            <ns0:Concept code="M86.8X2" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other osteomyelitis, upper arm"/>
+            <ns0:Concept code="M86.8X3" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other osteomyelitis, forearm"/>
+            <ns0:Concept code="M86.8X4" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other osteomyelitis, hand"/>
+            <ns0:Concept code="M86.8X5" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other osteomyelitis, thigh"/>
+            <ns0:Concept code="M86.8X6" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other osteomyelitis, lower leg"/>
+            <ns0:Concept code="M86.8X7" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other osteomyelitis, ankle and foot"/>
+            <ns0:Concept code="M86.8X8" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other osteomyelitis, other site"/>
+            <ns0:Concept code="M86.8X9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other osteomyelitis, unspecified sites"/>
+            <ns0:Concept code="M86.9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Osteomyelitis, unspecified"/>
+            <ns0:Concept code="N13.6" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Pyonephrosis"/>
+            <ns0:Concept code="N15.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Renal and perinephric abscess"/>
+            <ns0:Concept code="N15.9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Renal tubulo-interstitial disease, unspecified"/>
+            <ns0:Concept code="N28.86" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Ureteritis cystica"/>
+            <ns0:Concept code="N39.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Urinary tract infection, site not specified"/>
+            <ns0:Concept code="N45.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Epididymitis"/>
+            <ns0:Concept code="N45.2" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Orchitis"/>
+            <ns0:Concept code="N45.3" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Epididymo-orchitis"/>
+            <ns0:Concept code="N45.4" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Abscess of epididymis or testis"/>
+            <ns0:Concept code="N70.01" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute salpingitis"/>
+            <ns0:Concept code="N70.02" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute oophoritis"/>
+            <ns0:Concept code="N70.03" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute salpingitis and oophoritis"/>
+            <ns0:Concept code="N70.91" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Salpingitis, unspecified"/>
+            <ns0:Concept code="N70.92" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Oophoritis, unspecified"/>
+            <ns0:Concept code="N70.93" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Salpingitis and oophoritis, unspecified"/>
+            <ns0:Concept code="N72" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Inflammatory disease of cervix uteri"/>
+            <ns0:Concept code="N73.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute parametritis and pelvic cellulitis"/>
+            <ns0:Concept code="N73.2" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Unspecified parametritis and pelvic cellulitis"/>
+            <ns0:Concept code="N73.3" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Female acute pelvic peritonitis"/>
+            <ns0:Concept code="N73.5" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Female pelvic peritonitis, unspecified"/>
+            <ns0:Concept code="N73.8" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other specified female pelvic inflammatory diseases"/>
+            <ns0:Concept code="N73.9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Female pelvic inflammatory disease, unspecified"/>
+            <ns0:Concept code="N74" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Female pelvic inflammatory disorders in diseases classified elsewhere"/>
+            <ns0:Concept code="N75.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Abscess of Bartholin's gland"/>
+            <ns0:Concept code="N76.4" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Abscess of vulva"/>
+            <ns0:Concept code="N98.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection associated with artificial insemination"/>
+            <ns0:Concept code="O03.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Genital tract and pelvic infection following incomplete spontaneous abortion"/>
+            <ns0:Concept code="O03.30" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Unspecified complication following incomplete spontaneous abortion"/>
+            <ns0:Concept code="O03.31" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Shock following incomplete spontaneous abortion"/>
+            <ns0:Concept code="O03.37" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Sepsis following incomplete spontaneous abortion"/>
+            <ns0:Concept code="O03.38" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Urinary tract infection following incomplete spontaneous abortion"/>
+            <ns0:Concept code="O03.5" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Genital tract and pelvic infection following complete or unspecified spontaneous abortion"/>
+            <ns0:Concept code="O03.81" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Shock following complete or unspecified spontaneous abortion"/>
+            <ns0:Concept code="O03.87" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Sepsis following complete or unspecified spontaneous abortion"/>
+            <ns0:Concept code="O03.88" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Urinary tract infection following complete or unspecified spontaneous abortion"/>
+            <ns0:Concept code="O04.5" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Genital tract and pelvic infection following (induced) termination of pregnancy"/>
+            <ns0:Concept code="O04.81" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Shock following (induced) termination of pregnancy"/>
+            <ns0:Concept code="O04.87" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Sepsis following (induced) termination of pregnancy"/>
+            <ns0:Concept code="O04.88" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Urinary tract infection following (induced) termination of pregnancy"/>
+            <ns0:Concept code="O07.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Genital tract and pelvic infection following failed attempted termination of pregnancy"/>
+            <ns0:Concept code="O07.31" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Shock following failed attempted termination of pregnancy"/>
+            <ns0:Concept code="O07.37" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Sepsis following failed attempted termination of pregnancy"/>
+            <ns0:Concept code="O07.38" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Urinary tract infection following failed attempted termination of pregnancy"/>
+            <ns0:Concept code="O23.00" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infections of kidney in pregnancy, unspecified trimester"/>
+            <ns0:Concept code="O23.01" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infections of kidney in pregnancy, first trimester"/>
+            <ns0:Concept code="O23.02" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infections of kidney in pregnancy, second trimester"/>
+            <ns0:Concept code="O23.03" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infections of kidney in pregnancy, third trimester"/>
+            <ns0:Concept code="O23.10" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infections of bladder in pregnancy, unspecified trimester"/>
+            <ns0:Concept code="O23.11" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infections of bladder in pregnancy, first trimester"/>
+            <ns0:Concept code="O23.12" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infections of bladder in pregnancy, second trimester"/>
+            <ns0:Concept code="O23.13" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infections of bladder in pregnancy, third trimester"/>
+            <ns0:Concept code="O23.20" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infections of urethra in pregnancy, unspecified trimester"/>
+            <ns0:Concept code="O23.21" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infections of urethra in pregnancy, first trimester"/>
+            <ns0:Concept code="O23.22" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infections of urethra in pregnancy, second trimester"/>
+            <ns0:Concept code="O23.23" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infections of urethra in pregnancy, third trimester"/>
+            <ns0:Concept code="O23.30" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infections of other parts of urinary tract in pregnancy, unspecified trimester"/>
+            <ns0:Concept code="O23.31" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infections of other parts of urinary tract in pregnancy, first trimester"/>
+            <ns0:Concept code="O23.32" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infections of other parts of urinary tract in pregnancy, second trimester"/>
+            <ns0:Concept code="O23.33" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infections of other parts of urinary tract in pregnancy, third trimester"/>
+            <ns0:Concept code="O23.40" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Unspecified infection of urinary tract in pregnancy, unspecified trimester"/>
+            <ns0:Concept code="O23.41" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Unspecified infection of urinary tract in pregnancy, first trimester"/>
+            <ns0:Concept code="O23.42" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Unspecified infection of urinary tract in pregnancy, second trimester"/>
+            <ns0:Concept code="O23.43" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Unspecified infection of urinary tract in pregnancy, third trimester"/>
+            <ns0:Concept code="O23.511" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infections of cervix in pregnancy, first trimester"/>
+            <ns0:Concept code="O23.512" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infections of cervix in pregnancy, second trimester"/>
+            <ns0:Concept code="O23.513" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infections of cervix in pregnancy, third trimester"/>
+            <ns0:Concept code="O23.519" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infections of cervix in pregnancy, unspecified trimester"/>
+            <ns0:Concept code="O23.521" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Salpingo-oophoritis in pregnancy, first trimester"/>
+            <ns0:Concept code="O23.522" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Salpingo-oophoritis in pregnancy, second trimester"/>
+            <ns0:Concept code="O23.523" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Salpingo-oophoritis in pregnancy, third trimester"/>
+            <ns0:Concept code="O23.529" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Salpingo-oophoritis in pregnancy, unspecified trimester"/>
+            <ns0:Concept code="O23.591" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of other part of genital tract in pregnancy, first trimester"/>
+            <ns0:Concept code="O23.592" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of other part of genital tract in pregnancy, second trimester"/>
+            <ns0:Concept code="O23.593" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of other part of genital tract in pregnancy, third trimester"/>
+            <ns0:Concept code="O23.599" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of other part of genital tract in pregnancy, unspecified trimester"/>
+            <ns0:Concept code="O23.90" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Unspecified genitourinary tract infection in pregnancy, unspecified trimester"/>
+            <ns0:Concept code="O23.91" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Unspecified genitourinary tract infection in pregnancy, first trimester"/>
+            <ns0:Concept code="O23.92" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Unspecified genitourinary tract infection in pregnancy, second trimester"/>
+            <ns0:Concept code="O23.93" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Unspecified genitourinary tract infection in pregnancy, third trimester"/>
+            <ns0:Concept code="O41.1010" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of amniotic sac and membranes, unspecified, first trimester, not applicable or unspecified"/>
+            <ns0:Concept code="O41.1011" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of amniotic sac and membranes, unspecified, first trimester, fetus 1"/>
+            <ns0:Concept code="O41.1012" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of amniotic sac and membranes, unspecified, first trimester, fetus 2"/>
+            <ns0:Concept code="O41.1013" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of amniotic sac and membranes, unspecified, first trimester, fetus 3"/>
+            <ns0:Concept code="O41.1014" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of amniotic sac and membranes, unspecified, first trimester, fetus 4"/>
+            <ns0:Concept code="O41.1015" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of amniotic sac and membranes, unspecified, first trimester, fetus 5"/>
+            <ns0:Concept code="O41.1019" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of amniotic sac and membranes, unspecified, first trimester, other fetus"/>
+            <ns0:Concept code="O41.1020" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of amniotic sac and membranes, unspecified, second trimester, not applicable or unspecified"/>
+            <ns0:Concept code="O41.1021" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of amniotic sac and membranes, unspecified, second trimester, fetus 1"/>
+            <ns0:Concept code="O41.1022" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of amniotic sac and membranes, unspecified, second trimester, fetus 2"/>
+            <ns0:Concept code="O41.1023" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of amniotic sac and membranes, unspecified, second trimester, fetus 3"/>
+            <ns0:Concept code="O41.1024" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of amniotic sac and membranes, unspecified, second trimester, fetus 4"/>
+            <ns0:Concept code="O41.1025" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of amniotic sac and membranes, unspecified, second trimester, fetus 5"/>
+            <ns0:Concept code="O41.1029" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of amniotic sac and membranes, unspecified, second trimester, other fetus"/>
+            <ns0:Concept code="O41.1030" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of amniotic sac and membranes, unspecified, third trimester, not applicable or unspecified"/>
+            <ns0:Concept code="O41.1031" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of amniotic sac and membranes, unspecified, third trimester, fetus 1"/>
+            <ns0:Concept code="O41.1032" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of amniotic sac and membranes, unspecified, third trimester, fetus 2"/>
+            <ns0:Concept code="O41.1033" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of amniotic sac and membranes, unspecified, third trimester, fetus 3"/>
+            <ns0:Concept code="O41.1034" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of amniotic sac and membranes, unspecified, third trimester, fetus 4"/>
+            <ns0:Concept code="O41.1035" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of amniotic sac and membranes, unspecified, third trimester, fetus 5"/>
+            <ns0:Concept code="O41.1039" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of amniotic sac and membranes, unspecified, third trimester, other fetus"/>
+            <ns0:Concept code="O41.1090" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of amniotic sac and membranes, unspecified, unspecified trimester, not applicable or unspecified"/>
+            <ns0:Concept code="O41.1091" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of amniotic sac and membranes, unspecified, unspecified trimester, fetus 1"/>
+            <ns0:Concept code="O41.1092" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of amniotic sac and membranes, unspecified, unspecified trimester, fetus 2"/>
+            <ns0:Concept code="O41.1093" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of amniotic sac and membranes, unspecified, unspecified trimester, fetus 3"/>
+            <ns0:Concept code="O41.1094" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of amniotic sac and membranes, unspecified, unspecified trimester, fetus 4"/>
+            <ns0:Concept code="O41.1095" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of amniotic sac and membranes, unspecified, unspecified trimester, fetus 5"/>
+            <ns0:Concept code="O41.1099" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of amniotic sac and membranes, unspecified, unspecified trimester, other fetus"/>
+            <ns0:Concept code="O41.1210" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Chorioamnionitis, first trimester, not applicable or unspecified"/>
+            <ns0:Concept code="O41.1211" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Chorioamnionitis, first trimester, fetus 1"/>
+            <ns0:Concept code="O41.1212" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Chorioamnionitis, first trimester, fetus 2"/>
+            <ns0:Concept code="O41.1213" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Chorioamnionitis, first trimester, fetus 3"/>
+            <ns0:Concept code="O41.1214" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Chorioamnionitis, first trimester, fetus 4"/>
+            <ns0:Concept code="O41.1215" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Chorioamnionitis, first trimester, fetus 5"/>
+            <ns0:Concept code="O41.1219" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Chorioamnionitis, first trimester, other fetus"/>
+            <ns0:Concept code="O41.1220" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Chorioamnionitis, second trimester, not applicable or unspecified"/>
+            <ns0:Concept code="O41.1221" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Chorioamnionitis, second trimester, fetus 1"/>
+            <ns0:Concept code="O41.1222" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Chorioamnionitis, second trimester, fetus 2"/>
+            <ns0:Concept code="O41.1223" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Chorioamnionitis, second trimester, fetus 3"/>
+            <ns0:Concept code="O41.1224" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Chorioamnionitis, second trimester, fetus 4"/>
+            <ns0:Concept code="O41.1225" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Chorioamnionitis, second trimester, fetus 5"/>
+            <ns0:Concept code="O41.1229" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Chorioamnionitis, second trimester, other fetus"/>
+            <ns0:Concept code="O41.1230" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Chorioamnionitis, third trimester, not applicable or unspecified"/>
+            <ns0:Concept code="O41.1231" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Chorioamnionitis, third trimester, fetus 1"/>
+            <ns0:Concept code="O41.1232" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Chorioamnionitis, third trimester, fetus 2"/>
+            <ns0:Concept code="O41.1233" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Chorioamnionitis, third trimester, fetus 3"/>
+            <ns0:Concept code="O41.1234" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Chorioamnionitis, third trimester, fetus 4"/>
+            <ns0:Concept code="O41.1235" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Chorioamnionitis, third trimester, fetus 5"/>
+            <ns0:Concept code="O41.1239" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Chorioamnionitis, third trimester, other fetus"/>
+            <ns0:Concept code="O41.1290" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Chorioamnionitis, unspecified trimester, not applicable or unspecified"/>
+            <ns0:Concept code="O41.1291" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Chorioamnionitis, unspecified trimester, fetus 1"/>
+            <ns0:Concept code="O41.1292" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Chorioamnionitis, unspecified trimester, fetus 2"/>
+            <ns0:Concept code="O41.1293" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Chorioamnionitis, unspecified trimester, fetus 3"/>
+            <ns0:Concept code="O41.1294" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Chorioamnionitis, unspecified trimester, fetus 4"/>
+            <ns0:Concept code="O41.1295" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Chorioamnionitis, unspecified trimester, fetus 5"/>
+            <ns0:Concept code="O41.1299" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Chorioamnionitis, unspecified trimester, other fetus"/>
+            <ns0:Concept code="O41.1410" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Placentitis, first trimester, not applicable or unspecified"/>
+            <ns0:Concept code="O41.1411" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Placentitis, first trimester, fetus 1"/>
+            <ns0:Concept code="O41.1412" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Placentitis, first trimester, fetus 2"/>
+            <ns0:Concept code="O41.1413" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Placentitis, first trimester, fetus 3"/>
+            <ns0:Concept code="O41.1414" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Placentitis, first trimester, fetus 4"/>
+            <ns0:Concept code="O41.1415" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Placentitis, first trimester, fetus 5"/>
+            <ns0:Concept code="O41.1419" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Placentitis, first trimester, other fetus"/>
+            <ns0:Concept code="O41.1420" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Placentitis, second trimester, not applicable or unspecified"/>
+            <ns0:Concept code="O41.1421" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Placentitis, second trimester, fetus 1"/>
+            <ns0:Concept code="O41.1422" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Placentitis, second trimester, fetus 2"/>
+            <ns0:Concept code="O41.1423" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Placentitis, second trimester, fetus 3"/>
+            <ns0:Concept code="O41.1424" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Placentitis, second trimester, fetus 4"/>
+            <ns0:Concept code="O41.1425" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Placentitis, second trimester, fetus 5"/>
+            <ns0:Concept code="O41.1429" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Placentitis, second trimester, other fetus"/>
+            <ns0:Concept code="O41.1430" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Placentitis, third trimester, not applicable or unspecified"/>
+            <ns0:Concept code="O41.1431" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Placentitis, third trimester, fetus 1"/>
+            <ns0:Concept code="O41.1432" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Placentitis, third trimester, fetus 2"/>
+            <ns0:Concept code="O41.1433" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Placentitis, third trimester, fetus 3"/>
+            <ns0:Concept code="O41.1434" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Placentitis, third trimester, fetus 4"/>
+            <ns0:Concept code="O41.1435" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Placentitis, third trimester, fetus 5"/>
+            <ns0:Concept code="O41.1439" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Placentitis, third trimester, other fetus"/>
+            <ns0:Concept code="O41.1490" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Placentitis, unspecified trimester, not applicable or unspecified"/>
+            <ns0:Concept code="O41.1491" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Placentitis, unspecified trimester, fetus 1"/>
+            <ns0:Concept code="O41.1492" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Placentitis, unspecified trimester, fetus 2"/>
+            <ns0:Concept code="O41.1493" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Placentitis, unspecified trimester, fetus 3"/>
+            <ns0:Concept code="O41.1494" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Placentitis, unspecified trimester, fetus 4"/>
+            <ns0:Concept code="O41.1495" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Placentitis, unspecified trimester, fetus 5"/>
+            <ns0:Concept code="O41.1499" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Placentitis, unspecified trimester, other fetus"/>
+            <ns0:Concept code="O85" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Puerperal sepsis"/>
+            <ns0:Concept code="O86.11" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cervicitis following delivery"/>
+            <ns0:Concept code="O86.12" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Endometritis following delivery"/>
+            <ns0:Concept code="O86.13" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Vaginitis following delivery"/>
+            <ns0:Concept code="O86.19" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other infection of genital tract following delivery"/>
+            <ns0:Concept code="O86.20" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Urinary tract infection following delivery, unspecified"/>
+            <ns0:Concept code="O86.21" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of kidney following delivery"/>
+            <ns0:Concept code="O86.22" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of bladder following delivery"/>
+            <ns0:Concept code="O86.29" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other urinary tract infection following delivery"/>
+            <ns0:Concept code="O86.81" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Puerperal septic thrombophlebitis"/>
+            <ns0:Concept code="O86.89" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other specified puerperal infections"/>
+            <ns0:Concept code="O91.111" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Abscess of breast associated with pregnancy, first trimester"/>
+            <ns0:Concept code="O91.112" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Abscess of breast associated with pregnancy, second trimester"/>
+            <ns0:Concept code="O91.113" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Abscess of breast associated with pregnancy, third trimester"/>
+            <ns0:Concept code="O91.119" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Abscess of breast associated with pregnancy, unspecified trimester"/>
+            <ns0:Concept code="O91.12" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Abscess of breast associated with the puerperium"/>
+            <ns0:Concept code="O91.13" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Abscess of breast associated with lactation"/>
+            <ns0:Concept code="R78.81" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Bacteremia"/>
+            <ns0:Concept code="T80.211A" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Bloodstream infection due to central venous catheter, initial encounter"/>
+            <ns0:Concept code="T80.212A" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Local infection due to central venous catheter, initial encounter"/>
+            <ns0:Concept code="T80.218A" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other infection due to central venous catheter, initial encounter"/>
+            <ns0:Concept code="T80.219A" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Unspecified infection due to central venous catheter, initial encounter"/>
+            <ns0:Concept code="T80.22XA" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute infection following transfusion, infusion, or injection of blood and blood products, initial encounter"/>
+            <ns0:Concept code="T80.29XA" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection following other infusion, transfusion and therapeutic injection, initial encounter"/>
+            <ns0:Concept code="T82.6XXA" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection and inflammatory reaction due to cardiac valve prosthesis, initial encounter"/>
+            <ns0:Concept code="T82.7XXA" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection and inflammatory reaction due to other cardiac and vascular devices, implants and grafts, initial encounter"/>
+            <ns0:Concept code="T83.510A" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection and inflammatory reaction due to cystostomy catheter, initial encounter"/>
+            <ns0:Concept code="T83.511A" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection and inflammatory reaction due to indwelling urethral catheter, initial encounter"/>
+            <ns0:Concept code="T83.512A" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection and inflammatory reaction due to nephrostomy catheter, initial encounter"/>
+            <ns0:Concept code="T83.518A" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection and inflammatory reaction due to other urinary catheter, initial encounter"/>
+            <ns0:Concept code="T83.590A" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection and inflammatory reaction due to implanted urinary neurostimulation device, initial encounter"/>
+            <ns0:Concept code="T83.591A" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection and inflammatory reaction due to implanted urinary sphincter, initial encounter"/>
+            <ns0:Concept code="T83.592A" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection and inflammatory reaction due to indwelling ureteral stent, initial encounter"/>
+            <ns0:Concept code="T83.593A" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection and inflammatory reaction due to other urinary stents, initial encounter"/>
+            <ns0:Concept code="T83.598A" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection and inflammatory reaction due to other prosthetic device, implant and graft in urinary system, initial encounter"/>
+            <ns0:Concept code="T83.61XA" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection and inflammatory reaction due to implanted penile prosthesis, initial encounter"/>
+            <ns0:Concept code="T83.62XA" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection and inflammatory reaction due to implanted testicular prosthesis, initial encounter"/>
+            <ns0:Concept code="T83.69XA" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection and inflammatory reaction due to other prosthetic device, implant and graft in genital tract, initial encounter"/>
+            <ns0:Concept code="T84.50XA" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection and inflammatory reaction due to unspecified internal joint prosthesis, initial encounter"/>
+            <ns0:Concept code="T84.51XA" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection and inflammatory reaction due to internal right hip prosthesis, initial encounter"/>
+            <ns0:Concept code="T84.52XA" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection and inflammatory reaction due to internal left hip prosthesis, initial encounter"/>
+            <ns0:Concept code="T84.53XA" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection and inflammatory reaction due to internal right knee prosthesis, initial encounter"/>
+            <ns0:Concept code="T84.54XA" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection and inflammatory reaction due to internal left knee prosthesis, initial encounter"/>
+            <ns0:Concept code="T84.59XA" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection and inflammatory reaction due to other internal joint prosthesis, initial encounter"/>
+            <ns0:Concept code="T84.60XA" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection and inflammatory reaction due to internal fixation device of unspecified site, initial encounter"/>
+            <ns0:Concept code="T84.610A" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection and inflammatory reaction due to internal fixation device of right humerus, initial encounter"/>
+            <ns0:Concept code="T84.611A" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection and inflammatory reaction due to internal fixation device of left humerus, initial encounter"/>
+            <ns0:Concept code="T84.612A" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection and inflammatory reaction due to internal fixation device of right radius, initial encounter"/>
+            <ns0:Concept code="T84.613A" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection and inflammatory reaction due to internal fixation device of left radius, initial encounter"/>
+            <ns0:Concept code="T84.614A" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection and inflammatory reaction due to internal fixation device of right ulna, initial encounter"/>
+            <ns0:Concept code="T84.615A" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection and inflammatory reaction due to internal fixation device of left ulna, initial encounter"/>
+            <ns0:Concept code="T84.619A" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection and inflammatory reaction due to internal fixation device of unspecified bone of arm, initial encounter"/>
+            <ns0:Concept code="T84.620A" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection and inflammatory reaction due to internal fixation device of right femur, initial encounter"/>
+            <ns0:Concept code="T84.621A" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection and inflammatory reaction due to internal fixation device of left femur, initial encounter"/>
+            <ns0:Concept code="T84.622A" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection and inflammatory reaction due to internal fixation device of right tibia, initial encounter"/>
+            <ns0:Concept code="T84.623A" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection and inflammatory reaction due to internal fixation device of left tibia, initial encounter"/>
+            <ns0:Concept code="T84.624A" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection and inflammatory reaction due to internal fixation device of right fibula, initial encounter"/>
+            <ns0:Concept code="T84.625A" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection and inflammatory reaction due to internal fixation device of left fibula, initial encounter"/>
+            <ns0:Concept code="T84.629A" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection and inflammatory reaction due to internal fixation device of unspecified bone of leg, initial encounter"/>
+            <ns0:Concept code="T84.63XA" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection and inflammatory reaction due to internal fixation device of spine, initial encounter"/>
+            <ns0:Concept code="T84.69XA" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection and inflammatory reaction due to internal fixation device of other site, initial encounter"/>
+            <ns0:Concept code="T84.7XXA" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection and inflammatory reaction due to other internal orthopedic prosthetic devices, implants and grafts, initial encounter"/>
+            <ns0:Concept code="T85.71XA" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection and inflammatory reaction due to peritoneal dialysis catheter, initial encounter"/>
+            <ns0:Concept code="T85.72XA" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection and inflammatory reaction due to insulin pump, initial encounter"/>
+            <ns0:Concept code="T85.730A" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection and inflammatory reaction due to ventricular intracranial (communicating) shunt, initial encounter"/>
+            <ns0:Concept code="T85.731A" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection and inflammatory reaction due to implanted electronic neurostimulator of brain, electrode (lead), initial encounter"/>
+            <ns0:Concept code="T85.732A" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection and inflammatory reaction due to implanted electronic neurostimulator of peripheral nerve, electrode (lead), initial encounter"/>
+            <ns0:Concept code="T85.733A" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection and inflammatory reaction due to implanted electronic neurostimulator of spinal cord, electrode (lead), initial encounter"/>
+            <ns0:Concept code="T85.734A" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection and inflammatory reaction due to implanted electronic neurostimulator, generator, initial encounter"/>
+            <ns0:Concept code="T85.735A" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection and inflammatory reaction due to cranial or spinal infusion catheter, initial encounter"/>
+            <ns0:Concept code="T85.738A" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection and inflammatory reaction due to other nervous system device, implant or graft, initial encounter"/>
+            <ns0:Concept code="T85.79XA" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection and inflammatory reaction due to other internal prosthetic devices, implants and grafts, initial encounter"/>
+            <ns0:Concept code="T86.842" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Corneal transplant infection"/>
+            <ns0:Concept code="T88.0XXA" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection following immunization, initial encounter"/>
+        </ns0:ConceptList>
+    </ns0:ValueSet>
+</ns0:RetrieveValueSetResponse>

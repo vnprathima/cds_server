@@ -112,7 +112,7 @@ codeService.ensureValueSets(valueSets, vsacUser, vsacPass)
     for (const id in results.patientResults) {
       const result = results.patientResults[id];
       console.log(`${id}:`);
-      console.log("REsult:",result.Requirements.Condition[0]);
+      console.log("REsult:",result.Requirements);
     }
   })
   .catch( (err) => {

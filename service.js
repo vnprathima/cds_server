@@ -88,7 +88,11 @@ exports.executeCql = function (req, res, ) {
                 res.setHeader('Content-Type', 'application/json');
                 if (postBody.request_for == 'requirements'){
                     console.log("\tRequirements:", result.Requirements);
-                    res.end(JSON.stringify({"requirements":result.Requirements}) + '\n');
+                    if(result.hasOwnProperty("PriorAuthorization")){
+                        res.end(JSON.stringify({"requirements":result.Requirements,"prior_authorization":result.PriorAuthorization}) + '\n');
+                    } else {
+                        res.end(JSON.stringify({"requirements":result.Requirements}) + '\n');
+                    }
                 } else if (postBody.request_for == 'decision'){
                     console.log(`\tCoverage: ${result.Coverage}`);
                     res.end(JSON.stringify({"Coverage":result.Coverage}) + '\n');

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns0:RetrieveValueSetResponse xmlns:ns0="urn:ihe:iti:svs:2008" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <ns0:ValueSet ID="2.16.840.1.113883.3.3157.1835" displayName="Infectious conditions" version="20180706">
+        <ns0:ConceptList>
+            <ns0:Concept code="A17.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Meningeal tuberculoma"/>
+            <ns0:Concept code="A17.81" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Tuberculoma of brain and spinal cord"/>
+            <ns0:Concept code="A17.82" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Tuberculous meningoencephalitis"/>
+            <ns0:Concept code="A17.83" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Tuberculous neuritis"/>
+            <ns0:Concept code="A18.01" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Tuberculosis of spine"/>
+            <ns0:Concept code="A52.10" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Symptomatic neurosyphilis, unspecified"/>
+            <ns0:Concept code="A52.11" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Tabes dorsalis"/>
+            <ns0:Concept code="A52.12" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other cerebrospinal syphilis"/>
+            <ns0:Concept code="A52.13" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Late syphilitic meningitis"/>
+            <ns0:Concept code="A52.14" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Late syphilitic encephalitis"/>
+            <ns0:Concept code="A52.15" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Late syphilitic neuropathy"/>
+            <ns0:Concept code="A52.16" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Charcôt's arthropathy (tabetic)"/>
+            <ns0:Concept code="A52.17" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="General paresis"/>
+            <ns0:Concept code="A52.19" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other symptomatic neurosyphilis"/>
+            <ns0:Concept code="A52.2" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Asymptomatic neurosyphilis"/>
+            <ns0:Concept code="A52.3" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Neurosyphilis, unspecified"/>
+            <ns0:Concept code="M46.20" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Osteomyelitis of vertebra, site unspecified"/>
+            <ns0:Concept code="M46.21" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Osteomyelitis of vertebra, occipito-atlanto-axial region"/>
+            <ns0:Concept code="M46.22" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Osteomyelitis of vertebra, cervical region"/>
+            <ns0:Concept code="M46.23" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Osteomyelitis of vertebra, cervicothoracic region"/>
+            <ns0:Concept code="M46.24" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Osteomyelitis of vertebra, thoracic region"/>
+            <ns0:Concept code="M46.25" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Osteomyelitis of vertebra, thoracolumbar region"/>
+            <ns0:Concept code="M46.26" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Osteomyelitis of vertebra, lumbar region"/>
+            <ns0:Concept code="M46.27" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Osteomyelitis of vertebra, lumbosacral region"/>
+            <ns0:Concept code="M46.28" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Osteomyelitis of vertebra, sacral and sacrococcygeal region"/>
+            <ns0:Concept code="M46.30" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of intervertebral disc (pyogenic), site unspecified"/>
+            <ns0:Concept code="M46.31" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of intervertebral disc (pyogenic), occipito-atlanto-axial region"/>
+            <ns0:Concept code="M46.32" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of intervertebral disc (pyogenic), cervical region"/>
+            <ns0:Concept code="M46.33" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of intervertebral disc (pyogenic), cervicothoracic region"/>
+            <ns0:Concept code="M46.34" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of intervertebral disc (pyogenic), thoracic region"/>
+            <ns0:Concept code="M46.35" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of intervertebral disc (pyogenic), thoracolumbar region"/>
+            <ns0:Concept code="M46.36" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of intervertebral disc (pyogenic), lumbar region"/>
+            <ns0:Concept code="M46.37" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of intervertebral disc (pyogenic), lumbosacral region"/>
+            <ns0:Concept code="M46.38" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of intervertebral disc (pyogenic), sacral and sacrococcygeal region"/>
+            <ns0:Concept code="M46.39" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Infection of intervertebral disc (pyogenic), multiple sites in spine"/>
+            <ns0:Concept code="M86.08" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute hematogenous osteomyelitis, other sites"/>
+            <ns0:Concept code="M86.18" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other acute osteomyelitis, other site"/>
+            <ns0:Concept code="M86.28" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Subacute osteomyelitis, other site"/>
+            <ns0:Concept code="M86.38" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Chronic multifocal osteomyelitis, other site"/>
+            <ns0:Concept code="M86.48" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Chronic osteomyelitis with draining sinus, other site"/>
+            <ns0:Concept code="M86.58" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other chronic hematogenous osteomyelitis, other site"/>
+            <ns0:Concept code="M86.68" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other chronic osteomyelitis, other site"/>
+            <ns0:Concept code="M86.8X8" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other osteomyelitis, other site"/>
+            <ns0:Concept code="M86.9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Osteomyelitis, unspecified"/>
+            <ns0:Concept code="M90.88" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Osteopathy in diseases classified elsewhere, other site"/>
+        </ns0:ConceptList>
+    </ns0:ValueSet>
+</ns0:RetrieveValueSetResponse>

@@ -1,5 +1,8 @@
 {
     "vsac_user":"prathyanusha",
     "vsac_password":"Anusha56",
-    "cqls_list": ["AdultLiverTransplant","HyperbaricOxygenTherapy","HomeOxygenTherapy"]
+    "cqls_list": ["AdultLiverTransplant","HyperbaricOxygenTherapy","HomeOxygenTherapy"],
+    "client_id": "app-login",
+    "client_secret": "237b167a-c4d0-4861-856d-6decf5426022",
+    "auth_url": "https://54.227.173.76:8443/auth/realms/ClientFhirServer/protocol/openid-connect/token/introspect"
 }

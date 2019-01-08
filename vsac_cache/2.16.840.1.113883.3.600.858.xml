@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns0:RetrieveValueSetResponse xmlns:ns0="urn:ihe:iti:svs:2008" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <ns0:ValueSet ID="2.16.840.1.113883.3.600.858" displayName="CHD or CHD Risk Equivalent I10" version="20180706">
+        <ns0:ConceptList>
+            <ns0:Concept code="A52.01" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Syphilitic aneurysm of aorta"/>
+            <ns0:Concept code="E08.36" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Diabetes mellitus due to underlying condition with diabetic cataract"/>
+            <ns0:Concept code="E08.42" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Diabetes mellitus due to underlying condition with diabetic polyneuropathy"/>
+            <ns0:Concept code="E09.36" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Drug or chemical induced diabetes mellitus with diabetic cataract"/>
+            <ns0:Concept code="E09.42" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Drug or chemical induced diabetes mellitus with neurological complications with diabetic polyneuropathy"/>
+            <ns0:Concept code="E10.10" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 1 diabetes mellitus with ketoacidosis without coma"/>
+            <ns0:Concept code="E10.11" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 1 diabetes mellitus with ketoacidosis with coma"/>
+            <ns0:Concept code="E10.21" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 1 diabetes mellitus with diabetic nephropathy"/>
+            <ns0:Concept code="E10.29" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 1 diabetes mellitus with other diabetic kidney complication"/>
+            <ns0:Concept code="E10.311" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 1 diabetes mellitus with unspecified diabetic retinopathy with macular edema"/>
+            <ns0:Concept code="E10.319" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 1 diabetes mellitus with unspecified diabetic retinopathy without macular edema"/>
+            <ns0:Concept code="E10.36" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 1 diabetes mellitus with diabetic cataract"/>
+            <ns0:Concept code="E10.39" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 1 diabetes mellitus with other diabetic ophthalmic complication"/>
+            <ns0:Concept code="E10.40" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 1 diabetes mellitus with diabetic neuropathy, unspecified"/>
+            <ns0:Concept code="E10.42" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 1 diabetes mellitus with diabetic polyneuropathy"/>
+            <ns0:Concept code="E10.51" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 1 diabetes mellitus with diabetic peripheral angiopathy without gangrene"/>
+            <ns0:Concept code="E10.618" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 1 diabetes mellitus with other diabetic arthropathy"/>
+            <ns0:Concept code="E10.620" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 1 diabetes mellitus with diabetic dermatitis"/>
+            <ns0:Concept code="E10.621" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 1 diabetes mellitus with foot ulcer"/>
+            <ns0:Concept code="E10.622" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 1 diabetes mellitus with other skin ulcer"/>
+            <ns0:Concept code="E10.628" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 1 diabetes mellitus with other skin complications"/>
+            <ns0:Concept code="E10.630" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 1 diabetes mellitus with periodontal disease"/>
+            <ns0:Concept code="E10.638" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 1 diabetes mellitus with other oral complications"/>
+            <ns0:Concept code="E10.641" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 1 diabetes mellitus with hypoglycemia with coma"/>
+            <ns0:Concept code="E10.649" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 1 diabetes mellitus with hypoglycemia without coma"/>
+            <ns0:Concept code="E10.65" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 1 diabetes mellitus with hyperglycemia"/>
+            <ns0:Concept code="E10.69" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 1 diabetes mellitus with other specified complication"/>
+            <ns0:Concept code="E10.8" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 1 diabetes mellitus with unspecified complications"/>
+            <ns0:Concept code="E10.9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 1 diabetes mellitus without complications"/>
+            <ns0:Concept code="E11.00" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 2 diabetes mellitus with hyperosmolarity without nonketotic hyperglycemic-hyperosmolar coma (NKHHC)"/>
+            <ns0:Concept code="E11.01" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 2 diabetes mellitus with hyperosmolarity with coma"/>
+            <ns0:Concept code="E11.21" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 2 diabetes mellitus with diabetic nephropathy"/>
+            <ns0:Concept code="E11.29" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 2 diabetes mellitus with other diabetic kidney complication"/>
+            <ns0:Concept code="E11.311" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 2 diabetes mellitus with unspecified diabetic retinopathy with macular edema"/>
+            <ns0:Concept code="E11.319" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 2 diabetes mellitus with unspecified diabetic retinopathy without macular edema"/>
+            <ns0:Concept code="E11.329" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 2 diabetes mellitus with mild nonproliferative diabetic retinopathy without macular edema"/>
+            <ns0:Concept code="E11.339" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 2 diabetes mellitus with moderate nonproliferative diabetic retinopathy without macular edema"/>
+            <ns0:Concept code="E11.349" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 2 diabetes mellitus with severe nonproliferative diabetic retinopathy without macular edema"/>
+            <ns0:Concept code="E11.359" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 2 diabetes mellitus with proliferative diabetic retinopathy without macular edema"/>
+            <ns0:Concept code="E11.36" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 2 diabetes mellitus with diabetic cataract"/>
+            <ns0:Concept code="E11.39" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 2 diabetes mellitus with other diabetic ophthalmic complication"/>
+            <ns0:Concept code="E11.40" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 2 diabetes mellitus with diabetic neuropathy, unspecified"/>
+            <ns0:Concept code="E11.42" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 2 diabetes mellitus with diabetic polyneuropathy"/>
+            <ns0:Concept code="E11.51" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 2 diabetes mellitus with diabetic peripheral angiopathy without gangrene"/>
+            <ns0:Concept code="E11.618" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 2 diabetes mellitus with other diabetic arthropathy"/>
+            <ns0:Concept code="E11.620" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 2 diabetes mellitus with diabetic dermatitis"/>
+            <ns0:Concept code="E11.621" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 2 diabetes mellitus with foot ulcer"/>
+            <ns0:Concept code="E11.622" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 2 diabetes mellitus with other skin ulcer"/>
+            <ns0:Concept code="E11.628" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 2 diabetes mellitus with other skin complications"/>
+            <ns0:Concept code="E11.630" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 2 diabetes mellitus with periodontal disease"/>
+            <ns0:Concept code="E11.638" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 2 diabetes mellitus with other oral complications"/>
+            <ns0:Concept code="E11.641" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 2 diabetes mellitus with hypoglycemia with coma"/>
+            <ns0:Concept code="E11.649" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 2 diabetes mellitus with hypoglycemia without coma"/>
+            <ns0:Concept code="E11.65" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 2 diabetes mellitus with hyperglycemia"/>
+            <ns0:Concept code="E11.69" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 2 diabetes mellitus with other specified complication"/>
+            <ns0:Concept code="E11.8" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 2 diabetes mellitus with unspecified complications"/>
+            <ns0:Concept code="E11.9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Type 2 diabetes mellitus without complications"/>
+            <ns0:Concept code="E13.36" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other specified diabetes mellitus with diabetic cataract"/>
+            <ns0:Concept code="E13.42" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other specified diabetes mellitus with diabetic polyneuropathy"/>
+            <ns0:Concept code="I20.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Unstable angina"/>
+            <ns0:Concept code="I20.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Angina pectoris with documented spasm"/>
+            <ns0:Concept code="I20.8" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other forms of angina pectoris"/>
+            <ns0:Concept code="I20.9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Angina pectoris, unspecified"/>
+            <ns0:Concept code="I24.0" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Acute coronary thrombosis not resulting in myocardial infarction"/>
+            <ns0:Concept code="I24.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Dressler's syndrome"/>
+            <ns0:Concept code="I24.8" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other forms of acute ischemic heart disease"/>
+            <ns0:Concept code="I25.10" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Atherosclerotic heart disease of native coronary artery without angina pectoris"/>
+            <ns0:Concept code="I25.5" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Ischemic cardiomyopathy"/>
+            <ns0:Concept code="I25.810" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Atherosclerosis of coronary artery bypass graft(s) without angina pectoris"/>
+            <ns0:Concept code="I25.811" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Atherosclerosis of native coronary artery of transplanted heart without angina pectoris"/>
+            <ns0:Concept code="I25.812" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Atherosclerosis of bypass graft of coronary artery of transplanted heart without angina pectoris"/>
+            <ns0:Concept code="I25.89" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other forms of chronic ischemic heart disease"/>
+            <ns0:Concept code="I25.9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Chronic ischemic heart disease, unspecified"/>
+            <ns0:Concept code="I63.139" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cerebral infarction due to embolism of unspecified carotid artery"/>
+            <ns0:Concept code="I63.239" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cerebral infarction due to unspecified occlusion or stenosis of unspecified carotid artery"/>
+            <ns0:Concept code="I63.59" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Cerebral infarction due to unspecified occlusion or stenosis of other cerebral artery"/>
+            <ns0:Concept code="I65.29" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Occlusion and stenosis of unspecified carotid artery"/>
+            <ns0:Concept code="I65.8" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Occlusion and stenosis of other precerebral arteries"/>
+            <ns0:Concept code="I71.3" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Abdominal aortic aneurysm, ruptured"/>
+            <ns0:Concept code="I71.4" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Abdominal aortic aneurysm, without rupture"/>
+            <ns0:Concept code="I73.00" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Raynaud's syndrome without gangrene"/>
+            <ns0:Concept code="I73.1" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Thromboangiitis obliterans [Buerger's disease]"/>
+            <ns0:Concept code="I73.81" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Erythromelalgia"/>
+            <ns0:Concept code="I73.89" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other specified peripheral vascular diseases"/>
+            <ns0:Concept code="I73.9" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Peripheral vascular disease, unspecified"/>
+            <ns0:Concept code="I77.71" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Dissection of carotid artery"/>
+            <ns0:Concept code="I77.72" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Dissection of iliac artery"/>
+            <ns0:Concept code="I77.73" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Dissection of renal artery"/>
+            <ns0:Concept code="I77.74" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Dissection of vertebral artery"/>
+            <ns0:Concept code="I77.79" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Dissection of other specified artery"/>
+            <ns0:Concept code="I79.8" codeSystem="2.16.840.1.113883.6.90" codeSystemName="ICD10CM" codeSystemVersion="2019" displayName="Other disorders of arteries, arterioles and capillaries in diseases classified elsewhere"/>
+        </ns0:ConceptList>
+    </ns0:ValueSet>
+</ns0:RetrieveValueSetResponse>

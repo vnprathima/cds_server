@@ -1,3 +1,4 @@
+//Hyperbaric Oxygen Therapy
 library HyperbaricOxygenTherapy
 
 using FHIR
@@ -9,260 +10,127 @@ using FHIR
 //concept conceptName : {codeName1, codeName2, etc} display 'displayName'
 //parameter parameterName (dataType or default value)
 
-codesystem "SNOMEDCT": 'http://snomed.info/sct'
-codesystem "HCPCS": 'https://hcpcs.codes/'
-codesystem "ICD9CM": 'https://www.cdc.gov/nchs/icd/icd9.htm'
-codesystem "RXNORM": 'https://www.nlm.nih.gov/research/umls/rxnorm/'
+codesystem "ICD10CM" : '2.16.840.1.113883.6.90'
+codesystem "CPT" : '2.16.840.1.113883.6.12'
 
-// valueset "Hyperbaric oxygen therapy (procedure)":'2.16.840.1.113883.3.88.12.80.28'
-// valueset "Toxic effect of carbon monoxide (disorder)":'2.16.840.1.113883.3.88.12.3221.7.4'
-// valueset "Decompression sickness type I (disorder)":'2.16.840.1.113883.3.88.12.3221.7.4'
-// valueset "Decompression sickness type II (disorder)":'2.16.840.1.113883.3.88.12.3221.7.4'
-// valueset "Air embolism (disorder)":'2.16.840.1.113883.3.88.12.3221.7.4'
-// valueset "Gas gangrene (disorder)":'2.16.840.1.113883.3.88.12.3221.7.4'
-// valueset "Peripheral ischemia (disorder)":'2.16.840.1.113883.3.88.12.3221.7.4'
-// valueset "Crushing injury (disorder)":'2.16.840.1.113883.3.88.12.3221.7.4'
-// valueset "Traumatic amputation of limb (disorder)":'2.16.840.1.113883.3.88.12.3221.7.4'
-// valueset "Closure by suture (procedure)":'2.16.840.1.113883.3.88.12.80.28'
-// valueset "General treatment (procedure)":'2.16.840.1.113883.3.88.12.80.28'
-// valueset "Serious or Life Threatening Illness":'2.16.840.1.113883.3.464.1003.199.12.1055'
-// valueset "Necrotizing fasciitis (disorder)":'2.16.840.1.113883.3.88.12.3221.7.4'
-// valueset "Peripheral arterial insufficiency (disorder)":'2.16.840.1.113883.3.88.12.3221.7.4'
-// valueset "Skin graft cutting/preparation (procedure)":'2.16.840.1.113883.3.88.12.80.28'
-// valueset "Chronic osteomyelitis (disorder)":'2.16.840.1.113883.3.88.12.3221.7.4'
-// valueset "Absent response to treatment (situation)":'2.16.840.1.113883.3.88.12.3221.7.4'
-// valueset "Osteoradionecrosis (disorder)":'2.16.840.1.113883.3.88.12.3221.7.4'
-// valueset "Radionecrosis of skin (disorder)":'2.16.840.1.113883.3.88.12.3221.7.4'
-// valueset "Toxic effect of cyanide (disorder)":'2.16.840.1.113883.3.88.12.3221.7.4'
-// valueset "Actinomycosis, unspecified":'2.16.840.1.113883.17.4077.3.2054'
-// valueset "Antibiotic therapy (procedure)":'2.16.840.1.113883.3.88.12.80.28'
-// valueset "Optional surgery (procedure)":'2.16.840.1.113883.3.88.12.80.28'
-// valueset "Soft tissues (body structure)":'2.16.840.1.113883.3.88.12.3221.8.9'
-// valueset "Diabetes mellitus (disorder)":'2.16.840.1.113883.3.88.12.3221.7.4'
-// valueset "Diabetes mellitus type 2 (disorder)":'2.16.840.1.113883.3.88.12.3221.7.4'
-// valueset "Diabetes mellitus type 1 (disorder)":'2.16.840.1.113883.3.88.12.3221.7.4'
-// valueset "Diabetic foot (disorder)":'2.16.840.1.113883.3.88.12.3221.7.4'
-// valueset "Wagner syndrome (disorder)":'2.16.840.1.113883.3.88.12.3221.7.4'
-// valueset "Providing care according to standard (regime/therapy)":'2.16.840.1.113883.3.88.12.80.28'
-// valueset "Procedure on wound (procedure)":'2.16.840.1.113883.3.88.12.80.28'
+/*valueset "Osteomyelitis, unspecified" : '2.16.840.1.113883.3.3157.1835'
+valueset "Radiation sickness, unspecified, initial encounter":'2.16.840.1.113883.3.3157.1411'
+valueset "Actinomycosis, unspecified" :'2.16.840.1.113883.17.4077.2.2074'
+valueset "Type 2 diabetes mellitus with other skin ulcer":'2.16.840.1.113762.1.4.1138.739'
+valueset "Type 1 diabetes mellitus with other skin ulcer":'2.16.840.1.113762.1.4.1138.739'
+valueset "Crushing injury of unspecified hand, initial encounter":'2.16.840.1.113883.3.3157.1411'
+valueset "Complete traumatic amputation at level between left hip and knee, initial encounter":'2.16.840.1.113883.3.3157.1411'
+valueset "Caisson disease [decompression sickness], initial encounter" : '2.16.840.1.113883.3.3157.1411'
+valueset "Air embolism following infusion, transfusion and therapeutic injection, initial encounter" : '2.16.840.1.113883.3.3157.1411'
+valueset "Gas gangrene":'2.16.840.1.113883.17.4077.2.2074'
+valueset "Necrotizing fasciitis" : '2.16.840.1.113883.17.4077.2.2074'
+valueset "Peripheral vascular disease, unspecified" : '2.16.840.1.113883.3.600.858'
+valueset "Toxic effect of carbon monoxide from unspecified source, accidental (unintentional), initial encounter" : '2.16.840.1.113762.1.4.1146.289'
+valueset "Toxic effect of hydrogen cyanide, intentional self-harm, initial encounter" : '2.16.840.1.113883.17.4077.2.2077'*/
 
-// valueset "Skin ulcer (disorder)":'2.16.840.1.113883.3.88.12.3221.7.4'
-// valueset "Pressure ulcer (disorder)":'2.16.840.1.113883.3.88.12.3221.7.4'
-// valueset "Stasis ulcer (disorder)":'2.16.840.1.113883.3.88.12.3221.7.4'
-// valueset "Peripheral vascular disease (disorder)":'2.16.840.1.113883.3.88.12.3221.7.4'
-// valueset "Septicemia due to anaerobes":'2.16.840.1.113883.3.666.5.672'
-// valueset "Clostridial infection (disorder)":'2.16.840.1.113883.3.88.12.3221.7.4'
-// valueset "Infection":'2.16.840.1.113883.17.4077.2.2075'
-// valueset "Burn of skin (disorder)":'2.16.840.1.113883.3.88.12.3221.7.4'
-// valueset "Thermal burn (disorder)":'2.16.840.1.113883.3.88.12.3221.7.4'
-// valueset "Senility (finding)":'2.16.840.1.113883.3.88.12.3221.7.4'
-// valueset "Myocardial infarction (disorder)":'2.16.840.1.113883.3.88.12.3221.7.4'
-// valueset "Cardiogenic shock (disorder)":'2.16.840.1.113883.3.88.12.3221.7.4'
-// valueset "Sickle Cell Disease":'2.16.840.1.113883.3.3157.1004.22'
-// valueset "Anemia (disorder)":'2.16.840.1.113883.3.88.12.3221.7.4'
-// valueset "Acute cerebrovascular insufficiency (disorder)":'2.16.840.1.113883.3.88.12.3221.7.4'
-// valueset "Hepatic necrosis (disorder)":'2.16.840.1.113883.3.88.12.3221.7.4'
-// valueset "Chronic brain syndrome (disorder)":'2.16.840.1.113883.3.88.12.3221.7.4'
-// valueset "Tetanus (disorder)":'2.16.840.1.113883.3.88.12.3221.7.4'
-// valueset "Organ transplant":'2.16.840.1.113883.3.666.5.801'
-// valueset "Procedure on organ (procedure)":'2.16.840.1.113883.3.88.12.80.28'
-// valueset "Storage (procedure)":'2.16.840.1.113883.3.88.12.80.28'
-// valueset "Pulmonary emphysema (disorder)":'2.16.840.1.113883.3.88.12.3221.7.4'
-// valueset "Anemia due to chronic blood loss (disorder)":'2.16.840.1.113883.3.88.12.3221.7.4'
-// valueset "Multiple sclerosis (disorder)":'2.16.840.1.113883.3.88.12.3221.7.4'
-// valueset "Arthritis (disorder)":'2.16.840.1.113883.3.88.12.3221.7.4'
-// valueset "Cerebral edema (disorder)":'2.16.840.1.113883.3.88.12.3221.7.4'
+//General treatment (procedure)
 
 
-code "Hyperbaric oxygen therapy (procedure) code": '18678000' from "SNOMEDCT" display 'Hyperbaric oxygen therapy (procedure)'
-code "Toxic effect of carbon monoxide (disorder) code": '17383000' from "SNOMEDCT" display 'Toxic effect of carbon monoxide (disorder)'
-code "Decompression sickness type I (disorder) code": '212953005' from "SNOMEDCT" display 'Decompression sickness type I (disorder)'
-code "Decompression sickness type II (disorder) code": '212954004' from "SNOMEDCT" display 'Decompression sickness type II (disorder)'
-code "Air embolism (disorder) code": '271376002' from "SNOMEDCT" display 'Air embolism (disorder)'
-code "Gas gangrene (disorder) code": '80466000' from "SNOMEDCT" display 'Gas gangrene (disorder)'
-code "Peripheral ischemia (disorder) code": '233958001' from "SNOMEDCT" display 'Peripheral ischemia (disorder)'
-code "Crushing injury (disorder) code": '125665001' from "SNOMEDCT" display 'Crushing injury (disorder)'
-code "Traumatic amputation of limb (disorder) code": '210771000' from "SNOMEDCT" display 'Traumatic amputation of limb (disorder)'
-code "Closure by suture (procedure) code": '18557009' from "SNOMEDCT" display 'Closure by suture (procedure)'
-code "General treatment (procedure) code": '7922000' from "SNOMEDCT" display 'General treatment (procedure)'
-code "Serious or Life Threatening Illness code": '20160205' from "SNOMEDCT" display 'Serious or Life Threatening Illness'
-code "Necrotizing fasciitis (disorder) code": '52486002' from "SNOMEDCT" display 'Necrotizing fasciitis (disorder)'
-code "Peripheral arterial insufficiency (disorder) code": '153911000119104' from "SNOMEDCT" display 'Peripheral arterial insufficiency (disorder)'
-code "Skin graft cutting/preparation (procedure) code": '307255005' from "SNOMEDCT" display 'Skin graft cutting/preparation (procedure)'
-code "Chronic osteomyelitis (disorder) code": '40970001' from "SNOMEDCT" display 'Chronic osteomyelitis (disorder)'
-code "Absent response to treatment (situation) code": '266721009' from "SNOMEDCT" display 'Absent response to treatment (situation)'
-code "Osteoradionecrosis (disorder) code": '109333005' from "SNOMEDCT" display 'Osteoradionecrosis (disorder)'
-code "Radionecrosis of skin (disorder) code": '289998006' from "SNOMEDCT" display 'Radionecrosis of skin (disorder)'
-code "Toxic effect of cyanide (disorder) code": '66207005' from "SNOMEDCT" display 'Toxic effect of cyanide (disorder)'
-code "Actinomycosis, unspecified code": 'A42.9' from "SNOMEDCT" display 'Actinomycosis, unspecified'
-code "Antibiotic therapy (procedure) code": '281789004' from "SNOMEDCT" display 'Antibiotic therapy (procedure)'
-code "Optional surgery (procedure) code": '274075007' from "SNOMEDCT" display 'Optional surgery (procedure)'
-code "Soft tissues (body structure) code": '87784001' from "SNOMEDCT" display 'Soft tissues (body structure)'
-code "Diabetes mellitus (disorder) code": '73211009' from "SNOMEDCT" display 'Diabetes mellitus (disorder)'
-code "Diabetes mellitus type 2 (disorder) code": '44054006' from "SNOMEDCT" display 'Diabetes mellitus type 2 (disorder)'
-code "Diabetes mellitus type 1 (disorder) code": '46635009' from "SNOMEDCT" display 'Diabetes mellitus type 1 (disorder)'
-code "Diabetic foot (disorder) code": '280137006' from "SNOMEDCT" display 'Diabetic foot (disorder)'
-code "Wagner syndrome (disorder) code": '232064001' from "SNOMEDCT" display 'Wagner syndrome (disorder)'
-code "Providing care according to standard (regime/therapy) code": '372921003' from "SNOMEDCT" display 'Providing care according to standard (regime/therapy)'
-code "Procedure on wound (procedure) code": '442460002' from "SNOMEDCT" display 'Procedure on wound (procedure)'
+//Hyperbaric oxygen therapy (procedure)
+code "Physician attendance and supervision of hyperbaric oxygen therapy, per session code" :'99183' from  "CPT" display 'Hyperbaric oxygen therapy (procedure'
+//Wagner syndrome (disorder)
+code "Wegener's granulomatosis without renal involvement code" : 'M31.30' from "ICD10CM" display 'Wegeners granulomatosis without renal involvement'
+//Osteoradionecrosis (disorder)
+code "Inflammatory conditions of jaws code":'M27.2' from "ICD10CM" display 'Inflammatory conditions of jaws'
+code "Toxic effect of carbon monoxide from unspecified source, accidental (unintentional), initial encounter code" : 'T58.91XA' from "ICD10CM" display 'Toxic effect of carbon monoxide from unspecified source, accidental (unintentional), initial encounter'
+code "Osteomyelitis, unspecified code" : 'M86.9' from "ICD10CM" display 'Osteomyelitis, unspecified'
+code "Radiation sickness, unspecified, initial encounter code" : 'T66.XXXA' from "ICD10CM" display 'Radiation sickness, unspecified, initial encounter'
+code "Actinomycosis, unspecified code" : 'A42.9' from "ICD10CM" display 'Actinomycosis, unspecified'
+code "Type 2 diabetes mellitus with other skin ulcer code" : 'E11.622' from "ICD10CM" display 'Type 2 diabetes mellitus with other skin ulcer'
+code "Type 1 diabetes mellitus with other skin ulcer code" : 'E10.622' from "ICD10CM" display 'Type 1 diabetes mellitus with other skin ulcer'
+code "Crushing injury of unspecified hand, initial encounter code" :'S67.20XA' from "ICD10CM" display 'Crushing injury of unspecified hand, initial encounter'
+code "Complete traumatic amputation at level between left hip and knee, initial encounter code" : 'S78.112A' from "ICD10CM" display 'Complete traumatic amputation at level between left hip and knee, initial encounter'
+code "Caisson disease [decompression sickness], initial encounter code":'T70.3XXA' from "ICD10CM" display 'Caisson disease [decompression sickness], initial encounter'
+code "Air embolism following infusion, transfusion and therapeutic injection, initial encounter	code" : 'T80.0XXA' from "ICD10CM" display 'Air embolism following infusion, transfusion and therapeutic injection, initial encounter'
+code "Gas gangrene code": 'A48.0' from "ICD10CM" display 'Gas gangrene'
+code "Peripheral vascular disease, unspecified code":'I73.9' from "ICD10CM" display 'Peripheral vascular disease, unspecified'
+code "Necrotizing fasciitis code" : 'M72.6' from "ICD10CM" display 'Necrotizing fasciitis'
+code "Toxic effect of hydrogen cyanide, intentional self-harm, initial encounter code" :'T57.3X2A' from "ICD10CM" display 'Toxic effect of hydrogen cyanide, intentional self-harm, initial encounter'
+code "Air embolism following infusion, transfusion and therapeutic injection, initial encounter code": 'T80.0XXA' from "ICD10CM" display 'Air embolism following infusion, transfusion and therapeutic injection, initial encounter'
+code "Under Skin Substitute Grafts code":'15273' from "CPT" display 'Under Skin Substitute Grafts'
 
-code "Skin ulcer (disorder) code": '46742003' from "SNOMEDCT" display 'Skin ulcer (disorder)'
-code "Pressure ulcer (disorder) code": '399912005' from "SNOMEDCT" display 'Pressure ulcer (disorder)'
-code "Stasis ulcer (disorder) code": '371032004' from "SNOMEDCT" display 'Stasis ulcer (disorder)'
-code "Peripheral vascular disease (disorder) code": '400047006' from "SNOMEDCT" display 'Peripheral vascular disease (disorder)'
-code "Septicemia due to anaerobes code": '038.3' from "SNOMEDCT" display 'Septicemia due to anaerobes'
-code "Clostridial infection (disorder) code": '56688005' from "SNOMEDCT" display 'Clostridial infection (disorder)'
-code "Infection code": '20181221' from "SNOMEDCT" display 'Infection'
-code "Burn of skin (disorder) code": '284196006' from "SNOMEDCT" display 'Burn of skin (disorder)'
-code "Thermal burn (disorder) code": '314534006' from "SNOMEDCT" display 'Thermal burn (disorder)'
-code "Senility (finding) code": '271873000' from "SNOMEDCT" display 'Senility (finding)'
-code "Myocardial infarction (disorder) code": '22298006' from "SNOMEDCT" display 'Myocardial infarction (disorder)'
-code "Cardiogenic shock (disorder) code": '89138009' from "SNOMEDCT" display 'Cardiogenic shock (disorder)'
-code "Sickle Cell Disease code": '20180508' from "SNOMEDCT" display 'Sickle Cell Disease'
-code "Anemia (disorder) code": '271737000' from "SNOMEDCT" display 'Anemia (disorder)'
-code "Acute cerebrovascular insufficiency (disorder) code": '29322000' from "SNOMEDCT" display 'Acute cerebrovascular insufficiency (disorder)'
-code "Hepatic necrosis (disorder) code": '87248009' from "SNOMEDCT" display 'Hepatic necrosis (disorder)'
-code "Chronic brain syndrome (disorder) code": '78689005' from "SNOMEDCT" display 'Chronic brain syndrome (disorder)'
-code "Tetanus (disorder) code": '76902006' from "SNOMEDCT" display 'Tetanus (disorder)'
-code "Organ transplant code": '20170427' from "SNOMEDCT" display 'Organ transplant'
-code "Procedure on organ (procedure) code": '118717007' from "SNOMEDCT" display 'Procedure on organ (procedure)'
-code "Storage (procedure) code": '440276004' from "SNOMEDCT" display 'Storage (procedure)'
-code "Pulmonary emphysema (disorder) code": '87433001' from "SNOMEDCT" display 'Pulmonary emphysema (disorder)'
-code "Anemia due to chronic blood loss (disorder) code": '413533008' from "SNOMEDCT" display 'Anemia due to chronic blood loss (disorder)'
-code "Multiple sclerosis (disorder) code": '24700007' from "SNOMEDCT" display 'Multiple sclerosis (disorder)'
-code "Arthritis (disorder) code": '3723001' from "SNOMEDCT" display 'Arthritis (disorder)'
-code "Cerebral edema (disorder) code": '2032001' from "SNOMEDCT" display 'Cerebral edema (disorder)'
 
-concept "Hyperbaric oxygen therapy (procedure) ": {"Hyperbaric oxygen therapy (procedure) code"}  display 'Hyperbaric oxygen therapy (procedure)'
-concept "Toxic effect of carbon monoxide (disorder) ": {"Toxic effect of carbon monoxide (disorder) code"}  display 'Toxic effect of carbon monoxide (disorder)'
-concept "Decompression sickness type I (disorder) ": {"Decompression sickness type I (disorder) code"}  display 'Decompression sickness type I (disorder)'
-concept "Decompression sickness type II (disorder) ": {"Decompression sickness type II (disorder) code"}  display 'Decompression sickness type II (disorder)'
-concept "Air embolism (disorder) ": {"Air embolism (disorder) code"}  display 'Air embolism (disorder)'
-concept "Gas gangrene (disorder) ": {"Gas gangrene (disorder) code"}  display 'Gas gangrene (disorder)'
-concept "Peripheral ischemia (disorder) ": {"Peripheral ischemia (disorder) code"}  display 'Peripheral ischemia (disorder)'
-concept "Crushing injury (disorder) ": {"Crushing injury (disorder) code"}  display 'Crushing injury (disorder)'
-concept "Traumatic amputation of limb (disorder) ": {"Traumatic amputation of limb (disorder) code"}  display 'Traumatic amputation of limb (disorder)'
-concept "Closure by suture (procedure) ": {"Closure by suture (procedure) code"}  display 'Closure by suture (procedure)'
-concept "General treatment (procedure) ": {"General treatment (procedure) code"}  display 'General treatment (procedure)'
-concept "Serious or Life Threatening Illness ": {"Serious or Life Threatening Illness code"}  display 'Serious or Life Threatening Illness'
-concept "Necrotizing fasciitis (disorder) ": {"Necrotizing fasciitis (disorder) code"}  display 'Necrotizing fasciitis (disorder)'
-concept "Peripheral arterial insufficiency (disorder) ": {"Peripheral arterial insufficiency (disorder) code"}  display 'Peripheral arterial insufficiency (disorder)'
-concept "Skin graft cutting/preparation (procedure) ": {"Skin graft cutting/preparation (procedure) code"}  display 'Skin graft cutting/preparation (procedure)'
-concept "Chronic osteomyelitis (disorder) ": {"Chronic osteomyelitis (disorder) code"}  display 'Chronic osteomyelitis (disorder)'
-concept "Absent response to treatment (situation) ": {"Absent response to treatment (situation) code"}  display 'Absent response to treatment (situation)'
-concept "Osteoradionecrosis (disorder) ": {"Osteoradionecrosis (disorder) code"}  display 'Osteoradionecrosis (disorder)'
-concept "Radionecrosis of skin (disorder) ": {"Radionecrosis of skin (disorder) code"}  display 'Radionecrosis of skin (disorder)'
-concept "Toxic effect of cyanide (disorder) ": {"Toxic effect of cyanide (disorder) code"}  display 'Toxic effect of cyanide (disorder)'
-concept "Actinomycosis, unspecified ": {"Actinomycosis, unspecified code"}  display 'Actinomycosis, unspecified'
-concept "Antibiotic therapy (procedure) ": {"Antibiotic therapy (procedure) code"}  display 'Antibiotic therapy (procedure)'
-concept "Optional surgery (procedure) ": {"Optional surgery (procedure) code"}  display 'Optional surgery (procedure)'
-concept "Soft tissues (body structure) ": {"Soft tissues (body structure) code"}  display 'Soft tissues (body structure)'
-concept "Diabetes mellitus (disorder) ": {"Diabetes mellitus (disorder) code"}  display 'Diabetes mellitus (disorder)'
-concept "Diabetes mellitus type 2 (disorder) ": {"Diabetes mellitus type 2 (disorder) code"}  display 'Diabetes mellitus type 2 (disorder)'
-concept "Diabetes mellitus type 1 (disorder) ": {"Diabetes mellitus type 1 (disorder) code"}  display 'Diabetes mellitus type 1 (disorder)'
-concept "Diabetic foot (disorder) ": {"Diabetic foot (disorder) code"}  display 'Diabetic foot (disorder)'
-concept "Wagner syndrome (disorder) ": {"Wagner syndrome (disorder) code"}  display 'Wagner syndrome (disorder)'
-concept "Providing care according to standard (regime/therapy) ": {"Providing care according to standard (regime/therapy) code"}  display 'Providing care according to standard (regime/therapy)'
-concept "Procedure on wound (procedure) ": {"Procedure on wound (procedure) code"}  display 'Procedure on wound (procedure)'
-
-concept "Skin ulcer (disorder) ": {"Skin ulcer (disorder) code"}  display 'Skin ulcer (disorder)'
-concept "Pressure ulcer (disorder) ": {"Pressure ulcer (disorder) code"}  display 'Pressure ulcer (disorder)'
-concept "Stasis ulcer (disorder) ": {"Stasis ulcer (disorder) code"}  display 'Stasis ulcer (disorder)'
-concept "Peripheral vascular disease (disorder) ": {"Peripheral vascular disease (disorder) code"}  display 'Peripheral vascular disease (disorder)'
-concept "Septicemia due to anaerobes ": {"Septicemia due to anaerobes code"}  display 'Septicemia due to anaerobes'
-concept "Clostridial infection (disorder) ": {"Clostridial infection (disorder) code"}  display 'Clostridial infection (disorder)'
-concept "Infection ": {"Infection code"}  display 'Infection'
-concept "Burn of skin (disorder) ": {"Burn of skin (disorder) code"}  display 'Burn of skin (disorder)'
-concept "Thermal burn (disorder) ": {"Thermal burn (disorder) code"}  display 'Thermal burn (disorder)'
-concept "Senility (finding) ": {"Senility (finding) code"}  display 'Senility (finding)'
-concept "Myocardial infarction (disorder) ": {"Myocardial infarction (disorder) code"}  display 'Myocardial infarction (disorder)'
-concept "Cardiogenic shock (disorder) ": {"Cardiogenic shock (disorder) code"}  display 'Cardiogenic shock (disorder)'
-concept "Sickle Cell Disease ": {"Sickle Cell Disease code"}  display 'Sickle Cell Disease'
-concept "Anemia (disorder) ": {"Anemia (disorder) code"}  display 'Anemia (disorder)'
-concept "Acute cerebrovascular insufficiency (disorder) ": {"Acute cerebrovascular insufficiency (disorder) code"}  display 'Acute cerebrovascular insufficiency (disorder)'
-concept "Hepatic necrosis (disorder) ": {"Hepatic necrosis (disorder) code"}  display 'Hepatic necrosis (disorder)'
-concept "Chronic brain syndrome (disorder) ": {"Chronic brain syndrome (disorder) code"}  display 'Chronic brain syndrome (disorder)'
-concept "Tetanus (disorder) ": {"Tetanus (disorder) code"}  display 'Tetanus (disorder)'
-concept "Organ transplant ": {"Organ transplant code"}  display 'Organ transplant'
-concept "Procedure on organ (procedure) ": {"Procedure on organ (procedure) code"}  display 'Procedure on organ (procedure)'
-concept "Storage (procedure) ": {"Storage (procedure) code"}  display 'Storage (procedure)'
-concept "Pulmonary emphysema (disorder) ": {"Pulmonary emphysema (disorder) code"}  display 'Pulmonary emphysema (disorder)'
-concept "Anemia due to chronic blood loss (disorder) ": {"Anemia due to chronic blood loss (disorder) code"}  display 'Anemia due to chronic blood loss (disorder)'
-concept "Multiple sclerosis (disorder) ": {"Multiple sclerosis (disorder) code"}  display 'Multiple sclerosis (disorder)'
-concept "Arthritis (disorder) ": {"Arthritis (disorder) code"}  display 'Arthritis (disorder)'
-concept "Cerebral edema (disorder) ": {"Cerebral edema (disorder) code"}  display 'Cerebral edema (disorder)'
+concept "Physician attendance and supervision of hyperbaric oxygen therapy, per session":{"Physician attendance and supervision of hyperbaric oxygen therapy, per session code"} display 'Physician attendance and supervision of hyperbaric oxygen therapy, per session'
+concept "Osteomyelitis, unspecified": {"Osteomyelitis, unspecified code"} display 'Osteomyelitis, unspecified'
+concept "Radiation sickness, unspecified, initial encounter" :{"Radiation sickness, unspecified, initial encounter code"} display 'Radiation sickness, unspecified, initial encounter'
+concept "Actinomycosis, unspecified" : {"Actinomycosis, unspecified code"} display 'Actinomycosis, unspecified'
+concept "Type 1 diabetes mellitus with other skin ulcer" : {"Type 1 diabetes mellitus with other skin ulcer code"} display 'Type 1 diabetes mellitus with other skin ulcer'
+concept "Type 2 diabetes mellitus with other skin ulcer" : {"Type 2 diabetes mellitus with other skin ulcer code"} display 'Type 2 diabetes mellitus with other skin ulcer'
+concept "Crushing injury of unspecified hand, initial encounter":{"Crushing injury of unspecified hand, initial encounter code"} display 'Crushing injury of unspecified hand, initial encounter'
+concept "Complete traumatic amputation at level between left hip and knee, initial encounter":{"Complete traumatic amputation at level between left hip and knee, initial encounter code"} display 'Complete traumatic amputation at level between left hip and knee, initial encounter'
+concept "Caisson disease [decompression sickness], initial encounter" : {"Caisson disease [decompression sickness], initial encounter code"} display 'Caisson disease [decompression sickness], initial encounter'
+concept "Air embolism following infusion, transfusion and therapeutic injection, initial encounter" : {"Air embolism following infusion, transfusion and therapeutic injection, initial encounter code"} display 'Air embolism following infusion, transfusion and therapeutic injection, initial encounter'
+concept "Gas gangrene" : {"Gas gangrene code"} display 'Gas gangrene'
+concept "Peripheral vascular disease, unspecified" : {"Peripheral vascular disease, unspecified code"} display 'Peripheral vascular disease, unspecified'
+concept "Necrotizing fasciitis" : {"Necrotizing fasciitis code"} display 'Necrotizing fasciitis'
+concept "Toxic effect of hydrogen cyanide, intentional self-harm, initial encounter" : {"Toxic effect of hydrogen cyanide, intentional self-harm, initial encounter code"}  display 'Toxic effect of hydrogen cyanide, intentional self-harm, initial encounter'
+concept "Inflammatory conditions of jaws": {"Inflammatory conditions of jaws code"} display 'Inflammatory conditions of jaws'
+concept "Wegener's granulomatosis without renal involvement":{"Wegener's granulomatosis without renal involvement code"} display 'Wegeners granulomatosis without renal involvement code'
+concept "Toxic effect of carbon monoxide from unspecified source, accidental (unintentional), initial encounter":{"Toxic effect of carbon monoxide from unspecified source, accidental (unintentional), initial encounter code"} display 'Toxic effect of carbon monoxide from unspecified source, accidental (unintentional), initial encounter'
+concept "Under Skin Substitute Grafts" : {"Under Skin Substitute Grafts code"} display 'Under Skin Substitute Grafts'
 
 define "Condition1":
-    {"Condition": "Chronic osteomyelitis (disorder) ",
-      "Observation": "Absent response to treatment (situation) "}
-
+    {"Condition": "Osteomyelitis, unspecified"}
+      
 define "Condition2":
-    {"Condition": "Osteoradionecrosis (disorder) ",
-      "Procedure": "General treatment (procedure) "}
+	{"Condition":"Inflammatory conditions of jaws"}
 
 define "Condition3":
-    {"BodySite": "Soft tissues (body structure) ",
-      "Condition": "Radionecrosis of skin (disorder) ",
-      "Procedure": "General treatment (procedure) "}
-
+      {"Condition": "Radiation sickness, unspecified, initial encounter"}
+     
 define "Condition4":
-    {"Condition": "Actinomycosis, unspecified ",
-    "Observation": "Absent response to treatment (situation) ",
-      "Procedure": "General treatment (procedure) "}
-
+    {"Condition": "Actinomycosis, unspecified" }
+    
 define "Condition5":
-    {"Condition": "Diabetes mellitus type 1 (disorder) ",
-    "Condition": "Wagner syndrome (disorder) ",
-    "Procedure": "Providing care according to standard (regime/therapy) ",
-    "Observation": "Absent response to treatment (situation) "}
+    {"Condition": "Type 1 diabetes mellitus with other skin ulcer"}
+    
 
 define "Condition6":
-    {"Condition": "Diabetes mellitus type 2 (disorder) ",
-    "Condition": "Wagner syndrome (disorder) ",
-    "Procedure": "Providing care according to standard (regime/therapy) ",
-    "Observation": "Absent response to treatment (situation) "}
-
+    {"Condition": "Type 2 diabetes mellitus with other skin ulcer"}
+    
 define "Condition7":
-        {"Condition": "Crushing injury (disorder) ",
-        "Condition": "Traumatic amputation of limb (disorder) "}
+        {"Condition": "Crushing injury of unspecified hand, initial encounter",
+        "Condition": "Complete traumatic amputation at level between left hip and knee, initial encounter"}
 
 define "Condition8":
-    {"Condition": "Toxic effect of carbon monoxide (disorder) "}
+    {"Condition":"Toxic effect of carbon monoxide from unspecified source, accidental (unintentional), initial encounter" }
 
 define "Condition9":
-    {"Condition": "Decompression sickness type I (disorder) "}
+    {"Condition": "Caisson disease [decompression sickness], initial encounter"}
 
 define "Condition10":
-    {"Condition": "Decompression sickness type II (disorder) "}
+    {"Condition": "Caisson disease [decompression sickness], initial encounter"}
 
 define "Condition11":
-    {"Condition": "Air embolism (disorder) "}
+    {"Condition": "Air embolism following infusion, transfusion and therapeutic injection, initial encounter"}
 
 define "Condition12":
-    {"Condition": "Gas gangrene (disorder) "}
+    {"Condition": "Gas gangrene"}
 
 define "Condition13":
-    {"Condition": "Peripheral ischemia (disorder) "}
+    {"Condition": "Peripheral vascular disease, unspecified"}
 
 define "Condition14":
-    {"Condition": "Necrotizing fasciitis (disorder) "}
+    {"Condition": "Necrotizing fasciitis"}
 
 define "Condition15":
-    {"Condition": "Peripheral arterial insufficiency (disorder) "}
+    {"Condition":"Peripheral vascular disease, unspecified" }
 
 define "Condition16":
-    {"Procedure": "Skin graft cutting/preparation (procedure) "}
+    {"Procedure": "Under Skin Substitute Grafts"}
 
 define "Condition17":
-    {"Condition": "Toxic effect of cyanide (disorder) "}
+    {"Condition": "Toxic effect of hydrogen cyanide, intentional self-harm, initial encounter"}
 
 define "Requirements":
     {"Condition1",{'or'},"Condition2",{'or'},"Condition3",{'or'},"Condition4",{'or'},"Condition5",{'or'},"Condition6",
-{'or'},"Condition7",{'or'},"Condition8",{'or'},"Condition9",{'or'},"Condition10",{'or'},"Condition11",{'or'},
-"Condition12",{'or'},"Condition13",{'or'},"Condition14",{'or'},"Condition15",{'or'},"Condition16",{'or'},"Condition17"}
+	{'or'},"Condition7",{'or'},"Condition9",{'or'},"Condition10",{'or'},"Condition11",{'or'},
+	"Condition12",{'or'},"Condition13",{'or'},"Condition14",{'or'},"Condition15",{'or'},"Condition16",{'or'},"Condition17"}
 
-define "Prior Authorisation":
-	exists([Procedure: "Hyperbaric oxygen therapy (procedure) "])
-    
-    
-    
+define "PriorAuthorization":
+	exists(["Procedure": "Physician attendance and supervision of hyperbaric oxygen therapy, per session"])
