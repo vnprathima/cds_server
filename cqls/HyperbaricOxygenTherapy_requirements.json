@@ -2718,7 +2718,7 @@
                     }
                 },
                 {
-                    "localId": "180",
+                    "localId": "179",
                     "name": "PriorAuthorization",
                     "context": "Patient",
                     "accessLevel": "Public",
@@ -2726,64 +2726,14 @@
                         {
                             "type": "Annotation",
                             "s": {
-                                "r": "180",
+                                "r": "179",
                                 "s": [
                                     {
                                         "value": [
                                             "define ",
                                             "\"PriorAuthorization\"",
-                                            ":\n\t"
-                                        ]
-                                    },
-                                    {
-                                        "r": "179",
-                                        "s": [
-                                            {
-                                                "value": [
-                                                    "exists"
-                                                ]
-                                            },
-                                            {
-                                                "r": "178",
-                                                "s": [
-                                                    {
-                                                        "value": [
-                                                            "("
-                                                        ]
-                                                    },
-                                                    {
-                                                        "r": "178",
-                                                        "s": [
-                                                            {
-                                                                "value": [
-                                                                    "[",
-                                                                    "\"Procedure\"",
-                                                                    ": "
-                                                                ]
-                                                            },
-                                                            {
-                                                                "s": [
-                                                                    {
-                                                                        "value": [
-                                                                            "\"Physician attendance and supervision of hyperbaric oxygen therapy, per session\""
-                                                                        ]
-                                                                    }
-                                                                ]
-                                                            },
-                                                            {
-                                                                "value": [
-                                                                    "]"
-                                                                ]
-                                                            }
-                                                        ]
-                                                    },
-                                                    {
-                                                        "value": [
-                                                            ")"
-                                                        ]
-                                                    }
-                                                ]
-                                            }
+                                            ":\n\t//exists([\"Procedure\": \"Physician attendance and supervision of hyperbaric oxygen therapy, per session\"])\n    ",
+                                            "true"
                                         ]
                                     }
                                 ]
@@ -2791,21 +2741,10 @@
                         }
                     ],
                     "expression": {
-                        "localId": "179",
-                        "type": "Exists",
-                        "operand": {
-                            "localId": "178",
-                            "dataType": "{http://hl7.org/fhir}Procedure",
-                            "codeProperty": "code",
-                            "type": "Retrieve",
-                            "codes": {
-                                "type": "ToList",
-                                "operand": {
-                                    "name": "Physician attendance and supervision of hyperbaric oxygen therapy, per session",
-                                    "type": "ConceptRef"
-                                }
-                            }
-                        }
+                        "localId": "178",
+                        "valueType": "{urn:hl7-org:elm-types:r1}Boolean",
+                        "value": "true",
+                        "type": "Literal"
                     }
                 }
             ]
