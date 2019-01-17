@@ -13,7 +13,7 @@ module.exports = http.createServer((req, res) => {
     } else if (reqUrl.pathname == '/execute_cql' && req.method === 'POST') {
         console.log('Request Type:' + req.method + ' Endpoint: ' + reqUrl.pathname);
         if(req.headers.authorization){
-            const authURL = "https://54.227.173.76:8443/auth/realms/ClientFhirServer/protocol/openid-connect/token/introspect";
+            const authURL = "https://18.222.7.99:8443/auth/realms/ClientFhirServer/protocol/openid-connect/token/introspect";
             var Client = require('node-rest-client').Client;
             var client = new Client();
             var token = req.headers.authorization;
@@ -38,11 +38,12 @@ module.exports = http.createServer((req, res) => {
                     service.invalidAuthorization(req,res);
                 }
             });
-        } else {
-            sesrvice.invalidAuthorization(req,res);
         }
-        
-    } else {
+         if(!req.headers.authorization) {
+            service.executeCql(req, res);
+        } 
+    } 
+    else {
         console.log('Request Type:' + req.method + ' Invalid Endpoint: ' + reqUrl.pathname);
         service.invalidRequest(req, res);
     }
