@@ -3647,7 +3647,7 @@
                 },
                 {
                     "localId": "226",
-                    "name": "PriorAuthorisation Documents",
+                    "name": "PriorAuthorization Documents",
                     "context": "Patient",
                     "accessLevel": "Public",
                     "annotation": [
@@ -3659,7 +3659,7 @@
                                     {
                                         "value": [
                                             "define ",
-                                            "\"PriorAuthorisation Documents\"",
+                                            "\"PriorAuthorization Documents\"",
                                             ":\n    "
                                         ]
                                     },
@@ -3789,7 +3789,7 @@
                 },
                 {
                     "localId": "228",
-                    "name": "PriorAuthorisation",
+                    "name": "PriorAuthorization",
                     "context": "Patient",
                     "accessLevel": "Public",
                     "annotation": [
@@ -3801,7 +3801,7 @@
                                     {
                                         "value": [
                                             "define ",
-                                            "\"PriorAuthorisation\"",
+                                            "\"PriorAuthorization\"",
                                             ":\n\t",
                                             "true"
                                         ]
@@ -3819,7 +3819,7 @@
                 },
                 {
                     "localId": "254",
-                    "name": "PriorAuthorisationRequirements",
+                    "name": "PriorAuthorizationRequirements",
                     "context": "Patient",
                     "accessLevel": "Public",
                     "annotation": [
@@ -3831,7 +3831,7 @@
                                     {
                                         "value": [
                                             "define ",
-                                            "\"PriorAuthorisationRequirements\"",
+                                            "\"PriorAuthorizationRequirements\"",
                                             ":\n    "
                                         ]
                                     },
@@ -4188,7 +4188,7 @@
                                                 "s": [
                                                     {
                                                         "value": [
-                                                            "\"PriorAuthorisation Documents\""
+                                                            "\"PriorAuthorization Documents\""
                                                         ]
                                                     }
                                                 ]
@@ -4335,7 +4335,7 @@
                             },
                             {
                                 "localId": "252",
-                                "name": "PriorAuthorisation Documents",
+                                "name": "PriorAuthorization Documents",
                                 "type": "ExpressionRef"
                             }
                         ]

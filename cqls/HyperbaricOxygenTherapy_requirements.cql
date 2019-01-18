@@ -161,14 +161,13 @@ define "RequestorInformation":
     'State',
     'Diagnosis Codes'}*/
 
-define "PriorAuthorisation Documents":
+define "PriorAuthorization Documents":
     "BeneficiaryInformation" union "OrderingPhysician/PractitionerInformation"
     union "FacilityInformation" union "RequestorInformation" 
 
-define "PriorAuthorisation":
+define "PriorAuthorization":
 	true
 
-define "PriorAuthorisationRequirements":
+define "PriorAuthorizationRequirements":
     {"Condition1",{'or'},"Condition2",{'or'},"Condition3",{'or'},"Condition4",{'or'},
-        "Condition5",{'or'},"Condition6",{'or'},"Condition18",{'or'},"Condition19"} union "PriorAuthorisation Documents"
-
+        "Condition5",{'or'},"Condition6",{'or'},"Condition18",{'or'},"Condition19"} union "PriorAuthorization Documents"
