@@ -13,7 +13,7 @@ module.exports = http.createServer((req, res) => {
     } else if (reqUrl.pathname == '/execute_cql' && req.method === 'POST') {
         console.log('Request Type:' + req.method + ' Endpoint: ' + reqUrl.pathname);
         if(req.headers.authorization){
-            const authURL = "https://18.222.7.99:8443/auth/realms/ClientFhirServer/protocol/openid-connect/token/introspect";
+            const authURL = "https://18.222.7.99:8443/auth/realms/ProviderCredentials/protocol/openid-connect/token/introspect";
             var Client = require('node-rest-client').Client;
             var client = new Client();
             var token = req.headers.authorization;
