@@ -38,6 +38,36 @@
                 },
                 {
                     "localId": "4",
+                    "name": "ICD9CM",
+                    "id": "https://www.cdc.gov/nchs/icd/icd9.htm",
+                    "accessLevel": "Public"
+                },
+                {
+                    "localId": "5",
+                    "name": "RXNORM",
+                    "id": "https://www.nlm.nih.gov/research/umls/rxnorm/",
+                    "accessLevel": "Public"
+                },
+                {
+                    "localId": "6",
+                    "name": "ICD10CM",
+                    "id": "",
+                    "accessLevel": "Public"
+                },
+                {
+                    "localId": "7",
+                    "name": "ICD10PCS",
+                    "id": "",
+                    "accessLevel": "Public"
+                },
+                {
+                    "localId": "8",
+                    "name": "CPT",
+                    "id": "",
+                    "accessLevel": "Public"
+                },
+                {
+                    "localId": "9",
                     "name": "NUCCPT",
                     "id": "",
                     "accessLevel": "Public"
@@ -47,102 +77,190 @@
         "codes": {
             "def": [
                 {
-                    "localId": "6",
-                    "name": "End Stage Liver Disease code",
-                    "id": "708248004",
-                    "display": "End Stage Liver Disease",
+                    "localId": "11",
+                    "name": "Hepatic failure, unspecified without coma code",
+                    "id": "K72.90",
+                    "display": "Hepatic failure, unspecified without coma",
                     "accessLevel": "Public",
                     "codeSystem": {
-                        "localId": "5",
-                        "name": "SNOMEDCT"
+                        "localId": "10",
+                        "name": "ICD10CM"
                     }
                 },
                 {
-                    "localId": "8",
-                    "name": "Follow-up arranged (finding) code",
-                    "id": "183616001",
-                    "display": "Follow-up arranged",
+                    "localId": "13",
+                    "name": "Transplantation of Liver, Allogeneic, Open Approach code",
+                    "id": "0FY00Z0",
+                    "display": "Transplantation of Liver, Allogeneic, Open Approach",
                     "accessLevel": "Public",
                     "codeSystem": {
-                        "localId": "7",
-                        "name": "SNOMEDCT"
+                        "localId": "12",
+                        "name": "ICD10PCS"
                     }
                 },
                 {
-                    "localId": "10",
-                    "name": "Immunosuppressive therapy for transplant (procedure) code",
-                    "id": "7447008",
-                    "display": "Immunosuppressive therapy for transplant",
+                    "localId": "15",
+                    "name": "Transplantation of Liver, Syngeneic, Open Approach code",
+                    "id": "0FY00Z1",
+                    "display": "Transplantation of Liver, Syngeneic, Open Approach",
                     "accessLevel": "Public",
                     "codeSystem": {
-                        "localId": "9",
-                        "name": "SNOMEDCT"
+                        "localId": "14",
+                        "name": "ICD10PCS"
                     }
                 },
                 {
-                    "localId": "12",
-                    "name": "Postoperative follow-up visit (procedure) code",
-                    "id": "439740005",
-                    "display": "Postoperative follow-up visit",
+                    "localId": "17",
+                    "name": "Transplantation of Liver, Zooplastic, Open Approach code",
+                    "id": "0FY00Z2",
+                    "display": "Transplantation of liver (procedure)",
                     "accessLevel": "Public",
                     "codeSystem": {
-                        "localId": "11",
-                        "name": "SNOMEDCT"
+                        "localId": "16",
+                        "name": "ICD10PCS"
                     }
                 },
                 {
-                    "localId": "14",
-                    "name": "Prescription medication started (situation) code",
-                    "id": "432861000124103",
-                    "display": "Prescription medication started",
+                    "localId": "19",
+                    "name": "Encounter for aftercare following liver transplant code",
+                    "id": "Z48.23",
+                    "display": "Encounter for aftercare following liver transplant",
                     "accessLevel": "Public",
                     "codeSystem": {
-                        "localId": "13",
-                        "name": "SNOMEDCT"
+                        "localId": "18",
+                        "name": "ICD10CM"
                     }
                 },
                 {
-                    "localId": "16",
+                    "localId": "21",
                     "name": "Ambulatory Health Care Facilities; Clinic/Center, Federally Qualified Health Center (FQHC) code",
                     "id": "261QF0400X",
                     "display": "Ambulatory Health Care Facilities; Clinic/Center, Federally Qualified Health Center (FQHC)",
                     "accessLevel": "Public",
                     "codeSystem": {
-                        "localId": "15",
+                        "localId": "20",
                         "name": "NUCCPT"
                     }
                 },
                 {
-                    "localId": "18",
-                    "name": "Transplantation of liver (procedure) code",
-                    "id": "18027006",
-                    "display": "Transplantation of liver (procedure)",
+                    "localId": "23",
+                    "name": "Other long term (current) drug therapy code",
+                    "id": "Z79.899",
+                    "display": "Other long term (current) drug therapy",
                     "accessLevel": "Public",
                     "codeSystem": {
-                        "localId": "17",
-                        "name": "SNOMEDCT"
+                        "localId": "22",
+                        "name": "ICD10CM"
                     }
                 },
                 {
-                    "localId": "20",
-                    "name": "Aftercare for liver transplant done (situation) code",
-                    "id": "96601000119101",
-                    "display": "Aftercare for liver transplant done",
+                    "localId": "25",
+                    "name": "General health panel This panel must include the following: Comprehensive metabolic panel (80053) Blood count, complete (CBC), automated and automated differential WBC count (85025 or 85027 and 85004) OR Blood count, complete (CBC), automated (85027) and appropriate manual differential WBC count (85007 or 85009) Thyroid stimulating hormone (TSH) (84443) code",
+                    "id": "80050",
+                    "display": "General health panel This panel must include the following: Comprehensive metabolic panel (80053) Blood count, complete (CBC), automated and automated differential WBC count (85025 or 85027 and 85004) OR Blood count, complete (CBC), automated (85027) and appropriate manual differential WBC count (85007 or 85009) Thyroid stimulating hormone (TSH) (84443)",
                     "accessLevel": "Public",
                     "codeSystem": {
-                        "localId": "19",
-                        "name": "SNOMEDCT"
+                        "localId": "24",
+                        "name": "CPT"
                     }
                 },
                 {
-                    "localId": "22",
-                    "name": "Prescription (procedure) code",
-                    "id": "16076005",
-                    "display": "Prescription",
+                    "localId": "27",
+                    "name": "Encounter for screening for human immunodeficiency virus [HIV] code",
+                    "id": "Z11.4",
+                    "display": "Encounter for screening for human immunodeficiency virus [HIV]",
                     "accessLevel": "Public",
                     "codeSystem": {
-                        "localId": "21",
-                        "name": "SNOMEDCT"
+                        "localId": "26",
+                        "name": "ICD10CM"
+                    }
+                },
+                {
+                    "localId": "29",
+                    "name": "Encounter for screening for other viral diseases code",
+                    "id": "Z11.59",
+                    "display": "Encounter for screening for other viral diseases",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "28",
+                        "name": "ICD10CM"
+                    }
+                },
+                {
+                    "localId": "31",
+                    "name": "Abnormal immunological finding in serum, unspecified code",
+                    "id": "R76.9",
+                    "display": "Abnormal immunological finding in serum, unspecified",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "30",
+                        "name": "ICD10CM"
+                    }
+                },
+                {
+                    "localId": "33",
+                    "name": "Low dose CT scan (LDCT) for lung cancer screening code",
+                    "id": "G0297",
+                    "display": "Low dose CT scan (LDCT) for lung cancer screening",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "32",
+                        "name": "CPT"
+                    }
+                },
+                {
+                    "localId": "35",
+                    "name": "Pulmonary Function Testing—no bronchodilator code",
+                    "id": "94010",
+                    "display": "Pulmonary Function Testing—no bronchodilator",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "34",
+                        "name": "CPT"
+                    }
+                },
+                {
+                    "localId": "37",
+                    "name": "Radiologic examination, chest; single view code",
+                    "id": "71045",
+                    "display": "Radiologic examination, chest; single view",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "36",
+                        "name": "CPT"
+                    }
+                },
+                {
+                    "localId": "39",
+                    "name": "Echocardiography, transthoracic, real-time with image documentation (2D), includes M-mode recording, when performed, during rest and cardiovascular stress test using treadmill, bicycle exercise and/or pharmacologically induced stress, with interpretation and report code",
+                    "id": "93350",
+                    "display": "Echocardiography, transthoracic, real-time with image documentation (2D), includes M-mode recording, when performed, during rest and cardiovascular stress test using treadmill, bicycle exercise and/or pharmacologically induced stress, with interpretation and report",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "38",
+                        "name": "CPT"
+                    }
+                },
+                {
+                    "localId": "41",
+                    "name": "Cardiac blood pool imaging gated equilibrium code",
+                    "id": "78472",
+                    "display": "Cardiac blood pool imaging gated equilibrium",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "40",
+                        "name": "CPT"
+                    }
+                },
+                {
+                    "localId": "43",
+                    "name": "Electrocardiogram, routine ECG with at least 12 leads; interpretation and report only code",
+                    "id": "93010",
+                    "display": "Electrocardiogram, routine ECG with at least 12 leads; interpretation and report only",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "42",
+                        "name": "CPT"
                     }
                 }
             ]
@@ -150,110 +268,206 @@
         "concepts": {
             "def": [
                 {
-                    "localId": "24",
-                    "name": "End Stage Liver Disease",
-                    "display": "End Stage Liver Disease",
+                    "localId": "45",
+                    "name": "Echocardiography, transthoracic, real-time with image documentation (2D), includes M-mode recording, when performed, during rest and cardiovascular stress test using treadmill, bicycle exercise and/or pharmacologically induced stress, with interpretation and report",
+                    "display": "Echocardiography, transthoracic, real-time with image documentation (2D), includes M-mode recording, when performed, during rest and cardiovascular stress test using treadmill, bicycle exercise and/or pharmacologically induced stress, with interpretation and report",
                     "accessLevel": "Public",
                     "code": [
                         {
-                            "localId": "23",
-                            "name": "End Stage Liver Disease code"
+                            "localId": "44",
+                            "name": "Echocardiography, transthoracic, real-time with image documentation (2D), includes M-mode recording, when performed, during rest and cardiovascular stress test using treadmill, bicycle exercise and/or pharmacologically induced stress, with interpretation and report code"
                         }
                     ]
                 },
                 {
-                    "localId": "26",
-                    "name": "Transplantation of liver (procedure)",
-                    "display": "Transplantation of liver (procedure)",
+                    "localId": "47",
+                    "name": "Cardiac blood pool imaging gated equilibrium",
+                    "display": "Cardiac blood pool imaging gated equilibrium",
                     "accessLevel": "Public",
                     "code": [
                         {
-                            "localId": "25",
-                            "name": "Transplantation of liver (procedure) code"
+                            "localId": "46",
+                            "name": "Cardiac blood pool imaging gated equilibrium code"
                         }
                     ]
                 },
                 {
-                    "localId": "28",
-                    "name": "Follow-up arranged",
-                    "display": "Follow-up arranged",
+                    "localId": "49",
+                    "name": "Electrocardiogram, routine ECG with at least 12 leads; interpretation and report only",
+                    "display": "Electrocardiogram, routine ECG with at least 12 leads; interpretation and report only",
                     "accessLevel": "Public",
                     "code": [
                         {
-                            "localId": "27",
-                            "name": "Follow-up arranged (finding) code"
+                            "localId": "48",
+                            "name": "Electrocardiogram, routine ECG with at least 12 leads; interpretation and report only code"
                         }
                     ]
                 },
                 {
-                    "localId": "30",
-                    "name": "Immunosuppressive therapy for transplant",
-                    "display": "Immunosuppressive therapy for transplant",
+                    "localId": "51",
+                    "name": "Low dose CT scan (LDCT) for lung cancer screening",
+                    "display": "Low dose CT scan (LDCT) for lung cancer screening",
                     "accessLevel": "Public",
                     "code": [
                         {
-                            "localId": "29",
-                            "name": "Immunosuppressive therapy for transplant (procedure) code"
+                            "localId": "50",
+                            "name": "Low dose CT scan (LDCT) for lung cancer screening code"
                         }
                     ]
                 },
                 {
-                    "localId": "32",
-                    "name": "Postoperative follow-up visit",
-                    "display": "Postoperative follow-up visit",
+                    "localId": "53",
+                    "name": "Pulmonary Function Testing—no bronchodilator",
+                    "display": "Pulmonary Function Testing—no bronchodilator",
                     "accessLevel": "Public",
                     "code": [
                         {
-                            "localId": "31",
-                            "name": "Postoperative follow-up visit (procedure) code"
+                            "localId": "52",
+                            "name": "Pulmonary Function Testing—no bronchodilator code"
                         }
                     ]
                 },
                 {
-                    "localId": "34",
-                    "name": "Prescription medication started",
-                    "display": "Prescription medication started",
+                    "localId": "55",
+                    "name": "Radiologic examination, chest; single view",
+                    "display": "Radiologic examination, chest; single view",
                     "accessLevel": "Public",
                     "code": [
                         {
-                            "localId": "33",
-                            "name": "Prescription medication started (situation) code"
+                            "localId": "54",
+                            "name": "Radiologic examination, chest; single view code"
                         }
                     ]
                 },
                 {
-                    "localId": "36",
+                    "localId": "57",
+                    "name": "Abnormal immunological finding in serum, unspecified",
+                    "display": "Abnormal immunological finding in serum, unspecified",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "56",
+                            "name": "Abnormal immunological finding in serum, unspecified code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "59",
+                    "name": "Encounter for screening for other viral diseases",
+                    "display": "Encounter for screening for other viral diseases",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "58",
+                            "name": "Encounter for screening for other viral diseases code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "61",
+                    "name": "Encounter for screening for human immunodeficiency virus [HIV]",
+                    "display": "Encounter for screening for human immunodeficiency virus [HIV]",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "60",
+                            "name": "Encounter for screening for human immunodeficiency virus [HIV] code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "63",
+                    "name": "General health panel This panel must include the following: Comprehensive metabolic panel (80053) Blood count, complete (CBC), automated and automated differential WBC count (85025 or 85027 and 85004) OR Blood count, complete (CBC), automated (85027) and appropriate manual differential WBC count (85007 or 85009) Thyroid stimulating hormone (TSH) (84443)",
+                    "display": "General health panel This panel must include the following: Comprehensive metabolic panel (80053) Blood count, complete (CBC), automated and automated differential WBC count (85025 or 85027 and 85004) OR Blood count, complete (CBC), automated (85027) and appropriate manual differential WBC count (85007 or 85009) Thyroid stimulating hormone (TSH) (84443)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "62",
+                            "name": "General health panel This panel must include the following: Comprehensive metabolic panel (80053) Blood count, complete (CBC), automated and automated differential WBC count (85025 or 85027 and 85004) OR Blood count, complete (CBC), automated (85027) and appropriate manual differential WBC count (85007 or 85009) Thyroid stimulating hormone (TSH) (84443) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "65",
+                    "name": "Other long term (current) drug therapy",
+                    "display": "Other long term (current) drug therapy",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "64",
+                            "name": "Other long term (current) drug therapy code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "67",
                     "name": "Ambulatory Health Care Facilities; Clinic/Center, Federally Qualified Health Center (FQHC)",
                     "display": "Ambulatory Health Care Facilities; Clinic/Center, Federally Qualified Health Center (FQHC)",
                     "accessLevel": "Public",
                     "code": [
                         {
-                            "localId": "35",
+                            "localId": "66",
                             "name": "Ambulatory Health Care Facilities; Clinic/Center, Federally Qualified Health Center (FQHC) code"
                         }
                     ]
                 },
                 {
-                    "localId": "38",
-                    "name": "Aftercare for liver transplant done",
-                    "display": "Aftercare for liver transplant done",
+                    "localId": "69",
+                    "name": "Hepatic failure, unspecified without coma",
+                    "display": "Hepatic failure, unspecified without coma",
                     "accessLevel": "Public",
                     "code": [
                         {
-                            "localId": "37",
-                            "name": "Aftercare for liver transplant done (situation) code"
+                            "localId": "68",
+                            "name": "Hepatic failure, unspecified without coma code"
                         }
                     ]
                 },
                 {
-                    "localId": "40",
-                    "name": "Prescription",
-                    "display": "Prescription",
+                    "localId": "71",
+                    "name": "Transplantation of Liver, Allogeneic, Open Approach",
+                    "display": "Transplantation of Liver, Allogeneic, Open Approach",
                     "accessLevel": "Public",
                     "code": [
                         {
-                            "localId": "39",
-                            "name": "Prescription (procedure) code"
+                            "localId": "70",
+                            "name": "Transplantation of Liver, Allogeneic, Open Approach code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "73",
+                    "name": "Transplantation of Liver, Syngeneic, Open Approach",
+                    "display": "Transplantation of Liver, Syngeneic, Open Approach",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "72",
+                            "name": "Transplantation of Liver, Syngeneic, Open Approach code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "75",
+                    "name": "Transplantation of Liver, Zooplastic, Open Approach",
+                    "display": "Transplantation of Liver, Zooplastic, Open Approach",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "74",
+                            "name": "Transplantation of Liver, Zooplastic, Open Approach code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "77",
+                    "name": "Encounter for aftercare following liver transplant",
+                    "display": "Encounter for aftercare following liver transplant",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "76",
+                            "name": "Encounter for aftercare following liver transplant code"
                         }
                     ]
                 }
@@ -273,25 +487,310 @@
                     }
                 },
                 {
-                    "localId": "47",
-                    "name": "Documents",
+                    "localId": "89",
+                    "name": "Procedures",
                     "context": "Patient",
                     "accessLevel": "Public",
                     "annotation": [
                         {
                             "type": "Annotation",
                             "s": {
-                                "r": "47",
+                                "r": "89",
                                 "s": [
                                     {
                                         "value": [
                                             "define ",
-                                            "\"Documents\"",
-                                            ":\n\t"
+                                            "\"Procedures\"",
+                                            ":\n    "
                                         ]
                                     },
                                     {
-                                        "r": "46",
+                                        "r": "88",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{"
+                                                ]
+                                            },
+                                            {
+                                                "r": "79",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "{"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Procedure\"",
+                                                                    ": "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "r": "78",
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"Transplantation of Liver, Allogeneic, Open Approach\""
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            "}"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ","
+                                                ]
+                                            },
+                                            {
+                                                "r": "81",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "{"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "80",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "'or'"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            "}"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n    "
+                                                ]
+                                            },
+                                            {
+                                                "r": "83",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "{"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Procedure\"",
+                                                                    ": "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "r": "82",
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"Transplantation of Liver, Syngeneic, Open Approach\""
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            "}"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ","
+                                                ]
+                                            },
+                                            {
+                                                "r": "85",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "{"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "84",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "'or'"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            "}"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n    "
+                                                ]
+                                            },
+                                            {
+                                                "r": "87",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "{"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Procedure\"",
+                                                                    ": "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "r": "86",
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"Transplantation of Liver, Zooplastic, Open Approach\""
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            "}"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "}"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "88",
+                        "type": "List",
+                        "element": [
+                            {
+                                "localId": "79",
+                                "type": "Tuple",
+                                "element": [
+                                    {
+                                        "name": "Procedure",
+                                        "value": {
+                                            "localId": "78",
+                                            "name": "Transplantation of Liver, Allogeneic, Open Approach",
+                                            "type": "ConceptRef"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "localId": "81",
+                                "type": "List",
+                                "element": [
+                                    {
+                                        "localId": "80",
+                                        "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                        "value": "or",
+                                        "type": "Literal"
+                                    }
+                                ]
+                            },
+                            {
+                                "localId": "83",
+                                "type": "Tuple",
+                                "element": [
+                                    {
+                                        "name": "Procedure",
+                                        "value": {
+                                            "localId": "82",
+                                            "name": "Transplantation of Liver, Syngeneic, Open Approach",
+                                            "type": "ConceptRef"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "localId": "85",
+                                "type": "List",
+                                "element": [
+                                    {
+                                        "localId": "84",
+                                        "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                        "value": "or",
+                                        "type": "Literal"
+                                    }
+                                ]
+                            },
+                            {
+                                "localId": "87",
+                                "type": "Tuple",
+                                "element": [
+                                    {
+                                        "name": "Procedure",
+                                        "value": {
+                                            "localId": "86",
+                                            "name": "Transplantation of Liver, Zooplastic, Open Approach",
+                                            "type": "ConceptRef"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "95",
+                    "name": "Conditions",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "95",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Conditions\"",
+                                            ":\n    "
+                                        ]
+                                    },
+                                    {
+                                        "r": "94",
                                         "s": [
                                             {
                                                 "value": [
@@ -307,11 +806,11 @@
                                                         ]
                                                     },
                                                     {
-                                                        "r": "41",
+                                                        "r": "90",
                                                         "s": [
                                                             {
                                                                 "value": [
-                                                                    "\"End Stage Liver Disease\""
+                                                                    "\"Hepatic failure, unspecified without coma\""
                                                                 ]
                                                             }
                                                         ]
@@ -320,32 +819,7 @@
                                             },
                                             {
                                                 "value": [
-                                                    ", "
-                                                ]
-                                            },
-                                            {
-                                                "s": [
-                                                    {
-                                                        "value": [
-                                                            "\"Procedure\"",
-                                                            ": "
-                                                        ]
-                                                    },
-                                                    {
-                                                        "r": "42",
-                                                        "s": [
-                                                            {
-                                                                "value": [
-                                                                    "\"Transplantation of liver (procedure)\""
-                                                                ]
-                                                            }
-                                                        ]
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "value": [
-                                                    ", "
+                                                    ",\n     "
                                                 ]
                                             },
                                             {
@@ -357,7 +831,7 @@
                                                         ]
                                                     },
                                                     {
-                                                        "r": "43",
+                                                        "r": "91",
                                                         "s": [
                                                             {
                                                                 "value": [
@@ -370,7 +844,7 @@
                                             },
                                             {
                                                 "value": [
-                                                    ","
+                                                    ",\n     "
                                                 ]
                                             },
                                             {
@@ -382,11 +856,11 @@
                                                         ]
                                                     },
                                                     {
-                                                        "r": "44",
+                                                        "r": "92",
                                                         "s": [
                                                             {
                                                                 "value": [
-                                                                    "\"Aftercare for liver transplant done\""
+                                                                    "\"Encounter for aftercare following liver transplant\""
                                                                 ]
                                                             }
                                                         ]
@@ -395,7 +869,7 @@
                                             },
                                             {
                                                 "value": [
-                                                    ", "
+                                                    ",\n     "
                                                 ]
                                             },
                                             {
@@ -407,11 +881,11 @@
                                                         ]
                                                     },
                                                     {
-                                                        "r": "45",
+                                                        "r": "93",
                                                         "s": [
                                                             {
                                                                 "value": [
-                                                                    "\"Prescription\""
+                                                                    "\"Other long term (current) drug therapy\""
                                                                 ]
                                                             }
                                                         ]
@@ -430,29 +904,21 @@
                         }
                     ],
                     "expression": {
-                        "localId": "46",
+                        "localId": "94",
                         "type": "Tuple",
                         "element": [
                             {
                                 "name": "Condition",
                                 "value": {
-                                    "localId": "41",
-                                    "name": "End Stage Liver Disease",
-                                    "type": "ConceptRef"
-                                }
-                            },
-                            {
-                                "name": "Procedure",
-                                "value": {
-                                    "localId": "42",
-                                    "name": "Transplantation of liver (procedure)",
+                                    "localId": "90",
+                                    "name": "Hepatic failure, unspecified without coma",
                                     "type": "ConceptRef"
                                 }
                             },
                             {
                                 "name": "Location",
                                 "value": {
-                                    "localId": "43",
+                                    "localId": "91",
                                     "name": "Ambulatory Health Care Facilities; Clinic/Center, Federally Qualified Health Center (FQHC)",
                                     "type": "ConceptRef"
                                 }
@@ -460,16 +926,16 @@
                             {
                                 "name": "EpisodeOfCare",
                                 "value": {
-                                    "localId": "44",
-                                    "name": "Aftercare for liver transplant done",
+                                    "localId": "92",
+                                    "name": "Encounter for aftercare following liver transplant",
                                     "type": "ConceptRef"
                                 }
                             },
                             {
                                 "name": "MedicationStatement",
                                 "value": {
-                                    "localId": "45",
-                                    "name": "Prescription",
+                                    "localId": "93",
+                                    "name": "Other long term (current) drug therapy",
                                     "type": "ConceptRef"
                                 }
                             }
@@ -477,7 +943,987 @@
                     }
                 },
                 {
-                    "localId": "49",
+                    "localId": "101",
+                    "name": "Clinical Evaluation",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "101",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Clinical Evaluation\"",
+                                            ":\n\t "
+                                        ]
+                                    },
+                                    {
+                                        "r": "100",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{\n\t "
+                                                ]
+                                            },
+                                            {
+                                                "r": "96",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "'Identification of comorbidities'"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n\t "
+                                                ]
+                                            },
+                                            {
+                                                "r": "97",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "'Treatment of co-morbidities'"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n\t "
+                                                ]
+                                            },
+                                            {
+                                                "r": "98",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "'Current assessment of co-morbidities'"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n\t "
+                                                ]
+                                            },
+                                            {
+                                                "r": "99",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "'Consult notes (if applicable)'"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "}"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "100",
+                        "type": "List",
+                        "element": [
+                            {
+                                "localId": "96",
+                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                "value": "Identification of comorbidities",
+                                "type": "Literal"
+                            },
+                            {
+                                "localId": "97",
+                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                "value": "Treatment of co-morbidities",
+                                "type": "Literal"
+                            },
+                            {
+                                "localId": "98",
+                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                "value": "Current assessment of co-morbidities",
+                                "type": "Literal"
+                            },
+                            {
+                                "localId": "99",
+                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                "value": "Consult notes (if applicable)",
+                                "type": "Literal"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "105",
+                    "name": "Psycho-Social Evaluation",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "105",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Psycho-Social Evaluation\"",
+                                            ":\n    "
+                                        ]
+                                    },
+                                    {
+                                        "r": "104",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{"
+                                                ]
+                                            },
+                                            {
+                                                "r": "102",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "'Karnofsky performance score'"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n    "
+                                                ]
+                                            },
+                                            {
+                                                "r": "103",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "'Identification of stressors'"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "}"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "104",
+                        "type": "List",
+                        "element": [
+                            {
+                                "localId": "102",
+                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                "value": "Karnofsky performance score",
+                                "type": "Literal"
+                            },
+                            {
+                                "localId": "103",
+                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                "value": "Identification of stressors",
+                                "type": "Literal"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "111",
+                    "name": "Lab Tests",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "111",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Lab Tests\"",
+                                            ":\n    "
+                                        ]
+                                    },
+                                    {
+                                        "r": "110",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"DiagnosticReport\"",
+                                                            ":"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "106",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"General health panel This panel must include the following: Comprehensive metabolic panel (80053) Blood count, complete (CBC), automated and automated differential WBC count (85025 or 85027 and 85004) OR Blood count, complete (CBC), automated (85027) and appropriate manual differential WBC count (85007 or 85009) Thyroid stimulating hormone (TSH) (84443)\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n    "
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"DiagnosticReport\"",
+                                                            ":"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "107",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Abnormal immunological finding in serum, unspecified\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n    "
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"DiagnosticReport\"",
+                                                            ":"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "108",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Encounter for screening for other viral diseases\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n    "
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"DiagnosticReport\"",
+                                                            ":"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "109",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Encounter for screening for human immunodeficiency virus [HIV]\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "}"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "110",
+                        "type": "Tuple",
+                        "element": [
+                            {
+                                "name": "DiagnosticReport",
+                                "value": {
+                                    "localId": "106",
+                                    "name": "General health panel This panel must include the following: Comprehensive metabolic panel (80053) Blood count, complete (CBC), automated and automated differential WBC count (85025 or 85027 and 85004) OR Blood count, complete (CBC), automated (85027) and appropriate manual differential WBC count (85007 or 85009) Thyroid stimulating hormone (TSH) (84443)",
+                                    "type": "ConceptRef"
+                                }
+                            },
+                            {
+                                "name": "DiagnosticReport",
+                                "value": {
+                                    "localId": "107",
+                                    "name": "Abnormal immunological finding in serum, unspecified",
+                                    "type": "ConceptRef"
+                                }
+                            },
+                            {
+                                "name": "DiagnosticReport",
+                                "value": {
+                                    "localId": "108",
+                                    "name": "Encounter for screening for other viral diseases",
+                                    "type": "ConceptRef"
+                                }
+                            },
+                            {
+                                "name": "DiagnosticReport",
+                                "value": {
+                                    "localId": "109",
+                                    "name": "Encounter for screening for human immunodeficiency virus [HIV]",
+                                    "type": "ConceptRef"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "116",
+                    "name": "Cardiac Assessment",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "116",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Cardiac Assessment\"",
+                                            ":\n    "
+                                        ]
+                                    },
+                                    {
+                                        "r": "115",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"DiagnosticReport\"",
+                                                            ":"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "112",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Electrocardiogram, routine ECG with at least 12 leads; interpretation and report only\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n    "
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"DiagnosticReport\"",
+                                                            ":"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "113",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Echocardiography, transthoracic, real-time with image documentation (2D), includes M-mode recording, when performed, during rest and cardiovascular stress test using treadmill, bicycle exercise and/or pharmacologically induced stress, with interpretation and report\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n    "
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"DiagnosticReport\"",
+                                                            ":"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "114",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Cardiac blood pool imaging gated equilibrium\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "}"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "115",
+                        "type": "Tuple",
+                        "element": [
+                            {
+                                "name": "DiagnosticReport",
+                                "value": {
+                                    "localId": "112",
+                                    "name": "Electrocardiogram, routine ECG with at least 12 leads; interpretation and report only",
+                                    "type": "ConceptRef"
+                                }
+                            },
+                            {
+                                "name": "DiagnosticReport",
+                                "value": {
+                                    "localId": "113",
+                                    "name": "Echocardiography, transthoracic, real-time with image documentation (2D), includes M-mode recording, when performed, during rest and cardiovascular stress test using treadmill, bicycle exercise and/or pharmacologically induced stress, with interpretation and report",
+                                    "type": "ConceptRef"
+                                }
+                            },
+                            {
+                                "name": "DiagnosticReport",
+                                "value": {
+                                    "localId": "114",
+                                    "name": "Cardiac blood pool imaging gated equilibrium",
+                                    "type": "ConceptRef"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "121",
+                    "name": "Pulmonary Assessment",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "121",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Pulmonary Assessment\"",
+                                            ":\n    "
+                                        ]
+                                    },
+                                    {
+                                        "r": "120",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"DiagnosticReport\"",
+                                                            ":"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "117",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Low dose CT scan (LDCT) for lung cancer screening\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n    "
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"DiagnosticReport\"",
+                                                            ":"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "118",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Pulmonary Function Testing—no bronchodilator\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n    "
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"DiagnosticReport\"",
+                                                            ":"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "119",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Radiologic examination, chest; single view\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "}"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "120",
+                        "type": "Tuple",
+                        "element": [
+                            {
+                                "name": "DiagnosticReport",
+                                "value": {
+                                    "localId": "117",
+                                    "name": "Low dose CT scan (LDCT) for lung cancer screening",
+                                    "type": "ConceptRef"
+                                }
+                            },
+                            {
+                                "name": "DiagnosticReport",
+                                "value": {
+                                    "localId": "118",
+                                    "name": "Pulmonary Function Testing—no bronchodilator",
+                                    "type": "ConceptRef"
+                                }
+                            },
+                            {
+                                "name": "DiagnosticReport",
+                                "value": {
+                                    "localId": "119",
+                                    "name": "Radiologic examination, chest; single view",
+                                    "type": "ConceptRef"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "131",
+                    "name": "Other Documents",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "131",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Other Documents\"",
+                                            ":\n    "
+                                        ]
+                                    },
+                                    {
+                                        "r": "130",
+                                        "s": [
+                                            {
+                                                "r": "128",
+                                                "s": [
+                                                    {
+                                                        "r": "126",
+                                                        "s": [
+                                                            {
+                                                                "r": "124",
+                                                                "s": [
+                                                                    {
+                                                                        "r": "122",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "\"Clinical Evaluation\""
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "value": [
+                                                                            " union "
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "123",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "\"Psycho-Social Evaluation\""
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n    union "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "r": "125",
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"Lab Tests\""
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            " union "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "127",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Cardiac Assessment\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    " union "
+                                                ]
+                                            },
+                                            {
+                                                "r": "129",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Pulmonary Assessment\""
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "130",
+                        "type": "Union",
+                        "operand": [
+                            {
+                                "localId": "124",
+                                "type": "Union",
+                                "operand": [
+                                    {
+                                        "localId": "122",
+                                        "name": "Clinical Evaluation",
+                                        "type": "ExpressionRef"
+                                    },
+                                    {
+                                        "localId": "123",
+                                        "name": "Psycho-Social Evaluation",
+                                        "type": "ExpressionRef"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "Query",
+                                "source": [
+                                    {
+                                        "alias": "X",
+                                        "expression": {
+                                            "type": "Union",
+                                            "operand": [
+                                                {
+                                                    "type": "Query",
+                                                    "source": [
+                                                        {
+                                                            "alias": "X",
+                                                            "expression": {
+                                                                "type": "Union",
+                                                                "operand": [
+                                                                    {
+                                                                        "type": "ToList",
+                                                                        "operand": {
+                                                                            "localId": "125",
+                                                                            "name": "Lab Tests",
+                                                                            "type": "ExpressionRef"
+                                                                        }
+                                                                    },
+                                                                    {
+                                                                        "type": "ToList",
+                                                                        "operand": {
+                                                                            "localId": "127",
+                                                                            "name": "Cardiac Assessment",
+                                                                            "type": "ExpressionRef"
+                                                                        }
+                                                                    }
+                                                                ]
+                                                            }
+                                                        }
+                                                    ],
+                                                    "return": {
+                                                        "distinct": false,
+                                                        "expression": {
+                                                            "asType": "{urn:hl7-org:elm-types:r1}String",
+                                                            "type": "As",
+                                                            "operand": {
+                                                                "name": "X",
+                                                                "type": "AliasRef"
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "type": "ToList",
+                                                    "operand": {
+                                                        "localId": "129",
+                                                        "name": "Pulmonary Assessment",
+                                                        "type": "ExpressionRef"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "return": {
+                                    "distinct": false,
+                                    "expression": {
+                                        "asType": "{urn:hl7-org:elm-types:r1}String",
+                                        "type": "As",
+                                        "operand": {
+                                            "name": "X",
+                                            "type": "AliasRef"
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "137",
+                    "name": "Documents",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "137",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Documents\"",
+                                            ":\n\t"
+                                        ]
+                                    },
+                                    {
+                                        "r": "136",
+                                        "s": [
+                                            {
+                                                "r": "134",
+                                                "s": [
+                                                    {
+                                                        "r": "132",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Procedures\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            " union "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "133",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Conditions\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    " union "
+                                                ]
+                                            },
+                                            {
+                                                "r": "135",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Other Documents\""
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "136",
+                        "type": "Union",
+                        "operand": [
+                            {
+                                "type": "Query",
+                                "source": [
+                                    {
+                                        "alias": "X",
+                                        "expression": {
+                                            "localId": "134",
+                                            "type": "Union",
+                                            "operand": [
+                                                {
+                                                    "localId": "132",
+                                                    "name": "Procedures",
+                                                    "type": "ExpressionRef"
+                                                },
+                                                {
+                                                    "type": "ToList",
+                                                    "operand": {
+                                                        "localId": "133",
+                                                        "name": "Conditions",
+                                                        "type": "ExpressionRef"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "return": {
+                                    "distinct": false,
+                                    "expression": {
+                                        "asType": "{urn:hl7-org:elm-types:r1}String",
+                                        "type": "As",
+                                        "operand": {
+                                            "name": "X",
+                                            "type": "AliasRef"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "localId": "135",
+                                "name": "Other Documents",
+                                "type": "ExpressionRef"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "139",
                     "name": "AttachableDocuments",
                     "context": "Patient",
                     "accessLevel": "Public",
@@ -485,7 +1931,7 @@
                         {
                             "type": "Annotation",
                             "s": {
-                                "r": "49",
+                                "r": "139",
                                 "s": [
                                     {
                                         "value": [
@@ -495,7 +1941,7 @@
                                         ]
                                     },
                                     {
-                                        "r": "48",
+                                        "r": "138",
                                         "s": [
                                             {
                                                 "value": [
@@ -509,14 +1955,14 @@
                         }
                     ],
                     "expression": {
-                        "localId": "48",
+                        "localId": "138",
                         "valueType": "{urn:hl7-org:elm-types:r1}String",
                         "value": "Seven Element Order",
                         "type": "Literal"
                     }
                 },
                 {
-                    "localId": "53",
+                    "localId": "143",
                     "name": "Requirements",
                     "context": "Patient",
                     "accessLevel": "Public",
@@ -524,7 +1970,7 @@
                         {
                             "type": "Annotation",
                             "s": {
-                                "r": "53",
+                                "r": "143",
                                 "s": [
                                     {
                                         "value": [
@@ -534,10 +1980,10 @@
                                         ]
                                     },
                                     {
-                                        "r": "52",
+                                        "r": "142",
                                         "s": [
                                             {
-                                                "r": "50",
+                                                "r": "140",
                                                 "s": [
                                                     {
                                                         "value": [
@@ -552,7 +1998,7 @@
                                                 ]
                                             },
                                             {
-                                                "r": "51",
+                                                "r": "141",
                                                 "s": [
                                                     {
                                                         "value": [
@@ -568,21 +2014,18 @@
                         }
                     ],
                     "expression": {
-                        "localId": "52",
+                        "localId": "142",
                         "type": "Union",
                         "operand": [
                             {
-                                "type": "ToList",
-                                "operand": {
-                                    "localId": "50",
-                                    "name": "Documents",
-                                    "type": "ExpressionRef"
-                                }
+                                "localId": "140",
+                                "name": "Documents",
+                                "type": "ExpressionRef"
                             },
                             {
                                 "type": "ToList",
                                 "operand": {
-                                    "localId": "51",
+                                    "localId": "141",
                                     "name": "AttachableDocuments",
                                     "type": "ExpressionRef"
                                 }
