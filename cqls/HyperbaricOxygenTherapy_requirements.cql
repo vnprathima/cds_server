@@ -1,6 +1,7 @@
+//Hyperbaric Oxygen
 library HyperbaricOxygenTherapy
 
-using FHIR
+using FHIR version '1.8'
 
 //include otherLibrary version 'x.x' called otherLibrary
 //codesystem codeSystemName : 'OID' version 'x.x'
@@ -60,65 +61,98 @@ concept "Under Skin Substitute Grafts" : {"Under Skin Substitute Grafts code"} d
 concept "Disruption of external operation (surgical) wound, not elsewhere classified, initial encounter": {"Disruption of external operation (surgical) wound, not elsewhere classified, initial encounter code"} display 'Disruption of external operation (surgical) wound, not elsewhere classified, initial encounter'
 
 define "Condition1":
-    {"Condition": "Osteomyelitis, unspecified"}
+    {"Condition":{
+        "code":  "Osteomyelitis, unspecified"}
+    }
 
 define "Condition2":
-	{"Condition":"Inflammatory conditions of jaws"}
+	{"Condition":{
+        "code":  "Inflammatory conditions of jaws"}
+    }
 
 define "Condition3":
-      {"Condition": "Radiation sickness, unspecified, initial encounter"}
+      {"Condition": {
+        "code":  "Radiation sickness, unspecified, initial encounter"}
+    }
 
 define "Condition4":
-    {"Condition": "Actinomycosis, unspecified" }
+    {"Condition": {
+        "code":  "Actinomycosis, unspecified" }
+    }
 
 define "Condition5":
-    {"Condition": "Type 1 diabetes mellitus with other skin ulcer"}
-
+    {"Condition": {
+        "code":  "Type 1 diabetes mellitus with other skin ulcer"}
+    }
 
 define "Condition6":
-    {"Condition": "Type 2 diabetes mellitus with other skin ulcer"}
+    {"Condition": {
+        "code":  "Type 2 diabetes mellitus with other skin ulcer"}
+    }
 
 define "Condition7":
-        {"Condition": "Crushing injury of unspecified hand, initial encounter" ,
-        "Condition": "Complete traumatic amputation at level between left hip and knee, initial encounter"}
+    {"Condition":{
+        "code":   "Crushing injury of unspecified hand, initial encounter"} ,
+        "Condition": {
+        "code":  "Complete traumatic amputation at level between left hip and knee, initial encounter"}
+    }
 
 define "Condition8":
-    {"Condition":"Toxic effect of carbon monoxide from unspecified source, accidental (unintentional), initial encounter" }
+    {"Condition":{
+        "code":  "Toxic effect of carbon monoxide from unspecified source, accidental (unintentional), initial encounter" }
+    }
 
 define "Condition9":
-    {"Condition": "Caisson disease [decompression sickness], initial encounter"}
+    {"Condition": {
+        "code":  "Caisson disease [decompression sickness], initial encounter"}
+    }
 
 define "Condition10":
-    {"Condition": "Caisson disease [decompression sickness], initial encounter"}
+    {"Condition": {
+        "code":  "Air embolism following infusion, transfusion and therapeutic injection, initial encounter"}
+    }
 
 define "Condition11":
-    {"Condition": "Air embolism following infusion, transfusion and therapeutic injection, initial encounter"}
+    {"Condition":{
+        "code":   "Gas gangrene"}
+    }
 
 define "Condition12":
-    {"Condition": "Gas gangrene"}
+    {"Condition": {
+        "code":  "Peripheral vascular disease, unspecified"}
+    }
 
 define "Condition13":
-    {"Condition": "Peripheral vascular disease, unspecified"}
+    {"Condition": {
+        "code":  "Necrotizing fasciitis"}
+    }
 
 define "Condition14":
-    {"Condition": "Necrotizing fasciitis"}
+    {"Procedure":{
+        "code":   "Under Skin Substitute Grafts"}
+    }
+
+define "Condition15":
+    {"Condition":{
+        "code":   "Toxic effect of hydrogen cyanide, intentional self-harm, initial encounter"}
+    }
 
 define "Condition16":
-    {"Procedure": "Under Skin Substitute Grafts"}
+    {"Condition": {
+        "code":  "Wegener's granulomatosis without renal involvement"}
+    }
 
 define "Condition17":
-    {"Condition": "Toxic effect of hydrogen cyanide, intentional self-harm, initial encounter"}
+    {"Procedure":{
+        "code":  "Wound Care"},
+    "Condition":{
+        "code":  "Disruption of external operation (surgical) wound, not elsewhere classified, initial encounter"}
+    }
 
-define "Condition18":
-    {"Condition": "Wegener's granulomatosis without renal involvement"}
-
-define "Condition19":
-    {"Procedure":"Wound Care",
-    "Condition":"Disruption of external operation (surgical) wound, not elsewhere classified, initial encounter"}
 
 define "Documents":
     {'Signed Physician Orders',
-    'CMN For Oxygen : https://www.cms.gov/Medicare/CMS-Forms/CMS-Forms/downloads/CMS484.pdf',
+    'https://www.cms.gov/Medicare/CMS-Forms/CMS-Forms/downloads/CMS484.pdf',
     'HBO progress notes (including measurable signs of healing)',
     'HBO treatment log with documented length of treatment time',
     'Results of all testing/services billed',
@@ -126,48 +160,103 @@ define "Documents":
     'Itemized bill'}
 
 define "Requirements":
-    {"Condition1",{'or'},"Condition2",{'or'},"Condition3",{'or'},"Condition4",{'or'},"Condition5",{'or'},"Condition6",
-	{'or'},"Condition7",{'or'},"Condition9",{'or'},"Condition10",{'or'},"Condition11",{'or'},
-	"Condition12",{'or'},"Condition13",{'or'},"Condition14",{'or'},"Condition16",{'or'},"Condition17"} union "Documents"
+      {
+	"Codes":{
+		   "Condition1",{'or'},
+		   "Condition2",{'or'},
+		   "Condition3",{'or'},
+		   "Condition4",{'or'},
+		   "Condition5",{'or'},
+		   "Condition6",{'or'},
+		   "Condition7",{'or'},
+		   "Condition9",{'or'},
+		   "Condition10",{'or'},
+		   "Condition11",{'or'},
+           "Condition12",{'or'},
+           "Condition13",{'or'},
+           "Condition14",{'or'},
+           "Condition16",{'or'},
+           "Condition17"
+        },
+	"DocumentsToAttach":{
+			"Documents"
+		}
+	}
 
-define "BeneficiaryInformation":
-    {"Patient.name":'Beneficiary Name',
-    "Patient.identifier":'Beneficiary Medicare Number',
-    "Patient.birthDate":'Beneficiary Date of Birth',
-    "Patient.gender":'Beneficiary Gender'}
+ define "BeneficiaryInformation":
+ 	{"Patient":{
+ 			"name":'Beneficiary Name',
+    	 		"identifier":'Beneficiary Medicare Number',
+    			"birthDate":'Beneficiary Date of Birth',
+         		"gender":'Beneficiary Gender'
+         	   }
+         }
 
 define "OrderingPhysician/PractitionerInformation":
-    {"Practitioner.name":'Physician or Practitioner Name',
-    "Practitioner.identifier":'National provider ID',
-    "Practitioner.address":'Physician or Practitioner Address'}
+    {"Practitioner":{
+    			"name":'Physician or Practitioner Name',
+    			"identifier":'National provider ID',
+    			"address":'Physician or Practitioner Address'
+    		   }
+   }
 
 define "FacilityInformation":
-    {"Organization.name": 'Facility Name',
-    "Organization.identifier":'National provider ID',
-    "Organization.address":'Facility Address'}
+    {"Organization":{
+            "name": 'Facility Name',
+            "identifier":'National provider ID',
+            "address":'Facility Address'
+        }
+    }
 
 define "RequestorInformation":
-    {"Claim.enterer":'Contact Name',
-    "Claim.enterer.phone":'Telephone Number'}
+	{"Claim":
+    		{
+    		"enterer":'Contact Name',
+   			"enterer.phone":'Telephone Number'
+   		}
+   	}
 
-/*define "OtherInformation":
-    {"Claim.procedure.procedure":'Number of treatments requested',
-    "Claim.item.quantity":'Number of units per treatment requested',
-    'HCPCS Code',
-    "Claim.created":'Submission Date',
-    "Claim.procedure.date":'Start Date of the 12 month period',
-    'Indicate if the request is an initial or resubmission review',
-    'Indicate if the request is expedited and the reason why',
-    'State',
-    'Diagnosis Codes'}*/
 
-define "PriorAuthorization Documents":
-    "BeneficiaryInformation" union "OrderingPhysician/PractitionerInformation"
-    union "FacilityInformation" union "RequestorInformation" 
+define "OtherInformation":
+    {"Claim":{
+    		"procedure":'Number of treatments requested',
+    		"item.quantity":'Number of units per treatment requested',
+   		    "created":'Submission Date',
+    		"procedure.date":'Start Date of the 12 month period',
+    		"state":'State',
+    		"type":'Diagnosis Codes'
+    		}
+    	}
+
+define "DocumentsInForm":
+    {"FormRequest":{
+		       "checkbox": 'Indicate if the request is an initial or resubmission review',
+		       "text": 'Indicate if the request is expedited and the reason why'
+		    }
+	}
 
 define "PriorAuthorization":
-	true
+	'Optional'
 
 define "PriorAuthorizationRequirements":
-    {"Condition1",{'or'},"Condition2",{'or'},"Condition3",{'or'},"Condition4",{'or'},
-        "Condition5",{'or'},"Condition6",{'or'},"Condition18",{'or'},"Condition19"} union "PriorAuthorization Documents"
+   {"DiagnosisCodes":{
+            "Condition1",{'or'},
+            "Condition2",{'or'},
+            "Condition3",{'or'},
+            "Condition4",{'or'},
+            "Condition5",{'or'},
+            "Condition6",{'or'},
+            "Condition16",{'or'},
+            "Condition17"
+	    },
+	"DocumentsFromFHIR": {
+            "BeneficiaryInformation",
+            "OrderingPhysician/PractitionerInformation",
+            "FacilityInformation",
+            "RequestorInformation",
+            "OtherInformation"
+	    },
+	"InfoFromForm": {
+	        "DocumentsInForm"
+	    }
+    }
