@@ -211,20 +211,30 @@ define "FacilityInformation":
 define "RequestorInformation":
 	{"Claim":
     		{
-    		"enterer":'Contact Name',
-   			"enterer.phone":'Telephone Number'
-   		}
+   			"enterer":{
+   			    "name":'Contact Name',
+   			    "phone":'Telephone Number'
+   			    }
+   			}
    	}
 
 
 define "OtherInformation":
     {"Claim":{
     		"procedure":'Number of treatments requested',
-    		"item.quantity":'Number of units per treatment requested',
+    		"item":{
+                "quantity":'Number of units per treatment requested'
+                },
    		    "created":'Submission Date',
-    		"procedure.date":'Start Date of the 12 month period',
+    		"procedure":{
+    		    "date":'Start Date of the 12 month period'
+    		    },
     		"state":'State',
-    		"type":'Diagnosis Codes'
+    		"diagnosis":{
+                "diagnosis":{
+                    "diagnosisCodeableConcept":'Diagnosis code'
+                    }
+                }
     		}
     	}
 
@@ -239,7 +249,7 @@ define "PriorAuthorization":
 	'Optional'
 
 define "PriorAuthorizationRequirements":
-   {"DiagnosisCodes":{
+   {"Codes":{
             "Condition1",{'or'},
             "Condition2",{'or'},
             "Condition3",{'or'},

@@ -1,132 +1,12051 @@
-library HomeOxygenTherapy version '1'
-
-using FHIR version '1.8'
-
-//include otherLibrary version 'x.x' called otherLibrary
-//codesystem codeSystemName : 'OID' version 'x.x'
-//valueset valuesetName : 'OID' version 'x.x' codesystems{codeSystem1 , codeSystem2, etc}
-//code codeName : 'OID' from codeSystemName display 'displayName'
-//concept conceptName : {codeName1, codeName2, etc} display 'displayName'
-//parameter parameterName (dataType or default value)
-
-codesystem "SNOMEDCT": 'http://snomed.info/sct'
-codesystem "HCPCS": 'https://hcpcs.codes/'
-codesystem "ICD9CM": 'https://www.cdc.gov/nchs/icd/icd9.htm'
-codesystem "EntityNamePartQualifier": '2.16.840.1.113883.11.20.9.26'
-codesystem "LOINC": '2.16.840.1.113762.1.4.1099.13'
-codesystem "NUCCPT":'2.16.840.1.114222.4.11.1066'
-
-
-
-
-code "Equipment related features (finding) code": '405655001' from "SNOMEDCT" display 'Equipment related features (finding)'
-code "Equipment requirement (finding) code": '698532002' from "SNOMEDCT" display 'Equipment requirement (finding)'
-code "Equipment in use (finding) code": '397917005' from "SNOMEDCT" display 'Equipment in use (finding)'
-code "Durable medical equipment education, guidance, and counseling (procedure) code": '410286008' from "SNOMEDCT" display 'Durable medical equipment education, guidance, and counseling (procedure)'
-code "Past history of procedure (situation) code": '416940007' from "SNOMEDCT" display 'Past history of procedure (situation)'
-code "Functional movement disorder (disorder) code": '718362003' from "SNOMEDCT" display 'Functional movement disorder (disorder)'
-code "Secondary diagnosis code": '81885-6' from "LOINC" display 'Secondary diagnosis'
-code "Primary diagnosis code": '18630-4' from "LOINC" display 'Primary diagnosis'
-code "Procedure aiding diagnosis (procedure) code": '165167006' from "SNOMEDCT" display 'Procedure aiding diagnosis (procedure)'
-code "Blood gas analysis (procedure) code": '278297009' from "SNOMEDCT" display 'Blood gas analysis (procedure)'
-code "Encounter Face to Face code": '20160302' from "SNOMEDCT" display 'Encounter Face to Face'
-code "Seen by physician (finding) code": '305660003' from "SNOMEDCT" display 'Seen by physician (finding)'
-code "Seen by clinical nurse specialist (finding) code": '305733002' from "SNOMEDCT" display 'Seen by clinical nurse specialist (finding)'
-code "Seen by nurse practitioner (finding) code": '305757002' from "SNOMEDCT" display 'Seen by nurse practitioner (finding)'
-code "Referred by physician assistant (finding) code": '2051000124106' from "SNOMEDCT" display 'Referred by physician assistant (finding)'
-code "Home oxygen therapy (procedure) code": '426990007' from "SNOMEDCT" display 'Home oxygen therapy (procedure)'
-code "Encounter Inpatient code": '20170504' from "SNOMEDCT" display 'Encounter Inpatient'
-code "Encounter Hospital Outpatient code": '20151013' from "SNOMEDCT" display 'Encounter Hospital Outpatient'
-code "initial code": 'IN' from "EntityNamePartQualifier" display 'initial'
-code "title code": 'TITLE' from "EntityNamePartQualifier" display 'title'
-code "Checking patient identity (procedure) code": '710958003' from "SNOMEDCT" display 'Checking patient identity (procedure)'
-code "Confirming patient identity prior to procedure (procedure) code": '372040007' from "SNOMEDCT" display 'Confirming patient identity prior to procedure (procedure)'
-code "Attending physician (occupation) code": '405279007' from "SNOMEDCT" display 'Attending physician (occupation)'
-code "National provider ID code": '45952-9' from "LOINC" display 'National provider ID'
-code "Illness (finding) code": '39104002' from "SNOMEDCT" display 'Illness (finding)'
-code "Patient's condition worsened (finding) code": '271299001' from "SNOMEDCT" display 'Patients condition worsened (finding)'
-code "Patient's condition improved (finding) code": '268910001' from "SNOMEDCT" display 'Patients condition improved (finding)'
-code "Conditional prognosis (finding) code": '60484009' from "SNOMEDCT" display 'Conditional prognosis (finding)'
-code "Mobile in home (finding) code": '302000008' from "SNOMEDCT" display 'Mobile in home (finding)'
-code "Gathering of past medical history (procedure) code": '451571000124102' from "SNOMEDCT" display 'Gathering of past medical history (procedure)'
-code "Therapeutic regimen (regime/therapy) code": '133877004' from "SNOMEDCT" display 'Therapeutic regimen (regime/therapy)'
-code "Administration of prescribed medications based on arterial blood gas results (procedure) code": '370774005' from "SNOMEDCT" display 'Administration of prescribed medications based on arterial blood gas results (procedure)'
-code "Ambulatory Health Care Facilities; Clinic/Center, Federally Qualified Health Center (FQHC) code": '261QF0400X' from "NUCCPT" display 'Ambulatory Health Care Facilities; Clinic/Center, Federally Qualified Health Center (FQHC)'
-code "Evaluating interventions (procedure) code": '225303001' from "SNOMEDCT" display 'Evaluating interventions (procedure)'
-
-concept "Equipment related features (finding)": {"Equipment related features (finding) code"} display 'Equipment related features (finding)'
-concept "Equipment requirement (finding)": {"Equipment requirement (finding) code"} display 'Equipment requirement (finding)'
-concept "Equipment in use (finding)": {"Equipment in use (finding) code"} display 'Equipment in use (finding)'
-concept "Durable medical equipment education, guidance, and counseling (procedure)": {"Durable medical equipment education, guidance, and counseling (procedure) code"} display 'Durable medical equipment education, guidance, and counseling (procedure)'
-concept "Past history of procedure (situation)": {"Past history of procedure (situation) code"} display 'Past history of procedure (situation)'
-concept "Evaluating interventions (procedure)": {"Evaluating interventions (procedure) code"} display 'Evaluating interventions (procedure)'
-concept "Functional movement disorder (disorder)": {"Functional movement disorder (disorder) code"} display 'Functional movement disorder (disorder)'
-concept "Ambulatory Health Care Facilities; Clinic/Center, Federally Qualified Health Center (FQHC)": {"Ambulatory Health Care Facilities; Clinic/Center, Federally Qualified Health Center (FQHC) code"}display 'Ambulatory Health Care Facilities; Clinic/Center, Federally Qualified Health Center (FQHC)'
-concept "Secondary diagnosis": {"Secondary diagnosis code"} display 'Secondary diagnosis'
-concept "Primary diagnosis": {"Primary diagnosis code"} display 'Primary diagnosis'
-concept "Procedure aiding diagnosis (procedure)": {"Procedure aiding diagnosis (procedure) code"} display 'Procedure aiding diagnosis (procedure)'
-concept "Blood gas analysis (procedure)": {"Blood gas analysis (procedure) code"} display 'Blood gas analysis (procedure)'
-concept "Encounter Face to Face": {"Encounter Face to Face code"} display 'Encounter Face to Face'
-concept "Seen by physician (finding)": {"Seen by physician (finding) code"} display 'Seen by physician (finding)'
-concept "Seen by clinical nurse specialist (finding)": {"Seen by clinical nurse specialist (finding) code"} display 'Seen by clinical nurse specialist (finding)'
-concept "Seen by nurse practitioner (finding)": {"Seen by nurse practitioner (finding) code"} display 'Seen by nurse practitioner (finding)'
-concept "Referred by physician assistant (finding)": {"Referred by physician assistant (finding) code"} display 'Referred by physician assistant (finding)'
-concept "Home oxygen therapy (procedure)": {"Home oxygen therapy (procedure) code"} display 'Home oxygen therapy (procedure)'
-concept "Encounter Inpatient": {"Encounter Inpatient code"} display 'Encounter Inpatient'
-concept "Encounter Hospital Outpatient": {"Encounter Hospital Outpatient code"} display 'Encounter Hospital Outpatient'
-concept "initial": {"initial code"} display 'initial'
-concept "title": {"title code"} display 'title'
-concept "Checking patient identity (procedure)": {"Checking patient identity (procedure) code"} display 'Checking patient identity (procedure)'
-concept "Confirming patient identity prior to procedure (procedure)": {"Confirming patient identity prior to procedure (procedure) code"} display 'Confirming patient identity prior to procedure (procedure)'
-concept "Attending physician (occupation)": {"Attending physician (occupation) code"} display 'Attending physician (occupation)'
-concept "National provider ID": {"National provider ID code"} display 'National provider ID'
-concept "Illness (finding)": {"Illness (finding) code"} display 'Illness (finding)'
-concept "Patient's condition worsened (finding)": {"Patient's condition worsened (finding) code"} display 'Patient\'s condition worsened (finding)'
-concept "Patient's condition improved (finding)": {"Patient's condition improved (finding) code"} display 'Patient\'s condition improved (finding)'
-concept "Conditional prognosis (finding)": {"Conditional prognosis (finding) code"} display 'Conditional prognosis (finding)'
-concept "Mobile in home (finding)": {"Mobile in home (finding) code"} display 'Mobile in home (finding)'
-concept "Gathering of past medical history (procedure)": {"Gathering of past medical history (procedure) code"} display 'Gathering of past medical history (procedure)'
-concept "Therapeutic regimen (regime/therapy)": {"Therapeutic regimen (regime/therapy) code"} display 'Therapeutic regimen (regime/therapy)'
-concept "Administration of prescribed medications based on arterial blood gas results (procedure)": {"Administration of prescribed medications based on arterial blood gas results (procedure) code"} display 'Administration of prescribed medications based on arterial blood gas results (procedure)'
-
-context Patient
-
-define "Physician":
-	[Practitioner: "Attending physician (occupation)"] P
-	where P.identifier.id = "National provider ID"
-	return P.qualification.code
-
-define "Practitioner Signature":
-	'e-prescription containing digital Signature of the Pratitioner and date'
-
-define "WOPD Details Required":
-	{"Patient":"Patient",
-	"Practitioner":"Physician",
-	"DeviceRequest":"Equipment requirement (finding)",
-	"DeviceUseStatement":"Equipment in use (finding)",
-	"Observation": "Equipment related features (finding)",
-	"Procedure": "Home oxygen therapy (procedure)",
-	"Organization":"National provider ID",
-	"Procedure": "Durable medical equipment education, guidance, and counseling (procedure)",
-	"Encounter": "Encounter Face to Face",
-	"Encounter": "Seen by physician (finding)",
-	"Encounter": "Seen by clinical nurse specialist (finding)",
-	"Encounter": "Seen by nurse practitioner (finding)",
-	"Encounter": "Referred by physician assistant (finding)",
-	"DiagnosticReport":"Primary diagnosis",
-	"Condition":"Illness (finding)",
-	"Observation": "Patient's condition worsened (finding)",
-	"Observation": "Patient's condition improved (finding)",
-	"Observation": "Mobile in home (finding)",
-	"ClinicalImpression":"Conditional prognosis (finding)",
-	"Procedure": "Blood gas analysis (procedure)",
-	"MedicationAdministration":"Administration of prescribed medications based on arterial blood gas results (procedure)",
-	"Condition": "Functional movement disorder (disorder)",
-	"Procedure": "Evaluating interventions (procedure)",
-	"Observation": "Past history of procedure (situation)",
-	"Procedure": "Gathering of past medical history (procedure)"
-	}
-
-define "Requirements":
-	"WOPD Details Required"
-	union "Practitioner Signature"
+{
+    "library": {
+        "annotation": [
+            {
+                "message": "List-valued expression was demoted to a singleton.",
+                "errorType": "semantic",
+                "errorSeverity": "warning",
+                "type": "CqlToElmError"
+            },
+            {
+                "message": "List-valued expression was demoted to a singleton.",
+                "errorType": "semantic",
+                "errorSeverity": "warning",
+                "type": "CqlToElmError"
+            },
+            {
+                "message": "List-valued expression was demoted to a singleton.",
+                "errorType": "semantic",
+                "errorSeverity": "warning",
+                "type": "CqlToElmError"
+            },
+            {
+                "startLine": 516,
+                "startChar": 9,
+                "endLine": 520,
+                "endChar": 9,
+                "message": "List-valued expression was demoted to a singleton.",
+                "errorType": "semantic",
+                "errorSeverity": "warning",
+                "type": "CqlToElmError"
+            },
+            {
+                "message": "List-valued expression was demoted to a singleton.",
+                "errorType": "semantic",
+                "errorSeverity": "warning",
+                "type": "CqlToElmError"
+            },
+            {
+                "message": "List-valued expression was demoted to a singleton.",
+                "errorType": "semantic",
+                "errorSeverity": "warning",
+                "type": "CqlToElmError"
+            },
+            {
+                "message": "List-valued expression was demoted to a singleton.",
+                "errorType": "semantic",
+                "errorSeverity": "warning",
+                "type": "CqlToElmError"
+            }
+        ],
+        "identifier": {
+            "id": "HomeOxygenTherapy",
+            "version": "1"
+        },
+        "schemaIdentifier": {
+            "id": "urn:hl7-org:elm",
+            "version": "r1"
+        },
+        "usings": {
+            "def": [
+                {
+                    "localIdentifier": "System",
+                    "uri": "urn:hl7-org:elm-types:r1"
+                },
+                {
+                    "localId": "1",
+                    "localIdentifier": "FHIR",
+                    "uri": "http://hl7.org/fhir"
+                }
+            ]
+        },
+        "codeSystems": {
+            "def": [
+                {
+                    "localId": "2",
+                    "name": "SNOMEDCT",
+                    "id": "http://snomed.info/sct",
+                    "accessLevel": "Public"
+                },
+                {
+                    "localId": "3",
+                    "name": "HCPCS",
+                    "id": "https://hcpcs.codes/",
+                    "accessLevel": "Public"
+                },
+                {
+                    "localId": "4",
+                    "name": "ICD9CM",
+                    "id": "https://www.cdc.gov/nchs/icd/icd9.htm",
+                    "accessLevel": "Public"
+                },
+                {
+                    "localId": "5",
+                    "name": "EntityNamePartQualifier",
+                    "id": "2.16.840.1.113883.11.20.9.26",
+                    "accessLevel": "Public"
+                },
+                {
+                    "localId": "6",
+                    "name": "LOINC",
+                    "id": "2.16.840.1.113762.1.4.1099.13",
+                    "accessLevel": "Public"
+                },
+                {
+                    "localId": "7",
+                    "name": "NUCCPT",
+                    "id": "https://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/NUCCPT/sourcerepresentation.html",
+                    "accessLevel": "Public"
+                },
+                {
+                    "localId": "8",
+                    "name": "CPT",
+                    "id": "https://www.aapc.com/resources/medical-coding/cpt.aspx",
+                    "accessLevel": "Public"
+                },
+                {
+                    "localId": "9",
+                    "name": "ICD10CM",
+                    "id": "https://www.cdc.gov/nchs/icd/icd10cm.htm",
+                    "accessLevel": "Public"
+                },
+                {
+                    "localId": "10",
+                    "name": "ICD10PCS",
+                    "id": "https://www.cdc.gov/nchs/icd/icd10cm_pcs.htm",
+                    "accessLevel": "Public"
+                }
+            ]
+        },
+        "codes": {
+            "def": [
+                {
+                    "localId": "12",
+                    "name": "Chronic obstructive pulmonary disease, unspecified code",
+                    "id": "J44.9",
+                    "display": "Chronic obstructive pulmonary disease, unspecified",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "11",
+                        "name": "ICD10CM"
+                    }
+                },
+                {
+                    "localId": "14",
+                    "name": "Interstitial pulmonary disease, unspecified code",
+                    "id": "J84.9",
+                    "display": "Interstitial pulmonary disease, unspecified",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "13",
+                        "name": "ICD10CM"
+                    }
+                },
+                {
+                    "localId": "16",
+                    "name": "Cystic fibrosis with pulmonary manifestations code",
+                    "id": "E84.0",
+                    "display": "Cystic fibrosis with pulmonary manifestations",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "15",
+                        "name": "ICD10CM"
+                    }
+                },
+                {
+                    "localId": "18",
+                    "name": "Bronchiectasis, uncomplicated code",
+                    "id": "J47.9",
+                    "display": "Bronchiectasis, uncomplicated",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "17",
+                        "name": "ICD10CM"
+                    }
+                },
+                {
+                    "localId": "20",
+                    "name": "Malignant neoplasm of unspecified part of unspecified bronchus or lung code",
+                    "id": "C34.90",
+                    "display": "Malignant neoplasm of unspecified part of unspecified bronchus or lung",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "19",
+                        "name": "ICD10CM"
+                    }
+                },
+                {
+                    "localId": "22",
+                    "name": "Hypoxemia code",
+                    "id": "R09.02",
+                    "display": "Hypoxemia",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "21",
+                        "name": "ICD10CM"
+                    }
+                },
+                {
+                    "localId": "24",
+                    "name": "Primary pulmonary hypertension code",
+                    "id": "I27.0",
+                    "display": "Primary pulmonary hypertension",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "23",
+                        "name": "ICD10CM"
+                    }
+                },
+                {
+                    "localId": "26",
+                    "name": "Secondary polycythemia code",
+                    "id": "D75.1",
+                    "display": "Secondary polycythemia",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "25",
+                        "name": "ICD10CM"
+                    }
+                },
+                {
+                    "localId": "28",
+                    "name": "Mild cognitive impairment, so stated code",
+                    "id": "G31.84",
+                    "display": "Mild cognitive impairment, so stated",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "27",
+                        "name": "ICD10CM"
+                    }
+                },
+                {
+                    "localId": "30",
+                    "name": "Restlessness and agitation code",
+                    "id": "R45.1",
+                    "display": "Restlessness and agitation",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "29",
+                        "name": "ICD10CM"
+                    }
+                },
+                {
+                    "localId": "32",
+                    "name": "Chronic tension-type headache, intractable code",
+                    "id": "G44.221",
+                    "display": "Chronic tension-type headache, intractable",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "31",
+                        "name": "ICD10CM"
+                    }
+                },
+                {
+                    "localId": "34",
+                    "name": "Gases, blood, O2 saturation only, by direct measurement, except pulse oximetry code",
+                    "id": "82810",
+                    "display": "Gases, blood, O2 saturation only, by direct measurement, except pulse oximetry",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "33",
+                        "name": "CPT"
+                    }
+                },
+                {
+                    "localId": "36",
+                    "name": "Gases, blood, any combination of pH, pCO2, pO2, CO2, HCO3 (including calculated O2 saturation) code",
+                    "id": "82803",
+                    "display": "Gases, blood, any combination of pH, pCO2, pO2, CO2, HCO3 (including calculated O2 saturation)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "35",
+                        "name": "CPT"
+                    }
+                },
+                {
+                    "localId": "38",
+                    "name": "Therapeutic Exercise code",
+                    "id": "97110",
+                    "display": "Therapeutic Exercise",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "37",
+                        "name": "CPT"
+                    }
+                },
+                {
+                    "localId": "40",
+                    "name": "Insomnia, unspecified code",
+                    "id": "G47.00",
+                    "display": "Insomnia, unspecified",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "39",
+                        "name": "ICD10CM"
+                    }
+                },
+                {
+                    "localId": "42",
+                    "name": "Cor pulmonale (chronic) code",
+                    "id": "I27.81",
+                    "display": "Cor pulmonale (chronic)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "41",
+                        "name": "ICD10CM"
+                    }
+                },
+                {
+                    "localId": "44",
+                    "name": "Edema, unspecified code",
+                    "id": "R60.9",
+                    "display": "Edema, unspecified",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "43",
+                        "name": "ICD10CM"
+                    }
+                },
+                {
+                    "localId": "46",
+                    "name": "Right heart failure, unspecified code",
+                    "id": "I50.810",
+                    "display": "Right heart failure, unspecified",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "45",
+                        "name": "ICD10CM"
+                    }
+                },
+                {
+                    "localId": "48",
+                    "name": "Other Cardiovascular Procedures code",
+                    "id": "93799",
+                    "display": "Other Cardiovascular Procedures",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "47",
+                        "name": "CPT"
+                    }
+                },
+                {
+                    "localId": "50",
+                    "name": "Transthoracic echocardiography code",
+                    "id": "93306",
+                    "display": "Transthoracic echocardiography",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "49",
+                        "name": "CPT"
+                    }
+                },
+                {
+                    "localId": "52",
+                    "name": "Hematocrit code",
+                    "id": "85014QW",
+                    "display": "Hematocrit",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "51",
+                        "name": "CPT"
+                    }
+                },
+                {
+                    "localId": "54",
+                    "name": "Cluster headache syndrome, unspecified, not intractable code",
+                    "id": "G44.009",
+                    "display": "Cluster headache syndrome, unspecified, not intractable",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "53",
+                        "name": "ICD10CM"
+                    }
+                },
+                {
+                    "localId": "56",
+                    "name": "Arterial Blood Gas With Oxyhemoglobin code",
+                    "id": "82805",
+                    "display": "Arterial Blood Gas With Oxyhemoglobin",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "55",
+                        "name": "CPT"
+                    }
+                },
+                {
+                    "localId": "58",
+                    "name": "Prolonged Services With Direct Face-to-Face Patient Contact 99354 code",
+                    "id": "99354",
+                    "display": "Prolonged Services With Direct Face-to-Face Patient Contact 99354",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "57",
+                        "name": "CPT"
+                    }
+                },
+                {
+                    "localId": "60",
+                    "name": "Prolonged Services With Direct Face-to-Face Patient Contact 99355 code",
+                    "id": "99355",
+                    "display": "Prolonged Services With Direct Face-to-Face Patient Contact 99355",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "59",
+                        "name": "CPT"
+                    }
+                },
+                {
+                    "localId": "62",
+                    "name": "Prolonged Services With Direct Face-to-Face Patient Contact 99356 code",
+                    "id": "99356",
+                    "display": "Prolonged Services With Direct Face-to-Face Patient Contact 99356",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "61",
+                        "name": "CPT"
+                    }
+                },
+                {
+                    "localId": "64",
+                    "name": "Prolonged Services With Direct Face-to-Face Patient Contact 99357 code",
+                    "id": "99357",
+                    "display": "Prolonged Services With Direct Face-to-Face Patient Contact 99357",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "63",
+                        "name": "CPT"
+                    }
+                },
+                {
+                    "localId": "66",
+                    "name": "National provider ID code",
+                    "id": "45952-9",
+                    "display": "National provider ID",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "65",
+                        "name": "LOINC"
+                    }
+                },
+                {
+                    "localId": "68",
+                    "name": "Illness, unspecified code",
+                    "id": "R69",
+                    "display": "Illness, unspecified",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "67",
+                        "name": "ICD10CM"
+                    }
+                },
+                {
+                    "localId": "70",
+                    "name": "Slowness and poor responsiveness code",
+                    "id": "R46.4",
+                    "display": "Slowness and poor responsiveness",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "69",
+                        "name": "ICD10CM"
+                    }
+                },
+                {
+                    "localId": "72",
+                    "name": "Conversion disorder with motor symptom or deficit code",
+                    "id": "F44.4",
+                    "display": "Conversion disorder with motor symptom or deficit",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "71",
+                        "name": "ICD10CM"
+                    }
+                },
+                {
+                    "localId": "74",
+                    "name": "Primary diagnosis code",
+                    "id": "18630-4",
+                    "display": "Primary diagnosis",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "73",
+                        "name": "LOINC"
+                    }
+                },
+                {
+                    "localId": "76",
+                    "name": "Mobile in home (finding) code",
+                    "id": "302000008",
+                    "display": "Mobile in home (finding)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "75",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "78",
+                    "name": "Equipment related features (finding) code",
+                    "id": "405655001",
+                    "display": "Equipment related features (finding)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "77",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "80",
+                    "name": "Equipment requirement (finding) code",
+                    "id": "698532002",
+                    "display": "Equipment requirement (finding)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "79",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "82",
+                    "name": "Equipment in use (finding) code",
+                    "id": "397917005",
+                    "display": "Equipment in use (finding)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "81",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "84",
+                    "name": "Durable medical equipment education, guidance, and counseling (procedure) code",
+                    "id": "410286008",
+                    "display": "Durable medical equipment education, guidance, and counseling (procedure)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "83",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "86",
+                    "name": "Attending physician (occupation) code",
+                    "id": "405279007",
+                    "display": "Attending physician (occupation)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "85",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "88",
+                    "name": "Administration of prescribed medications based on arterial blood gas results (procedure) code",
+                    "id": "370774005",
+                    "display": "Administration of prescribed medications based on arterial blood gas results (procedure)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "87",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "90",
+                    "name": "Past history of procedure (situation) code",
+                    "id": "416940007",
+                    "display": "Past history of procedure (situation)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "89",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "92",
+                    "name": "Evaluating interventions (procedure) code",
+                    "id": "225303001",
+                    "display": "Evaluating interventions (procedure)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "91",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "94",
+                    "name": "Home oxygen therapy (procedure) code",
+                    "id": "426990007",
+                    "display": "Home oxygen therapy (procedure)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "93",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "96",
+                    "name": "Patient's condition worsened (finding) code",
+                    "id": "271299001",
+                    "display": "Patient condition worsened (finding)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "95",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "98",
+                    "name": "Patient's condition improved (finding) code",
+                    "id": "268910001",
+                    "display": "Patient condition improved (finding)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "97",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "100",
+                    "name": "Inpatient stay (finding)",
+                    "id": "308540004",
+                    "display": "Inpatient stay (finding)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "99",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "102",
+                    "name": "Patient's condition stable (finding) code",
+                    "id": "359746009",
+                    "display": "Patient condition stable (finding)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "101",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "104",
+                    "name": "Practitioner certification status (finding) code",
+                    "id": "417707001",
+                    "display": "Practitioner certification status (finding)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "103",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "106",
+                    "name": "Treatment stopped - alternative therapy undertaken (situation) code",
+                    "id": "182868002",
+                    "display": "Treatment stopped - alternative therapy undertaken (situation)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "105",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "108",
+                    "name": "Resting state (finding) code",
+                    "id": "128975004",
+                    "display": "Resting state (finding)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "107",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "110",
+                    "name": "Awake (finding) code",
+                    "id": "248218005",
+                    "display": "Awake (finding)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "109",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "112",
+                    "name": "Sleeping out (finding) code",
+                    "id": "224229008",
+                    "display": "Sleeping out (finding)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "111",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "114",
+                    "name": "Seen by physician (finding) code",
+                    "id": "305660003",
+                    "display": "Seen by physician (finding)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "113",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "116",
+                    "name": "Seen by clinical nurse specialist (finding) code",
+                    "id": "305733002",
+                    "display": "Seen by clinical nurse specialist (finding)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "115",
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "localId": "118",
+                    "name": "Seen by nurse practitioner (finding) code",
+                    "id": "305757002",
+                    "display": "Seen by nurse practitioner (finding)",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "localId": "117",
+                        "name": "SNOMEDCT"
+                    }
+                }
+            ]
+        },
+        "concepts": {
+            "def": [
+                {
+                    "localId": "120",
+                    "name": "Chronic obstructive pulmonary disease, unspecified",
+                    "display": "Chronic obstructive pulmonary disease, unspecified",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "119",
+                            "name": "Chronic obstructive pulmonary disease, unspecified code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "122",
+                    "name": "Interstitial pulmonary disease, unspecified",
+                    "display": "Interstitial pulmonary disease, unspecified",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "121",
+                            "name": "Interstitial pulmonary disease, unspecified code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "124",
+                    "name": "Cystic fibrosis with pulmonary manifestations",
+                    "display": "Cystic fibrosis with pulmonary manifestations",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "123",
+                            "name": "Cystic fibrosis with pulmonary manifestations code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "126",
+                    "name": "Bronchiectasis, uncomplicated",
+                    "display": "Bronchiectasis, uncomplicated",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "125",
+                            "name": "Bronchiectasis, uncomplicated code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "128",
+                    "name": "Malignant neoplasm of unspecified part of unspecified bronchus or lung",
+                    "display": "Malignant neoplasm of unspecified part of unspecified bronchus or lung",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "127",
+                            "name": "Malignant neoplasm of unspecified part of unspecified bronchus or lung code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "130",
+                    "name": "Hypoxemia",
+                    "display": "Hypoxemia",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "129",
+                            "name": "Hypoxemia code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "132",
+                    "name": "Primary pulmonary hypertension",
+                    "display": "Primary pulmonary hypertension",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "131",
+                            "name": "Primary pulmonary hypertension code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "134",
+                    "name": "Secondary polycythemia",
+                    "display": "Secondary polycythemia",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "133",
+                            "name": "Secondary polycythemia code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "136",
+                    "name": "Mild cognitive impairment, so stated",
+                    "display": "Mild cognitive impairment, so stated",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "135",
+                            "name": "Mild cognitive impairment, so stated code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "138",
+                    "name": "Restlessness and agitation",
+                    "display": "Restlessness and agitation",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "137",
+                            "name": "Restlessness and agitation code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "140",
+                    "name": "Chronic tension-type headache, intractable",
+                    "display": "Chronic tension-type headache, intractable",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "139",
+                            "name": "Chronic tension-type headache, intractable code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "142",
+                    "name": "Patient's condition stable (finding)",
+                    "display": "Patient condition stable (finding)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "141",
+                            "name": "Patient's condition stable (finding) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "144",
+                    "name": "Practitioner certification status (finding)",
+                    "display": "Practitioner certification status (finding)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "143",
+                            "name": "Practitioner certification status (finding) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "146",
+                    "name": "Treatment stopped - alternative therapy undertaken (situation)",
+                    "display": "Treatment stopped - alternative therapy undertaken (situation)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "145",
+                            "name": "Treatment stopped - alternative therapy undertaken (situation) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "148",
+                    "name": "Gases, blood, O2 saturation only, by direct measurement, except pulse oximetry",
+                    "display": "Gases, blood, O2 saturation only, by direct measurement, except pulse oximetry",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "147",
+                            "name": "Gases, blood, O2 saturation only, by direct measurement, except pulse oximetry code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "150",
+                    "name": "Gases, blood, any combination of pH, pCO2, pO2, CO2, HCO3 (including calculated O2 saturation)",
+                    "display": "Gases, blood, any combination of pH, pCO2, pO2, CO2, HCO3 (including calculated O2 saturation)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "149",
+                            "name": "Gases, blood, any combination of pH, pCO2, pO2, CO2, HCO3 (including calculated O2 saturation) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "152",
+                    "name": "Therapeutic Exercise",
+                    "display": "Therapeutic Exercise",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "151",
+                            "name": "Therapeutic Exercise code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "154",
+                    "name": "Insomnia, unspecified",
+                    "display": "Insomnia, unspecified",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "153",
+                            "name": "Insomnia, unspecified code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "156",
+                    "name": "Cor pulmonale (chronic)",
+                    "display": "Cor pulmonale (chronic)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "155",
+                            "name": "Cor pulmonale (chronic) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "158",
+                    "name": "Edema, unspecified",
+                    "display": "Edema, unspecified",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "157",
+                            "name": "Edema, unspecified code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "160",
+                    "name": "Right heart failure, unspecified",
+                    "display": "Right heart failure, unspecified",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "159",
+                            "name": "Right heart failure, unspecified code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "162",
+                    "name": "Other Cardiovascular Procedures",
+                    "display": "Other Cardiovascular Procedures",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "161",
+                            "name": "Other Cardiovascular Procedures code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "164",
+                    "name": "Transthoracic echocardiography",
+                    "display": "Transthoracic echocardiography",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "163",
+                            "name": "Transthoracic echocardiography code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "166",
+                    "name": "Hematocrit",
+                    "display": "Hematocrit",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "165",
+                            "name": "Hematocrit code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "168",
+                    "name": "Cluster headache syndrome, unspecified, not intractable",
+                    "display": "Cluster headache syndrome, unspecified, not intractable",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "167",
+                            "name": "Cluster headache syndrome, unspecified, not intractable code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "170",
+                    "name": "Equipment related features (finding)",
+                    "display": "Equipment related features (finding)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "169",
+                            "name": "Equipment related features (finding) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "172",
+                    "name": "Equipment requirement (finding)",
+                    "display": "Equipment requirement (finding)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "171",
+                            "name": "Equipment requirement (finding) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "174",
+                    "name": "Equipment in use (finding)",
+                    "display": "Equipment in use (finding)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "173",
+                            "name": "Equipment in use (finding) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "176",
+                    "name": "Durable medical equipment education, guidance, and counseling (procedure)",
+                    "display": "Durable medical equipment education, guidance, and counseling (procedure)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "175",
+                            "name": "Durable medical equipment education, guidance, and counseling (procedure) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "178",
+                    "name": "Arterial Blood Gas With Oxyhemoglobin",
+                    "display": "Arterial Blood Gas With Oxyhemoglobin",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "177",
+                            "name": "Arterial Blood Gas With Oxyhemoglobin code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "180",
+                    "name": "Prolonged Services With Direct Face-to-Face Patient Contact 99354",
+                    "display": "Prolonged Services With Direct Face-to-Face Patient Contact 99354",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "179",
+                            "name": "Prolonged Services With Direct Face-to-Face Patient Contact 99354 code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "182",
+                    "name": "Prolonged Services With Direct Face-to-Face Patient Contact 99355",
+                    "display": "Prolonged Services With Direct Face-to-Face Patient Contact 99355",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "181",
+                            "name": "Prolonged Services With Direct Face-to-Face Patient Contact 99355 code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "184",
+                    "name": "Prolonged Services With Direct Face-to-Face Patient Contact 99356",
+                    "display": "Prolonged Services With Direct Face-to-Face Patient Contact 99356",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "183",
+                            "name": "Prolonged Services With Direct Face-to-Face Patient Contact 99356 code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "186",
+                    "name": "Prolonged Services With Direct Face-to-Face Patient Contact 99357",
+                    "display": "Prolonged Services With Direct Face-to-Face Patient Contact 99357",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "185",
+                            "name": "Prolonged Services With Direct Face-to-Face Patient Contact 99357 code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "188",
+                    "name": "Home oxygen therapy (procedure)",
+                    "display": "Home oxygen therapy (procedure)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "187",
+                            "name": "Home oxygen therapy (procedure) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "190",
+                    "name": "National provider ID",
+                    "display": "National provider ID",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "189",
+                            "name": "National provider ID code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "192",
+                    "name": "Illness, unspecified",
+                    "display": "Illness, unspecified",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "191",
+                            "name": "Illness, unspecified code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "194",
+                    "name": "Patient's condition worsened (finding)",
+                    "display": "Patient condition worsened (finding)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "193",
+                            "name": "Patient's condition worsened (finding) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "196",
+                    "name": "Patient's condition improved (finding)",
+                    "display": "Patient condition improved (finding)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "195",
+                            "name": "Patient's condition improved (finding) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "198",
+                    "name": "Slowness and poor responsiveness",
+                    "display": "Slowness and poor responsiveness",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "197",
+                            "name": "Slowness and poor responsiveness code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "200",
+                    "name": "Mobile in home (finding)",
+                    "display": "Mobile in home (finding)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "199",
+                            "name": "Mobile in home (finding) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "202",
+                    "name": "Administration of prescribed medications based on arterial blood gas results (procedure)",
+                    "display": "Administration of prescribed medications based on arterial blood gas results (procedure)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "201",
+                            "name": "Administration of prescribed medications based on arterial blood gas results (procedure) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "204",
+                    "name": "Past history of procedure (situation)",
+                    "display": "Past history of procedure (situation)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "203",
+                            "name": "Past history of procedure (situation) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "206",
+                    "name": "Evaluating interventions (procedure)",
+                    "display": "Evaluating interventions (procedure)",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "205",
+                            "name": "Evaluating interventions (procedure) code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "208",
+                    "name": "Conversion disorder with motor symptom or deficit",
+                    "display": "Conversion disorder with motor symptom or deficit",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "207",
+                            "name": "Conversion disorder with motor symptom or deficit code"
+                        }
+                    ]
+                },
+                {
+                    "localId": "210",
+                    "name": "Primary diagnosis",
+                    "display": "Primary diagnosis",
+                    "accessLevel": "Public",
+                    "code": [
+                        {
+                            "localId": "209",
+                            "name": "Primary diagnosis code"
+                        }
+                    ]
+                }
+            ]
+        },
+        "statements": {
+            "def": [
+                {
+                    "name": "Patient",
+                    "context": "Patient",
+                    "expression": {
+                        "type": "SingletonFrom",
+                        "operand": {
+                            "dataType": "{http://hl7.org/fhir}Patient",
+                            "type": "Retrieve"
+                        }
+                    }
+                },
+                {
+                    "localId": "214",
+                    "name": "IC1",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "214",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"IC1\"",
+                                            ":\n    "
+                                        ]
+                                    },
+                                    {
+                                        "r": "213",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{\n    "
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Condition\"",
+                                                            ":"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "212",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n            "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"code\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "211",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "\"Chronic obstructive pulmonary disease, unspecified\""
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n        }"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n    }"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "213",
+                        "type": "Tuple",
+                        "element": [
+                            {
+                                "name": "Condition",
+                                "value": {
+                                    "localId": "212",
+                                    "type": "Tuple",
+                                    "element": [
+                                        {
+                                            "name": "code",
+                                            "value": {
+                                                "localId": "211",
+                                                "name": "Chronic obstructive pulmonary disease, unspecified",
+                                                "type": "ConceptRef"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "218",
+                    "name": "IC2",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "218",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"IC2\"",
+                                            ":\n    "
+                                        ]
+                                    },
+                                    {
+                                        "r": "217",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{\n        "
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Condition\"",
+                                                            ": "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "216",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n            "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"code\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "215",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "\"Interstitial pulmonary disease, unspecified\""
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n        }"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n    }"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "217",
+                        "type": "Tuple",
+                        "element": [
+                            {
+                                "name": "Condition",
+                                "value": {
+                                    "localId": "216",
+                                    "type": "Tuple",
+                                    "element": [
+                                        {
+                                            "name": "code",
+                                            "value": {
+                                                "localId": "215",
+                                                "name": "Interstitial pulmonary disease, unspecified",
+                                                "type": "ConceptRef"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "222",
+                    "name": "IC3",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "222",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"IC3\"",
+                                            ":\n    "
+                                        ]
+                                    },
+                                    {
+                                        "r": "221",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{\n        "
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Condition\"",
+                                                            ": "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "220",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n            "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"code\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "219",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "\"Cystic fibrosis with pulmonary manifestations\""
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n        }"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n    }"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "221",
+                        "type": "Tuple",
+                        "element": [
+                            {
+                                "name": "Condition",
+                                "value": {
+                                    "localId": "220",
+                                    "type": "Tuple",
+                                    "element": [
+                                        {
+                                            "name": "code",
+                                            "value": {
+                                                "localId": "219",
+                                                "name": "Cystic fibrosis with pulmonary manifestations",
+                                                "type": "ConceptRef"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "226",
+                    "name": "IC4",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "226",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"IC4\"",
+                                            ":\n    "
+                                        ]
+                                    },
+                                    {
+                                        "r": "225",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{\n        "
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Condition\"",
+                                                            ": "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "224",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n            "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"code\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "223",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "\"Bronchiectasis, uncomplicated\""
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n        }"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n    }"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "225",
+                        "type": "Tuple",
+                        "element": [
+                            {
+                                "name": "Condition",
+                                "value": {
+                                    "localId": "224",
+                                    "type": "Tuple",
+                                    "element": [
+                                        {
+                                            "name": "code",
+                                            "value": {
+                                                "localId": "223",
+                                                "name": "Bronchiectasis, uncomplicated",
+                                                "type": "ConceptRef"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "230",
+                    "name": "IC5",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "230",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"IC5\"",
+                                            ":\n    "
+                                        ]
+                                    },
+                                    {
+                                        "r": "229",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{\n        "
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Condition\"",
+                                                            ": "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "228",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n            "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"code\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "227",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "\"Malignant neoplasm of unspecified part of unspecified bronchus or lung\""
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n        }"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n    }"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "229",
+                        "type": "Tuple",
+                        "element": [
+                            {
+                                "name": "Condition",
+                                "value": {
+                                    "localId": "228",
+                                    "type": "Tuple",
+                                    "element": [
+                                        {
+                                            "name": "code",
+                                            "value": {
+                                                "localId": "227",
+                                                "name": "Malignant neoplasm of unspecified part of unspecified bronchus or lung",
+                                                "type": "ConceptRef"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "234",
+                    "name": "IC6",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "234",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"IC6\"",
+                                            ":\n    "
+                                        ]
+                                    },
+                                    {
+                                        "r": "233",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{\n        "
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Condition\"",
+                                                            ": "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "232",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n            "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"code\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "231",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "\"Hypoxemia\""
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n        }"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n    }"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "233",
+                        "type": "Tuple",
+                        "element": [
+                            {
+                                "name": "Condition",
+                                "value": {
+                                    "localId": "232",
+                                    "type": "Tuple",
+                                    "element": [
+                                        {
+                                            "name": "code",
+                                            "value": {
+                                                "localId": "231",
+                                                "name": "Hypoxemia",
+                                                "type": "ConceptRef"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "238",
+                    "name": "IC7",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "238",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"IC7\"",
+                                            ":\n    "
+                                        ]
+                                    },
+                                    {
+                                        "r": "237",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{\n        "
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Condition\"",
+                                                            ": "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "236",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n            "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"code\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "235",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "\"Primary pulmonary hypertension\""
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n        }"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n    }"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "237",
+                        "type": "Tuple",
+                        "element": [
+                            {
+                                "name": "Condition",
+                                "value": {
+                                    "localId": "236",
+                                    "type": "Tuple",
+                                    "element": [
+                                        {
+                                            "name": "code",
+                                            "value": {
+                                                "localId": "235",
+                                                "name": "Primary pulmonary hypertension",
+                                                "type": "ConceptRef"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "242",
+                    "name": "IC8",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "242",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"IC8\"",
+                                            ":\n    "
+                                        ]
+                                    },
+                                    {
+                                        "r": "241",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{\n        "
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Condition\"",
+                                                            ": "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "240",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n            "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"code\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "239",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "\"Secondary polycythemia\""
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n        }"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n    }"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "241",
+                        "type": "Tuple",
+                        "element": [
+                            {
+                                "name": "Condition",
+                                "value": {
+                                    "localId": "240",
+                                    "type": "Tuple",
+                                    "element": [
+                                        {
+                                            "name": "code",
+                                            "value": {
+                                                "localId": "239",
+                                                "name": "Secondary polycythemia",
+                                                "type": "ConceptRef"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "246",
+                    "name": "IC9",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "246",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"IC9\"",
+                                            ":\n    "
+                                        ]
+                                    },
+                                    {
+                                        "r": "245",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{\n        "
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Condition\"",
+                                                            ": "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "244",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n            "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"code\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "243",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "\"Mild cognitive impairment, so stated\""
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n        }"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n    }"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "245",
+                        "type": "Tuple",
+                        "element": [
+                            {
+                                "name": "Condition",
+                                "value": {
+                                    "localId": "244",
+                                    "type": "Tuple",
+                                    "element": [
+                                        {
+                                            "name": "code",
+                                            "value": {
+                                                "localId": "243",
+                                                "name": "Mild cognitive impairment, so stated",
+                                                "type": "ConceptRef"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "250",
+                    "name": "IC10",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "250",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"IC10\"",
+                                            ":\n    "
+                                        ]
+                                    },
+                                    {
+                                        "r": "249",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{\n        "
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Observation\"",
+                                                            ": "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "248",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n            "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"code\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "247",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "\"Restlessness and agitation\""
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n        }"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n    }"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "249",
+                        "type": "Tuple",
+                        "element": [
+                            {
+                                "name": "Observation",
+                                "value": {
+                                    "localId": "248",
+                                    "type": "Tuple",
+                                    "element": [
+                                        {
+                                            "name": "code",
+                                            "value": {
+                                                "localId": "247",
+                                                "name": "Restlessness and agitation",
+                                                "type": "ConceptRef"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "254",
+                    "name": "IC11",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "254",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"IC11\"",
+                                            ":\n    "
+                                        ]
+                                    },
+                                    {
+                                        "r": "253",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{\n        "
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Condition\"",
+                                                            ": "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "252",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n            "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"code\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "251",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "\"Chronic tension-type headache, intractable\""
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n        }"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n    }"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "253",
+                        "type": "Tuple",
+                        "element": [
+                            {
+                                "name": "Condition",
+                                "value": {
+                                    "localId": "252",
+                                    "type": "Tuple",
+                                    "element": [
+                                        {
+                                            "name": "code",
+                                            "value": {
+                                                "localId": "251",
+                                                "name": "Chronic tension-type headache, intractable",
+                                                "type": "ConceptRef"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "258",
+                    "name": "IC12",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "258",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"IC12\"",
+                                            ":\n    "
+                                        ]
+                                    },
+                                    {
+                                        "r": "257",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{\n        "
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Condition\"",
+                                                            ": "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "256",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n            "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"code\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "255",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "\"Insomnia, unspecified\""
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n        }"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n    }"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "257",
+                        "type": "Tuple",
+                        "element": [
+                            {
+                                "name": "Condition",
+                                "value": {
+                                    "localId": "256",
+                                    "type": "Tuple",
+                                    "element": [
+                                        {
+                                            "name": "code",
+                                            "value": {
+                                                "localId": "255",
+                                                "name": "Insomnia, unspecified",
+                                                "type": "ConceptRef"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "262",
+                    "name": "IC13",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "262",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"IC13\"",
+                                            ":\n    "
+                                        ]
+                                    },
+                                    {
+                                        "r": "261",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{\n        "
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Condition\"",
+                                                            ": "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "260",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n            "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"code\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "259",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "\"Cor pulmonale (chronic)\""
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n        }"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n    }"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "261",
+                        "type": "Tuple",
+                        "element": [
+                            {
+                                "name": "Condition",
+                                "value": {
+                                    "localId": "260",
+                                    "type": "Tuple",
+                                    "element": [
+                                        {
+                                            "name": "code",
+                                            "value": {
+                                                "localId": "259",
+                                                "name": "Cor pulmonale (chronic)",
+                                                "type": "ConceptRef"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "266",
+                    "name": "IC14",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "266",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"IC14\"",
+                                            ":\n    "
+                                        ]
+                                    },
+                                    {
+                                        "r": "265",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{\n        "
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Condition\"",
+                                                            ": "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "264",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n            "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"code\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "263",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "\"Edema, unspecified\""
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n        }"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n    }"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "265",
+                        "type": "Tuple",
+                        "element": [
+                            {
+                                "name": "Condition",
+                                "value": {
+                                    "localId": "264",
+                                    "type": "Tuple",
+                                    "element": [
+                                        {
+                                            "name": "code",
+                                            "value": {
+                                                "localId": "263",
+                                                "name": "Edema, unspecified",
+                                                "type": "ConceptRef"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "270",
+                    "name": "IC15",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "270",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"IC15\"",
+                                            ":\n    "
+                                        ]
+                                    },
+                                    {
+                                        "r": "269",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{\n        "
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Condition\"",
+                                                            ": "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "268",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n            "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"code\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "267",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "\"Right heart failure, unspecified\""
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n        }"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n    }"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "269",
+                        "type": "Tuple",
+                        "element": [
+                            {
+                                "name": "Condition",
+                                "value": {
+                                    "localId": "268",
+                                    "type": "Tuple",
+                                    "element": [
+                                        {
+                                            "name": "code",
+                                            "value": {
+                                                "localId": "267",
+                                                "name": "Right heart failure, unspecified",
+                                                "type": "ConceptRef"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "284",
+                    "name": "Indications",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "284",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Indications\"",
+                                            ":\n\t"
+                                        ]
+                                    },
+                                    {
+                                        "r": "283",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{"
+                                                ]
+                                            },
+                                            {
+                                                "r": "271",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "'or'"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n        "
+                                                ]
+                                            },
+                                            {
+                                                "r": "272",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"IC1\""
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n        "
+                                                ]
+                                            },
+                                            {
+                                                "r": "273",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"IC2\""
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n        "
+                                                ]
+                                            },
+                                            {
+                                                "r": "274",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"IC3\""
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n        "
+                                                ]
+                                            },
+                                            {
+                                                "r": "275",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"IC4\""
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n        "
+                                                ]
+                                            },
+                                            {
+                                                "r": "276",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"IC5\""
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n        "
+                                                ]
+                                            },
+                                            {
+                                                "r": "277",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"IC6\""
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n        "
+                                                ]
+                                            },
+                                            {
+                                                "r": "278",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"IC7\""
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n        "
+                                                ]
+                                            },
+                                            {
+                                                "r": "279",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"IC8\""
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n        "
+                                                ]
+                                            },
+                                            {
+                                                "r": "280",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"IC9\""
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n        "
+                                                ]
+                                            },
+                                            {
+                                                "r": "281",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"IC10\""
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n        "
+                                                ]
+                                            },
+                                            {
+                                                "r": "282",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"IC11\""
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n\t}"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "283",
+                        "type": "List",
+                        "element": [
+                            {
+                                "localId": "271",
+                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                "value": "or",
+                                "type": "Literal"
+                            },
+                            {
+                                "localId": "272",
+                                "name": "IC1",
+                                "type": "ExpressionRef"
+                            },
+                            {
+                                "localId": "273",
+                                "name": "IC2",
+                                "type": "ExpressionRef"
+                            },
+                            {
+                                "localId": "274",
+                                "name": "IC3",
+                                "type": "ExpressionRef"
+                            },
+                            {
+                                "localId": "275",
+                                "name": "IC4",
+                                "type": "ExpressionRef"
+                            },
+                            {
+                                "localId": "276",
+                                "name": "IC5",
+                                "type": "ExpressionRef"
+                            },
+                            {
+                                "localId": "277",
+                                "name": "IC6",
+                                "type": "ExpressionRef"
+                            },
+                            {
+                                "localId": "278",
+                                "name": "IC7",
+                                "type": "ExpressionRef"
+                            },
+                            {
+                                "localId": "279",
+                                "name": "IC8",
+                                "type": "ExpressionRef"
+                            },
+                            {
+                                "localId": "280",
+                                "name": "IC9",
+                                "type": "ExpressionRef"
+                            },
+                            {
+                                "localId": "281",
+                                "name": "IC10",
+                                "type": "ExpressionRef"
+                            },
+                            {
+                                "localId": "282",
+                                "name": "IC11",
+                                "type": "ExpressionRef"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "288",
+                    "name": "BloodGasStudy",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "288",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"BloodGasStudy\"",
+                                            ":\n\t"
+                                        ]
+                                    },
+                                    {
+                                        "r": "287",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{\n\t    "
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Procedure\"",
+                                                            ":"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "286",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n\t        "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"code\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "285",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "\"Arterial Blood Gas With Oxyhemoglobin\""
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n\t    }"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n\t}"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "287",
+                        "type": "Tuple",
+                        "element": [
+                            {
+                                "name": "Procedure",
+                                "value": {
+                                    "localId": "286",
+                                    "type": "Tuple",
+                                    "element": [
+                                        {
+                                            "name": "code",
+                                            "value": {
+                                                "localId": "285",
+                                                "name": "Arterial Blood Gas With Oxyhemoglobin",
+                                                "type": "ConceptRef"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "295",
+                    "name": "Qualifying BloodgasStudy",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "295",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Qualifying BloodgasStudy\"",
+                                            ":\n      "
+                                        ]
+                                    },
+                                    {
+                                        "r": "294",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{"
+                                                ]
+                                            },
+                                            {
+                                                "r": "289",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "'and'"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n          "
+                                                ]
+                                            },
+                                            {
+                                                "r": "292",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "{\n            "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Encounter\"",
+                                                                    ":"
+                                                                ]
+                                                            },
+                                                            {
+                                                                "r": "291",
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "{\n                "
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "\"type\"",
+                                                                                    ": "
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "r": "290",
+                                                                                "s": [
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "'Inpatient stay'"
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "value": [
+                                                                            "\n            }"
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            "\n          }"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n        "
+                                                ]
+                                            },
+                                            {
+                                                "r": "293",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"BloodGasStudy\""
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n      }"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "294",
+                        "type": "List",
+                        "element": [
+                            {
+                                "localId": "289",
+                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                "value": "and",
+                                "type": "Literal"
+                            },
+                            {
+                                "localId": "292",
+                                "type": "Tuple",
+                                "element": [
+                                    {
+                                        "name": "Encounter",
+                                        "value": {
+                                            "localId": "291",
+                                            "type": "Tuple",
+                                            "element": [
+                                                {
+                                                    "name": "type",
+                                                    "value": {
+                                                        "localId": "290",
+                                                        "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                        "value": "Inpatient stay",
+                                                        "type": "Literal"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "localId": "293",
+                                "name": "BloodGasStudy",
+                                "type": "ExpressionRef"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "304",
+                    "name": "Outpatient Encounter",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "304",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Outpatient Encounter\"",
+                                            ":\n\t"
+                                        ]
+                                    },
+                                    {
+                                        "r": "303",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{"
+                                                ]
+                                            },
+                                            {
+                                                "r": "296",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "'and'"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n        "
+                                                ]
+                                            },
+                                            {
+                                                "r": "299",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "{"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Observation\"",
+                                                                    ": "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "r": "298",
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "{\n            "
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "\"code\"",
+                                                                                    ": "
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "r": "297",
+                                                                                "s": [
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "'Patient condition stable or not'"
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "value": [
+                                                                            "\n            }"
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            "\n        }"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n        "
+                                                ]
+                                            },
+                                            {
+                                                "r": "302",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "{\n         "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"DiagnosticReport\"",
+                                                                    ":"
+                                                                ]
+                                                            },
+                                                            {
+                                                                "r": "301",
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "{\n            "
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "\"code\"",
+                                                                                    ": "
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "r": "300",
+                                                                                "s": [
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "'Practitioner certification status'"
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "value": [
+                                                                            "\n            }"
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            "\n        }"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n    }"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "303",
+                        "type": "List",
+                        "element": [
+                            {
+                                "localId": "296",
+                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                "value": "and",
+                                "type": "Literal"
+                            },
+                            {
+                                "localId": "299",
+                                "type": "Tuple",
+                                "element": [
+                                    {
+                                        "name": "Observation",
+                                        "value": {
+                                            "localId": "298",
+                                            "type": "Tuple",
+                                            "element": [
+                                                {
+                                                    "name": "code",
+                                                    "value": {
+                                                        "localId": "297",
+                                                        "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                        "value": "Patient condition stable or not",
+                                                        "type": "Literal"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "localId": "302",
+                                "type": "Tuple",
+                                "element": [
+                                    {
+                                        "name": "DiagnosticReport",
+                                        "value": {
+                                            "localId": "301",
+                                            "type": "Tuple",
+                                            "element": [
+                                                {
+                                                    "name": "code",
+                                                    "value": {
+                                                        "localId": "300",
+                                                        "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                        "value": "Practitioner certification status",
+                                                        "type": "Literal"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "308",
+                    "name": "Alternate Treatment",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "308",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Alternate Treatment\"",
+                                            ":\n\t"
+                                        ]
+                                    },
+                                    {
+                                        "r": "307",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{\n\t    "
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"DiagnosticReport\"",
+                                                            ":"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "306",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n\t        "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"code\"",
+                                                                            ": "
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "305",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "'Treatment stopped - alternative therapy undertaken (situation)'"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n\t    }"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n\t}"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "307",
+                        "type": "Tuple",
+                        "element": [
+                            {
+                                "name": "DiagnosticReport",
+                                "value": {
+                                    "localId": "306",
+                                    "type": "Tuple",
+                                    "element": [
+                                        {
+                                            "name": "code",
+                                            "value": {
+                                                "localId": "305",
+                                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                "value": "Treatment stopped - alternative therapy undertaken (situation)",
+                                                "type": "Literal"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "313",
+                    "name": "Qualifying Outpatient",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "313",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Qualifying Outpatient\"",
+                                            ":\n\t"
+                                        ]
+                                    },
+                                    {
+                                        "r": "312",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{\n\t"
+                                                ]
+                                            },
+                                            {
+                                                "r": "309",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "'and'"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ","
+                                                ]
+                                            },
+                                            {
+                                                "r": "310",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"BloodGasStudy\""
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n\t "
+                                                ]
+                                            },
+                                            {
+                                                "r": "311",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Outpatient Encounter\""
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n\t }"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "312",
+                        "type": "List",
+                        "element": [
+                            {
+                                "localId": "309",
+                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                "value": "and",
+                                "type": "Literal"
+                            },
+                            {
+                                "localId": "310",
+                                "name": "BloodGasStudy",
+                                "type": "ExpressionRef"
+                            },
+                            {
+                                "localId": "311",
+                                "name": "Outpatient Encounter",
+                                "type": "ExpressionRef"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "325",
+                    "name": "Saturation or PP",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "325",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Saturation or PP\"",
+                                            ":\n    "
+                                        ]
+                                    },
+                                    {
+                                        "r": "324",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{"
+                                                ]
+                                            },
+                                            {
+                                                "r": "314",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "'and'"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ", "
+                                                ]
+                                            },
+                                            {
+                                                "r": "315",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"BloodGasStudy\""
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n        "
+                                                ]
+                                            },
+                                            {
+                                                "r": "323",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "{"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "316",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "'or'"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            ",\n            "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "319",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n            "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"Procedure\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "318",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "{\n                "
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "s": [
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "\"code\"",
+                                                                                            ": "
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "r": "317",
+                                                                                        "s": [
+                                                                                            {
+                                                                                                "value": [
+                                                                                                    "\"Gases, blood, O2 saturation only, by direct measurement, except pulse oximetry\""
+                                                                                                ]
+                                                                                            }
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "value": [
+                                                                                    "\n                }"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n            }"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            ",\n            "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "322",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n            "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"Procedure\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "321",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "{\n                "
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "s": [
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "\"code\"",
+                                                                                            ": "
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "r": "320",
+                                                                                        "s": [
+                                                                                            {
+                                                                                                "value": [
+                                                                                                    "\"Gases, blood, any combination of pH, pCO2, pO2, CO2, HCO3 (including calculated O2 saturation)\""
+                                                                                                ]
+                                                                                            }
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "value": [
+                                                                                    "\n                }"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n            }"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            "\n        }"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n    }"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "324",
+                        "type": "List",
+                        "element": [
+                            {
+                                "localId": "314",
+                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                "value": "and",
+                                "type": "Literal"
+                            },
+                            {
+                                "type": "ToList",
+                                "operand": {
+                                    "localId": "315",
+                                    "name": "BloodGasStudy",
+                                    "type": "ExpressionRef"
+                                }
+                            },
+                            {
+                                "localId": "323",
+                                "type": "List",
+                                "element": [
+                                    {
+                                        "localId": "316",
+                                        "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                        "value": "or",
+                                        "type": "Literal"
+                                    },
+                                    {
+                                        "localId": "319",
+                                        "type": "Tuple",
+                                        "element": [
+                                            {
+                                                "name": "Procedure",
+                                                "value": {
+                                                    "localId": "318",
+                                                    "type": "Tuple",
+                                                    "element": [
+                                                        {
+                                                            "name": "code",
+                                                            "value": {
+                                                                "localId": "317",
+                                                                "name": "Gases, blood, O2 saturation only, by direct measurement, except pulse oximetry",
+                                                                "type": "ConceptRef"
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "localId": "322",
+                                        "type": "Tuple",
+                                        "element": [
+                                            {
+                                                "name": "Procedure",
+                                                "value": {
+                                                    "localId": "321",
+                                                    "type": "Tuple",
+                                                    "element": [
+                                                        {
+                                                            "name": "code",
+                                                            "value": {
+                                                                "localId": "320",
+                                                                "name": "Gases, blood, any combination of pH, pCO2, pO2, CO2, HCO3 (including calculated O2 saturation)",
+                                                                "type": "ConceptRef"
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "337",
+                    "name": "Saturation and PP",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "337",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Saturation and PP\"",
+                                            ":\n    "
+                                        ]
+                                    },
+                                    {
+                                        "r": "336",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{"
+                                                ]
+                                            },
+                                            {
+                                                "r": "326",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "'and'"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ","
+                                                ]
+                                            },
+                                            {
+                                                "r": "327",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"BloodGasStudy\""
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n        "
+                                                ]
+                                            },
+                                            {
+                                                "r": "335",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "{"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "328",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "'and'"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            ",\n            "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "331",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n            "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"Procedure\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "330",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "{\n                "
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "s": [
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "\"code\"",
+                                                                                            ": "
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "r": "329",
+                                                                                        "s": [
+                                                                                            {
+                                                                                                "value": [
+                                                                                                    "\"Gases, blood, O2 saturation only, by direct measurement, except pulse oximetry\""
+                                                                                                ]
+                                                                                            }
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "value": [
+                                                                                    "\n                }"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n            }"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            ",\n            "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "334",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n            "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"Procedure\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "333",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "{\n                "
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "s": [
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "\"code\"",
+                                                                                            ": "
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "r": "332",
+                                                                                        "s": [
+                                                                                            {
+                                                                                                "value": [
+                                                                                                    "\"Gases, blood, any combination of pH, pCO2, pO2, CO2, HCO3 (including calculated O2 saturation)\""
+                                                                                                ]
+                                                                                            }
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "value": [
+                                                                                    "\n                }"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n            }"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            "\n        }"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n    }"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "336",
+                        "type": "List",
+                        "element": [
+                            {
+                                "localId": "326",
+                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                "value": "and",
+                                "type": "Literal"
+                            },
+                            {
+                                "type": "ToList",
+                                "operand": {
+                                    "localId": "327",
+                                    "name": "BloodGasStudy",
+                                    "type": "ExpressionRef"
+                                }
+                            },
+                            {
+                                "localId": "335",
+                                "type": "List",
+                                "element": [
+                                    {
+                                        "localId": "328",
+                                        "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                        "value": "and",
+                                        "type": "Literal"
+                                    },
+                                    {
+                                        "localId": "331",
+                                        "type": "Tuple",
+                                        "element": [
+                                            {
+                                                "name": "Procedure",
+                                                "value": {
+                                                    "localId": "330",
+                                                    "type": "Tuple",
+                                                    "element": [
+                                                        {
+                                                            "name": "code",
+                                                            "value": {
+                                                                "localId": "329",
+                                                                "name": "Gases, blood, O2 saturation only, by direct measurement, except pulse oximetry",
+                                                                "type": "ConceptRef"
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "localId": "334",
+                                        "type": "Tuple",
+                                        "element": [
+                                            {
+                                                "name": "Procedure",
+                                                "value": {
+                                                    "localId": "333",
+                                                    "type": "Tuple",
+                                                    "element": [
+                                                        {
+                                                            "name": "code",
+                                                            "value": {
+                                                                "localId": "332",
+                                                                "name": "Gases, blood, any combination of pH, pCO2, pO2, CO2, HCO3 (including calculated O2 saturation)",
+                                                                "type": "ConceptRef"
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "344",
+                    "name": "Group Exercise",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "344",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Group Exercise\"",
+                                            ":\n\t"
+                                        ]
+                                    },
+                                    {
+                                        "r": "343",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{"
+                                                ]
+                                            },
+                                            {
+                                                "r": "338",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "'and'"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n\t    "
+                                                ]
+                                            },
+                                            {
+                                                "r": "341",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "{\n\t    "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Procedure\"",
+                                                                    ":"
+                                                                ]
+                                                            },
+                                                            {
+                                                                "r": "340",
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "{\n\t        "
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "\"code\"",
+                                                                                    ":"
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "r": "339",
+                                                                                "s": [
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "\"Therapeutic Exercise\""
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "value": [
+                                                                            "\n\t        }"
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            "\n\t    }"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n\t    "
+                                                ]
+                                            },
+                                            {
+                                                "r": "342",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Saturation or PP\""
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n\t}"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "343",
+                        "type": "List",
+                        "element": [
+                            {
+                                "localId": "338",
+                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                "value": "and",
+                                "type": "Literal"
+                            },
+                            {
+                                "type": "ToList",
+                                "operand": {
+                                    "type": "ToList",
+                                    "operand": {
+                                        "localId": "341",
+                                        "type": "Tuple",
+                                        "element": [
+                                            {
+                                                "name": "Procedure",
+                                                "value": {
+                                                    "localId": "340",
+                                                    "type": "Tuple",
+                                                    "element": [
+                                                        {
+                                                            "name": "code",
+                                                            "value": {
+                                                                "localId": "339",
+                                                                "name": "Therapeutic Exercise",
+                                                                "type": "ConceptRef"
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            {
+                                "localId": "342",
+                                "name": "Saturation or PP",
+                                "type": "ExpressionRef"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "351",
+                    "name": "Group rest",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "351",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Group rest\"",
+                                            ":\n\t"
+                                        ]
+                                    },
+                                    {
+                                        "r": "350",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{"
+                                                ]
+                                            },
+                                            {
+                                                "r": "345",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "'and'"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n\t    "
+                                                ]
+                                            },
+                                            {
+                                                "r": "348",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "{\n\t    "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Observation\"",
+                                                                    ": "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "r": "347",
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "{\n\t        "
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "\"code\"",
+                                                                                    ":"
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "r": "346",
+                                                                                "s": [
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "'Resting state'"
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "value": [
+                                                                            "\n\t        }"
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            "\n\t    }"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n\t    "
+                                                ]
+                                            },
+                                            {
+                                                "r": "349",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Saturation or PP\""
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n\t}"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "350",
+                        "type": "List",
+                        "element": [
+                            {
+                                "localId": "345",
+                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                "value": "and",
+                                "type": "Literal"
+                            },
+                            {
+                                "localId": "348",
+                                "type": "Tuple",
+                                "element": [
+                                    {
+                                        "name": "Observation",
+                                        "value": {
+                                            "localId": "347",
+                                            "type": "Tuple",
+                                            "element": [
+                                                {
+                                                    "name": "code",
+                                                    "value": {
+                                                        "localId": "346",
+                                                        "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                        "value": "Resting state",
+                                                        "type": "Literal"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "localId": "349",
+                                "name": "Saturation or PP",
+                                "type": "ExpressionRef"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "358",
+                    "name": "Group Awake",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "358",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Group Awake\"",
+                                            ":\n\t"
+                                        ]
+                                    },
+                                    {
+                                        "r": "357",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{"
+                                                ]
+                                            },
+                                            {
+                                                "r": "352",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "'and'"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n\t    "
+                                                ]
+                                            },
+                                            {
+                                                "r": "355",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "{\n\t    "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Observation\"",
+                                                                    ":"
+                                                                ]
+                                                            },
+                                                            {
+                                                                "r": "354",
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "{\n\t        "
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "\"code\"",
+                                                                                    ": "
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "r": "353",
+                                                                                "s": [
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "'Awake'"
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "value": [
+                                                                            "\n\t        }"
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            "\n\t    }"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n\t    "
+                                                ]
+                                            },
+                                            {
+                                                "r": "356",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Saturation or PP\""
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n\t}"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "357",
+                        "type": "List",
+                        "element": [
+                            {
+                                "localId": "352",
+                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                "value": "and",
+                                "type": "Literal"
+                            },
+                            {
+                                "localId": "355",
+                                "type": "Tuple",
+                                "element": [
+                                    {
+                                        "name": "Observation",
+                                        "value": {
+                                            "localId": "354",
+                                            "type": "Tuple",
+                                            "element": [
+                                                {
+                                                    "name": "code",
+                                                    "value": {
+                                                        "localId": "353",
+                                                        "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                        "value": "Awake",
+                                                        "type": "Literal"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "localId": "356",
+                                "name": "Saturation or PP",
+                                "type": "ExpressionRef"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "366",
+                    "name": "Symptoms to hypoxemia",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "366",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Symptoms to hypoxemia\"",
+                                            ":\n//\t{{\"Condition\": \"P pulmonale (finding)\"},{'or'},\n\t"
+                                        ]
+                                    },
+                                    {
+                                        "r": "365",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{"
+                                                ]
+                                            },
+                                            {
+                                                "r": "359",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "'or'"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n        "
+                                                ]
+                                            },
+                                            {
+                                                "r": "360",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"IC8\""
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n        "
+                                                ]
+                                            },
+                                            {
+                                                "r": "361",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"IC9\""
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n        "
+                                                ]
+                                            },
+                                            {
+                                                "r": "362",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"IC12\""
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n        "
+                                                ]
+                                            },
+                                            {
+                                                "r": "363",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"IC13\""
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n        "
+                                                ]
+                                            },
+                                            {
+                                                "r": "364",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"IC7\""
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n\t}"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "365",
+                        "type": "List",
+                        "element": [
+                            {
+                                "localId": "359",
+                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                "value": "or",
+                                "type": "Literal"
+                            },
+                            {
+                                "localId": "360",
+                                "name": "IC8",
+                                "type": "ExpressionRef"
+                            },
+                            {
+                                "localId": "361",
+                                "name": "IC9",
+                                "type": "ExpressionRef"
+                            },
+                            {
+                                "localId": "362",
+                                "name": "IC12",
+                                "type": "ExpressionRef"
+                            },
+                            {
+                                "localId": "363",
+                                "name": "IC13",
+                                "type": "ExpressionRef"
+                            },
+                            {
+                                "localId": "364",
+                                "name": "IC7",
+                                "type": "ExpressionRef"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "373",
+                    "name": "Decrease",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "373",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Decrease\"",
+                                            ":\n\t"
+                                        ]
+                                    },
+                                    {
+                                        "r": "372",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{"
+                                                ]
+                                            },
+                                            {
+                                                "r": "367",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "'and'"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n\t    "
+                                                ]
+                                            },
+                                            {
+                                                "r": "370",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "{"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Observation\"",
+                                                                    ":"
+                                                                ]
+                                                            },
+                                                            {
+                                                                "r": "369",
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "{\n\t        "
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "\"code\"",
+                                                                                    ": "
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "r": "368",
+                                                                                "s": [
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "'Sleeping out'"
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "value": [
+                                                                            "\n\t        }"
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            "\n\t    }"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n\t    "
+                                                ]
+                                            },
+                                            {
+                                                "r": "371",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Saturation or PP\""
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n\t}"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "372",
+                        "type": "List",
+                        "element": [
+                            {
+                                "localId": "367",
+                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                "value": "and",
+                                "type": "Literal"
+                            },
+                            {
+                                "localId": "370",
+                                "type": "Tuple",
+                                "element": [
+                                    {
+                                        "name": "Observation",
+                                        "value": {
+                                            "localId": "369",
+                                            "type": "Tuple",
+                                            "element": [
+                                                {
+                                                    "name": "code",
+                                                    "value": {
+                                                        "localId": "368",
+                                                        "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                        "value": "Sleeping out",
+                                                        "type": "Literal"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "localId": "371",
+                                "name": "Saturation or PP",
+                                "type": "ExpressionRef"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "378",
+                    "name": "Group Sleeping",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "378",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Group Sleeping\"",
+                                            ":\n\t "
+                                        ]
+                                    },
+                                    {
+                                        "r": "377",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{"
+                                                ]
+                                            },
+                                            {
+                                                "r": "374",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "'and'"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n         "
+                                                ]
+                                            },
+                                            {
+                                                "r": "375",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Decrease\""
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n         "
+                                                ]
+                                            },
+                                            {
+                                                "r": "376",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Symptoms to hypoxemia\""
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n\t }"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "377",
+                        "type": "List",
+                        "element": [
+                            {
+                                "localId": "374",
+                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                "value": "and",
+                                "type": "Literal"
+                            },
+                            {
+                                "localId": "375",
+                                "name": "Decrease",
+                                "type": "ExpressionRef"
+                            },
+                            {
+                                "localId": "376",
+                                "name": "Symptoms to hypoxemia",
+                                "type": "ExpressionRef"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "385",
+                    "name": "Group1 Criteria",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "385",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Group1 Criteria\"",
+                                            ":\n\t"
+                                        ]
+                                    },
+                                    {
+                                        "r": "384",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{"
+                                                ]
+                                            },
+                                            {
+                                                "r": "379",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "'or'"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ","
+                                                ]
+                                            },
+                                            {
+                                                "r": "380",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Group Exercise\""
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n\t "
+                                                ]
+                                            },
+                                            {
+                                                "r": "381",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Group rest\""
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n\t "
+                                                ]
+                                            },
+                                            {
+                                                "r": "382",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Group Awake\""
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n\t "
+                                                ]
+                                            },
+                                            {
+                                                "r": "383",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Group Sleeping\""
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "}"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "384",
+                        "type": "List",
+                        "element": [
+                            {
+                                "localId": "379",
+                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                "value": "or",
+                                "type": "Literal"
+                            },
+                            {
+                                "localId": "380",
+                                "name": "Group Exercise",
+                                "type": "ExpressionRef"
+                            },
+                            {
+                                "localId": "381",
+                                "name": "Group rest",
+                                "type": "ExpressionRef"
+                            },
+                            {
+                                "localId": "382",
+                                "name": "Group Awake",
+                                "type": "ExpressionRef"
+                            },
+                            {
+                                "localId": "383",
+                                "name": "Group Sleeping",
+                                "type": "ExpressionRef"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "389",
+                    "name": "PC1",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "389",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"PC1\"",
+                                            ":\n    "
+                                        ]
+                                    },
+                                    {
+                                        "r": "388",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Procedure\"",
+                                                            ": "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "387",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n        "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"code\"",
+                                                                            ": "
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "386",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "\"Other Cardiovascular Procedures\""
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n        }"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n    }"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "388",
+                        "type": "Tuple",
+                        "element": [
+                            {
+                                "name": "Procedure",
+                                "value": {
+                                    "localId": "387",
+                                    "type": "Tuple",
+                                    "element": [
+                                        {
+                                            "name": "code",
+                                            "value": {
+                                                "localId": "386",
+                                                "name": "Other Cardiovascular Procedures",
+                                                "type": "ConceptRef"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "393",
+                    "name": "PC2",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "393",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"PC2\"",
+                                            ":\n    "
+                                        ]
+                                    },
+                                    {
+                                        "r": "392",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Procedure\"",
+                                                            ": "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "391",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n        "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"code\"",
+                                                                            ": "
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "390",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "\"Transthoracic echocardiography\""
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n        }"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n    }"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "392",
+                        "type": "Tuple",
+                        "element": [
+                            {
+                                "name": "Procedure",
+                                "value": {
+                                    "localId": "391",
+                                    "type": "Tuple",
+                                    "element": [
+                                        {
+                                            "name": "code",
+                                            "value": {
+                                                "localId": "390",
+                                                "name": "Transthoracic echocardiography",
+                                                "type": "ConceptRef"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "397",
+                    "name": "PC3",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "397",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"PC3\"",
+                                            ":\n    "
+                                        ]
+                                    },
+                                    {
+                                        "r": "396",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Procedure\"",
+                                                            ": "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "395",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n        "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"code\"",
+                                                                            ": "
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "394",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "\"Hematocrit\""
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n        }"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n    }"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "396",
+                        "type": "Tuple",
+                        "element": [
+                            {
+                                "name": "Procedure",
+                                "value": {
+                                    "localId": "395",
+                                    "type": "Tuple",
+                                    "element": [
+                                        {
+                                            "name": "code",
+                                            "value": {
+                                                "localId": "394",
+                                                "name": "Hematocrit",
+                                                "type": "ConceptRef"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "411",
+                    "name": "Group2 Symptoms",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "411",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Group2 Symptoms\"",
+                                            ":\n\t"
+                                        ]
+                                    },
+                                    {
+                                        "r": "410",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{"
+                                                ]
+                                            },
+                                            {
+                                                "r": "398",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "'and'"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n        "
+                                                ]
+                                            },
+                                            {
+                                                "r": "404",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "{"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "399",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "'or'"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            ",\n            "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "400",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"IC14\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            ",\n            "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "401",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"IC15\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            ",\n            "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "402",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"IC7\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            ",\n        //\t{\"Condition\": \"P pulmonale (finding)\"},{'or'},\n            "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "403",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"IC8\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            "\n        }"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n        "
+                                                ]
+                                            },
+                                            {
+                                                "r": "409",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "{"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "405",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "'or'"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            ",\n             "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "406",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"PC1\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            ",\n             "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "407",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"PC2\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            ",\n             "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "408",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"PC3\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            "\n        }"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n\t }"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "410",
+                        "type": "List",
+                        "element": [
+                            {
+                                "localId": "398",
+                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                "value": "and",
+                                "type": "Literal"
+                            },
+                            {
+                                "localId": "404",
+                                "type": "List",
+                                "element": [
+                                    {
+                                        "localId": "399",
+                                        "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                        "value": "or",
+                                        "type": "Literal"
+                                    },
+                                    {
+                                        "localId": "400",
+                                        "name": "IC14",
+                                        "type": "ExpressionRef"
+                                    },
+                                    {
+                                        "localId": "401",
+                                        "name": "IC15",
+                                        "type": "ExpressionRef"
+                                    },
+                                    {
+                                        "localId": "402",
+                                        "name": "IC7",
+                                        "type": "ExpressionRef"
+                                    },
+                                    {
+                                        "localId": "403",
+                                        "name": "IC8",
+                                        "type": "ExpressionRef"
+                                    }
+                                ]
+                            },
+                            {
+                                "localId": "409",
+                                "type": "List",
+                                "element": [
+                                    {
+                                        "localId": "405",
+                                        "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                        "value": "or",
+                                        "type": "Literal"
+                                    },
+                                    {
+                                        "localId": "406",
+                                        "name": "PC1",
+                                        "type": "ExpressionRef"
+                                    },
+                                    {
+                                        "localId": "407",
+                                        "name": "PC2",
+                                        "type": "ExpressionRef"
+                                    },
+                                    {
+                                        "localId": "408",
+                                        "name": "PC3",
+                                        "type": "ExpressionRef"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "416",
+                    "name": "Group2 Awake",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "416",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Group2 Awake\"",
+                                            ":\n\t"
+                                        ]
+                                    },
+                                    {
+                                        "r": "415",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{"
+                                                ]
+                                            },
+                                            {
+                                                "r": "412",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "'and'"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n        "
+                                                ]
+                                            },
+                                            {
+                                                "r": "413",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Group Awake\""
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n        "
+                                                ]
+                                            },
+                                            {
+                                                "r": "414",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Group2 Symptoms\""
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n\t}"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "415",
+                        "type": "List",
+                        "element": [
+                            {
+                                "localId": "412",
+                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                "value": "and",
+                                "type": "Literal"
+                            },
+                            {
+                                "type": "Query",
+                                "source": [
+                                    {
+                                        "alias": "X",
+                                        "expression": {
+                                            "localId": "413",
+                                            "name": "Group Awake",
+                                            "type": "ExpressionRef"
+                                        }
+                                    }
+                                ],
+                                "return": {
+                                    "distinct": false,
+                                    "expression": {
+                                        "type": "Query",
+                                        "source": [
+                                            {
+                                                "alias": "X",
+                                                "expression": {
+                                                    "name": "X",
+                                                    "type": "AliasRef"
+                                                }
+                                            }
+                                        ],
+                                        "return": {
+                                            "distinct": false,
+                                            "expression": {
+                                                "type": "SingletonFrom",
+                                                "operand": {
+                                                    "name": "X",
+                                                    "type": "AliasRef"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "localId": "414",
+                                "name": "Group2 Symptoms",
+                                "type": "ExpressionRef"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "421",
+                    "name": "Group2 Exercise",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "421",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Group2 Exercise\"",
+                                            ":\n\t"
+                                        ]
+                                    },
+                                    {
+                                        "r": "420",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{"
+                                                ]
+                                            },
+                                            {
+                                                "r": "417",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "'and'"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n        "
+                                                ]
+                                            },
+                                            {
+                                                "r": "418",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Group Exercise\""
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n        "
+                                                ]
+                                            },
+                                            {
+                                                "r": "419",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Group2 Symptoms\""
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n\t}"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "420",
+                        "type": "List",
+                        "element": [
+                            {
+                                "localId": "417",
+                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                "value": "and",
+                                "type": "Literal"
+                            },
+                            {
+                                "type": "Query",
+                                "source": [
+                                    {
+                                        "alias": "X",
+                                        "expression": {
+                                            "localId": "418",
+                                            "name": "Group Exercise",
+                                            "type": "ExpressionRef"
+                                        }
+                                    }
+                                ],
+                                "return": {
+                                    "distinct": false,
+                                    "expression": {
+                                        "type": "Query",
+                                        "source": [
+                                            {
+                                                "alias": "X",
+                                                "expression": {
+                                                    "name": "X",
+                                                    "type": "AliasRef"
+                                                }
+                                            }
+                                        ],
+                                        "return": {
+                                            "distinct": false,
+                                            "expression": {
+                                                "type": "SingletonFrom",
+                                                "operand": {
+                                                    "name": "X",
+                                                    "type": "AliasRef"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "localId": "419",
+                                "name": "Group2 Symptoms",
+                                "type": "ExpressionRef"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "426",
+                    "name": "Group2 Sleep",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "426",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Group2 Sleep\"",
+                                            ":\n\t"
+                                        ]
+                                    },
+                                    {
+                                        "r": "425",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{"
+                                                ]
+                                            },
+                                            {
+                                                "r": "422",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "'and'"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n        "
+                                                ]
+                                            },
+                                            {
+                                                "r": "423",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Decrease\""
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n        "
+                                                ]
+                                            },
+                                            {
+                                                "r": "424",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Group2 Symptoms\""
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n\t}"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "425",
+                        "type": "List",
+                        "element": [
+                            {
+                                "localId": "422",
+                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                "value": "and",
+                                "type": "Literal"
+                            },
+                            {
+                                "type": "Query",
+                                "source": [
+                                    {
+                                        "alias": "X",
+                                        "expression": {
+                                            "localId": "423",
+                                            "name": "Decrease",
+                                            "type": "ExpressionRef"
+                                        }
+                                    }
+                                ],
+                                "return": {
+                                    "distinct": false,
+                                    "expression": {
+                                        "type": "Query",
+                                        "source": [
+                                            {
+                                                "alias": "X",
+                                                "expression": {
+                                                    "name": "X",
+                                                    "type": "AliasRef"
+                                                }
+                                            }
+                                        ],
+                                        "return": {
+                                            "distinct": false,
+                                            "expression": {
+                                                "type": "SingletonFrom",
+                                                "operand": {
+                                                    "name": "X",
+                                                    "type": "AliasRef"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "localId": "424",
+                                "name": "Group2 Symptoms",
+                                "type": "ExpressionRef"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "430",
+                    "name": "Initial Coverage",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "430",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Initial Coverage\"",
+                                            ":\n\t"
+                                        ]
+                                    },
+                                    {
+                                        "r": "429",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{\n\t    "
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Procedure\"",
+                                                            ": "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "428",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n\t        "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"code\"",
+                                                                            ": "
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "427",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "\"Home oxygen therapy (procedure)\""
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n\t    }"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n\t}"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "429",
+                        "type": "Tuple",
+                        "element": [
+                            {
+                                "name": "Procedure",
+                                "value": {
+                                    "localId": "428",
+                                    "type": "Tuple",
+                                    "element": [
+                                        {
+                                            "name": "code",
+                                            "value": {
+                                                "localId": "427",
+                                                "name": "Home oxygen therapy (procedure)",
+                                                "type": "ConceptRef"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "439",
+                    "name": "Group2 Criteria",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "439",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Group2 Criteria\"",
+                                            ":\n\t"
+                                        ]
+                                    },
+                                    {
+                                        "r": "438",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{"
+                                                ]
+                                            },
+                                            {
+                                                "r": "431",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "'and'"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n        "
+                                                ]
+                                            },
+                                            {
+                                                "r": "436",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "{"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "432",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "'or'"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            ",\n            "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "433",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Group2 Awake\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            ",\n            "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "434",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Group2 Exercise\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            ",\n            "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "435",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Group2 Sleep\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            "\n        }"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n        "
+                                                ]
+                                            },
+                                            {
+                                                "r": "437",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Initial Coverage\""
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n    }"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "438",
+                        "type": "List",
+                        "element": [
+                            {
+                                "localId": "431",
+                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                "value": "and",
+                                "type": "Literal"
+                            },
+                            {
+                                "type": "SingletonFrom",
+                                "operand": {
+                                    "type": "SingletonFrom",
+                                    "operand": {
+                                        "type": "SingletonFrom",
+                                        "operand": {
+                                            "type": "SingletonFrom",
+                                            "operand": {
+                                                "localId": "436",
+                                                "type": "List",
+                                                "element": [
+                                                    {
+                                                        "localId": "432",
+                                                        "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                        "value": "or",
+                                                        "type": "Literal"
+                                                    },
+                                                    {
+                                                        "localId": "433",
+                                                        "name": "Group2 Awake",
+                                                        "type": "ExpressionRef"
+                                                    },
+                                                    {
+                                                        "localId": "434",
+                                                        "name": "Group2 Exercise",
+                                                        "type": "ExpressionRef"
+                                                    },
+                                                    {
+                                                        "localId": "435",
+                                                        "name": "Group2 Sleep",
+                                                        "type": "ExpressionRef"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "localId": "437",
+                                "name": "Initial Coverage",
+                                "type": "ExpressionRef"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "443",
+                    "name": "Cluster Headaches",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "443",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Cluster Headaches\"",
+                                            ":\n\t"
+                                        ]
+                                    },
+                                    {
+                                        "r": "442",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{\n\t"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Condition\"",
+                                                            ": "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "441",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n\t    "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"code\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "440",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "\"Cluster headache syndrome, unspecified, not intractable\""
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n\t    }"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n\t}"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "442",
+                        "type": "Tuple",
+                        "element": [
+                            {
+                                "name": "Condition",
+                                "value": {
+                                    "localId": "441",
+                                    "type": "Tuple",
+                                    "element": [
+                                        {
+                                            "name": "code",
+                                            "value": {
+                                                "localId": "440",
+                                                "name": "Cluster headache syndrome, unspecified, not intractable",
+                                                "type": "ConceptRef"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "448",
+                    "name": "Group3 Criteria",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "448",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Group3 Criteria\"",
+                                            ":\n\t"
+                                        ]
+                                    },
+                                    {
+                                        "r": "447",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{"
+                                                ]
+                                            },
+                                            {
+                                                "r": "444",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "'and'"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n        "
+                                                ]
+                                            },
+                                            {
+                                                "r": "445",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Cluster Headaches\""
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n        "
+                                                ]
+                                            },
+                                            {
+                                                "r": "446",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Saturation or PP\""
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n\t}"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "447",
+                        "type": "List",
+                        "element": [
+                            {
+                                "localId": "444",
+                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                "value": "and",
+                                "type": "Literal"
+                            },
+                            {
+                                "localId": "445",
+                                "name": "Cluster Headaches",
+                                "type": "ExpressionRef"
+                            },
+                            {
+                                "localId": "446",
+                                "name": "Saturation or PP",
+                                "type": "ExpressionRef"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "454",
+                    "name": "Group Criteria",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "454",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define  ",
+                                            "\"Group Criteria\"",
+                                            ":\n\t"
+                                        ]
+                                    },
+                                    {
+                                        "r": "453",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{"
+                                                ]
+                                            },
+                                            {
+                                                "r": "449",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "'or'"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n         "
+                                                ]
+                                            },
+                                            {
+                                                "r": "450",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Group1 Criteria\""
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n         "
+                                                ]
+                                            },
+                                            {
+                                                "r": "451",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Group2 Criteria\""
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n         "
+                                                ]
+                                            },
+                                            {
+                                                "r": "452",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Group3 Criteria\""
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n    }"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "453",
+                        "type": "List",
+                        "element": [
+                            {
+                                "localId": "449",
+                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                "value": "or",
+                                "type": "Literal"
+                            },
+                            {
+                                "type": "Query",
+                                "source": [
+                                    {
+                                        "alias": "X",
+                                        "expression": {
+                                            "localId": "450",
+                                            "name": "Group1 Criteria",
+                                            "type": "ExpressionRef"
+                                        }
+                                    }
+                                ],
+                                "return": {
+                                    "distinct": false,
+                                    "expression": {
+                                        "type": "As",
+                                        "operand": {
+                                            "name": "X",
+                                            "type": "AliasRef"
+                                        },
+                                        "asTypeSpecifier": {
+                                            "type": "ListTypeSpecifier",
+                                            "elementType": {
+                                                "type": "ListTypeSpecifier",
+                                                "elementType": {
+                                                    "type": "TupleTypeSpecifier",
+                                                    "element": [
+                                                        {
+                                                            "name": "Procedure",
+                                                            "type": {
+                                                                "type": "TupleTypeSpecifier",
+                                                                "element": [
+                                                                    {
+                                                                        "name": "code",
+                                                                        "type": {
+                                                                            "name": "{urn:hl7-org:elm-types:r1}Concept",
+                                                                            "type": "NamedTypeSpecifier"
+                                                                        }
+                                                                    }
+                                                                ]
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "type": "Query",
+                                "source": [
+                                    {
+                                        "alias": "X",
+                                        "expression": {
+                                            "localId": "451",
+                                            "name": "Group2 Criteria",
+                                            "type": "ExpressionRef"
+                                        }
+                                    }
+                                ],
+                                "return": {
+                                    "distinct": false,
+                                    "expression": {
+                                        "type": "ToList",
+                                        "operand": {
+                                            "type": "ToList",
+                                            "operand": {
+                                                "name": "X",
+                                                "type": "AliasRef"
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "localId": "452",
+                                "name": "Group3 Criteria",
+                                "type": "ExpressionRef"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "463",
+                    "name": "BeneficiaryInformation",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "463",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"BeneficiaryInformation\"",
+                                            ":\n \t"
+                                        ]
+                                    },
+                                    {
+                                        "r": "462",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Patient\"",
+                                                            ":"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "461",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n \t\t\t"
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"name\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "455",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "'Beneficiary Name'"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    ",\n            "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"identifier\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "456",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "'Beneficiary Medicare Number'"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    ",\n            "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"birthDate\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "457",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "'Beneficiary Date of Birth'"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    ",\n            "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"gender\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "458",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "'Beneficiary Gender'"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    ",\n            "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"address\"",
+                                                                            ": "
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "459",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "'Beneficiary Address'"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    ",\n            "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"managingOrganization\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "460",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "'Place of Service'"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n           }"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n     }"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "462",
+                        "type": "Tuple",
+                        "element": [
+                            {
+                                "name": "Patient",
+                                "value": {
+                                    "localId": "461",
+                                    "type": "Tuple",
+                                    "element": [
+                                        {
+                                            "name": "name",
+                                            "value": {
+                                                "localId": "455",
+                                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                "value": "Beneficiary Name",
+                                                "type": "Literal"
+                                            }
+                                        },
+                                        {
+                                            "name": "identifier",
+                                            "value": {
+                                                "localId": "456",
+                                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                "value": "Beneficiary Medicare Number",
+                                                "type": "Literal"
+                                            }
+                                        },
+                                        {
+                                            "name": "birthDate",
+                                            "value": {
+                                                "localId": "457",
+                                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                "value": "Beneficiary Date of Birth",
+                                                "type": "Literal"
+                                            }
+                                        },
+                                        {
+                                            "name": "gender",
+                                            "value": {
+                                                "localId": "458",
+                                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                "value": "Beneficiary Gender",
+                                                "type": "Literal"
+                                            }
+                                        },
+                                        {
+                                            "name": "address",
+                                            "value": {
+                                                "localId": "459",
+                                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                "value": "Beneficiary Address",
+                                                "type": "Literal"
+                                            }
+                                        },
+                                        {
+                                            "name": "managingOrganization",
+                                            "value": {
+                                                "localId": "460",
+                                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                "value": "Place of Service",
+                                                "type": "Literal"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "471",
+                    "name": "Supplier Information",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "471",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Supplier Information\"",
+                                            ":\n    "
+                                        ]
+                                    },
+                                    {
+                                        "r": "470",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"SupplyRequest\"",
+                                                            ":"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "469",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n    \t\t\t"
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"supplier\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "468",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "{\n                    "
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "s": [
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "\"name\"",
+                                                                                            ":"
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "r": "464",
+                                                                                        "s": [
+                                                                                            {
+                                                                                                "value": [
+                                                                                                    "'Supplier Name'"
+                                                                                                ]
+                                                                                            }
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "value": [
+                                                                                    ",\n                    "
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "s": [
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "\"identifier\"",
+                                                                                            ":"
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "r": "465",
+                                                                                        "s": [
+                                                                                            {
+                                                                                                "value": [
+                                                                                                    "' Supplier National Provider Identification'"
+                                                                                                ]
+                                                                                            }
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "value": [
+                                                                                    ",\n                    "
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "s": [
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "\"address\"",
+                                                                                            ":"
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "r": "466",
+                                                                                        "s": [
+                                                                                            {
+                                                                                                "value": [
+                                                                                                    "'Supplier Address'"
+                                                                                                ]
+                                                                                            }
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "value": [
+                                                                                    ",\n                    "
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "s": [
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "\"phone\"",
+                                                                                            ":"
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "r": "467",
+                                                                                        "s": [
+                                                                                            {
+                                                                                                "value": [
+                                                                                                    "'Supplier Phone Number'"
+                                                                                                ]
+                                                                                            }
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "value": [
+                                                                                    "\n                   }"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n               }"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n    }"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "470",
+                        "type": "Tuple",
+                        "element": [
+                            {
+                                "name": "SupplyRequest",
+                                "value": {
+                                    "localId": "469",
+                                    "type": "Tuple",
+                                    "element": [
+                                        {
+                                            "name": "supplier",
+                                            "value": {
+                                                "localId": "468",
+                                                "type": "Tuple",
+                                                "element": [
+                                                    {
+                                                        "name": "name",
+                                                        "value": {
+                                                            "localId": "464",
+                                                            "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                            "value": "Supplier Name",
+                                                            "type": "Literal"
+                                                        }
+                                                    },
+                                                    {
+                                                        "name": "identifier",
+                                                        "value": {
+                                                            "localId": "465",
+                                                            "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                            "value": " Supplier National Provider Identification",
+                                                            "type": "Literal"
+                                                        }
+                                                    },
+                                                    {
+                                                        "name": "address",
+                                                        "value": {
+                                                            "localId": "466",
+                                                            "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                            "value": "Supplier Address",
+                                                            "type": "Literal"
+                                                        }
+                                                    },
+                                                    {
+                                                        "name": "phone",
+                                                        "value": {
+                                                            "localId": "467",
+                                                            "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                            "value": "Supplier Phone Number",
+                                                            "type": "Literal"
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "478",
+                    "name": "RequestorInformation",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "478",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"RequestorInformation\"",
+                                            ":\n\t"
+                                        ]
+                                    },
+                                    {
+                                        "r": "477",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Claim\"",
+                                                            ":\n    \t\t"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "476",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n   \t\t\t"
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"enterer\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "475",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "{\n   \t\t\t    "
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "s": [
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "\"name\"",
+                                                                                            ":"
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "r": "472",
+                                                                                        "s": [
+                                                                                            {
+                                                                                                "value": [
+                                                                                                    "'Contact Name'"
+                                                                                                ]
+                                                                                            }
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "value": [
+                                                                                    ",\n   \t\t\t    "
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "s": [
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "\"phone\"",
+                                                                                            ":"
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "r": "473",
+                                                                                        "s": [
+                                                                                            {
+                                                                                                "value": [
+                                                                                                    "'Telephone Number'"
+                                                                                                ]
+                                                                                            }
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "value": [
+                                                                                    ",\n   \t\t\t    "
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "s": [
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "\"address\"",
+                                                                                            ":"
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "r": "474",
+                                                                                        "s": [
+                                                                                            {
+                                                                                                "value": [
+                                                                                                    "'Address'"
+                                                                                                ]
+                                                                                            }
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "value": [
+                                                                                    "\n   \t\t\t    }"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n   \t\t\t}"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n   \t}"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "477",
+                        "type": "Tuple",
+                        "element": [
+                            {
+                                "name": "Claim",
+                                "value": {
+                                    "localId": "476",
+                                    "type": "Tuple",
+                                    "element": [
+                                        {
+                                            "name": "enterer",
+                                            "value": {
+                                                "localId": "475",
+                                                "type": "Tuple",
+                                                "element": [
+                                                    {
+                                                        "name": "name",
+                                                        "value": {
+                                                            "localId": "472",
+                                                            "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                            "value": "Contact Name",
+                                                            "type": "Literal"
+                                                        }
+                                                    },
+                                                    {
+                                                        "name": "phone",
+                                                        "value": {
+                                                            "localId": "473",
+                                                            "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                            "value": "Telephone Number",
+                                                            "type": "Literal"
+                                                        }
+                                                    },
+                                                    {
+                                                        "name": "address",
+                                                        "value": {
+                                                            "localId": "474",
+                                                            "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                            "value": "Address",
+                                                            "type": "Literal"
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "487",
+                    "name": "OtherInformation",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "487",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"OtherInformation\"",
+                                            ":\n    "
+                                        ]
+                                    },
+                                    {
+                                        "r": "486",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Claim\"",
+                                                            ":"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "485",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n   \t\t    "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"created\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "479",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "'Submission Date'"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    ",\n    \t\t"
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"supportingInfo\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "481",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "{\n    \t\t    "
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "s": [
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "\"code\"",
+                                                                                            ":"
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "r": "480",
+                                                                                        "s": [
+                                                                                            {
+                                                                                                "value": [
+                                                                                                    "'HCPCS Codes'"
+                                                                                                ]
+                                                                                            }
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "value": [
+                                                                                    "\n    \t\t}"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    ",\n    \t\t"
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"diagnosis\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "484",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "{\n                "
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "s": [
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "\"diagnosis\"",
+                                                                                            ":"
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "r": "483",
+                                                                                        "s": [
+                                                                                            {
+                                                                                                "value": [
+                                                                                                    "{\n                    "
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "s": [
+                                                                                                    {
+                                                                                                        "value": [
+                                                                                                            "\"diagnosisCodeableConcept\"",
+                                                                                                            ":"
+                                                                                                        ]
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "r": "482",
+                                                                                                        "s": [
+                                                                                                            {
+                                                                                                                "value": [
+                                                                                                                    "'Diagnosis code'"
+                                                                                                                ]
+                                                                                                            }
+                                                                                                        ]
+                                                                                                    }
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "value": [
+                                                                                                    "\n                    }"
+                                                                                                ]
+                                                                                            }
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "value": [
+                                                                                    "\n                }"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n    \t\t}"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n    }"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "486",
+                        "type": "Tuple",
+                        "element": [
+                            {
+                                "name": "Claim",
+                                "value": {
+                                    "localId": "485",
+                                    "type": "Tuple",
+                                    "element": [
+                                        {
+                                            "name": "created",
+                                            "value": {
+                                                "localId": "479",
+                                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                "value": "Submission Date",
+                                                "type": "Literal"
+                                            }
+                                        },
+                                        {
+                                            "name": "supportingInfo",
+                                            "value": {
+                                                "localId": "481",
+                                                "type": "Tuple",
+                                                "element": [
+                                                    {
+                                                        "name": "code",
+                                                        "value": {
+                                                            "localId": "480",
+                                                            "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                            "value": "HCPCS Codes",
+                                                            "type": "Literal"
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "name": "diagnosis",
+                                            "value": {
+                                                "localId": "484",
+                                                "type": "Tuple",
+                                                "element": [
+                                                    {
+                                                        "name": "diagnosis",
+                                                        "value": {
+                                                            "localId": "483",
+                                                            "type": "Tuple",
+                                                            "element": [
+                                                                {
+                                                                    "name": "diagnosisCodeableConcept",
+                                                                    "value": {
+                                                                        "localId": "482",
+                                                                        "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                                        "value": "Diagnosis code",
+                                                                        "type": "Literal"
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "493",
+                    "name": "DocumentsInForm1",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "493",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"DocumentsInForm1\"",
+                                            ":\n    "
+                                        ]
+                                    },
+                                    {
+                                        "r": "492",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"FormRequest\"",
+                                                            ":"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "491",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n\t\t       "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"checkbox\"",
+                                                                            ": "
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "488",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "'Indicate if the request is an initial or resubmission review'"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    ",\n\t\t       "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"text\"",
+                                                                            ": "
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "489",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "'Indicate if the request is expedited and the reason why'"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    ",\n\t\t       "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"number\"",
+                                                                            ": "
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "490",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "'Supplier National Supplier Clearinghouse (NSC) Number'"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n\t\t    }"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n\t}"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "492",
+                        "type": "Tuple",
+                        "element": [
+                            {
+                                "name": "FormRequest",
+                                "value": {
+                                    "localId": "491",
+                                    "type": "Tuple",
+                                    "element": [
+                                        {
+                                            "name": "checkbox",
+                                            "value": {
+                                                "localId": "488",
+                                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                "value": "Indicate if the request is an initial or resubmission review",
+                                                "type": "Literal"
+                                            }
+                                        },
+                                        {
+                                            "name": "text",
+                                            "value": {
+                                                "localId": "489",
+                                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                "value": "Indicate if the request is expedited and the reason why",
+                                                "type": "Literal"
+                                            }
+                                        },
+                                        {
+                                            "name": "number",
+                                            "value": {
+                                                "localId": "490",
+                                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                "value": "Supplier National Supplier Clearinghouse (NSC) Number",
+                                                "type": "Literal"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "516",
+                    "name": "WOPD Details Required",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "516",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"WOPD Details Required\"",
+                                            ":\n \t"
+                                        ]
+                                    },
+                                    {
+                                        "r": "515",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Claim\"",
+                                                            ":"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "511",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n     \t"
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"patient\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "496",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "{\n            "
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "s": [
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "\"name\"",
+                                                                                            ":"
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "r": "495",
+                                                                                        "s": [
+                                                                                            {
+                                                                                                "r": "494",
+                                                                                                "s": [
+                                                                                                    {
+                                                                                                        "value": [
+                                                                                                            "Patient"
+                                                                                                        ]
+                                                                                                    }
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "value": [
+                                                                                                    "."
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "r": "495",
+                                                                                                "s": [
+                                                                                                    {
+                                                                                                        "value": [
+                                                                                                            "name"
+                                                                                                        ]
+                                                                                                    }
+                                                                                                ]
+                                                                                            }
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "value": [
+                                                                                    "\n            }"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    ",\n        "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"provider\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "499",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "{\n            "
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "s": [
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "\"name\"",
+                                                                                            ":"
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "r": "497",
+                                                                                        "s": [
+                                                                                            {
+                                                                                                "value": [
+                                                                                                    "'Physician or Practitioner Name'"
+                                                                                                ]
+                                                                                            }
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "value": [
+                                                                                    ",\n            "
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "s": [
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "\"identifier\"",
+                                                                                            ":"
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "r": "498",
+                                                                                        "s": [
+                                                                                            {
+                                                                                                "value": [
+                                                                                                    "'Practitioner National Provider Identifier (NPI)'"
+                                                                                                ]
+                                                                                            }
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "value": [
+                                                                                    "\n            }"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    ",\n        "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"item\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "507",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "{\n                "
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "s": [
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "\"detail\"",
+                                                                                            ":"
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "r": "500",
+                                                                                        "s": [
+                                                                                            {
+                                                                                                "value": [
+                                                                                                    "'Description of the item ordered'"
+                                                                                                ]
+                                                                                            }
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "value": [
+                                                                                    ",\n                "
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "s": [
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "\"encounter\"",
+                                                                                            ":"
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "r": "503",
+                                                                                        "s": [
+                                                                                            {
+                                                                                                "value": [
+                                                                                                    "{\n                    "
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "s": [
+                                                                                                    {
+                                                                                                        "value": [
+                                                                                                            "\"period\"",
+                                                                                                            ":"
+                                                                                                        ]
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "r": "502",
+                                                                                                        "s": [
+                                                                                                            {
+                                                                                                                "value": [
+                                                                                                                    "{\n                        "
+                                                                                                                ]
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "s": [
+                                                                                                                    {
+                                                                                                                        "value": [
+                                                                                                                            "\"end\"",
+                                                                                                                            ":"
+                                                                                                                        ]
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "r": "501",
+                                                                                                                        "s": [
+                                                                                                                            {
+                                                                                                                                "value": [
+                                                                                                                                    "'Date of the face-to-face examination'"
+                                                                                                                                ]
+                                                                                                                            }
+                                                                                                                        ]
+                                                                                                                    }
+                                                                                                                ]
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "value": [
+                                                                                                                    "\n                    }"
+                                                                                                                ]
+                                                                                                            }
+                                                                                                        ]
+                                                                                                    }
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "value": [
+                                                                                                    "\n                }"
+                                                                                                ]
+                                                                                            }
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "value": [
+                                                                                    ",\n                "
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "s": [
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "\"udi\"",
+                                                                                            ":"
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "r": "506",
+                                                                                        "s": [
+                                                                                            {
+                                                                                                "value": [
+                                                                                                    "{\n                    "
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "s": [
+                                                                                                    {
+                                                                                                        "value": [
+                                                                                                            "\"specialization\"",
+                                                                                                            ":"
+                                                                                                        ]
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "r": "504",
+                                                                                                        "s": [
+                                                                                                            {
+                                                                                                                "value": [
+                                                                                                                    "'Durable medical equipment  guidance'"
+                                                                                                                ]
+                                                                                                            }
+                                                                                                        ]
+                                                                                                    }
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "value": [
+                                                                                                    ",\n                    "
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "s": [
+                                                                                                    {
+                                                                                                        "value": [
+                                                                                                            "\"property\"",
+                                                                                                            ":"
+                                                                                                        ]
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "r": "505",
+                                                                                                        "s": [
+                                                                                                            {
+                                                                                                                "value": [
+                                                                                                                    "'Durable medical equipment education'"
+                                                                                                                ]
+                                                                                                            }
+                                                                                                        ]
+                                                                                                    }
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "value": [
+                                                                                                    "\n                }"
+                                                                                                ]
+                                                                                            }
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "value": [
+                                                                                    "\n            }"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    ",\n        "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"diagnosis\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "510",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "{\n            "
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "s": [
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "\"diagnosis\"",
+                                                                                            ":"
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "r": "509",
+                                                                                        "s": [
+                                                                                            {
+                                                                                                "value": [
+                                                                                                    "{\n                "
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "s": [
+                                                                                                    {
+                                                                                                        "value": [
+                                                                                                            "\"diagnosisReference\"",
+                                                                                                            ":"
+                                                                                                        ]
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "r": "508",
+                                                                                                        "s": [
+                                                                                                            {
+                                                                                                                "value": [
+                                                                                                                    "'Pertinent diagnoses/conditions that relate to the need for the item ordered'"
+                                                                                                                ]
+                                                                                                            }
+                                                                                                        ]
+                                                                                                    }
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "value": [
+                                                                                                    "\n                }"
+                                                                                                ]
+                                                                                            }
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "value": [
+                                                                                    "\n            }"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n        }"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n    //Signature has to be linked to the Physician attribute in Claim\n    "
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Signature\"",
+                                                            ":"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "514",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n        "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"who\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "512",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "'Physician signature'"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    ",\n        "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"when\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "513",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "'Date of physician signature'"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n        }"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n    }"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "515",
+                        "type": "Tuple",
+                        "element": [
+                            {
+                                "name": "Claim",
+                                "value": {
+                                    "localId": "511",
+                                    "type": "Tuple",
+                                    "element": [
+                                        {
+                                            "name": "patient",
+                                            "value": {
+                                                "localId": "496",
+                                                "type": "Tuple",
+                                                "element": [
+                                                    {
+                                                        "name": "name",
+                                                        "value": {
+                                                            "localId": "495",
+                                                            "path": "name",
+                                                            "type": "Property",
+                                                            "source": {
+                                                                "localId": "494",
+                                                                "name": "Patient",
+                                                                "type": "ExpressionRef"
+                                                            }
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "name": "provider",
+                                            "value": {
+                                                "localId": "499",
+                                                "type": "Tuple",
+                                                "element": [
+                                                    {
+                                                        "name": "name",
+                                                        "value": {
+                                                            "localId": "497",
+                                                            "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                            "value": "Physician or Practitioner Name",
+                                                            "type": "Literal"
+                                                        }
+                                                    },
+                                                    {
+                                                        "name": "identifier",
+                                                        "value": {
+                                                            "localId": "498",
+                                                            "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                            "value": "Practitioner National Provider Identifier (NPI)",
+                                                            "type": "Literal"
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "name": "item",
+                                            "value": {
+                                                "localId": "507",
+                                                "type": "Tuple",
+                                                "element": [
+                                                    {
+                                                        "name": "detail",
+                                                        "value": {
+                                                            "localId": "500",
+                                                            "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                            "value": "Description of the item ordered",
+                                                            "type": "Literal"
+                                                        }
+                                                    },
+                                                    {
+                                                        "name": "encounter",
+                                                        "value": {
+                                                            "localId": "503",
+                                                            "type": "Tuple",
+                                                            "element": [
+                                                                {
+                                                                    "name": "period",
+                                                                    "value": {
+                                                                        "localId": "502",
+                                                                        "type": "Tuple",
+                                                                        "element": [
+                                                                            {
+                                                                                "name": "end",
+                                                                                "value": {
+                                                                                    "localId": "501",
+                                                                                    "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                                                    "value": "Date of the face-to-face examination",
+                                                                                    "type": "Literal"
+                                                                                }
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    },
+                                                    {
+                                                        "name": "udi",
+                                                        "value": {
+                                                            "localId": "506",
+                                                            "type": "Tuple",
+                                                            "element": [
+                                                                {
+                                                                    "name": "specialization",
+                                                                    "value": {
+                                                                        "localId": "504",
+                                                                        "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                                        "value": "Durable medical equipment  guidance",
+                                                                        "type": "Literal"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "name": "property",
+                                                                    "value": {
+                                                                        "localId": "505",
+                                                                        "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                                        "value": "Durable medical equipment education",
+                                                                        "type": "Literal"
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "name": "diagnosis",
+                                            "value": {
+                                                "localId": "510",
+                                                "type": "Tuple",
+                                                "element": [
+                                                    {
+                                                        "name": "diagnosis",
+                                                        "value": {
+                                                            "localId": "509",
+                                                            "type": "Tuple",
+                                                            "element": [
+                                                                {
+                                                                    "name": "diagnosisReference",
+                                                                    "value": {
+                                                                        "localId": "508",
+                                                                        "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                                        "value": "Pertinent diagnoses/conditions that relate to the need for the item ordered",
+                                                                        "type": "Literal"
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "name": "Signature",
+                                "value": {
+                                    "localId": "514",
+                                    "type": "Tuple",
+                                    "element": [
+                                        {
+                                            "name": "who",
+                                            "value": {
+                                                "localId": "512",
+                                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                "value": "Physician signature",
+                                                "type": "Literal"
+                                            }
+                                        },
+                                        {
+                                            "name": "when",
+                                            "value": {
+                                                "localId": "513",
+                                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                "value": "Date of physician signature",
+                                                "type": "Literal"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "520",
+                    "name": "EC1",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "520",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"EC1\"",
+                                            ":\n   "
+                                        ]
+                                    },
+                                    {
+                                        "r": "519",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Encounter\"",
+                                                            ":"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "518",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n    \t\t"
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"type\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "517",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "\"Prolonged Services With Direct Face-to-Face Patient Contact 99354\""
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n\n    \t\t}"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n    }"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "519",
+                        "type": "Tuple",
+                        "element": [
+                            {
+                                "name": "Encounter",
+                                "value": {
+                                    "localId": "518",
+                                    "type": "Tuple",
+                                    "element": [
+                                        {
+                                            "name": "type",
+                                            "value": {
+                                                "localId": "517",
+                                                "name": "Prolonged Services With Direct Face-to-Face Patient Contact 99354",
+                                                "type": "ConceptRef"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "524",
+                    "name": "EC2",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "524",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"EC2\"",
+                                            ":\n   "
+                                        ]
+                                    },
+                                    {
+                                        "r": "523",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Encounter\"",
+                                                            ":"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "522",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n    \t\t"
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"type\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "521",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "\"Prolonged Services With Direct Face-to-Face Patient Contact 99355\""
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n\n    \t\t}"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n    }"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "523",
+                        "type": "Tuple",
+                        "element": [
+                            {
+                                "name": "Encounter",
+                                "value": {
+                                    "localId": "522",
+                                    "type": "Tuple",
+                                    "element": [
+                                        {
+                                            "name": "type",
+                                            "value": {
+                                                "localId": "521",
+                                                "name": "Prolonged Services With Direct Face-to-Face Patient Contact 99355",
+                                                "type": "ConceptRef"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "528",
+                    "name": "EC3",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "528",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"EC3\"",
+                                            ":\n   "
+                                        ]
+                                    },
+                                    {
+                                        "r": "527",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Encounter\"",
+                                                            ":"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "526",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n    \t\t"
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"type\"",
+                                                                            ":\n    \t\t\t"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "525",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "\"Prolonged Services With Direct Face-to-Face Patient Contact 99356\""
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n\n    \t\t}"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n    }"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "527",
+                        "type": "Tuple",
+                        "element": [
+                            {
+                                "name": "Encounter",
+                                "value": {
+                                    "localId": "526",
+                                    "type": "Tuple",
+                                    "element": [
+                                        {
+                                            "name": "type",
+                                            "value": {
+                                                "localId": "525",
+                                                "name": "Prolonged Services With Direct Face-to-Face Patient Contact 99356",
+                                                "type": "ConceptRef"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "532",
+                    "name": "EC4",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "532",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"EC4\"",
+                                            ":\n   "
+                                        ]
+                                    },
+                                    {
+                                        "r": "531",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Encounter\"",
+                                                            ":"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "530",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n    \t\t"
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"type\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "529",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "\"Prolonged Services With Direct Face-to-Face Patient Contact 99357\""
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n\n    \t\t}"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n    }"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "531",
+                        "type": "Tuple",
+                        "element": [
+                            {
+                                "name": "Encounter",
+                                "value": {
+                                    "localId": "530",
+                                    "type": "Tuple",
+                                    "element": [
+                                        {
+                                            "name": "type",
+                                            "value": {
+                                                "localId": "529",
+                                                "name": "Prolonged Services With Direct Face-to-Face Patient Contact 99357",
+                                                "type": "ConceptRef"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "536",
+                    "name": "Encounter1",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "536",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Encounter1\"",
+                                            ":\n\t "
+                                        ]
+                                    },
+                                    {
+                                        "r": "535",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Encounter\"",
+                                                            ":"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "534",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n        \t"
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"participant\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "533",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "'Physician'"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n\n        \t\t}"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n    \t}"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "535",
+                        "type": "Tuple",
+                        "element": [
+                            {
+                                "name": "Encounter",
+                                "value": {
+                                    "localId": "534",
+                                    "type": "Tuple",
+                                    "element": [
+                                        {
+                                            "name": "participant",
+                                            "value": {
+                                                "localId": "533",
+                                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                "value": "Physician",
+                                                "type": "Literal"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "540",
+                    "name": "Encounter2",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "540",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Encounter2\"",
+                                            ":\n\t "
+                                        ]
+                                    },
+                                    {
+                                        "r": "539",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Encounter\"",
+                                                            ":"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "538",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n        \t"
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"participant\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "537",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "'Nurse Practitioner (NP)'"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n\n        \t\t}"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n    \t}"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "539",
+                        "type": "Tuple",
+                        "element": [
+                            {
+                                "name": "Encounter",
+                                "value": {
+                                    "localId": "538",
+                                    "type": "Tuple",
+                                    "element": [
+                                        {
+                                            "name": "participant",
+                                            "value": {
+                                                "localId": "537",
+                                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                "value": "Nurse Practitioner (NP)",
+                                                "type": "Literal"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "544",
+                    "name": "Encounter3",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "544",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Encounter3\"",
+                                            ":\n    "
+                                        ]
+                                    },
+                                    {
+                                        "r": "543",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Encounter\"",
+                                                            ":"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "542",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n        \t"
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"participant\"",
+                                                                            ":\n            \t\t\t"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "541",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "'Clinical Nurse Specialist (CNS)'"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n\n            \t}"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n    }"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "543",
+                        "type": "Tuple",
+                        "element": [
+                            {
+                                "name": "Encounter",
+                                "value": {
+                                    "localId": "542",
+                                    "type": "Tuple",
+                                    "element": [
+                                        {
+                                            "name": "participant",
+                                            "value": {
+                                                "localId": "541",
+                                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                "value": "Clinical Nurse Specialist (CNS)",
+                                                "type": "Literal"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "548",
+                    "name": "Encounter4",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "548",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Encounter4\"",
+                                            ":\n    "
+                                        ]
+                                    },
+                                    {
+                                        "r": "547",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Encounter\"",
+                                                            ":"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "546",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n        \t"
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"participant\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "545",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "' Physician Assistant (PA)'"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n\n            \t}"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n    }"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "547",
+                        "type": "Tuple",
+                        "element": [
+                            {
+                                "name": "Encounter",
+                                "value": {
+                                    "localId": "546",
+                                    "type": "Tuple",
+                                    "element": [
+                                        {
+                                            "name": "participant",
+                                            "value": {
+                                                "localId": "545",
+                                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                "value": " Physician Assistant (PA)",
+                                                "type": "Literal"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "563",
+                    "name": "EncounterConduct",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "563",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"EncounterConduct\"",
+                                            ":\n    "
+                                        ]
+                                    },
+                                    {
+                                        "r": "562",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{"
+                                                ]
+                                            },
+                                            {
+                                                "r": "549",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "'and'"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n        "
+                                                ]
+                                            },
+                                            {
+                                                "r": "555",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "{"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "550",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "'or'"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            ",\n            "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "551",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"EC1\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            ",\n            "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "552",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"EC2\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            ",\n            "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "553",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"EC3\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            ",\n            "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "554",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"EC4\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            "\n\t\t}"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n\t\t"
+                                                ]
+                                            },
+                                            {
+                                                "r": "561",
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "{"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "556",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "'or'"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            ",\n            "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "557",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Encounter1\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            ",\n            "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "558",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Encounter2\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            ",\n            "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "559",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Encounter3\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            ",\n            "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "560",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Encounter4\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "value": [
+                                                            "\n\t    }"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n\n    }"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "562",
+                        "type": "List",
+                        "element": [
+                            {
+                                "localId": "549",
+                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                "value": "and",
+                                "type": "Literal"
+                            },
+                            {
+                                "localId": "555",
+                                "type": "List",
+                                "element": [
+                                    {
+                                        "localId": "550",
+                                        "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                        "value": "or",
+                                        "type": "Literal"
+                                    },
+                                    {
+                                        "localId": "551",
+                                        "name": "EC1",
+                                        "type": "ExpressionRef"
+                                    },
+                                    {
+                                        "localId": "552",
+                                        "name": "EC2",
+                                        "type": "ExpressionRef"
+                                    },
+                                    {
+                                        "localId": "553",
+                                        "name": "EC3",
+                                        "type": "ExpressionRef"
+                                    },
+                                    {
+                                        "localId": "554",
+                                        "name": "EC4",
+                                        "type": "ExpressionRef"
+                                    }
+                                ]
+                            },
+                            {
+                                "localId": "561",
+                                "type": "List",
+                                "element": [
+                                    {
+                                        "localId": "556",
+                                        "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                        "value": "or",
+                                        "type": "Literal"
+                                    },
+                                    {
+                                        "localId": "557",
+                                        "name": "Encounter1",
+                                        "type": "ExpressionRef"
+                                    },
+                                    {
+                                        "localId": "558",
+                                        "name": "Encounter2",
+                                        "type": "ExpressionRef"
+                                    },
+                                    {
+                                        "localId": "559",
+                                        "name": "Encounter3",
+                                        "type": "ExpressionRef"
+                                    },
+                                    {
+                                        "localId": "560",
+                                        "name": "Encounter4",
+                                        "type": "ExpressionRef"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "569",
+                    "name": "DocumentsInForm2",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "569",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"DocumentsInForm2\"",
+                                            ":\n    "
+                                        ]
+                                    },
+                                    {
+                                        "r": "568",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"FormRequest\"",
+                                                            ":"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "567",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n\t\t       "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"checkbox\"",
+                                                                            ": "
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "564",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "'if portable oxygen is needed or not'"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    ",\n\t\t       "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"text\"",
+                                                                            ": "
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "565",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "'If portable oxygen is needed, an indication that he or she is mobile within the home'"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    ",\n\t\t       "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"text-type\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "566",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "'Prognosis'"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n\t\t    }"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n\t}"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "568",
+                        "type": "Tuple",
+                        "element": [
+                            {
+                                "name": "FormRequest",
+                                "value": {
+                                    "localId": "567",
+                                    "type": "Tuple",
+                                    "element": [
+                                        {
+                                            "name": "checkbox",
+                                            "value": {
+                                                "localId": "564",
+                                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                "value": "if portable oxygen is needed or not",
+                                                "type": "Literal"
+                                            }
+                                        },
+                                        {
+                                            "name": "text",
+                                            "value": {
+                                                "localId": "565",
+                                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                "value": "If portable oxygen is needed, an indication that he or she is mobile within the home",
+                                                "type": "Literal"
+                                            }
+                                        },
+                                        {
+                                            "name": "text-type",
+                                            "value": {
+                                                "localId": "566",
+                                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                "value": "Prognosis",
+                                                "type": "Literal"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "587",
+                    "name": "Medical Record",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "587",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Medical Record\"",
+                                            ":\n \t"
+                                        ]
+                                    },
+                                    {
+                                        "r": "586",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Condition\"",
+                                                            ":"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "585",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n     \t"
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"code\"",
+                                                                            ": "
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "570",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "\"Primary diagnosis\""
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    ",\n        "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"onset\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "572",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "{\n            "
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "s": [
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "\"onsetPeriod\"",
+                                                                                            ":"
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "r": "571",
+                                                                                        "s": [
+                                                                                            {
+                                                                                                "value": [
+                                                                                                    "'Duration of condition'"
+                                                                                                ]
+                                                                                            }
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "value": [
+                                                                                    "\n            }"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    ",\n        "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"abatement\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "574",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "{\n            "
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "s": [
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "\"abatementPeriod\"",
+                                                                                            ":"
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "r": "573",
+                                                                                        "s": [
+                                                                                            {
+                                                                                                "value": [
+                                                                                                    "'Duration of condition'"
+                                                                                                ]
+                                                                                            }
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "value": [
+                                                                                    "\n            }"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    ",\n        "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"clinicalStatus\"",
+                                                                            ": "
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "575",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "'Clinical course (worsening or improving)'"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    ",\n        "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"stage\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "583",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "{\n                "
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "s": [
+                                                                                    {
+                                                                                        "value": [
+                                                                                            "\"assessment\"",
+                                                                                            ":"
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "r": "582",
+                                                                                        "s": [
+                                                                                            {
+                                                                                                "value": [
+                                                                                                    "{\n                    "
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "s": [
+                                                                                                    {
+                                                                                                        "value": [
+                                                                                                            "\"code\"",
+                                                                                                            ":"
+                                                                                                        ]
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "r": "576",
+                                                                                                        "s": [
+                                                                                                            {
+                                                                                                                "value": [
+                                                                                                                    "\"Arterial Blood Gas With Oxyhemoglobin\""
+                                                                                                                ]
+                                                                                                            }
+                                                                                                        ]
+                                                                                                    }
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "value": [
+                                                                                                    ",\n                    "
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "s": [
+                                                                                                    {
+                                                                                                        "value": [
+                                                                                                            "\"conclusion\"",
+                                                                                                            ": "
+                                                                                                        ]
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "r": "577",
+                                                                                                        "s": [
+                                                                                                            {
+                                                                                                                "value": [
+                                                                                                                    "'Results of the blood gas study'"
+                                                                                                                ]
+                                                                                                            }
+                                                                                                        ]
+                                                                                                    }
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "value": [
+                                                                                                    ",\n                    "
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "s": [
+                                                                                                    {
+                                                                                                        "value": [
+                                                                                                            "\"focus\"",
+                                                                                                            ": "
+                                                                                                        ]
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "r": "578",
+                                                                                                        "s": [
+                                                                                                            {
+                                                                                                                "value": [
+                                                                                                                    "'Nature and extent of functional limitations'"
+                                                                                                                ]
+                                                                                                            }
+                                                                                                        ]
+                                                                                                    }
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "value": [
+                                                                                                    ",\n                    "
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "s": [
+                                                                                                    {
+                                                                                                        "value": [
+                                                                                                            "\"device\"",
+                                                                                                            ":"
+                                                                                                        ]
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "r": "580",
+                                                                                                        "s": [
+                                                                                                            {
+                                                                                                                "value": [
+                                                                                                                    "{\n                        "
+                                                                                                                ]
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "s": [
+                                                                                                                    {
+                                                                                                                        "value": [
+                                                                                                                            "\"note\"",
+                                                                                                                            ":"
+                                                                                                                        ]
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "r": "579",
+                                                                                                                        "s": [
+                                                                                                                            {
+                                                                                                                                "value": [
+                                                                                                                                    "'Past experience with related items'"
+                                                                                                                                ]
+                                                                                                                            }
+                                                                                                                        ]
+                                                                                                                    }
+                                                                                                                ]
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "value": [
+                                                                                                                    "\n                        }"
+                                                                                                                ]
+                                                                                                            }
+                                                                                                        ]
+                                                                                                    }
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "value": [
+                                                                                                    ",\n                    "
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "s": [
+                                                                                                    {
+                                                                                                        "value": [
+                                                                                                            "\"note\"",
+                                                                                                            ": "
+                                                                                                        ]
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "r": "581",
+                                                                                                        "s": [
+                                                                                                            {
+                                                                                                                "value": [
+                                                                                                                    "'Other therapeutic interventions and results'"
+                                                                                                                ]
+                                                                                                            }
+                                                                                                        ]
+                                                                                                    }
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "value": [
+                                                                                                    "\n                    }"
+                                                                                                ]
+                                                                                            }
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "value": [
+                                                                                    "\n                }"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    ",\n        "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"note\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "584",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "'Other pertinent information'"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n        }"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n    }"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "586",
+                        "type": "Tuple",
+                        "element": [
+                            {
+                                "name": "Condition",
+                                "value": {
+                                    "localId": "585",
+                                    "type": "Tuple",
+                                    "element": [
+                                        {
+                                            "name": "code",
+                                            "value": {
+                                                "localId": "570",
+                                                "name": "Primary diagnosis",
+                                                "type": "ConceptRef"
+                                            }
+                                        },
+                                        {
+                                            "name": "onset",
+                                            "value": {
+                                                "localId": "572",
+                                                "type": "Tuple",
+                                                "element": [
+                                                    {
+                                                        "name": "onsetPeriod",
+                                                        "value": {
+                                                            "localId": "571",
+                                                            "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                            "value": "Duration of condition",
+                                                            "type": "Literal"
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "name": "abatement",
+                                            "value": {
+                                                "localId": "574",
+                                                "type": "Tuple",
+                                                "element": [
+                                                    {
+                                                        "name": "abatementPeriod",
+                                                        "value": {
+                                                            "localId": "573",
+                                                            "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                            "value": "Duration of condition",
+                                                            "type": "Literal"
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "name": "clinicalStatus",
+                                            "value": {
+                                                "localId": "575",
+                                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                "value": "Clinical course (worsening or improving)",
+                                                "type": "Literal"
+                                            }
+                                        },
+                                        {
+                                            "name": "stage",
+                                            "value": {
+                                                "localId": "583",
+                                                "type": "Tuple",
+                                                "element": [
+                                                    {
+                                                        "name": "assessment",
+                                                        "value": {
+                                                            "localId": "582",
+                                                            "type": "Tuple",
+                                                            "element": [
+                                                                {
+                                                                    "name": "code",
+                                                                    "value": {
+                                                                        "localId": "576",
+                                                                        "name": "Arterial Blood Gas With Oxyhemoglobin",
+                                                                        "type": "ConceptRef"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "name": "conclusion",
+                                                                    "value": {
+                                                                        "localId": "577",
+                                                                        "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                                        "value": "Results of the blood gas study",
+                                                                        "type": "Literal"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "name": "focus",
+                                                                    "value": {
+                                                                        "localId": "578",
+                                                                        "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                                        "value": "Nature and extent of functional limitations",
+                                                                        "type": "Literal"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "name": "device",
+                                                                    "value": {
+                                                                        "localId": "580",
+                                                                        "type": "Tuple",
+                                                                        "element": [
+                                                                            {
+                                                                                "name": "note",
+                                                                                "value": {
+                                                                                    "localId": "579",
+                                                                                    "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                                                    "value": "Past experience with related items",
+                                                                                    "type": "Literal"
+                                                                                }
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "name": "note",
+                                                                    "value": {
+                                                                        "localId": "581",
+                                                                        "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                                        "value": "Other therapeutic interventions and results",
+                                                                        "type": "Literal"
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "name": "note",
+                                            "value": {
+                                                "localId": "584",
+                                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                "value": "Other pertinent information",
+                                                "type": "Literal"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "591",
+                    "name": "Practitioner Signature",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "591",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Practitioner Signature\"",
+                                            ":\n\t"
+                                        ]
+                                    },
+                                    {
+                                        "r": "590",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{"
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"MedicationPrescription\"",
+                                                            ":"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "589",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n\t\t\t"
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"prescriber\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "588",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "'e-prescription containing digital Signature of the Pratitioner and date'"
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n\t\t\t}"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n\t}"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "590",
+                        "type": "Tuple",
+                        "element": [
+                            {
+                                "name": "MedicationPrescription",
+                                "value": {
+                                    "localId": "589",
+                                    "type": "Tuple",
+                                    "element": [
+                                        {
+                                            "name": "prescriber",
+                                            "value": {
+                                                "localId": "588",
+                                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                "value": "e-prescription containing digital Signature of the Pratitioner and date",
+                                                "type": "Literal"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "595",
+                    "name": "Face-to-Face Encounter",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "595",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Face-to-Face Encounter\"",
+                                            ":\n\t"
+                                        ]
+                                    },
+                                    {
+                                        "r": "594",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{\n        "
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Encounter\"",
+                                                            " :"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "592",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"EncounterConduct\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n        "
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"WOPD Document\"",
+                                                            ": "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "593",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"WOPD Details Required\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n\t}"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "594",
+                        "type": "Tuple",
+                        "element": [
+                            {
+                                "name": "Encounter",
+                                "value": {
+                                    "localId": "592",
+                                    "name": "EncounterConduct",
+                                    "type": "ExpressionRef"
+                                }
+                            },
+                            {
+                                "name": "WOPD Document",
+                                "value": {
+                                    "localId": "593",
+                                    "name": "WOPD Details Required",
+                                    "type": "ExpressionRef"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "597",
+                    "name": "PriorAuthorization",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "597",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"PriorAuthorization\"",
+                                            ":\n\t",
+                                            "true"
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "596",
+                        "valueType": "{urn:hl7-org:elm-types:r1}Boolean",
+                        "value": "true",
+                        "type": "Literal"
+                    }
+                },
+                {
+                    "localId": "604",
+                    "name": "PriorAuthorizationRequirements",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "604",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"PriorAuthorizationRequirements\"",
+                                            ":\n   "
+                                        ]
+                                    },
+                                    {
+                                        "r": "603",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{\n        "
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"DocumentsFromFHIR\"",
+                                                            ": "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "602",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n                "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "r": "598",
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"BeneficiaryInformation\""
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    ",\n                "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "r": "599",
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"Supplier Information\""
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    ",\n                "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "r": "600",
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"RequestorInformation\""
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    ",\n                "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "r": "601",
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"OtherInformation\""
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n            }"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n    }"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "603",
+                        "type": "Tuple",
+                        "element": [
+                            {
+                                "name": "DocumentsFromFHIR",
+                                "value": {
+                                    "localId": "602",
+                                    "type": "List",
+                                    "element": [
+                                        {
+                                            "localId": "598",
+                                            "name": "BeneficiaryInformation",
+                                            "type": "ExpressionRef"
+                                        },
+                                        {
+                                            "localId": "599",
+                                            "name": "Supplier Information",
+                                            "type": "ExpressionRef"
+                                        },
+                                        {
+                                            "localId": "600",
+                                            "name": "RequestorInformation",
+                                            "type": "ExpressionRef"
+                                        },
+                                        {
+                                            "localId": "601",
+                                            "name": "OtherInformation",
+                                            "type": "ExpressionRef"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "616",
+                    "name": "Code Requirements",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "616",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Code Requirements\"",
+                                            ":\n    "
+                                        ]
+                                    },
+                                    {
+                                        "r": "615",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{\n        "
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Indications\"",
+                                                            ":"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "606",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n                "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "r": "605",
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"Indications\""
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n            }"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n        "
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Qualifying BloodgasStudy\"",
+                                                            ":"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "608",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n                "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "r": "607",
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"Qualifying BloodgasStudy\""
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n            }"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n        "
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Qualifying Outpatient\"",
+                                                            ":"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "610",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n                "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "r": "609",
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"Qualifying Outpatient\""
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n            }"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n        "
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Alternate Treatment\"",
+                                                            ":"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "612",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n                "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "r": "611",
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"Alternate Treatment\""
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n            }"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n        "
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Group Criteria\"",
+                                                            ":"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "614",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n                "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "r": "613",
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"Group Criteria\""
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n            }"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n    }"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "615",
+                        "type": "Tuple",
+                        "element": [
+                            {
+                                "name": "Indications",
+                                "value": {
+                                    "localId": "606",
+                                    "type": "List",
+                                    "element": [
+                                        {
+                                            "localId": "605",
+                                            "name": "Indications",
+                                            "type": "ExpressionRef"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "name": "Qualifying BloodgasStudy",
+                                "value": {
+                                    "localId": "608",
+                                    "type": "List",
+                                    "element": [
+                                        {
+                                            "localId": "607",
+                                            "name": "Qualifying BloodgasStudy",
+                                            "type": "ExpressionRef"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "name": "Qualifying Outpatient",
+                                "value": {
+                                    "localId": "610",
+                                    "type": "List",
+                                    "element": [
+                                        {
+                                            "localId": "609",
+                                            "name": "Qualifying Outpatient",
+                                            "type": "ExpressionRef"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "name": "Alternate Treatment",
+                                "value": {
+                                    "localId": "612",
+                                    "type": "List",
+                                    "element": [
+                                        {
+                                            "localId": "611",
+                                            "name": "Alternate Treatment",
+                                            "type": "ExpressionRef"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "name": "Group Criteria",
+                                "value": {
+                                    "localId": "614",
+                                    "type": "List",
+                                    "element": [
+                                        {
+                                            "localId": "613",
+                                            "name": "Group Criteria",
+                                            "type": "ExpressionRef"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "localId": "625",
+                    "name": "Requirements",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "annotation": [
+                        {
+                            "type": "Annotation",
+                            "s": {
+                                "r": "625",
+                                "s": [
+                                    {
+                                        "value": [
+                                            "define ",
+                                            "\"Requirements\"",
+                                            ":\n\t"
+                                        ]
+                                    },
+                                    {
+                                        "r": "624",
+                                        "s": [
+                                            {
+                                                "value": [
+                                                    "{\n\t    "
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"Codes\"",
+                                                            ": "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "617",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "\"Code Requirements\""
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n\t    "
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"DocumentsFromFHIR\"",
+                                                            ": "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "620",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n\t            "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"WOPD\"",
+                                                                            ":"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "618",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "\"Face-to-Face Encounter\""
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    ",\n\t            "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"Medical Record\"",
+                                                                            ": "
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "r": "619",
+                                                                        "s": [
+                                                                            {
+                                                                                "value": [
+                                                                                    "\"Medical Record\""
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n\t    }"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    ",\n\t    "
+                                                ]
+                                            },
+                                            {
+                                                "s": [
+                                                    {
+                                                        "value": [
+                                                            "\"InfoFromForm\"",
+                                                            ": "
+                                                        ]
+                                                    },
+                                                    {
+                                                        "r": "623",
+                                                        "s": [
+                                                            {
+                                                                "value": [
+                                                                    "{\n                "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "r": "621",
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"DocumentsInForm1\""
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    ",\n                "
+                                                                ]
+                                                            },
+                                                            {
+                                                                "r": "622",
+                                                                "s": [
+                                                                    {
+                                                                        "value": [
+                                                                            "\"DocumentsInForm2\""
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "value": [
+                                                                    "\n\t    }"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "value": [
+                                                    "\n\t}"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "expression": {
+                        "localId": "624",
+                        "type": "Tuple",
+                        "element": [
+                            {
+                                "name": "Codes",
+                                "value": {
+                                    "localId": "617",
+                                    "name": "Code Requirements",
+                                    "type": "ExpressionRef"
+                                }
+                            },
+                            {
+                                "name": "DocumentsFromFHIR",
+                                "value": {
+                                    "localId": "620",
+                                    "type": "Tuple",
+                                    "element": [
+                                        {
+                                            "name": "WOPD",
+                                            "value": {
+                                                "localId": "618",
+                                                "name": "Face-to-Face Encounter",
+                                                "type": "ExpressionRef"
+                                            }
+                                        },
+                                        {
+                                            "name": "Medical Record",
+                                            "value": {
+                                                "localId": "619",
+                                                "name": "Medical Record",
+                                                "type": "ExpressionRef"
+                                            }
+                                        }
+                                    ]
+                                }	
+                            },
+                            {
+                                "name": "InfoFromForm",
+                                "value": {
+                                    "localId": "623",
+                                    "type": "List",
+                                    "element": [
+                                        {
+                                            "localId": "621",
+                                            "name": "DocumentsInForm1",
+                                            "type": "ExpressionRef"
+                                        },
+                                        {
+                                            "localId": "622",
+                                            "name": "DocumentsInForm2",
+                                            "type": "ExpressionRef"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

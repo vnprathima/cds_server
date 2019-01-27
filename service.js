@@ -90,7 +90,9 @@ exports.executeCql = function (req, res, ) {
                     if (postBody.request_for == 'requirements'){
                         console.log("\tRequirements:", result.Requirements);
                         if(result.hasOwnProperty("PriorAuthorization")){
-                            res.end(JSON.stringify({"requirements":result.Requirements,"prior_authorization":result.PriorAuthorization}) + '\n');
+                            res.end(JSON.stringify({"requirements":result.Requirements,
+                            "prior_authorization":result.PriorAuthorization,
+                            "pa_requirements":result.PriorAuthorizationRequirements}) + '\n');
                         } else {
                             res.end(JSON.stringify({"requirements":result.Requirements}) + '\n');
                         }
@@ -101,6 +103,7 @@ exports.executeCql = function (req, res, ) {
                 }
             })
             .catch( (err) => {
+                console.log(err);
                 // There was an error downloading the value sets!
                 res.end('Error Processing cql !!',err);
             });
