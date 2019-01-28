@@ -10,8 +10,8 @@ using FHIR version '1.8'
 //concept conceptName : {codeName1, codeName2, etc} display 'displayName'
 //parameter parameterName (dataType or default value)
 
-codesystem "ICD10CM" : '2.16.840.1.113883.6.90'
-codesystem "CPT" : '2.16.840.1.113883.6.12'
+codesystem "CPT":'https://www.aapc.com/resources/medical-coding/cpt.aspx'
+codesystem "ICD10CM":'https://www.cdc.gov/nchs/icd/icd10cm.htm'
 
 /*valueset "Caisson disease [decompression sickness], initial encounter" : '2.16.840.1.113883.3.3157.1411'
 valueset "Air embolism following infusion, transfusion and therapeutic injection, initial encounter" : '2.16.840.1.113883.3.3157.1411'
@@ -87,6 +87,7 @@ code "Emphysema, unspecified code": 'J43.9' from "ICD10CM" display 'Pulmonary em
 code "Cardiogenic shock code" : 'R57.0' from "ICD10CM" display 'Cardiogenic shock'
 code "Multiple sclerosis code": 'G35' from "ICD10CM" display 'Multiple sclerosis'
 code "Cerebral edema code": 'G93.6' from "ICD10CM" display 'Cerebral edema'
+code "Other specified cerebrovascular diseases code":'I67.8' from "ICD10CM" display 'Other specified cerebrovascular diseases'
 
 concept "Physician attendance and supervision of hyperbaric oxygen therapy, per session":{"Physician attendance and supervision of hyperbaric oxygen therapy, per session code"} display 'Physician attendance and supervision of hyperbaric oxygen therapy, per session'
 concept "Unspecified osteoarthritis, unspecified site": {"Unspecified osteoarthritis, unspecified site code"} display 'Unspecified osteoarthritis, unspecified site'
@@ -130,61 +131,76 @@ concept "Other tetanus" : {"Other tetanus code"} display 'Other tetanus'
 concept "Emphysema, unspecified" : {"Emphysema, unspecified code"} display 'Emphysema, unspecified'
 concept "Multiple sclerosis": {"Multiple sclerosis code"}  display 'Multiple sclerosis'
 concept "Cerebral edema": {"Cerebral edema code"}  display 'Cerebral edema'
+concept "Other specified cerebrovascular diseases":{"Other specified cerebrovascular diseases code"} display 'Other specified cerebrovascular diseases'
 
+
+context Patient
+define "Method":
+	(exists["Procedure":"Physician attendance and supervision of hyperbaric oxygen therapy, per session"])
+		
+define "Condition1":
+    exists(["Condition" :"Crushing injury of unspecified hand, initial encounter"])
+    and exists(["Condition" :"Complete traumatic amputation at level between left hip and knee, initial encounter"])
+
+define "Condition2":
+    exists(["Condition":"Inflammatory conditions of jaws"])
+  
+define "Condition3":
+    exists(["Condition":"Radiation sickness, unspecified, initial encounter"])
+  
+
+define "Condition4":
+    exists(["Condition":"Actinomycosis, unspecified"])
+    
+
+define "Condition5":
+   (exists(["Condition":"Type 2 diabetes mellitus with other skin ulcer"])
+    or exists(["Condition": "Type 1 diabetes mellitus with other skin ulcer"]))
+    and exists(["Condition":"Wegener's granulomatosis without renal involvement"])
+    and exists(["Procedure":"Wound Care"])
+    
+define "Condition6":
+	(exists["Condition":"Toxic effect of carbon monoxide from unspecified source, accidental (unintentional), initial encounter"])
+	
+define "Condition7":
+	(exists["Condition" :"Caisson disease [decompression sickness], initial encounter"])
+	
+define "Condition8":
+	(exists["Condition" :"Air embolism following infusion, transfusion and therapeutic injection, initial encounter"])
+	
+define "Condition9":
+	(exists["Condition" :"Gas gangrene"])
+	
+define "Condition10":
+	 (exists["Condition" :"Peripheral vascular disease, unspecified"])
+	 
+define "Condition11":
+	 (exists["Condition" :"Necrotizing fasciitis"])
+	 
+
+                   
+define "Condition12":
+                   (exists["Procedure" :"Under Skin Substitute Grafts"])
+                   
+define "Condition13" :
+                  (exists["Condition" :"Osteomyelitis, unspecified"])	
+                  
+ define "Condition14":
+ 	         (exists(["Condition":"Toxic effect of cyanides, accidental (unintentional), initial encounter"]))        
 
 define "Covered":
-    if(exists(["Procedure" : "Physician attendance and supervision of hyperbaric oxygen therapy, per session"])
-    	    and (exists(["Condition":"Toxic effect of carbon monoxide from unspecified source, accidental (unintentional), initial encounter"]))
-            or (exists(["Condition" :"Caisson disease [decompression sickness], initial encounter"]))
-            or  (exists(["Condition" :"Air embolism following infusion, transfusion and therapeutic injection, initial encounter"]))
-            or  (exists(["Condition" :"Gas gangrene"]))
-            or  (exists(["Condition" :"Peripheral vascular disease, unspecified"]))
-            or  (exists(["Condition" :"Crushing injury of unspecified hand, initial encounter"]))
-            and (exists(["Condition" :"Complete traumatic amputation at level between left hip and knee, initial encounter"]))
-            or  (exists(["Condition" :"Necrotizing fasciitis"]))
-            or  (exists(["Condition" :"Peripheral vascular disease, unspecified"]))
-            or 	(exists(["Procedure" :"Under Skin Substitute Grafts"]))
-            or 	(exists(["Condition" :"Osteomyelitis, unspecified"]))
-            or  (exists(["Condition":"Inflammatory conditions of jaws"])
-            and (exists(["Procedure": "Physician attendance and supervision of hyperbaric oxygen therapy, per session"])))
-            or  (exists(["Condition":"Radiation sickness, unspecified, initial encounter"])
-            and (exists(["Procedure": "Physician attendance and supervision of hyperbaric oxygen therapy, per session"])))
-            or  (exists(["Condition":"Toxic effect of cyanides, accidental (unintentional), initial encounter"])
-            or  (exists(["Condition":"Actinomycosis, unspecified"]))   
-            and (exists(["Procedure": "Physician attendance and supervision of hyperbaric oxygen therapy, per session"])))
-            or  (exists(["Condition":"Type 1 diabetes mellitus with other skin ulcer"]))
-            or  (exists(["Condition":"Type 2 diabetes mellitus with other skin ulcer"]))
-            and (exists(["Condition":"Wegener's granulomatosis without renal involvement"])
-            and (exists(["Procedure":"Wound Care"])))
-            )
+    if("Method"  and
+     ("Condition6" or "Condition7" or "Condition8" or  
+      "Condition9" or "Condition10" or  "Condition1" or  
+      "Condition11" or "Condition12"  or "Condition13" or
+      "Condition2"  or  "Condition3"   or "Condition14"  or  "Condition4"   or  "Condition5") )
+    	                                                  
+                        
     then 
     		true
     else
     		false
-
-define "Not Covered":
-	(exists (["Condition":"Non-pressure chronic ulcer of skin of other sites with unspecified severity"])
-	or (exists (["Condition":"Pressure ulcer of unspecified site"]))
-	or (exists (["Condition":"Venous insufficiency (chronic) (peripheral)"]))
-	or(exists(["Condition":"Peripheral vascular disease, unspecified"]))	
-	or (exists(["Condition" :"Sepsis due to anaerobes"]))
-	and not (exists(["Condition":"Clostridium perfringens [C. perfringens] as the cause of diseases classified elsewhere"]))
-	or (exists(["Condition":"Burn of unspecified body region, unspecified degree"])
-	and (exists(["Condition":"Burns involving less than 10% of body surface"])))
-	or (exists(["Condition":"Senile degeneration of brain, not elsewhere classified"]))
-	or (exists(["Condition":"Other myocardial infarction type"]))
-	or (exists(["Condition":"Cardiogenic shock"]))
-	or (exists(["Condition":"Sickle-cell disease without crisis"]))
-	or (exists(["Condition":"Acute cerebrovascular insufficiency"]))
-	or (exists(["Condition":"Acute and subacute hepatic failure without coma"]))
-	or (exists(["Condition":"Other specified mental disorders due to known physiological condition"]))
-	or (exists(["Condition":"Other tetanus"]))
-	or (exists(["Procedure":"Other transplanted organ and tissue status"]))
-	or (exists(["Condition":"Emphysema, unspecified"]))
-	or (exists(["Condition":"Iron deficiency anemia secondary to blood loss (chronic)"]))
-	or (exists(["Condition":"Multiple sclerosis"]))
-	or (exists(["Condition":"Cerebral edema"]))
-	)
-
+    		
+    				
 define "Coverage":
-	"Covered" and not "Not Covered"
+	if "Covered" is true then 'true' else 'false because Conditions are not appropriate'
