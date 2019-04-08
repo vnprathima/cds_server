@@ -4,5 +4,5 @@
     "cqls_list": ["AdultLiverTransplant","HyperbaricOxygenTherapy","HomeOxygenTherapy"],
     "client_id": "app-login",
     "client_secret": "237b167a-c4d0-4861-856d-6decf5426022",
-    "auth_url": "https://54.227.173.76:8443/auth/realms/ClientFhirServer/protocol/openid-connect/token/introspect"
+    "auth_url": "https://3.92.187.150:8443/auth/realms/ProviderCredentials/protocol/openid-connect/token/introspect"
 }
