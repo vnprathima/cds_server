@@ -25,7 +25,7 @@ function app(req, res) {
             var args = { 
                         "token": req.headers.authorization,
                         "client-id": "app-token",
-                        "client-secret": "237b167a-c4d0-4861-856d-6decf5426022" };
+                        "client-secret": "48bf2c3e-2bd6-4f8d-a5ce-2f94adcb7492" };
             console.log("Inside If");
             client.post("https://54.227.173.76:8443/auth/realms/ClientFhirServer/protocol/openid-connect/token/introspect", args, function (data, response) {
                 console.log(data);

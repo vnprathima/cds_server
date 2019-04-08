@@ -20,7 +20,7 @@ module.exports = http.createServer((req, res) => {
             token = token.replace("Bearer ", "");
             var params = {token: token,
                         client_id: "app-token",
-                        client_secret: "237b167a-c4d0-4861-856d-6decf5426022"};
+                        client_secret: "48bf2c3e-2bd6-4f8d-a5ce-2f94adcb7492"};
             const inputParams = Object.keys(params).map((key) => {
                 return encodeURIComponent(key) + '=' + encodeURIComponent(params[key]);
             }).join('&');
@@ -31,6 +31,8 @@ module.exports = http.createServer((req, res) => {
                         rejectUnauthorized: false 
                         };
             client.post(authURL, args, function (data, response) {
+                console.log("ResponSe",response);
+                console.log("data",data);
                 if('active' in data && data['active'] == true){
                     service.executeCql(req, res);
                 } 
