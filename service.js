@@ -14,6 +14,13 @@ exports.get = function (req, res) {
     res.end(JSON.stringify(response));
 };
 
+function Singleton(pat) {
+    // lazy 
+    if (Singleton.prototype.myInstance == undefined) {
+        Singleton.prototype.myInstance = pat;
+    }
+    return Singleton.prototype.myInstance;
+}
 exports.executeCql = function (req, res, ) {
     body = '' ;
     req.on('data', function (chunk) {
@@ -27,11 +34,33 @@ exports.executeCql = function (req, res, ) {
         const cqlfhir = require('cql-exec-fhir');
         const cqlvsac = require('cql-exec-vsac');
 
+
         let vsacUser, vsacPass;
         [vsacUser, vsacPass] = [config.vsac_user,config.vsac_password];
 
         // postBody = JSON.parse(body);
-        if(!postBody.hasOwnProperty("cql") && postBody.cql.trim().length === 0  && !postBody.hasOwnProperty("request_for") && postBody.request_for.trim().length === 0 && !postBody.hasOwnProperty("patientFhir") && !config.cqls_list.includes(postBody.cql)){
+        let postBodyCql
+        let cqlCode
+        let postBodyPatient
+        if(postBody.hasOwnProperty('entry')){
+            for(var i=0;i<postBody.entry.length;i++){
+               if( postBody.entry[i].resource.resourceType=='DeviceRequest'){
+                cqlCode = postBody.entry[i].resource.codeCodeableConcept.coding[0].code
+               }
+               if( postBody.entry[i].resource.resourceType=='Patient'){
+                postBodyPatient = postBody.entry[i].resource
+               }
+            }
+        }
+       
+        // console.log(cqlCode,'=======')
+        let cql_mapping_json = config.cql_mapping_json
+        Object.keys(cql_mapping_json).map(function(key, index) {
+            if(cql_mapping_json[key].includes(cqlCode)){
+                postBodyCql = key
+            }
+          });
+        if(!postBody.hasOwnProperty("cql") && postBodyCql.trim().length === 0  && !postBody.hasOwnProperty("request_for") && postBody.request_for.trim().length === 0 && !postBody.hasOwnProperty("patientFhir") && !config.cqls_list.includes(postBodyCql)){
             res.statusCode = 400;
             res.setHeader('Content-Type', 'text/plain');
             res.end("Invalid Inputs !!")
@@ -44,11 +73,11 @@ exports.executeCql = function (req, res, ) {
         console.log('\\-------------------------------------------------------------------------------');
 
         // Set up the library
-        var cql_json_file = postBody.cql +'_requirements.json';
+        var cql_json_file = postBodyCql +'_decision.json';
         if (postBody.request_for){
-            cql_json_file = postBody.cql + '_' + postBody.request_for +'.json';
+            cql_json_file = postBodyCql + '_' + postBody.request_for +'.json';
         } 
-        console.log('Json file Given :', cql_json_file);
+        console.log('Json file Given :', cql_json_file,postBody.hasOwnProperty('request_for'));
         try {
             const elmFile = JSON.parse(fs.readFileSync(path.join(__dirname, 'cqls', cql_json_file), 'utf8'));
             const libraries = {
@@ -57,13 +86,27 @@ exports.executeCql = function (req, res, ) {
             const library = new cql.Library(elmFile, new cql.Repository(libraries));
 
             // Create the patient source
-            const patientSource = cqlfhir.PatientSource.FHIRv102();
+            const patientSource = cqlfhir.PatientSource.FHIRv400(); 
+            // const patientSource = new cql.PatientSource();
 
             // Load the patient source with patients
-            const bundles = [];
-            bundles.push(postBody.patientFhir);
-            patientSource.loadBundles(bundles);
-            
+            let patient = {"resourceType": "Bundle",
+            "type": "collection",
+            "id": "example1",
+            "meta": {
+            "versionId": "1",
+            "lastUpdated": "2014-08-18T01:43:30Z"
+            },
+            "base": "http://example.com/base",
+            "entry": 
+                [{
+                    'resource': postBodyPatient
+                }]
+            };
+
+            patientSource.loadBundles([patient]);
+
+            // console.log(patientSource._bundles,'12333')
             // Extract the value sets from the ELM
             let valueSets = [];
             if (elmFile.library && elmFile.library.valueSets && elmFile.library.valueSets.def) {
@@ -79,27 +122,30 @@ exports.executeCql = function (req, res, ) {
                 console.log("PAtient fhir---",vsacPass);
                 // Value sets are loaded, so execute!
                 const executor = new cql.Executor(library, codeService);
-                console.log("exectutor initiated---");
+                // console.log("exectutor initiated---",executor.exec(patientSource));
                 const results = executor.exec(patientSource);
-                console.log("exectutor done---");
+                console.log("exectutor done--- resultspatientResults",results);
                 for (const id in results.patientResults) {
+                    console.log(id,'what is id')
                     const result = results.patientResults[id];
-                    console.log(`${id}:`);
+                    console.log(`${id}:` ,postBody.request_for,result);
                     res.statusCode = 200;
                     res.setHeader('Content-Type', 'application/json');
-                    if (postBody.request_for == 'requirements'){
-                        console.log("\tRequirements:", result.Requirements);
-                        if(result.hasOwnProperty("PriorAuthorization")){
-                            res.end(JSON.stringify({"requirements":result.Requirements,
-                            "prior_authorization":result.PriorAuthorization,
-                            "pa_requirements":result.PriorAuthorizationRequirements}) + '\n');
-                        } else {
-                            res.end(JSON.stringify({"requirements":result.Requirements}) + '\n');
-                        }
-                    } else if (postBody.request_for == 'decision'){
-                        console.log(`\tCoverage: ${result.Coverage}`);
-                        res.end(JSON.stringify({"Coverage":result.Coverage}) + '\n');
-                    }
+                    // if (postBody.request_for == 'requirements'){
+                    //     console.log("\tRequirements:", result.Requirements);
+                    //     if(result.hasOwnProperty("PriorAuthorization")){
+                    //         res.end(JSON.stringify({"requirements":result.Requirements,
+                    //         "prior_authorization":result.PriorAuthorization,
+                    //         "pa_requirements":result.PriorAuthorizationRequirements}) + '\n');
+                    //     } else {
+                    //         res.end(JSON.stringify({"requirements":result.Requirements}) + '\n');
+                    //     }
+                    // } else if (postBody.request_for == 'decision'){
+                    //     console.log(`\tCoverage: ${result.Coverage}`);
+                    //     res.end(JSON.stringify({"Coverage":result.Coverage}) + '\n');
+                    // }
+                    console.log(`\tCoverage: ${result['Coverage Criteria']}`);
+                    res.end(JSON.stringify({"Coverage":result['Coverage Criteria']}) + '\n');
                 }
             })
             .catch( (err) => {
