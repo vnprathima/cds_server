@@ -4,7 +4,7 @@
     "cqls_list":["AdultLiverTransplant","HyperbaricOxygenTherapy","HomeOxygenTherapy"],
     "client_id": "app-login",
     "client_secret": "237b167a-c4d0-4861-856d-6decf5426022",
-    "auth_url": "https://3.92.187.150:8443/auth/realms/ProviderCredentials/protocol/openid-connect/token/introspect",
+    "auth_url": "https://54.227.218.17:8443/auth/realms/ProviderCredentials/protocol/openid-connect/token/introspect",
     "cql_mapping_json":{
         "HomeOxygenTherapy" : [ "E1390","E1391","E0439","E0424","E1405","E1406","E0431","E0434","E1392","E0433","K0738","E0441","E0442","E0443","E0444"],
         "AdultLiverTransplant":["E1111","E2222"],
