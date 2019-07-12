@@ -166,7 +166,18 @@ code "73985-4": '73985-4' from "LOINC"
 //Sleeping out (finding)
 code "224229008": '224229008' from "SNOMEDCT"
 
+//Occupations in SNOMEDCT
+//Nurse practitioner (occupation)
+code "224571005": '224571005' from "SNOMEDCT"
+//Physician assistant (occupation)
+code "449161006":'449161006' from "SNOMEDCT"
+//Physician (occupation)
+code "309343006" : '309343006' from "SNOMEDCT"
+//Clinical nurse specialist (occupation)
+code "224570006" : '224570006' from "SNOMEDCT"
+
 parameter device_request DeviceRequest
+parameter Reason String
 
 // Relevant Diagnosis Code Lists
 define "COPD_Codes": { "J44", "J44.0", "J44.1", "J44.9" }
@@ -204,7 +215,7 @@ define "Arterial_partial_pressure_of_oxygen_Codes": { "2703-7" }
 define "Arterial_oxygen_saturation_during_exercise_Codes": { "89276-0" }
 
 define "Hematocrit_lab_test_Codes": { "20570-8", "31100-1", "32354-3", "41654-5", "41655-2", "4544-3", "4545-0", "71829-6", "71830-4", "71832-0", "71833-8" }
-	  
+
 context Patient
 
 define function GetMiddleInitials(name FHIR.HumanName):
@@ -222,72 +233,57 @@ define PatientGender: Patient.gender.value
 define PatientDateOfBirth: Patient.birthDate.value
 
 define "Indications": {
-	  if exists(Confirmed(ActiveOrRecurring([Condition: "COPD_Codes"]))) then true else false,
-	  if exists(Confirmed(ActiveOrRecurring([Condition: "Bronchiectasis_Codes"]))) then true else false,
-	  if exists(Confirmed(ActiveOrRecurring([Condition: "Diffuse_interstitial_lung_disease_Codes"]))) then true else false,
-	  if exists(Confirmed(ActiveOrRecurring([Condition: "Cystic_fibrosis_Codes"]))) then true else false,
-	  if exists(Confirmed(ActiveOrRecurring([Condition: "Pulmonary_neoplasm_codes"]))) then true else false,
-	  if exists(Confirmed(ActiveOrRecurring([Condition: "Pulmonary_hypertension_Codes"]))) then true else false,
-	  if exists(Confirmed(ActiveOrRecurring([Condition: "Hypoxemia_Codes"]))) then true else false,
-	  if exists(Confirmed(ActiveOrRecurring([Condition: "Erythrocytosis_Codes"]))) then true else false,
-	  if exists(Confirmed(ActiveOrRecurring([Condition: "Mild_cognitive_impairment_Codes"]))) then true else false,
-	  if exists(Confirmed(ActiveOrRecurring([Condition: "Restlessness_Codes"]))) then true else false,
-	  if exists(Confirmed(ActiveOrRecurring([Condition: "Headache_codes"]))) then true else false,
-	  if exists(Confirmed(ActiveOrRecurring([Condition: "Cor_pulmonale_Codes"]))) then true else false,
-	  if exists(Confirmed(ActiveOrRecurring([Condition: "Congestive_heart_failure_codes"]))) then true else false
-	} except { 'null' }
-	
+	  if (exists(Confirmed(ActiveOrRecurring([Condition: "COPD_Codes"])))
+	  	or exists(Confirmed(ActiveOrRecurring([Condition: "Bronchiectasis_Codes"])))
+	  	or exists(Confirmed(ActiveOrRecurring([Condition: "Diffuse_interstitial_lung_disease_Codes"])))
+	  	or exists(Confirmed(ActiveOrRecurring([Condition: "Cystic_fibrosis_Codes"])))
+	  	or exists(Confirmed(ActiveOrRecurring([Condition: "Pulmonary_neoplasm_codes"])))
+	  	or exists(Confirmed(ActiveOrRecurring([Condition: "Pulmonary_hypertension_Codes"])))
+	  	or exists(Confirmed(ActiveOrRecurring([Condition: "Hypoxemia_Codes"])))
+	  	or exists(Confirmed(ActiveOrRecurring([Condition: "Erythrocytosis_Codes"])))
+	  	or exists(Confirmed(ActiveOrRecurring([Condition: "Mild_cognitive_impairment_Codes"])))
+	  	or exists(Confirmed(ActiveOrRecurring([Condition: "Restlessness_Codes"])))
+	  	or exists(Confirmed(ActiveOrRecurring([Condition: "Headache_codes"])))
+	  	or exists(Confirmed(ActiveOrRecurring([Condition: "Cor_pulmonale_Codes"])))
+	  	or exists(Confirmed(ActiveOrRecurring([Condition: "Congestive_heart_failure_codes"])))
+	  )
+	  then true
+	  else false
+	} except { false }
+
 define "Blood Gas Study":
 	[Procedure: "Blood_gas_study_Codes"]
-	
+
 
 //Considering treating physician as OrderingProvider
 define "Alternate Treatment":
-	(exists ([Observation: "182868002"]A 
-	where  A.value = 'therapy clinically ineffective' and A.performer = OrderingProvider)
-	)
-
-//define ArterialOxygenSaturation: 
-//	LowestObservation(WithUnit(Verified(ObservationLookBack([Observation: "Arterial_oxygen_saturation_Codes"], 3 months)), '%'))
-	
-//define ArterialPartialPressureOfOxygen: 
-//	LowestObservation(WithUnit(Verified(ObservationLookBack([Observation: "Arterial_partial_pressure_of_oxygen_Codes"], 3 months)), 'mm[Hg]'))
-	
-//define ArterialOxygenSaturationExercise: 
-//	LowestObservation(WithUnit(Verified(ObservationLookBack([Observation: "Arterial_oxygen_saturation_during_exercise_Codes"], 3 months)), '%'))
+	exists ([QuestionnaireResponse]Q where Q.item[30].linkId = '3.14' and Q.item[30].answer[0].value = 'true')
 
 define "Group1 resting state":
-	exists([Observation: "Resting_state_Codes"]) and "Group1- low values"
+	exists([QuestionnaireResponse]Q where Q.item[18].linkId= '3.2' and Q.item[18].answer[0].value <= 88'%')
+	or exists([QuestionnaireResponse]Q where Q.item[19].linkId= '3.3' and Q.item[19].answer[0].value <= 55 'mmHg')
 
-define "Group1- low values":
-	exists[Observation:"Arterial_partial_pressure_of_oxygen_Codes"]P where P.value <= 55 'mmHg'
-	or exists[Observation:"Arterial_oxygen_saturation_Codes"]G where G.value <= 88'%' 
-		
-define "Group1- high values":
-	exists[Observation:"Arterial_partial_pressure_of_oxygen_Codes"]P  where P.value >= 56 'mmHg'
-	or exists[Observation:"Arterial_oxygen_saturation_Codes"]G where G.value >= 89'%'
-	
 define "Group1 Exercise":
-	if (exists([Observation: "Resting_state_Codes"]) and "Group1- high values")
-	then (exists([Observation: "73985-4"]) 
-		and "Group1- low values" )
+	if (not "Group1 resting state")
+	then (exists([QuestionnaireResponse]Q where Q.item[20].linkId= '3.4' and Q.item[20].answer[0].value <= 88'%')
+		or exists([QuestionnaireResponse]Q where Q.item[21].linkId= '3.5' and Q.item[21].answer[0].value <= 55 'mmHg'))
 	else false
-	
+
 define "Group1 Sleep":
-	if (exists([Observation: "Resting_state_Codes"]) and "Group1- high values") 
+	if (not "Group1 resting state")
 	then ("Group1 Sleep Condition1" or "Group1 Sleep Condition2")
 	else false
-	
+
+//should be tested for atleast 5 minutes
 define "Group1 Sleep Condition1":
-	exists([Observation: "224229008"])
-	and (exists([Observation:"Arterial_partial_pressure_of_oxygen_Codes"]P where P.value <= 55 'mmHg' and P.effective>= 5 minutes)
-		or exists([Observation:"Arterial_oxygen_saturation_Codes"]G where G.value <= 88'%' and P.effective>= 5 minutes)) 
-	
+	exists([QuestionnaireResponse]Q where Q.item[28].linkId= '3.12' and Q.item[28].answer[0].value <= 88'%')
+	or exists([QuestionnaireResponse]Q where Q.item[29].linkId= '3.13' and Q.item[29].answer[0].value <= 55 'mmHg')
+
 define "Group1 Sleep Condition2":
-	exists([Observation: "224229008"])
-	and exists([Observation:"Arterial_partial_pressure_of_oxygen_Codes"]P  where P.value >= 56 'mmHg')
+	(exists([QuestionnaireResponse]Q where Q.item[28].linkId= '3.12' and Q.item[28].answer[0].value >= 89'%')
+	or exists([QuestionnaireResponse]Q where Q.item[29].linkId= '3.13' and Q.item[29].answer[0].value >= 56 'mmHg'))
 	and exists("Symptoms to hypoxemia")
-	
+
 define "Symptoms to hypoxemia":{
 	  if exists(Confirmed(ActiveOrRecurring([Condition: "Erythrocytosis_Codes"]))) then true else false,
 	  if exists(Confirmed(ActiveOrRecurring([Condition: "Cor_pulmonale_Codes"]))) then true else false,
@@ -301,100 +297,147 @@ define "Group1 Criteria":
 	"Group1 resting state"
 	and "Group1 Exercise"
 	and "Group1 Sleep"
-		
+
 define "Group2 resting state":
-	 exists([Observation: "Resting_state_Codes"]) 
-	 and "Group2 Conditions"
-	     
-			
+	exists([QuestionnaireResponse]Q where Q.item[18].linkId= '3.2' and Q.item[18].answer[0].value = 89'%')
+	or (exists([QuestionnaireResponse]Q where Q.item[19].linkId= '3.3' and Q.item[19].answer[0].value >= 56 'mmHg' and Q.item[19].answer[0].value <= 59 'mmHg')
+		and "Group2 Conditions")
+
+
 define "Group2 Conditions":
-	exists([Observation:"Arterial_oxygen_saturation_Codes"]G where G.value = 89'%')
-	or (exists([Observation:"Arterial_partial_pressure_of_oxygen_Codes"]P  where P.value >= 56 'mmHg' and P.value <= 59 'mmHg')
-	 	and (
-	 		(exists(Confirmed(ActiveOrRecurring([Condition: "Hypoxemia_Codes"]))) and exists(Confirmed(ActiveOrRecurring([Condition: "Hypoxemia_Codes"]))))
-	 		or (exists(Confirmed(ActiveOrRecurring([Condition: "Pulmonary_hypertension_Codes"]))) or exists(Confirmed(ActiveOrRecurring([Condition: "Cor_pulmonale_Codes"]))))
-	 			
-	 	 )
-	)
+	(exists(Confirmed(ActiveOrRecurring([Condition: "Hypoxemia_Codes"]))) and exists(Confirmed(ActiveOrRecurring([Condition: "Hypoxemia_Codes"]))))
+	 or (exists(Confirmed(ActiveOrRecurring([Condition: "Pulmonary_hypertension_Codes"]))) or exists(Confirmed(ActiveOrRecurring([Condition: "Cor_pulmonale_Codes"]))))
 
 define "Group2 Exercise":
-	exists([Observation: "73985-4"]) 
-	and "Group2 Conditions"
-			 
+	exists([QuestionnaireResponse]Q where Q.item[20].linkId= '3.4' and Q.item[20].answer[0].value = 89'%')
+	or (exists([QuestionnaireResponse]Q where Q.item[21].linkId= '3.5' and Q.item[21].answer[0].value >= 56 'mmHg' and Q.item[21].answer[0].value <= 59 'mmHg')
+		and "Group2 Conditions")
+
 define "Group2 Sleep":
-	exists([Observation: "224229008"])
-	and "Group2 Conditions"
-	
+	exists([QuestionnaireResponse]Q where Q.item[28].linkId= '3.12' and Q.item[28].answer[0].value = 89'%')
+	or (exists([QuestionnaireResponse]Q where Q.item[29].linkId= '3.13' and Q.item[29].answer[0].value >= 56 'mmHg' and Q.item[29].answer[0].value <= 59 'mmHg')
+		and "Group2 Conditions")
+
 define "Group2 Criteria":
 	"Group2 resting state"
 	and "Group2 Exercise"
-	and "Group2 Sleep"	
-	
+	and "Group2 Sleep"
+
 define "Group3 Criteria":
 	exists[Observation:"Arterial_partial_pressure_of_oxygen_Codes"]P where P.value >= 60 'mmHg'
-	or exists[Observation:"Arterial_oxygen_saturation_Codes"]G where G.value >= 90'%' 
-	
+	or exists[Observation:"Arterial_oxygen_saturation_Codes"]G where G.value >= 90'%'
+
 define  "Group Criteria":
 	"Group1 Criteria"
-		or "Group2 Criteria" 
-		or  "Group3 Criteria"	
+	or "Group2 Criteria"
+	or "Group3 Criteria"
 
-define "Long-term oxygen therapy":	
+define "Long-term oxygen therapy":
 	(exists[Observation:"Arterial_oxygen_saturation_Codes"]G where G.value >= 89'%')
-	and (exists[Observation:"Arterial_partial_pressure_of_oxygen_Codes"]P 
+	and (exists[Observation:"Arterial_partial_pressure_of_oxygen_Codes"]P
 		where P.value >= 56 'mm of Hg' and P.value <= 65 'mm of Hg')
-	
+
 define "Cluster Headaches":
 	exists [Condition: "G44.009"]C
 		where C.onset in Interval[15'minutes', 180'minutes']
 
-define "Coverage Criteria":
-	(exists("Indications")
-	//and "Qualifying BloodGasStudy"
-	and "Alternate Treatment"
-	and "Group Criteria")
-	or ("Long-term oxygen therapy" and "Cluster Headaches")
-	
+define "Clinical trials":
+	("Long-term oxygen therapy" and "Cluster Headaches")
+
+//define "Practitioners":
+//	(exists ["Practitioner":"309343006"])
+//	or (exists ["Practitioner":"224571005"])
+//	or (exists ["Practitioner":"449161006"])
+//	or (exists ["Practitioner":"224570006"])
+
+//define "WOPD Date":
+	//if(exists([QuestionnaireResponse]Q where Q.item[13].linkId= 2.7 and Q.item[13].answer[0].value!= ''))
+	//then [QuestionnaireResponse].item.answer[0].value
+	//else ''
+
+define "Face-to-face Encounter":
+	exists([QuestionnaireResponse]Q where Q.item[12].linkId= '2.6' and Q.item[12].answer[0].value != '')
+	//and exists("WOPD Date")
+
+define "Medical Record":
+	exists([QuestionnaireResponse]Q where Q.item[14].linkId= '3.1' and Q.item[14].answer[0].value != '')
+	and exists([QuestionnaireResponse]Q where Q.item[15].linkId= '3.1.1' and Q.item[15].answer[0].value != '')
+	and exists([QuestionnaireResponse]Q where Q.item[16].linkId= '3.1.2' and Q.item[16].answer[0].value != '')
+	and exists([QuestionnaireResponse]Q where Q.item[17].linkId= '3.1.3' and Q.item[17].answer[0].value != '')
+	and exists([QuestionnaireResponse]Q where Q.item[23].linkId= '3.7' and Q.item[23].answer[0].value != '')
+	and exists([QuestionnaireResponse]Q where Q.item[39].linkId= '5.1c' and Q.item[39].answer[0].value != '')
+	and exists([QuestionnaireResponse]Q where Q.item[46].linkId= '5.8' and Q.item[46].answer[0].value != '')
+
+define "WOPD":
+	exists([QuestionnaireResponse]Q where Q.item[48].linkId= '5.10' and Q.item[48].answer[0].value != '')
+	and exists([QuestionnaireResponse]Q where Q.item[49].linkId= '5.11' and Q.item[49].answer[0].value != '')
+	and exists([QuestionnaireResponse]Q where Q.item[37].linkId= '5.1' and Q.item[37].answer[0].value != '')
+
+define "CMN":
+	exists([QuestionnaireResponse]Q where Q.item[32].linkId= '4.2' and Q.item[32].answer[0].value != '')
+	and "Portable Oxygen"
+
+define "Portable Oxygen":
+	if exists([QuestionnaireResponse]Q where Q.item[38].linkId= '5.1b' and Q.item[38].answer[0].value = 'true')
+	then exists([QuestionnaireResponse]Q where Q.item[23].linkId= '3.7' and Q.item[23].answer[0].value != '')
+	else false
+
+define "Coverage Criteria":{
+	if exists("Indications") then "Reason" = "Reason" + 'The Diagnosis conditions are not satisfied. ' else "Reason"= "Reason" + '',
+	if not "Alternate Treatment" then "Reason" = "Reason" + 'Alternate Treatments could have been considered. ' else "Reason"= "Reason" + '',
+	if not "Group Criteria" then "Reason" = "Reason" + 'The Arterial Partial Pressure of Oxygen values or the Arterial oxygen saturation values do not meet the criteria of Coverage.' else "Reason"= "Reason" + '',
+	if not "Clinical trials" then "Reason" = "Reason" + 'The Clinical Trial criteria (Long-term oxygen therapy or Cluster Headaches) is not met. ' else "Reason"= "Reason" + '',
+	if not "Face-to-face Encounter" then "Reason" = "Reason" + 'The face-to-face encounter requirements are not met. ' else "Reason"= "Reason" + '',
+	if not "Medical Record" then "Reason" = "Reason" + 'The Medical Record requirements are not met. ' else "Reason"= "Reason" + '',
+	if not "WOPD" then "Reason" = "Reason" + 'The Written Order (Prescription) Prior to Delivery (WOPD) requirements are not met. ' else "Reason"= "Reason" + '',
+	if not "CMN" then "Reason" = "Reason" + 'The Certificate of Medical Necessity requirements are not met. ' else "Reason"= "Reason" + ''
+	} except { 'null' }
+
 // ordering provider info
 define OrderingProvider: singleton from (
   [Practitioner] practitioner
     where ('Practitioner/' + practitioner.id) = device_request.performer.reference.value)
+
 define OrderingProviderName: singleton from ("OrderingProvider".name name where name.use.value = 'official')
+
 define OrderingProviderLastName: "OrderingProviderName".family.value
+
 define OrderingProviderMiddleInitial: GetMiddleInitials("OrderingProviderName")
+
 define OrderingProviderFirstName: "OrderingProviderName".given[0].value
+
 define OrderingProviderNPI: (singleton from (
   "OrderingProvider".identifier identifier
     where identifier.system.value = 'http://hl7.org/fhir/sid/us-npi')).value.value
-	
-	
+
+
 ////////////////////////////// Taken from CDS Connect Commons for FHIR, could replace with stu3 version of helper library
 define function ActiveOrRecurring(CondList List<Condition>):
   CondList C where C.clinicalStatus.value in {'active', 'relapse'}
-  
+
 define function ObservationLookBack(ObsList List<Observation>, LookBack System.Quantity):
   ObsList O
     let LookBackInterval: Interval[Now() - LookBack, Now()]
     where (cast O.effective as dateTime).value in LookBackInterval
       or NullSafeToInterval(cast O.effective as Period) overlaps LookBackInterval
       or O.issued in LookBackInterval
-      
+
 define function NullSafeToInterval(Pd FHIR.Period):
   if Pd is not null then Interval[Pd."start".value, Pd."end".value] else null
-  
- 
+
+
 define function Verified(ObsList List<Observation>):
   ObsList O where O.status.value in {'final', 'amended'}
-  
+
 define function WithUnit(ObsList List<Observation>, Unit String):
   ObsList O where (cast O.value as Quantity).unit.value = Unit or (cast O.value as Quantity).code.value = Unit
-  
+
 define function HighestObservation(ObsList List<Observation>):
   Max(ObsList O return NullSafeToQuantity(cast O.value as Quantity))
-  
+
 define function Confirmed(CondList List<Condition>):
   CondList C where C.verificationStatus.value = 'confirmed'
-  
+
 define function NullSafeToQuantity(Qty FHIR.Quantity):
   if Qty is not null then
     System.Quantity {
@@ -402,8 +445,7 @@ define function NullSafeToQuantity(Qty FHIR.Quantity):
       unit: Coalesce(Qty.unit.value, Qty.code.value)
     }
   else null
-  
+
 define function LowestObservation(ObsList List<Observation>):
   Min(ObsList O return NullSafeToQuantity(cast O.value as Quantity))
 
-  

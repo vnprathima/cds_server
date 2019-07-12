@@ -39,6 +39,14 @@
                         "name": "{http://hl7.org/fhir}DeviceRequest",
                         "type": "NamedTypeSpecifier"
                     }
+                },
+                {
+                    "name": "Reason",
+                    "accessLevel": "Public",
+                    "parameterTypeSpecifier": {
+                        "name": "{urn:hl7-org:elm-types:r1}String",
+                        "type": "NamedTypeSpecifier"
+                    }
                 }
             ]
         },
@@ -788,6 +796,38 @@
                 {
                     "name": "224229008",
                     "id": "224229008",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "name": "224571005",
+                    "id": "224571005",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "name": "449161006",
+                    "id": "449161006",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "name": "309343006",
+                    "id": "309343006",
+                    "accessLevel": "Public",
+                    "codeSystem": {
+                        "name": "SNOMEDCT"
+                    }
+                },
+                {
+                    "name": "224570006",
+                    "id": "224570006",
                     "accessLevel": "Public",
                     "codeSystem": {
                         "name": "SNOMEDCT"
@@ -1697,590 +1737,408 @@
                         "type": "Except",
                         "operand": [
                             {
-                                "type": "As",
-                                "operand": {
-                                    "type": "List",
-                                    "element": [
-                                        {
-                                            "type": "If",
-                                            "condition": {
-                                                "asType": "{urn:hl7-org:elm-types:r1}Boolean",
-                                                "type": "As",
-                                                "operand": {
-                                                    "type": "Exists",
-                                                    "operand": {
-                                                        "name": "Confirmed",
-                                                        "type": "FunctionRef",
+                                "type": "List",
+                                "element": [
+                                    {
+                                        "type": "If",
+                                        "condition": {
+                                            "asType": "{urn:hl7-org:elm-types:r1}Boolean",
+                                            "type": "As",
+                                            "operand": {
+                                                "type": "Or",
+                                                "operand": [
+                                                    {
+                                                        "type": "Or",
                                                         "operand": [
                                                             {
-                                                                "name": "ActiveOrRecurring",
-                                                                "type": "FunctionRef",
+                                                                "type": "Or",
                                                                 "operand": [
                                                                     {
-                                                                        "dataType": "{http://hl7.org/fhir}Condition",
-                                                                        "codeProperty": "code",
-                                                                        "type": "Retrieve",
-                                                                        "codes": {
-                                                                            "name": "COPD_Codes",
-                                                                            "type": "ExpressionRef"
+                                                                        "type": "Or",
+                                                                        "operand": [
+                                                                            {
+                                                                                "type": "Or",
+                                                                                "operand": [
+                                                                                    {
+                                                                                        "type": "Or",
+                                                                                        "operand": [
+                                                                                            {
+                                                                                                "type": "Or",
+                                                                                                "operand": [
+                                                                                                    {
+                                                                                                        "type": "Or",
+                                                                                                        "operand": [
+                                                                                                            {
+                                                                                                                "type": "Or",
+                                                                                                                "operand": [
+                                                                                                                    {
+                                                                                                                        "type": "Or",
+                                                                                                                        "operand": [
+                                                                                                                            {
+                                                                                                                                "type": "Or",
+                                                                                                                                "operand": [
+                                                                                                                                    {
+                                                                                                                                        "type": "Or",
+                                                                                                                                        "operand": [
+                                                                                                                                            {
+                                                                                                                                                "type": "Exists",
+                                                                                                                                                "operand": {
+                                                                                                                                                    "name": "Confirmed",
+                                                                                                                                                    "type": "FunctionRef",
+                                                                                                                                                    "operand": [
+                                                                                                                                                        {
+                                                                                                                                                            "name": "ActiveOrRecurring",
+                                                                                                                                                            "type": "FunctionRef",
+                                                                                                                                                            "operand": [
+                                                                                                                                                                {
+                                                                                                                                                                    "dataType": "{http://hl7.org/fhir}Condition",
+                                                                                                                                                                    "codeProperty": "code",
+                                                                                                                                                                    "type": "Retrieve",
+                                                                                                                                                                    "codes": {
+                                                                                                                                                                        "name": "COPD_Codes",
+                                                                                                                                                                        "type": "ExpressionRef"
+                                                                                                                                                                    }
+                                                                                                                                                                }
+                                                                                                                                                            ]
+                                                                                                                                                        }
+                                                                                                                                                    ]
+                                                                                                                                                }
+                                                                                                                                            },
+                                                                                                                                            {
+                                                                                                                                                "type": "Exists",
+                                                                                                                                                "operand": {
+                                                                                                                                                    "name": "Confirmed",
+                                                                                                                                                    "type": "FunctionRef",
+                                                                                                                                                    "operand": [
+                                                                                                                                                        {
+                                                                                                                                                            "name": "ActiveOrRecurring",
+                                                                                                                                                            "type": "FunctionRef",
+                                                                                                                                                            "operand": [
+                                                                                                                                                                {
+                                                                                                                                                                    "dataType": "{http://hl7.org/fhir}Condition",
+                                                                                                                                                                    "codeProperty": "code",
+                                                                                                                                                                    "type": "Retrieve",
+                                                                                                                                                                    "codes": {
+                                                                                                                                                                        "name": "Bronchiectasis_Codes",
+                                                                                                                                                                        "type": "ExpressionRef"
+                                                                                                                                                                    }
+                                                                                                                                                                }
+                                                                                                                                                            ]
+                                                                                                                                                        }
+                                                                                                                                                    ]
+                                                                                                                                                }
+                                                                                                                                            }
+                                                                                                                                        ]
+                                                                                                                                    },
+                                                                                                                                    {
+                                                                                                                                        "type": "Exists",
+                                                                                                                                        "operand": {
+                                                                                                                                            "name": "Confirmed",
+                                                                                                                                            "type": "FunctionRef",
+                                                                                                                                            "operand": [
+                                                                                                                                                {
+                                                                                                                                                    "name": "ActiveOrRecurring",
+                                                                                                                                                    "type": "FunctionRef",
+                                                                                                                                                    "operand": [
+                                                                                                                                                        {
+                                                                                                                                                            "dataType": "{http://hl7.org/fhir}Condition",
+                                                                                                                                                            "codeProperty": "code",
+                                                                                                                                                            "type": "Retrieve",
+                                                                                                                                                            "codes": {
+                                                                                                                                                                "name": "Diffuse_interstitial_lung_disease_Codes",
+                                                                                                                                                                "type": "ExpressionRef"
+                                                                                                                                                            }
+                                                                                                                                                        }
+                                                                                                                                                    ]
+                                                                                                                                                }
+                                                                                                                                            ]
+                                                                                                                                        }
+                                                                                                                                    }
+                                                                                                                                ]
+                                                                                                                            },
+                                                                                                                            {
+                                                                                                                                "type": "Exists",
+                                                                                                                                "operand": {
+                                                                                                                                    "name": "Confirmed",
+                                                                                                                                    "type": "FunctionRef",
+                                                                                                                                    "operand": [
+                                                                                                                                        {
+                                                                                                                                            "name": "ActiveOrRecurring",
+                                                                                                                                            "type": "FunctionRef",
+                                                                                                                                            "operand": [
+                                                                                                                                                {
+                                                                                                                                                    "dataType": "{http://hl7.org/fhir}Condition",
+                                                                                                                                                    "codeProperty": "code",
+                                                                                                                                                    "type": "Retrieve",
+                                                                                                                                                    "codes": {
+                                                                                                                                                        "name": "Cystic_fibrosis_Codes",
+                                                                                                                                                        "type": "ExpressionRef"
+                                                                                                                                                    }
+                                                                                                                                                }
+                                                                                                                                            ]
+                                                                                                                                        }
+                                                                                                                                    ]
+                                                                                                                                }
+                                                                                                                            }
+                                                                                                                        ]
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "type": "Exists",
+                                                                                                                        "operand": {
+                                                                                                                            "name": "Confirmed",
+                                                                                                                            "type": "FunctionRef",
+                                                                                                                            "operand": [
+                                                                                                                                {
+                                                                                                                                    "name": "ActiveOrRecurring",
+                                                                                                                                    "type": "FunctionRef",
+                                                                                                                                    "operand": [
+                                                                                                                                        {
+                                                                                                                                            "dataType": "{http://hl7.org/fhir}Condition",
+                                                                                                                                            "codeProperty": "code",
+                                                                                                                                            "type": "Retrieve",
+                                                                                                                                            "codes": {
+                                                                                                                                                "name": "Pulmonary_neoplasm_codes",
+                                                                                                                                                "type": "ExpressionRef"
+                                                                                                                                            }
+                                                                                                                                        }
+                                                                                                                                    ]
+                                                                                                                                }
+                                                                                                                            ]
+                                                                                                                        }
+                                                                                                                    }
+                                                                                                                ]
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "type": "Exists",
+                                                                                                                "operand": {
+                                                                                                                    "name": "Confirmed",
+                                                                                                                    "type": "FunctionRef",
+                                                                                                                    "operand": [
+                                                                                                                        {
+                                                                                                                            "name": "ActiveOrRecurring",
+                                                                                                                            "type": "FunctionRef",
+                                                                                                                            "operand": [
+                                                                                                                                {
+                                                                                                                                    "dataType": "{http://hl7.org/fhir}Condition",
+                                                                                                                                    "codeProperty": "code",
+                                                                                                                                    "type": "Retrieve",
+                                                                                                                                    "codes": {
+                                                                                                                                        "name": "Pulmonary_hypertension_Codes",
+                                                                                                                                        "type": "ExpressionRef"
+                                                                                                                                    }
+                                                                                                                                }
+                                                                                                                            ]
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            }
+                                                                                                        ]
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "type": "Exists",
+                                                                                                        "operand": {
+                                                                                                            "name": "Confirmed",
+                                                                                                            "type": "FunctionRef",
+                                                                                                            "operand": [
+                                                                                                                {
+                                                                                                                    "name": "ActiveOrRecurring",
+                                                                                                                    "type": "FunctionRef",
+                                                                                                                    "operand": [
+                                                                                                                        {
+                                                                                                                            "dataType": "{http://hl7.org/fhir}Condition",
+                                                                                                                            "codeProperty": "code",
+                                                                                                                            "type": "Retrieve",
+                                                                                                                            "codes": {
+                                                                                                                                "name": "Hypoxemia_Codes",
+                                                                                                                                "type": "ExpressionRef"
+                                                                                                                            }
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    }
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "type": "Exists",
+                                                                                                "operand": {
+                                                                                                    "name": "Confirmed",
+                                                                                                    "type": "FunctionRef",
+                                                                                                    "operand": [
+                                                                                                        {
+                                                                                                            "name": "ActiveOrRecurring",
+                                                                                                            "type": "FunctionRef",
+                                                                                                            "operand": [
+                                                                                                                {
+                                                                                                                    "dataType": "{http://hl7.org/fhir}Condition",
+                                                                                                                    "codeProperty": "code",
+                                                                                                                    "type": "Retrieve",
+                                                                                                                    "codes": {
+                                                                                                                        "name": "Erythrocytosis_Codes",
+                                                                                                                        "type": "ExpressionRef"
+                                                                                                                    }
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            }
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "type": "Exists",
+                                                                                        "operand": {
+                                                                                            "name": "Confirmed",
+                                                                                            "type": "FunctionRef",
+                                                                                            "operand": [
+                                                                                                {
+                                                                                                    "name": "ActiveOrRecurring",
+                                                                                                    "type": "FunctionRef",
+                                                                                                    "operand": [
+                                                                                                        {
+                                                                                                            "dataType": "{http://hl7.org/fhir}Condition",
+                                                                                                            "codeProperty": "code",
+                                                                                                            "type": "Retrieve",
+                                                                                                            "codes": {
+                                                                                                                "name": "Mild_cognitive_impairment_Codes",
+                                                                                                                "type": "ExpressionRef"
+                                                                                                            }
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "type": "Exists",
+                                                                                "operand": {
+                                                                                    "name": "Confirmed",
+                                                                                    "type": "FunctionRef",
+                                                                                    "operand": [
+                                                                                        {
+                                                                                            "name": "ActiveOrRecurring",
+                                                                                            "type": "FunctionRef",
+                                                                                            "operand": [
+                                                                                                {
+                                                                                                    "dataType": "{http://hl7.org/fhir}Condition",
+                                                                                                    "codeProperty": "code",
+                                                                                                    "type": "Retrieve",
+                                                                                                    "codes": {
+                                                                                                        "name": "Restlessness_Codes",
+                                                                                                        "type": "ExpressionRef"
+                                                                                                    }
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "type": "Exists",
+                                                                        "operand": {
+                                                                            "name": "Confirmed",
+                                                                            "type": "FunctionRef",
+                                                                            "operand": [
+                                                                                {
+                                                                                    "name": "ActiveOrRecurring",
+                                                                                    "type": "FunctionRef",
+                                                                                    "operand": [
+                                                                                        {
+                                                                                            "dataType": "{http://hl7.org/fhir}Condition",
+                                                                                            "codeProperty": "code",
+                                                                                            "type": "Retrieve",
+                                                                                            "codes": {
+                                                                                                "name": "Headache_codes",
+                                                                                                "type": "ExpressionRef"
+                                                                                            }
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
                                                                         }
                                                                     }
                                                                 ]
+                                                            },
+                                                            {
+                                                                "type": "Exists",
+                                                                "operand": {
+                                                                    "name": "Confirmed",
+                                                                    "type": "FunctionRef",
+                                                                    "operand": [
+                                                                        {
+                                                                            "name": "ActiveOrRecurring",
+                                                                            "type": "FunctionRef",
+                                                                            "operand": [
+                                                                                {
+                                                                                    "dataType": "{http://hl7.org/fhir}Condition",
+                                                                                    "codeProperty": "code",
+                                                                                    "type": "Retrieve",
+                                                                                    "codes": {
+                                                                                        "name": "Cor_pulmonale_Codes",
+                                                                                        "type": "ExpressionRef"
+                                                                                    }
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
                                                             }
                                                         ]
+                                                    },
+                                                    {
+                                                        "type": "Exists",
+                                                        "operand": {
+                                                            "name": "Confirmed",
+                                                            "type": "FunctionRef",
+                                                            "operand": [
+                                                                {
+                                                                    "name": "ActiveOrRecurring",
+                                                                    "type": "FunctionRef",
+                                                                    "operand": [
+                                                                        {
+                                                                            "dataType": "{http://hl7.org/fhir}Condition",
+                                                                            "codeProperty": "code",
+                                                                            "type": "Retrieve",
+                                                                            "codes": {
+                                                                                "name": "Congestive_heart_failure_codes",
+                                                                                "type": "ExpressionRef"
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
                                                     }
-                                                }
-                                            },
-                                            "then": {
-                                                "valueType": "{urn:hl7-org:elm-types:r1}Boolean",
-                                                "value": "true",
-                                                "type": "Literal"
-                                            },
-                                            "else": {
-                                                "valueType": "{urn:hl7-org:elm-types:r1}Boolean",
-                                                "value": "false",
-                                                "type": "Literal"
+                                                ]
                                             }
                                         },
-                                        {
-                                            "type": "If",
-                                            "condition": {
-                                                "asType": "{urn:hl7-org:elm-types:r1}Boolean",
-                                                "type": "As",
-                                                "operand": {
-                                                    "type": "Exists",
-                                                    "operand": {
-                                                        "name": "Confirmed",
-                                                        "type": "FunctionRef",
-                                                        "operand": [
-                                                            {
-                                                                "name": "ActiveOrRecurring",
-                                                                "type": "FunctionRef",
-                                                                "operand": [
-                                                                    {
-                                                                        "dataType": "{http://hl7.org/fhir}Condition",
-                                                                        "codeProperty": "code",
-                                                                        "type": "Retrieve",
-                                                                        "codes": {
-                                                                            "name": "Bronchiectasis_Codes",
-                                                                            "type": "ExpressionRef"
-                                                                        }
-                                                                    }
-                                                                ]
-                                                            }
-                                                        ]
-                                                    }
-                                                }
-                                            },
-                                            "then": {
-                                                "valueType": "{urn:hl7-org:elm-types:r1}Boolean",
-                                                "value": "true",
-                                                "type": "Literal"
-                                            },
-                                            "else": {
-                                                "valueType": "{urn:hl7-org:elm-types:r1}Boolean",
-                                                "value": "false",
-                                                "type": "Literal"
-                                            }
+                                        "then": {
+                                            "valueType": "{urn:hl7-org:elm-types:r1}Boolean",
+                                            "value": "true",
+                                            "type": "Literal"
                                         },
-                                        {
-                                            "type": "If",
-                                            "condition": {
-                                                "asType": "{urn:hl7-org:elm-types:r1}Boolean",
-                                                "type": "As",
-                                                "operand": {
-                                                    "type": "Exists",
-                                                    "operand": {
-                                                        "name": "Confirmed",
-                                                        "type": "FunctionRef",
-                                                        "operand": [
-                                                            {
-                                                                "name": "ActiveOrRecurring",
-                                                                "type": "FunctionRef",
-                                                                "operand": [
-                                                                    {
-                                                                        "dataType": "{http://hl7.org/fhir}Condition",
-                                                                        "codeProperty": "code",
-                                                                        "type": "Retrieve",
-                                                                        "codes": {
-                                                                            "name": "Diffuse_interstitial_lung_disease_Codes",
-                                                                            "type": "ExpressionRef"
-                                                                        }
-                                                                    }
-                                                                ]
-                                                            }
-                                                        ]
-                                                    }
-                                                }
-                                            },
-                                            "then": {
-                                                "valueType": "{urn:hl7-org:elm-types:r1}Boolean",
-                                                "value": "true",
-                                                "type": "Literal"
-                                            },
-                                            "else": {
-                                                "valueType": "{urn:hl7-org:elm-types:r1}Boolean",
-                                                "value": "false",
-                                                "type": "Literal"
-                                            }
-                                        },
-                                        {
-                                            "type": "If",
-                                            "condition": {
-                                                "asType": "{urn:hl7-org:elm-types:r1}Boolean",
-                                                "type": "As",
-                                                "operand": {
-                                                    "type": "Exists",
-                                                    "operand": {
-                                                        "name": "Confirmed",
-                                                        "type": "FunctionRef",
-                                                        "operand": [
-                                                            {
-                                                                "name": "ActiveOrRecurring",
-                                                                "type": "FunctionRef",
-                                                                "operand": [
-                                                                    {
-                                                                        "dataType": "{http://hl7.org/fhir}Condition",
-                                                                        "codeProperty": "code",
-                                                                        "type": "Retrieve",
-                                                                        "codes": {
-                                                                            "name": "Cystic_fibrosis_Codes",
-                                                                            "type": "ExpressionRef"
-                                                                        }
-                                                                    }
-                                                                ]
-                                                            }
-                                                        ]
-                                                    }
-                                                }
-                                            },
-                                            "then": {
-                                                "valueType": "{urn:hl7-org:elm-types:r1}Boolean",
-                                                "value": "true",
-                                                "type": "Literal"
-                                            },
-                                            "else": {
-                                                "valueType": "{urn:hl7-org:elm-types:r1}Boolean",
-                                                "value": "false",
-                                                "type": "Literal"
-                                            }
-                                        },
-                                        {
-                                            "type": "If",
-                                            "condition": {
-                                                "asType": "{urn:hl7-org:elm-types:r1}Boolean",
-                                                "type": "As",
-                                                "operand": {
-                                                    "type": "Exists",
-                                                    "operand": {
-                                                        "name": "Confirmed",
-                                                        "type": "FunctionRef",
-                                                        "operand": [
-                                                            {
-                                                                "name": "ActiveOrRecurring",
-                                                                "type": "FunctionRef",
-                                                                "operand": [
-                                                                    {
-                                                                        "dataType": "{http://hl7.org/fhir}Condition",
-                                                                        "codeProperty": "code",
-                                                                        "type": "Retrieve",
-                                                                        "codes": {
-                                                                            "name": "Pulmonary_neoplasm_codes",
-                                                                            "type": "ExpressionRef"
-                                                                        }
-                                                                    }
-                                                                ]
-                                                            }
-                                                        ]
-                                                    }
-                                                }
-                                            },
-                                            "then": {
-                                                "valueType": "{urn:hl7-org:elm-types:r1}Boolean",
-                                                "value": "true",
-                                                "type": "Literal"
-                                            },
-                                            "else": {
-                                                "valueType": "{urn:hl7-org:elm-types:r1}Boolean",
-                                                "value": "false",
-                                                "type": "Literal"
-                                            }
-                                        },
-                                        {
-                                            "type": "If",
-                                            "condition": {
-                                                "asType": "{urn:hl7-org:elm-types:r1}Boolean",
-                                                "type": "As",
-                                                "operand": {
-                                                    "type": "Exists",
-                                                    "operand": {
-                                                        "name": "Confirmed",
-                                                        "type": "FunctionRef",
-                                                        "operand": [
-                                                            {
-                                                                "name": "ActiveOrRecurring",
-                                                                "type": "FunctionRef",
-                                                                "operand": [
-                                                                    {
-                                                                        "dataType": "{http://hl7.org/fhir}Condition",
-                                                                        "codeProperty": "code",
-                                                                        "type": "Retrieve",
-                                                                        "codes": {
-                                                                            "name": "Pulmonary_hypertension_Codes",
-                                                                            "type": "ExpressionRef"
-                                                                        }
-                                                                    }
-                                                                ]
-                                                            }
-                                                        ]
-                                                    }
-                                                }
-                                            },
-                                            "then": {
-                                                "valueType": "{urn:hl7-org:elm-types:r1}Boolean",
-                                                "value": "true",
-                                                "type": "Literal"
-                                            },
-                                            "else": {
-                                                "valueType": "{urn:hl7-org:elm-types:r1}Boolean",
-                                                "value": "false",
-                                                "type": "Literal"
-                                            }
-                                        },
-                                        {
-                                            "type": "If",
-                                            "condition": {
-                                                "asType": "{urn:hl7-org:elm-types:r1}Boolean",
-                                                "type": "As",
-                                                "operand": {
-                                                    "type": "Exists",
-                                                    "operand": {
-                                                        "name": "Confirmed",
-                                                        "type": "FunctionRef",
-                                                        "operand": [
-                                                            {
-                                                                "name": "ActiveOrRecurring",
-                                                                "type": "FunctionRef",
-                                                                "operand": [
-                                                                    {
-                                                                        "dataType": "{http://hl7.org/fhir}Condition",
-                                                                        "codeProperty": "code",
-                                                                        "type": "Retrieve",
-                                                                        "codes": {
-                                                                            "name": "Hypoxemia_Codes",
-                                                                            "type": "ExpressionRef"
-                                                                        }
-                                                                    }
-                                                                ]
-                                                            }
-                                                        ]
-                                                    }
-                                                }
-                                            },
-                                            "then": {
-                                                "valueType": "{urn:hl7-org:elm-types:r1}Boolean",
-                                                "value": "true",
-                                                "type": "Literal"
-                                            },
-                                            "else": {
-                                                "valueType": "{urn:hl7-org:elm-types:r1}Boolean",
-                                                "value": "false",
-                                                "type": "Literal"
-                                            }
-                                        },
-                                        {
-                                            "type": "If",
-                                            "condition": {
-                                                "asType": "{urn:hl7-org:elm-types:r1}Boolean",
-                                                "type": "As",
-                                                "operand": {
-                                                    "type": "Exists",
-                                                    "operand": {
-                                                        "name": "Confirmed",
-                                                        "type": "FunctionRef",
-                                                        "operand": [
-                                                            {
-                                                                "name": "ActiveOrRecurring",
-                                                                "type": "FunctionRef",
-                                                                "operand": [
-                                                                    {
-                                                                        "dataType": "{http://hl7.org/fhir}Condition",
-                                                                        "codeProperty": "code",
-                                                                        "type": "Retrieve",
-                                                                        "codes": {
-                                                                            "name": "Erythrocytosis_Codes",
-                                                                            "type": "ExpressionRef"
-                                                                        }
-                                                                    }
-                                                                ]
-                                                            }
-                                                        ]
-                                                    }
-                                                }
-                                            },
-                                            "then": {
-                                                "valueType": "{urn:hl7-org:elm-types:r1}Boolean",
-                                                "value": "true",
-                                                "type": "Literal"
-                                            },
-                                            "else": {
-                                                "valueType": "{urn:hl7-org:elm-types:r1}Boolean",
-                                                "value": "false",
-                                                "type": "Literal"
-                                            }
-                                        },
-                                        {
-                                            "type": "If",
-                                            "condition": {
-                                                "asType": "{urn:hl7-org:elm-types:r1}Boolean",
-                                                "type": "As",
-                                                "operand": {
-                                                    "type": "Exists",
-                                                    "operand": {
-                                                        "name": "Confirmed",
-                                                        "type": "FunctionRef",
-                                                        "operand": [
-                                                            {
-                                                                "name": "ActiveOrRecurring",
-                                                                "type": "FunctionRef",
-                                                                "operand": [
-                                                                    {
-                                                                        "dataType": "{http://hl7.org/fhir}Condition",
-                                                                        "codeProperty": "code",
-                                                                        "type": "Retrieve",
-                                                                        "codes": {
-                                                                            "name": "Mild_cognitive_impairment_Codes",
-                                                                            "type": "ExpressionRef"
-                                                                        }
-                                                                    }
-                                                                ]
-                                                            }
-                                                        ]
-                                                    }
-                                                }
-                                            },
-                                            "then": {
-                                                "valueType": "{urn:hl7-org:elm-types:r1}Boolean",
-                                                "value": "true",
-                                                "type": "Literal"
-                                            },
-                                            "else": {
-                                                "valueType": "{urn:hl7-org:elm-types:r1}Boolean",
-                                                "value": "false",
-                                                "type": "Literal"
-                                            }
-                                        },
-                                        {
-                                            "type": "If",
-                                            "condition": {
-                                                "asType": "{urn:hl7-org:elm-types:r1}Boolean",
-                                                "type": "As",
-                                                "operand": {
-                                                    "type": "Exists",
-                                                    "operand": {
-                                                        "name": "Confirmed",
-                                                        "type": "FunctionRef",
-                                                        "operand": [
-                                                            {
-                                                                "name": "ActiveOrRecurring",
-                                                                "type": "FunctionRef",
-                                                                "operand": [
-                                                                    {
-                                                                        "dataType": "{http://hl7.org/fhir}Condition",
-                                                                        "codeProperty": "code",
-                                                                        "type": "Retrieve",
-                                                                        "codes": {
-                                                                            "name": "Restlessness_Codes",
-                                                                            "type": "ExpressionRef"
-                                                                        }
-                                                                    }
-                                                                ]
-                                                            }
-                                                        ]
-                                                    }
-                                                }
-                                            },
-                                            "then": {
-                                                "valueType": "{urn:hl7-org:elm-types:r1}Boolean",
-                                                "value": "true",
-                                                "type": "Literal"
-                                            },
-                                            "else": {
-                                                "valueType": "{urn:hl7-org:elm-types:r1}Boolean",
-                                                "value": "false",
-                                                "type": "Literal"
-                                            }
-                                        },
-                                        {
-                                            "type": "If",
-                                            "condition": {
-                                                "asType": "{urn:hl7-org:elm-types:r1}Boolean",
-                                                "type": "As",
-                                                "operand": {
-                                                    "type": "Exists",
-                                                    "operand": {
-                                                        "name": "Confirmed",
-                                                        "type": "FunctionRef",
-                                                        "operand": [
-                                                            {
-                                                                "name": "ActiveOrRecurring",
-                                                                "type": "FunctionRef",
-                                                                "operand": [
-                                                                    {
-                                                                        "dataType": "{http://hl7.org/fhir}Condition",
-                                                                        "codeProperty": "code",
-                                                                        "type": "Retrieve",
-                                                                        "codes": {
-                                                                            "name": "Headache_codes",
-                                                                            "type": "ExpressionRef"
-                                                                        }
-                                                                    }
-                                                                ]
-                                                            }
-                                                        ]
-                                                    }
-                                                }
-                                            },
-                                            "then": {
-                                                "valueType": "{urn:hl7-org:elm-types:r1}Boolean",
-                                                "value": "true",
-                                                "type": "Literal"
-                                            },
-                                            "else": {
-                                                "valueType": "{urn:hl7-org:elm-types:r1}Boolean",
-                                                "value": "false",
-                                                "type": "Literal"
-                                            }
-                                        },
-                                        {
-                                            "type": "If",
-                                            "condition": {
-                                                "asType": "{urn:hl7-org:elm-types:r1}Boolean",
-                                                "type": "As",
-                                                "operand": {
-                                                    "type": "Exists",
-                                                    "operand": {
-                                                        "name": "Confirmed",
-                                                        "type": "FunctionRef",
-                                                        "operand": [
-                                                            {
-                                                                "name": "ActiveOrRecurring",
-                                                                "type": "FunctionRef",
-                                                                "operand": [
-                                                                    {
-                                                                        "dataType": "{http://hl7.org/fhir}Condition",
-                                                                        "codeProperty": "code",
-                                                                        "type": "Retrieve",
-                                                                        "codes": {
-                                                                            "name": "Cor_pulmonale_Codes",
-                                                                            "type": "ExpressionRef"
-                                                                        }
-                                                                    }
-                                                                ]
-                                                            }
-                                                        ]
-                                                    }
-                                                }
-                                            },
-                                            "then": {
-                                                "valueType": "{urn:hl7-org:elm-types:r1}Boolean",
-                                                "value": "true",
-                                                "type": "Literal"
-                                            },
-                                            "else": {
-                                                "valueType": "{urn:hl7-org:elm-types:r1}Boolean",
-                                                "value": "false",
-                                                "type": "Literal"
-                                            }
-                                        },
-                                        {
-                                            "type": "If",
-                                            "condition": {
-                                                "asType": "{urn:hl7-org:elm-types:r1}Boolean",
-                                                "type": "As",
-                                                "operand": {
-                                                    "type": "Exists",
-                                                    "operand": {
-                                                        "name": "Confirmed",
-                                                        "type": "FunctionRef",
-                                                        "operand": [
-                                                            {
-                                                                "name": "ActiveOrRecurring",
-                                                                "type": "FunctionRef",
-                                                                "operand": [
-                                                                    {
-                                                                        "dataType": "{http://hl7.org/fhir}Condition",
-                                                                        "codeProperty": "code",
-                                                                        "type": "Retrieve",
-                                                                        "codes": {
-                                                                            "name": "Congestive_heart_failure_codes",
-                                                                            "type": "ExpressionRef"
-                                                                        }
-                                                                    }
-                                                                ]
-                                                            }
-                                                        ]
-                                                    }
-                                                }
-                                            },
-                                            "then": {
-                                                "valueType": "{urn:hl7-org:elm-types:r1}Boolean",
-                                                "value": "true",
-                                                "type": "Literal"
-                                            },
-                                            "else": {
-                                                "valueType": "{urn:hl7-org:elm-types:r1}Boolean",
-                                                "value": "false",
-                                                "type": "Literal"
-                                            }
-                                        }
-                                    ]
-                                },
-                                "asTypeSpecifier": {
-                                    "type": "ListTypeSpecifier",
-                                    "elementType": {
-                                        "type": "ChoiceTypeSpecifier",
-                                        "choice": [
-                                            {
-                                                "name": "{urn:hl7-org:elm-types:r1}Boolean",
-                                                "type": "NamedTypeSpecifier"
-                                            },
-                                            {
-                                                "name": "{urn:hl7-org:elm-types:r1}String",
-                                                "type": "NamedTypeSpecifier"
-                                            }
-                                        ]
-                                    }
-                                }
-                            },
-                            {
-                                "type": "As",
-                                "operand": {
-                                    "type": "List",
-                                    "element": [
-                                        {
-                                            "valueType": "{urn:hl7-org:elm-types:r1}String",
-                                            "value": "null",
+                                        "else": {
+                                            "valueType": "{urn:hl7-org:elm-types:r1}Boolean",
+                                            "value": "false",
                                             "type": "Literal"
                                         }
-                                    ]
-                                },
-                                "asTypeSpecifier": {
-                                    "type": "ListTypeSpecifier",
-                                    "elementType": {
-                                        "type": "ChoiceTypeSpecifier",
-                                        "choice": [
-                                            {
-                                                "name": "{urn:hl7-org:elm-types:r1}Boolean",
-                                                "type": "NamedTypeSpecifier"
-                                            },
-                                            {
-                                                "name": "{urn:hl7-org:elm-types:r1}String",
-                                                "type": "NamedTypeSpecifier"
-                                            }
-                                        ]
                                     }
-                                }
+                                ]
+                            },
+                            {
+                                "type": "List",
+                                "element": [
+                                    {
+                                        "valueType": "{urn:hl7-org:elm-types:r1}Boolean",
+                                        "value": "false",
+                                        "type": "Literal"
+                                    }
+                                ]
                             }
                         ]
                     }
@@ -2300,30 +2158,6 @@
                     }
                 },
                 {
-                    "name": "OrderingProvider",
-                    "context": "Patient",
-                    "accessLevel": "Public",
-                    "expression": {
-                        "type": "SingletonFrom",
-                        "operand": {
-                            "type": "Query",
-                            "source": [
-                                {
-                                    "alias": "practitioner",
-                                    "expression": {
-                                        "dataType": "{http://hl7.org/fhir}Practitioner",
-                                        "type": "Retrieve"
-                                    }
-                                }
-                            ],
-                            "relationship": [],
-                            "where": {
-                                "type": "Null"
-                            }
-                        }
-                    }
-                },
-                {
                     "name": "Alternate Treatment",
                     "context": "Patient",
                     "accessLevel": "Public",
@@ -2333,47 +2167,10 @@
                             "type": "Query",
                             "source": [
                                 {
-                                    "alias": "A",
+                                    "alias": "Q",
                                     "expression": {
-                                        "dataType": "{http://hl7.org/fhir}Observation",
-                                        "codeProperty": "code",
-                                        "type": "Retrieve",
-                                        "codes": {
-                                            "type": "ToList",
-                                            "operand": {
-                                                "name": "182868002",
-                                                "type": "CodeRef"
-                                            }
-                                        }
-                                    }
-                                }
-                            ],
-                            "relationship": [],
-                            "where": {
-                                "type": "Null"
-                            }
-                        }
-                    }
-                },
-                {
-                    "name": "Group1- low values",
-                    "context": "Patient",
-                    "accessLevel": "Public",
-                    "expression": {
-                        "type": "Exists",
-                        "operand": {
-                            "type": "Query",
-                            "source": [
-                                {
-                                    "alias": "P",
-                                    "expression": {
-                                        "dataType": "{http://hl7.org/fhir}Observation",
-                                        "codeProperty": "code",
-                                        "type": "Retrieve",
-                                        "codes": {
-                                            "name": "Arterial_partial_pressure_of_oxygen_Codes",
-                                            "type": "ExpressionRef"
-                                        }
+                                        "dataType": "{http://hl7.org/fhir}QuestionnaireResponse",
+                                        "type": "Retrieve"
                                     }
                                 }
                             ],
@@ -2389,54 +2186,47 @@
                     "context": "Patient",
                     "accessLevel": "Public",
                     "expression": {
-                        "type": "And",
+                        "type": "Or",
                         "operand": [
                             {
                                 "type": "Exists",
                                 "operand": {
-                                    "dataType": "{http://hl7.org/fhir}Observation",
-                                    "codeProperty": "code",
-                                    "type": "Retrieve",
-                                    "codes": {
-                                        "name": "Resting_state_Codes",
-                                        "type": "ExpressionRef"
+                                    "type": "Query",
+                                    "source": [
+                                        {
+                                            "alias": "Q",
+                                            "expression": {
+                                                "dataType": "{http://hl7.org/fhir}QuestionnaireResponse",
+                                                "type": "Retrieve"
+                                            }
+                                        }
+                                    ],
+                                    "relationship": [],
+                                    "where": {
+                                        "type": "Null"
                                     }
                                 }
                             },
                             {
-                                "name": "Group1- low values",
-                                "type": "ExpressionRef"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "Group1- high values",
-                    "context": "Patient",
-                    "accessLevel": "Public",
-                    "expression": {
-                        "type": "Exists",
-                        "operand": {
-                            "type": "Query",
-                            "source": [
-                                {
-                                    "alias": "P",
-                                    "expression": {
-                                        "dataType": "{http://hl7.org/fhir}Observation",
-                                        "codeProperty": "code",
-                                        "type": "Retrieve",
-                                        "codes": {
-                                            "name": "Arterial_partial_pressure_of_oxygen_Codes",
-                                            "type": "ExpressionRef"
+                                "type": "Exists",
+                                "operand": {
+                                    "type": "Query",
+                                    "source": [
+                                        {
+                                            "alias": "Q",
+                                            "expression": {
+                                                "dataType": "{http://hl7.org/fhir}QuestionnaireResponse",
+                                                "type": "Retrieve"
+                                            }
                                         }
+                                    ],
+                                    "relationship": [],
+                                    "where": {
+                                        "type": "Null"
                                     }
                                 }
-                            ],
-                            "relationship": [],
-                            "where": {
-                                "type": "Null"
                             }
-                        }
+                        ]
                     }
                 },
                 {
@@ -2449,48 +2239,53 @@
                             "asType": "{urn:hl7-org:elm-types:r1}Boolean",
                             "type": "As",
                             "operand": {
-                                "type": "And",
-                                "operand": [
-                                    {
-                                        "type": "Exists",
-                                        "operand": {
-                                            "dataType": "{http://hl7.org/fhir}Observation",
-                                            "codeProperty": "code",
-                                            "type": "Retrieve",
-                                            "codes": {
-                                                "name": "Resting_state_Codes",
-                                                "type": "ExpressionRef"
-                                            }
-                                        }
-                                    },
-                                    {
-                                        "name": "Group1- high values",
-                                        "type": "ExpressionRef"
-                                    }
-                                ]
+                                "type": "Not",
+                                "operand": {
+                                    "name": "Group1 resting state",
+                                    "type": "ExpressionRef"
+                                }
                             }
                         },
                         "then": {
-                            "type": "And",
+                            "type": "Or",
                             "operand": [
                                 {
                                     "type": "Exists",
                                     "operand": {
-                                        "dataType": "{http://hl7.org/fhir}Observation",
-                                        "codeProperty": "code",
-                                        "type": "Retrieve",
-                                        "codes": {
-                                            "type": "ToList",
-                                            "operand": {
-                                                "name": "73985-4",
-                                                "type": "CodeRef"
+                                        "type": "Query",
+                                        "source": [
+                                            {
+                                                "alias": "Q",
+                                                "expression": {
+                                                    "dataType": "{http://hl7.org/fhir}QuestionnaireResponse",
+                                                    "type": "Retrieve"
+                                                }
                                             }
+                                        ],
+                                        "relationship": [],
+                                        "where": {
+                                            "type": "Null"
                                         }
                                     }
                                 },
                                 {
-                                    "name": "Group1- low values",
-                                    "type": "ExpressionRef"
+                                    "type": "Exists",
+                                    "operand": {
+                                        "type": "Query",
+                                        "source": [
+                                            {
+                                                "alias": "Q",
+                                                "expression": {
+                                                    "dataType": "{http://hl7.org/fhir}QuestionnaireResponse",
+                                                    "type": "Retrieve"
+                                                }
+                                            }
+                                        ],
+                                        "relationship": [],
+                                        "where": {
+                                            "type": "Null"
+                                        }
+                                    }
                                 }
                             ]
                         },
@@ -2506,75 +2301,45 @@
                     "context": "Patient",
                     "accessLevel": "Public",
                     "expression": {
-                        "type": "And",
+                        "type": "Or",
                         "operand": [
                             {
                                 "type": "Exists",
                                 "operand": {
-                                    "dataType": "{http://hl7.org/fhir}Observation",
-                                    "codeProperty": "code",
-                                    "type": "Retrieve",
-                                    "codes": {
-                                        "type": "ToList",
-                                        "operand": {
-                                            "name": "224229008",
-                                            "type": "CodeRef"
+                                    "type": "Query",
+                                    "source": [
+                                        {
+                                            "alias": "Q",
+                                            "expression": {
+                                                "dataType": "{http://hl7.org/fhir}QuestionnaireResponse",
+                                                "type": "Retrieve"
+                                            }
                                         }
+                                    ],
+                                    "relationship": [],
+                                    "where": {
+                                        "type": "Null"
                                     }
                                 }
                             },
                             {
-                                "type": "Or",
-                                "operand": [
-                                    {
-                                        "type": "Exists",
-                                        "operand": {
-                                            "type": "Query",
-                                            "source": [
-                                                {
-                                                    "alias": "P",
-                                                    "expression": {
-                                                        "dataType": "{http://hl7.org/fhir}Observation",
-                                                        "codeProperty": "code",
-                                                        "type": "Retrieve",
-                                                        "codes": {
-                                                            "name": "Arterial_partial_pressure_of_oxygen_Codes",
-                                                            "type": "ExpressionRef"
-                                                        }
-                                                    }
-                                                }
-                                            ],
-                                            "relationship": [],
-                                            "where": {
-                                                "type": "Null"
+                                "type": "Exists",
+                                "operand": {
+                                    "type": "Query",
+                                    "source": [
+                                        {
+                                            "alias": "Q",
+                                            "expression": {
+                                                "dataType": "{http://hl7.org/fhir}QuestionnaireResponse",
+                                                "type": "Retrieve"
                                             }
                                         }
-                                    },
-                                    {
-                                        "type": "Exists",
-                                        "operand": {
-                                            "type": "Query",
-                                            "source": [
-                                                {
-                                                    "alias": "G",
-                                                    "expression": {
-                                                        "dataType": "{http://hl7.org/fhir}Observation",
-                                                        "codeProperty": "code",
-                                                        "type": "Retrieve",
-                                                        "codes": {
-                                                            "name": "Arterial_oxygen_saturation_Codes",
-                                                            "type": "ExpressionRef"
-                                                        }
-                                                    }
-                                                }
-                                            ],
-                                            "relationship": [],
-                                            "where": {
-                                                "type": "Null"
-                                            }
-                                        }
+                                    ],
+                                    "relationship": [],
+                                    "where": {
+                                        "type": "Null"
                                     }
-                                ]
+                                }
                             }
                         ]
                     }
@@ -2899,20 +2664,24 @@
                         "type": "And",
                         "operand": [
                             {
-                                "type": "And",
+                                "type": "Or",
                                 "operand": [
                                     {
                                         "type": "Exists",
                                         "operand": {
-                                            "dataType": "{http://hl7.org/fhir}Observation",
-                                            "codeProperty": "code",
-                                            "type": "Retrieve",
-                                            "codes": {
-                                                "type": "ToList",
-                                                "operand": {
-                                                    "name": "224229008",
-                                                    "type": "CodeRef"
+                                            "type": "Query",
+                                            "source": [
+                                                {
+                                                    "alias": "Q",
+                                                    "expression": {
+                                                        "dataType": "{http://hl7.org/fhir}QuestionnaireResponse",
+                                                        "type": "Retrieve"
+                                                    }
                                                 }
+                                            ],
+                                            "relationship": [],
+                                            "where": {
+                                                "type": "Null"
                                             }
                                         }
                                     },
@@ -2922,15 +2691,10 @@
                                             "type": "Query",
                                             "source": [
                                                 {
-                                                    "alias": "P",
+                                                    "alias": "Q",
                                                     "expression": {
-                                                        "dataType": "{http://hl7.org/fhir}Observation",
-                                                        "codeProperty": "code",
-                                                        "type": "Retrieve",
-                                                        "codes": {
-                                                            "name": "Arterial_partial_pressure_of_oxygen_Codes",
-                                                            "type": "ExpressionRef"
-                                                        }
+                                                        "dataType": "{http://hl7.org/fhir}QuestionnaireResponse",
+                                                        "type": "Retrieve"
                                                     }
                                                 }
                                             ],
@@ -2962,25 +2726,11 @@
                             "asType": "{urn:hl7-org:elm-types:r1}Boolean",
                             "type": "As",
                             "operand": {
-                                "type": "And",
-                                "operand": [
-                                    {
-                                        "type": "Exists",
-                                        "operand": {
-                                            "dataType": "{http://hl7.org/fhir}Observation",
-                                            "codeProperty": "code",
-                                            "type": "Retrieve",
-                                            "codes": {
-                                                "name": "Resting_state_Codes",
-                                                "type": "ExpressionRef"
-                                            }
-                                        }
-                                    },
-                                    {
-                                        "name": "Group1- high values",
-                                        "type": "ExpressionRef"
-                                    }
-                                ]
+                                "type": "Not",
+                                "operand": {
+                                    "name": "Group1 resting state",
+                                    "type": "ExpressionRef"
+                                }
                             }
                         },
                         "then": {
@@ -3038,20 +2788,131 @@
                         "type": "Or",
                         "operand": [
                             {
+                                "type": "And",
+                                "operand": [
+                                    {
+                                        "type": "Exists",
+                                        "operand": {
+                                            "name": "Confirmed",
+                                            "type": "FunctionRef",
+                                            "operand": [
+                                                {
+                                                    "name": "ActiveOrRecurring",
+                                                    "type": "FunctionRef",
+                                                    "operand": [
+                                                        {
+                                                            "dataType": "{http://hl7.org/fhir}Condition",
+                                                            "codeProperty": "code",
+                                                            "type": "Retrieve",
+                                                            "codes": {
+                                                                "name": "Hypoxemia_Codes",
+                                                                "type": "ExpressionRef"
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "type": "Exists",
+                                        "operand": {
+                                            "name": "Confirmed",
+                                            "type": "FunctionRef",
+                                            "operand": [
+                                                {
+                                                    "name": "ActiveOrRecurring",
+                                                    "type": "FunctionRef",
+                                                    "operand": [
+                                                        {
+                                                            "dataType": "{http://hl7.org/fhir}Condition",
+                                                            "codeProperty": "code",
+                                                            "type": "Retrieve",
+                                                            "codes": {
+                                                                "name": "Hypoxemia_Codes",
+                                                                "type": "ExpressionRef"
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "Or",
+                                "operand": [
+                                    {
+                                        "type": "Exists",
+                                        "operand": {
+                                            "name": "Confirmed",
+                                            "type": "FunctionRef",
+                                            "operand": [
+                                                {
+                                                    "name": "ActiveOrRecurring",
+                                                    "type": "FunctionRef",
+                                                    "operand": [
+                                                        {
+                                                            "dataType": "{http://hl7.org/fhir}Condition",
+                                                            "codeProperty": "code",
+                                                            "type": "Retrieve",
+                                                            "codes": {
+                                                                "name": "Pulmonary_hypertension_Codes",
+                                                                "type": "ExpressionRef"
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "type": "Exists",
+                                        "operand": {
+                                            "name": "Confirmed",
+                                            "type": "FunctionRef",
+                                            "operand": [
+                                                {
+                                                    "name": "ActiveOrRecurring",
+                                                    "type": "FunctionRef",
+                                                    "operand": [
+                                                        {
+                                                            "dataType": "{http://hl7.org/fhir}Condition",
+                                                            "codeProperty": "code",
+                                                            "type": "Retrieve",
+                                                            "codes": {
+                                                                "name": "Cor_pulmonale_Codes",
+                                                                "type": "ExpressionRef"
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "Group2 resting state",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "expression": {
+                        "type": "Or",
+                        "operand": [
+                            {
                                 "type": "Exists",
                                 "operand": {
                                     "type": "Query",
                                     "source": [
                                         {
-                                            "alias": "G",
+                                            "alias": "Q",
                                             "expression": {
-                                                "dataType": "{http://hl7.org/fhir}Observation",
-                                                "codeProperty": "code",
-                                                "type": "Retrieve",
-                                                "codes": {
-                                                    "name": "Arterial_oxygen_saturation_Codes",
-                                                    "type": "ExpressionRef"
-                                                }
+                                                "dataType": "{http://hl7.org/fhir}QuestionnaireResponse",
+                                                "type": "Retrieve"
                                             }
                                         }
                                     ],
@@ -3070,15 +2931,10 @@
                                             "type": "Query",
                                             "source": [
                                                 {
-                                                    "alias": "P",
+                                                    "alias": "Q",
                                                     "expression": {
-                                                        "dataType": "{http://hl7.org/fhir}Observation",
-                                                        "codeProperty": "code",
-                                                        "type": "Retrieve",
-                                                        "codes": {
-                                                            "name": "Arterial_partial_pressure_of_oxygen_Codes",
-                                                            "type": "ExpressionRef"
-                                                        }
+                                                        "dataType": "{http://hl7.org/fhir}QuestionnaireResponse",
+                                                        "type": "Retrieve"
                                                     }
                                                 }
                                             ],
@@ -3089,143 +2945,10 @@
                                         }
                                     },
                                     {
-                                        "type": "Or",
-                                        "operand": [
-                                            {
-                                                "type": "And",
-                                                "operand": [
-                                                    {
-                                                        "type": "Exists",
-                                                        "operand": {
-                                                            "name": "Confirmed",
-                                                            "type": "FunctionRef",
-                                                            "operand": [
-                                                                {
-                                                                    "name": "ActiveOrRecurring",
-                                                                    "type": "FunctionRef",
-                                                                    "operand": [
-                                                                        {
-                                                                            "dataType": "{http://hl7.org/fhir}Condition",
-                                                                            "codeProperty": "code",
-                                                                            "type": "Retrieve",
-                                                                            "codes": {
-                                                                                "name": "Hypoxemia_Codes",
-                                                                                "type": "ExpressionRef"
-                                                                            }
-                                                                        }
-                                                                    ]
-                                                                }
-                                                            ]
-                                                        }
-                                                    },
-                                                    {
-                                                        "type": "Exists",
-                                                        "operand": {
-                                                            "name": "Confirmed",
-                                                            "type": "FunctionRef",
-                                                            "operand": [
-                                                                {
-                                                                    "name": "ActiveOrRecurring",
-                                                                    "type": "FunctionRef",
-                                                                    "operand": [
-                                                                        {
-                                                                            "dataType": "{http://hl7.org/fhir}Condition",
-                                                                            "codeProperty": "code",
-                                                                            "type": "Retrieve",
-                                                                            "codes": {
-                                                                                "name": "Hypoxemia_Codes",
-                                                                                "type": "ExpressionRef"
-                                                                            }
-                                                                        }
-                                                                    ]
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "type": "Or",
-                                                "operand": [
-                                                    {
-                                                        "type": "Exists",
-                                                        "operand": {
-                                                            "name": "Confirmed",
-                                                            "type": "FunctionRef",
-                                                            "operand": [
-                                                                {
-                                                                    "name": "ActiveOrRecurring",
-                                                                    "type": "FunctionRef",
-                                                                    "operand": [
-                                                                        {
-                                                                            "dataType": "{http://hl7.org/fhir}Condition",
-                                                                            "codeProperty": "code",
-                                                                            "type": "Retrieve",
-                                                                            "codes": {
-                                                                                "name": "Pulmonary_hypertension_Codes",
-                                                                                "type": "ExpressionRef"
-                                                                            }
-                                                                        }
-                                                                    ]
-                                                                }
-                                                            ]
-                                                        }
-                                                    },
-                                                    {
-                                                        "type": "Exists",
-                                                        "operand": {
-                                                            "name": "Confirmed",
-                                                            "type": "FunctionRef",
-                                                            "operand": [
-                                                                {
-                                                                    "name": "ActiveOrRecurring",
-                                                                    "type": "FunctionRef",
-                                                                    "operand": [
-                                                                        {
-                                                                            "dataType": "{http://hl7.org/fhir}Condition",
-                                                                            "codeProperty": "code",
-                                                                            "type": "Retrieve",
-                                                                            "codes": {
-                                                                                "name": "Cor_pulmonale_Codes",
-                                                                                "type": "ExpressionRef"
-                                                                            }
-                                                                        }
-                                                                    ]
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                ]
-                                            }
-                                        ]
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "Group2 resting state",
-                    "context": "Patient",
-                    "accessLevel": "Public",
-                    "expression": {
-                        "type": "And",
-                        "operand": [
-                            {
-                                "type": "Exists",
-                                "operand": {
-                                    "dataType": "{http://hl7.org/fhir}Observation",
-                                    "codeProperty": "code",
-                                    "type": "Retrieve",
-                                    "codes": {
-                                        "name": "Resting_state_Codes",
+                                        "name": "Group2 Conditions",
                                         "type": "ExpressionRef"
                                     }
-                                }
-                            },
-                            {
-                                "name": "Group2 Conditions",
-                                "type": "ExpressionRef"
+                                ]
                             }
                         ]
                     }
@@ -3235,26 +2958,54 @@
                     "context": "Patient",
                     "accessLevel": "Public",
                     "expression": {
-                        "type": "And",
+                        "type": "Or",
                         "operand": [
                             {
                                 "type": "Exists",
                                 "operand": {
-                                    "dataType": "{http://hl7.org/fhir}Observation",
-                                    "codeProperty": "code",
-                                    "type": "Retrieve",
-                                    "codes": {
-                                        "type": "ToList",
-                                        "operand": {
-                                            "name": "73985-4",
-                                            "type": "CodeRef"
+                                    "type": "Query",
+                                    "source": [
+                                        {
+                                            "alias": "Q",
+                                            "expression": {
+                                                "dataType": "{http://hl7.org/fhir}QuestionnaireResponse",
+                                                "type": "Retrieve"
+                                            }
                                         }
+                                    ],
+                                    "relationship": [],
+                                    "where": {
+                                        "type": "Null"
                                     }
                                 }
                             },
                             {
-                                "name": "Group2 Conditions",
-                                "type": "ExpressionRef"
+                                "type": "And",
+                                "operand": [
+                                    {
+                                        "type": "Exists",
+                                        "operand": {
+                                            "type": "Query",
+                                            "source": [
+                                                {
+                                                    "alias": "Q",
+                                                    "expression": {
+                                                        "dataType": "{http://hl7.org/fhir}QuestionnaireResponse",
+                                                        "type": "Retrieve"
+                                                    }
+                                                }
+                                            ],
+                                            "relationship": [],
+                                            "where": {
+                                                "type": "Null"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "name": "Group2 Conditions",
+                                        "type": "ExpressionRef"
+                                    }
+                                ]
                             }
                         ]
                     }
@@ -3264,26 +3015,54 @@
                     "context": "Patient",
                     "accessLevel": "Public",
                     "expression": {
-                        "type": "And",
+                        "type": "Or",
                         "operand": [
                             {
                                 "type": "Exists",
                                 "operand": {
-                                    "dataType": "{http://hl7.org/fhir}Observation",
-                                    "codeProperty": "code",
-                                    "type": "Retrieve",
-                                    "codes": {
-                                        "type": "ToList",
-                                        "operand": {
-                                            "name": "224229008",
-                                            "type": "CodeRef"
+                                    "type": "Query",
+                                    "source": [
+                                        {
+                                            "alias": "Q",
+                                            "expression": {
+                                                "dataType": "{http://hl7.org/fhir}QuestionnaireResponse",
+                                                "type": "Retrieve"
+                                            }
                                         }
+                                    ],
+                                    "relationship": [],
+                                    "where": {
+                                        "type": "Null"
                                     }
                                 }
                             },
                             {
-                                "name": "Group2 Conditions",
-                                "type": "ExpressionRef"
+                                "type": "And",
+                                "operand": [
+                                    {
+                                        "type": "Exists",
+                                        "operand": {
+                                            "type": "Query",
+                                            "source": [
+                                                {
+                                                    "alias": "Q",
+                                                    "expression": {
+                                                        "dataType": "{http://hl7.org/fhir}QuestionnaireResponse",
+                                                        "type": "Retrieve"
+                                                    }
+                                                }
+                                            ],
+                                            "relationship": [],
+                                            "where": {
+                                                "type": "Null"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "name": "Group2 Conditions",
+                                        "type": "ExpressionRef"
+                                    }
+                                ]
                             }
                         ]
                     }
@@ -3484,11 +3263,53 @@
                     }
                 },
                 {
-                    "name": "Coverage Criteria",
+                    "name": "Clinical trials",
                     "context": "Patient",
                     "accessLevel": "Public",
                     "expression": {
-                        "type": "Or",
+                        "type": "And",
+                        "operand": [
+                            {
+                                "name": "Long-term oxygen therapy",
+                                "type": "ExpressionRef"
+                            },
+                            {
+                                "name": "Cluster Headaches",
+                                "type": "ExpressionRef"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "Face-to-face Encounter",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "expression": {
+                        "type": "Exists",
+                        "operand": {
+                            "type": "Query",
+                            "source": [
+                                {
+                                    "alias": "Q",
+                                    "expression": {
+                                        "dataType": "{http://hl7.org/fhir}QuestionnaireResponse",
+                                        "type": "Retrieve"
+                                    }
+                                }
+                            ],
+                            "relationship": [],
+                            "where": {
+                                "type": "Null"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Medical Record",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "expression": {
+                        "type": "And",
                         "operand": [
                             {
                                 "type": "And",
@@ -3497,38 +3318,885 @@
                                         "type": "And",
                                         "operand": [
                                             {
-                                                "type": "Exists",
-                                                "operand": {
-                                                    "name": "Indications",
-                                                    "type": "ExpressionRef"
-                                                }
+                                                "type": "And",
+                                                "operand": [
+                                                    {
+                                                        "type": "And",
+                                                        "operand": [
+                                                            {
+                                                                "type": "And",
+                                                                "operand": [
+                                                                    {
+                                                                        "type": "Exists",
+                                                                        "operand": {
+                                                                            "type": "Query",
+                                                                            "source": [
+                                                                                {
+                                                                                    "alias": "Q",
+                                                                                    "expression": {
+                                                                                        "dataType": "{http://hl7.org/fhir}QuestionnaireResponse",
+                                                                                        "type": "Retrieve"
+                                                                                    }
+                                                                                }
+                                                                            ],
+                                                                            "relationship": [],
+                                                                            "where": {
+                                                                                "type": "Null"
+                                                                            }
+                                                                        }
+                                                                    },
+                                                                    {
+                                                                        "type": "Exists",
+                                                                        "operand": {
+                                                                            "type": "Query",
+                                                                            "source": [
+                                                                                {
+                                                                                    "alias": "Q",
+                                                                                    "expression": {
+                                                                                        "dataType": "{http://hl7.org/fhir}QuestionnaireResponse",
+                                                                                        "type": "Retrieve"
+                                                                                    }
+                                                                                }
+                                                                            ],
+                                                                            "relationship": [],
+                                                                            "where": {
+                                                                                "type": "Null"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "type": "Exists",
+                                                                "operand": {
+                                                                    "type": "Query",
+                                                                    "source": [
+                                                                        {
+                                                                            "alias": "Q",
+                                                                            "expression": {
+                                                                                "dataType": "{http://hl7.org/fhir}QuestionnaireResponse",
+                                                                                "type": "Retrieve"
+                                                                            }
+                                                                        }
+                                                                    ],
+                                                                    "relationship": [],
+                                                                    "where": {
+                                                                        "type": "Null"
+                                                                    }
+                                                                }
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "type": "Exists",
+                                                        "operand": {
+                                                            "type": "Query",
+                                                            "source": [
+                                                                {
+                                                                    "alias": "Q",
+                                                                    "expression": {
+                                                                        "dataType": "{http://hl7.org/fhir}QuestionnaireResponse",
+                                                                        "type": "Retrieve"
+                                                                    }
+                                                                }
+                                                            ],
+                                                            "relationship": [],
+                                                            "where": {
+                                                                "type": "Null"
+                                                            }
+                                                        }
+                                                    }
+                                                ]
                                             },
                                             {
-                                                "name": "Alternate Treatment",
-                                                "type": "ExpressionRef"
+                                                "type": "Exists",
+                                                "operand": {
+                                                    "type": "Query",
+                                                    "source": [
+                                                        {
+                                                            "alias": "Q",
+                                                            "expression": {
+                                                                "dataType": "{http://hl7.org/fhir}QuestionnaireResponse",
+                                                                "type": "Retrieve"
+                                                            }
+                                                        }
+                                                    ],
+                                                    "relationship": [],
+                                                    "where": {
+                                                        "type": "Null"
+                                                    }
+                                                }
                                             }
                                         ]
                                     },
                                     {
-                                        "name": "Group Criteria",
-                                        "type": "ExpressionRef"
+                                        "type": "Exists",
+                                        "operand": {
+                                            "type": "Query",
+                                            "source": [
+                                                {
+                                                    "alias": "Q",
+                                                    "expression": {
+                                                        "dataType": "{http://hl7.org/fhir}QuestionnaireResponse",
+                                                        "type": "Retrieve"
+                                                    }
+                                                }
+                                            ],
+                                            "relationship": [],
+                                            "where": {
+                                                "type": "Null"
+                                            }
+                                        }
                                     }
                                 ]
                             },
                             {
+                                "type": "Exists",
+                                "operand": {
+                                    "type": "Query",
+                                    "source": [
+                                        {
+                                            "alias": "Q",
+                                            "expression": {
+                                                "dataType": "{http://hl7.org/fhir}QuestionnaireResponse",
+                                                "type": "Retrieve"
+                                            }
+                                        }
+                                    ],
+                                    "relationship": [],
+                                    "where": {
+                                        "type": "Null"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "WOPD",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "expression": {
+                        "type": "And",
+                        "operand": [
+                            {
                                 "type": "And",
                                 "operand": [
                                     {
-                                        "name": "Long-term oxygen therapy",
-                                        "type": "ExpressionRef"
+                                        "type": "Exists",
+                                        "operand": {
+                                            "type": "Query",
+                                            "source": [
+                                                {
+                                                    "alias": "Q",
+                                                    "expression": {
+                                                        "dataType": "{http://hl7.org/fhir}QuestionnaireResponse",
+                                                        "type": "Retrieve"
+                                                    }
+                                                }
+                                            ],
+                                            "relationship": [],
+                                            "where": {
+                                                "type": "Null"
+                                            }
+                                        }
                                     },
                                     {
-                                        "name": "Cluster Headaches",
-                                        "type": "ExpressionRef"
+                                        "type": "Exists",
+                                        "operand": {
+                                            "type": "Query",
+                                            "source": [
+                                                {
+                                                    "alias": "Q",
+                                                    "expression": {
+                                                        "dataType": "{http://hl7.org/fhir}QuestionnaireResponse",
+                                                        "type": "Retrieve"
+                                                    }
+                                                }
+                                            ],
+                                            "relationship": [],
+                                            "where": {
+                                                "type": "Null"
+                                            }
+                                        }
                                     }
                                 ]
+                            },
+                            {
+                                "type": "Exists",
+                                "operand": {
+                                    "type": "Query",
+                                    "source": [
+                                        {
+                                            "alias": "Q",
+                                            "expression": {
+                                                "dataType": "{http://hl7.org/fhir}QuestionnaireResponse",
+                                                "type": "Retrieve"
+                                            }
+                                        }
+                                    ],
+                                    "relationship": [],
+                                    "where": {
+                                        "type": "Null"
+                                    }
+                                }
                             }
                         ]
+                    }
+                },
+                {
+                    "name": "Portable Oxygen",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "expression": {
+                        "type": "If",
+                        "condition": {
+                            "asType": "{urn:hl7-org:elm-types:r1}Boolean",
+                            "type": "As",
+                            "operand": {
+                                "type": "Exists",
+                                "operand": {
+                                    "type": "Query",
+                                    "source": [
+                                        {
+                                            "alias": "Q",
+                                            "expression": {
+                                                "dataType": "{http://hl7.org/fhir}QuestionnaireResponse",
+                                                "type": "Retrieve"
+                                            }
+                                        }
+                                    ],
+                                    "relationship": [],
+                                    "where": {
+                                        "type": "Null"
+                                    }
+                                }
+                            }
+                        },
+                        "then": {
+                            "type": "Exists",
+                            "operand": {
+                                "type": "Query",
+                                "source": [
+                                    {
+                                        "alias": "Q",
+                                        "expression": {
+                                            "dataType": "{http://hl7.org/fhir}QuestionnaireResponse",
+                                            "type": "Retrieve"
+                                        }
+                                    }
+                                ],
+                                "relationship": [],
+                                "where": {
+                                    "type": "Null"
+                                }
+                            }
+                        },
+                        "else": {
+                            "valueType": "{urn:hl7-org:elm-types:r1}Boolean",
+                            "value": "false",
+                            "type": "Literal"
+                        }
+                    }
+                },
+                {
+                    "name": "CMN",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "expression": {
+                        "type": "And",
+                        "operand": [
+                            {
+                                "type": "Exists",
+                                "operand": {
+                                    "type": "Query",
+                                    "source": [
+                                        {
+                                            "alias": "Q",
+                                            "expression": {
+                                                "dataType": "{http://hl7.org/fhir}QuestionnaireResponse",
+                                                "type": "Retrieve"
+                                            }
+                                        }
+                                    ],
+                                    "relationship": [],
+                                    "where": {
+                                        "type": "Null"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Portable Oxygen",
+                                "type": "ExpressionRef"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "Coverage Criteria",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "expression": {
+                        "type": "Except",
+                        "operand": [
+                            {
+                                "type": "As",
+                                "operand": {
+                                    "type": "List",
+                                    "element": [
+                                        {
+                                            "type": "If",
+                                            "condition": {
+                                                "asType": "{urn:hl7-org:elm-types:r1}Boolean",
+                                                "type": "As",
+                                                "operand": {
+                                                    "type": "Exists",
+                                                    "operand": {
+                                                        "name": "Indications",
+                                                        "type": "ExpressionRef"
+                                                    }
+                                                }
+                                            },
+                                            "then": {
+                                                "type": "Equal",
+                                                "operand": [
+                                                    {
+                                                        "name": "Reason",
+                                                        "type": "ParameterRef"
+                                                    },
+                                                    {
+                                                        "type": "Concatenate",
+                                                        "operand": [
+                                                            {
+                                                                "name": "Reason",
+                                                                "type": "ParameterRef"
+                                                            },
+                                                            {
+                                                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                                "value": "The Diagnosis conditions are not satisfied. ",
+                                                                "type": "Literal"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            "else": {
+                                                "type": "Equal",
+                                                "operand": [
+                                                    {
+                                                        "name": "Reason",
+                                                        "type": "ParameterRef"
+                                                    },
+                                                    {
+                                                        "type": "Concatenate",
+                                                        "operand": [
+                                                            {
+                                                                "name": "Reason",
+                                                                "type": "ParameterRef"
+                                                            },
+                                                            {
+                                                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                                "value": "",
+                                                                "type": "Literal"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "type": "If",
+                                            "condition": {
+                                                "asType": "{urn:hl7-org:elm-types:r1}Boolean",
+                                                "type": "As",
+                                                "operand": {
+                                                    "type": "Not",
+                                                    "operand": {
+                                                        "name": "Alternate Treatment",
+                                                        "type": "ExpressionRef"
+                                                    }
+                                                }
+                                            },
+                                            "then": {
+                                                "type": "Equal",
+                                                "operand": [
+                                                    {
+                                                        "name": "Reason",
+                                                        "type": "ParameterRef"
+                                                    },
+                                                    {
+                                                        "type": "Concatenate",
+                                                        "operand": [
+                                                            {
+                                                                "name": "Reason",
+                                                                "type": "ParameterRef"
+                                                            },
+                                                            {
+                                                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                                "value": "Alternate Treatments could have been considered. ",
+                                                                "type": "Literal"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            "else": {
+                                                "type": "Equal",
+                                                "operand": [
+                                                    {
+                                                        "name": "Reason",
+                                                        "type": "ParameterRef"
+                                                    },
+                                                    {
+                                                        "type": "Concatenate",
+                                                        "operand": [
+                                                            {
+                                                                "name": "Reason",
+                                                                "type": "ParameterRef"
+                                                            },
+                                                            {
+                                                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                                "value": "",
+                                                                "type": "Literal"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "type": "If",
+                                            "condition": {
+                                                "asType": "{urn:hl7-org:elm-types:r1}Boolean",
+                                                "type": "As",
+                                                "operand": {
+                                                    "type": "Not",
+                                                    "operand": {
+                                                        "name": "Group Criteria",
+                                                        "type": "ExpressionRef"
+                                                    }
+                                                }
+                                            },
+                                            "then": {
+                                                "type": "Equal",
+                                                "operand": [
+                                                    {
+                                                        "name": "Reason",
+                                                        "type": "ParameterRef"
+                                                    },
+                                                    {
+                                                        "type": "Concatenate",
+                                                        "operand": [
+                                                            {
+                                                                "name": "Reason",
+                                                                "type": "ParameterRef"
+                                                            },
+                                                            {
+                                                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                                "value": "The Arterial Partial Pressure of Oxygen values or the Arterial oxygen saturation values do not meet the criteria of Coverage.",
+                                                                "type": "Literal"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            "else": {
+                                                "type": "Equal",
+                                                "operand": [
+                                                    {
+                                                        "name": "Reason",
+                                                        "type": "ParameterRef"
+                                                    },
+                                                    {
+                                                        "type": "Concatenate",
+                                                        "operand": [
+                                                            {
+                                                                "name": "Reason",
+                                                                "type": "ParameterRef"
+                                                            },
+                                                            {
+                                                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                                "value": "",
+                                                                "type": "Literal"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "type": "If",
+                                            "condition": {
+                                                "asType": "{urn:hl7-org:elm-types:r1}Boolean",
+                                                "type": "As",
+                                                "operand": {
+                                                    "type": "Not",
+                                                    "operand": {
+                                                        "name": "Clinical trials",
+                                                        "type": "ExpressionRef"
+                                                    }
+                                                }
+                                            },
+                                            "then": {
+                                                "type": "Equal",
+                                                "operand": [
+                                                    {
+                                                        "name": "Reason",
+                                                        "type": "ParameterRef"
+                                                    },
+                                                    {
+                                                        "type": "Concatenate",
+                                                        "operand": [
+                                                            {
+                                                                "name": "Reason",
+                                                                "type": "ParameterRef"
+                                                            },
+                                                            {
+                                                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                                "value": "The Clinical Trial criteria (Long-term oxygen therapy or Cluster Headaches) is not met. ",
+                                                                "type": "Literal"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            "else": {
+                                                "type": "Equal",
+                                                "operand": [
+                                                    {
+                                                        "name": "Reason",
+                                                        "type": "ParameterRef"
+                                                    },
+                                                    {
+                                                        "type": "Concatenate",
+                                                        "operand": [
+                                                            {
+                                                                "name": "Reason",
+                                                                "type": "ParameterRef"
+                                                            },
+                                                            {
+                                                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                                "value": "",
+                                                                "type": "Literal"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "type": "If",
+                                            "condition": {
+                                                "asType": "{urn:hl7-org:elm-types:r1}Boolean",
+                                                "type": "As",
+                                                "operand": {
+                                                    "type": "Not",
+                                                    "operand": {
+                                                        "name": "Face-to-face Encounter",
+                                                        "type": "ExpressionRef"
+                                                    }
+                                                }
+                                            },
+                                            "then": {
+                                                "type": "Equal",
+                                                "operand": [
+                                                    {
+                                                        "name": "Reason",
+                                                        "type": "ParameterRef"
+                                                    },
+                                                    {
+                                                        "type": "Concatenate",
+                                                        "operand": [
+                                                            {
+                                                                "name": "Reason",
+                                                                "type": "ParameterRef"
+                                                            },
+                                                            {
+                                                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                                "value": "The face-to-face encounter requirements are not met. ",
+                                                                "type": "Literal"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            "else": {
+                                                "type": "Equal",
+                                                "operand": [
+                                                    {
+                                                        "name": "Reason",
+                                                        "type": "ParameterRef"
+                                                    },
+                                                    {
+                                                        "type": "Concatenate",
+                                                        "operand": [
+                                                            {
+                                                                "name": "Reason",
+                                                                "type": "ParameterRef"
+                                                            },
+                                                            {
+                                                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                                "value": "",
+                                                                "type": "Literal"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "type": "If",
+                                            "condition": {
+                                                "asType": "{urn:hl7-org:elm-types:r1}Boolean",
+                                                "type": "As",
+                                                "operand": {
+                                                    "type": "Not",
+                                                    "operand": {
+                                                        "name": "Medical Record",
+                                                        "type": "ExpressionRef"
+                                                    }
+                                                }
+                                            },
+                                            "then": {
+                                                "type": "Equal",
+                                                "operand": [
+                                                    {
+                                                        "name": "Reason",
+                                                        "type": "ParameterRef"
+                                                    },
+                                                    {
+                                                        "type": "Concatenate",
+                                                        "operand": [
+                                                            {
+                                                                "name": "Reason",
+                                                                "type": "ParameterRef"
+                                                            },
+                                                            {
+                                                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                                "value": "The Medical Record requirements are not met. ",
+                                                                "type": "Literal"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            "else": {
+                                                "type": "Equal",
+                                                "operand": [
+                                                    {
+                                                        "name": "Reason",
+                                                        "type": "ParameterRef"
+                                                    },
+                                                    {
+                                                        "type": "Concatenate",
+                                                        "operand": [
+                                                            {
+                                                                "name": "Reason",
+                                                                "type": "ParameterRef"
+                                                            },
+                                                            {
+                                                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                                "value": "",
+                                                                "type": "Literal"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "type": "If",
+                                            "condition": {
+                                                "asType": "{urn:hl7-org:elm-types:r1}Boolean",
+                                                "type": "As",
+                                                "operand": {
+                                                    "type": "Not",
+                                                    "operand": {
+                                                        "name": "WOPD",
+                                                        "type": "ExpressionRef"
+                                                    }
+                                                }
+                                            },
+                                            "then": {
+                                                "type": "Equal",
+                                                "operand": [
+                                                    {
+                                                        "name": "Reason",
+                                                        "type": "ParameterRef"
+                                                    },
+                                                    {
+                                                        "type": "Concatenate",
+                                                        "operand": [
+                                                            {
+                                                                "name": "Reason",
+                                                                "type": "ParameterRef"
+                                                            },
+                                                            {
+                                                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                                "value": "The Written Order (Prescription) Prior to Delivery (WOPD) requirements are not met. ",
+                                                                "type": "Literal"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            "else": {
+                                                "type": "Equal",
+                                                "operand": [
+                                                    {
+                                                        "name": "Reason",
+                                                        "type": "ParameterRef"
+                                                    },
+                                                    {
+                                                        "type": "Concatenate",
+                                                        "operand": [
+                                                            {
+                                                                "name": "Reason",
+                                                                "type": "ParameterRef"
+                                                            },
+                                                            {
+                                                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                                "value": "",
+                                                                "type": "Literal"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "type": "If",
+                                            "condition": {
+                                                "asType": "{urn:hl7-org:elm-types:r1}Boolean",
+                                                "type": "As",
+                                                "operand": {
+                                                    "type": "Not",
+                                                    "operand": {
+                                                        "name": "CMN",
+                                                        "type": "ExpressionRef"
+                                                    }
+                                                }
+                                            },
+                                            "then": {
+                                                "type": "Equal",
+                                                "operand": [
+                                                    {
+                                                        "name": "Reason",
+                                                        "type": "ParameterRef"
+                                                    },
+                                                    {
+                                                        "type": "Concatenate",
+                                                        "operand": [
+                                                            {
+                                                                "name": "Reason",
+                                                                "type": "ParameterRef"
+                                                            },
+                                                            {
+                                                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                                "value": "The Certificate of Medical Necessity requirements are not met. ",
+                                                                "type": "Literal"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            "else": {
+                                                "type": "Equal",
+                                                "operand": [
+                                                    {
+                                                        "name": "Reason",
+                                                        "type": "ParameterRef"
+                                                    },
+                                                    {
+                                                        "type": "Concatenate",
+                                                        "operand": [
+                                                            {
+                                                                "name": "Reason",
+                                                                "type": "ParameterRef"
+                                                            },
+                                                            {
+                                                                "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                                                "value": "",
+                                                                "type": "Literal"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                "asTypeSpecifier": {
+                                    "type": "ListTypeSpecifier",
+                                    "elementType": {
+                                        "type": "ChoiceTypeSpecifier",
+                                        "choice": [
+                                            {
+                                                "name": "{urn:hl7-org:elm-types:r1}Boolean",
+                                                "type": "NamedTypeSpecifier"
+                                            },
+                                            {
+                                                "name": "{urn:hl7-org:elm-types:r1}String",
+                                                "type": "NamedTypeSpecifier"
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            {
+                                "type": "As",
+                                "operand": {
+                                    "type": "List",
+                                    "element": [
+                                        {
+                                            "valueType": "{urn:hl7-org:elm-types:r1}String",
+                                            "value": "null",
+                                            "type": "Literal"
+                                        }
+                                    ]
+                                },
+                                "asTypeSpecifier": {
+                                    "type": "ListTypeSpecifier",
+                                    "elementType": {
+                                        "type": "ChoiceTypeSpecifier",
+                                        "choice": [
+                                            {
+                                                "name": "{urn:hl7-org:elm-types:r1}Boolean",
+                                                "type": "NamedTypeSpecifier"
+                                            },
+                                            {
+                                                "name": "{urn:hl7-org:elm-types:r1}String",
+                                                "type": "NamedTypeSpecifier"
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "OrderingProvider",
+                    "context": "Patient",
+                    "accessLevel": "Public",
+                    "expression": {
+                        "type": "SingletonFrom",
+                        "operand": {
+                            "type": "Query",
+                            "source": [
+                                {
+                                    "alias": "practitioner",
+                                    "expression": {
+                                        "dataType": "{http://hl7.org/fhir}Practitioner",
+                                        "type": "Retrieve"
+                                    }
+                                }
+                            ],
+                            "relationship": [],
+                            "where": {
+                                "type": "Null"
+                            }
+                        }
                     }
                 },
                 {
