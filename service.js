@@ -53,8 +53,9 @@ exports.executeCql = function (req, res, ) {
             }
         }
        
-        // console.log(cqlCode,'=======')
+        console.log(cqlCode,'=======')
         let cql_mapping_json = config.cql_mapping_json
+	console.log(cql_mapping_json,'=======')
         Object.keys(cql_mapping_json).map(function(key, index) {
             if(cql_mapping_json[key].includes(cqlCode)){
                 postBodyCql = key
