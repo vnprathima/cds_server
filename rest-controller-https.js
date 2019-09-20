@@ -36,6 +36,9 @@ function app(req, res) {
             service.invalidAuthorization(req,res);
         }
         
+    } else if(reqUrl.pathname == '/getCqlData' && req.method === 'POST'){
+        service.getCqlData(req, res);
+
     } else {
         console.log('Request Type:' + req.method + ' Invalid Endpoint: ' + reqUrl.pathname);
         service.invalidRequest(req, res);

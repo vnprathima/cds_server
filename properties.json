@@ -9,6 +9,50 @@
         "HomeOxygenTherapy" : [ "E1390","E1391","E0439","E0424","E1405","E1406","E0431","E0434","E1392","E0433","K0738","E0441","E0442","E0443","E0444" ,  "G0151", "G0152","G0153","G0155","G0156","G0157","G0158","G0159","G0160","G0161","G0162","G0299","G0300","G0493","G0494","G0495","G0496","A0426","A0428","A0425"],
         "AdultLiverTransplant":["E1111","E2222"],
         "HyperbaricOxygenTherapy":["E4444","E3333"]
-    }
+    },
+    "hook_cql_map":{
+        "order-review":["HyperbaricOxygenTherapy"],
+        "liver-transplant":["AdultLiverTransplantation"],
+        "home-health-service":["HomeHealthServices"],
+        "ambulatory-transport":["AmbulatoryTransportService"]
+    },
+    "hcpc_template_mapper":{
+     "E1390": "home-oxygen-questionnaire_2",
+     "E1391": "home-oxygen-questionnaire_2",
+     "E0424": "home-oxygen-questionnaire_2",
+     "E0439": "home-oxygen-questionnaire_2",
+     "E1405": "home-oxygen-questionnaire_2",
+     "E1406": "home-oxygen-questionnaire_2",
+     "E0431": "home-oxygen-questionnaire_2",
+     "E0434": "home-oxygen-questionnaire_2",
+     "E1392": "home-oxygen-questionnaire_2",
+     "E0433": "home-oxygen-questionnaire_2",
+     "K0738": "home-oxygen-questionnaire_2",
+     "E0441": "home-oxygen-questionnaire_2",
+     "E0442": "home-oxygen-questionnaire_2",
+     "E0443": "home-oxygen-questionnaire_2",
+     "E0444": "home-oxygen-questionnaire_2",
+     "385781007":"HomeHealthServices",
+    "G0151" :"HomeHealthServices", 
+    "G0152" :"HomeHealthServices",
+    "G0153" :"HomeHealthServices",
+    "G0155" :"HomeHealthServices",
+    "G0156" :"HomeHealthServices",
+    "G0157" :"HomeHealthServices",
+    "G0158" :"HomeHealthServices",
+    "G0159" :"HomeHealthServices",
+    "G0160" :"HomeHealthServices",
+    "G0161" :"HomeHealthServices",
+    "G0162" :"HomeHealthServices",
+    "G0299" :"HomeHealthServices",
+    "G0300" :"HomeHealthServices",
+    "G0493" :"HomeHealthServices",
+    "G0494" :"HomeHealthServices",
+    "G0495" :"HomeHealthServices",
+    "G0496" :"HomeHealthServices",
+    "A0426":"AmbulatoryTransportService",
+    "A0428":"AmbulatoryTransportService",
+    "A0425":"AmbulatoryTransportService"
+      }
 }
 

@@ -21,6 +21,61 @@ function Singleton(pat) {
     }
     return Singleton.prototype.myInstance;
 }
+
+exports.getCqlData = function (req, res, ) {
+    body = '' ;
+    req.on('data', function (chunk) {
+        body += chunk.toString();
+    });
+    try{
+        req.on('end', function () {
+            postBody = JSON.parse(body);
+            console.log(postBody);
+            if(config.hook_cql_map.hasOwnProperty(postBody.hook)){
+                var cql = config.hook_cql_map[postBody.hook][0]
+                var prior_auth = true
+                var template = "";
+                if(postBody["deviceRequest"].hasOwnProperty("codeCodeableConcept")){
+                    if(postBody["deviceRequest"].codeCodeableConcept.hasOwnProperty("coding")){
+                        if(postBody["deviceRequest"].codeCodeableConcept.coding.length > 0){
+                            if(postBody["deviceRequest"].codeCodeableConcept.coding[0].hasOwnProperty("code")){
+                                var hcpc_code  = postBody["deviceRequest"].codeCodeableConcept.coding[0].code
+                                if(hcpc_code == "A0425"){
+                                    prior_auth = false
+
+                                }
+                                if(config.hcpc_template_mapper.hasOwnProperty(hcpc_code)){
+                                    template = config.hcpc_template_mapper[hcpc_code]
+                                }
+                            }
+                        }
+                    }
+                }
+                console.log(49);
+                res.statusCode = 200;
+                res.setHeader('Content-Type', 'application/json');
+                console.log(52);
+                res.end(JSON.stringify({"cql":cql,"prior_auth":prior_auth,"template":template}))
+                console.log(54);
+            }
+            else{
+                res.statusCode = 400;
+                res.setHeader('Content-Type', 'text/plain');
+                res.end(JSON.stringify({"Error":"hook is invalid"}))
+            }
+
+           
+
+        })
+    }
+    catch(err){
+            res.statusCode = 400;
+            res.setHeader('Content-Type', 'text/plain');
+            res.end("Invalid Inputs !!")
+        }
+
+}
+
 exports.executeCql = function (req, res, ) {
     body = '' ;
     req.on('data', function (chunk) {
