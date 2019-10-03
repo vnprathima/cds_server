@@ -32,14 +32,14 @@ exports.getCqlData = function (req, res, ) {
             postBody = JSON.parse(body);
             var prior_auth = true
             var template = "";
-            if(postBody["deviceRequest"].hasOwnProperty("codeCodeableConcept")){
-                if(postBody["deviceRequest"].codeCodeableConcept.hasOwnProperty("coding")){
-                    if(postBody["deviceRequest"].codeCodeableConcept.coding.length > 0){
-                        if(postBody["deviceRequest"].codeCodeableConcept.coding[0].hasOwnProperty("code")){
-                            var hcpc_code  = postBody["deviceRequest"].codeCodeableConcept.coding[0].code
+            if(postBody["deviceRequest"].hasOwnProperty("parameter")){
+		if(postBody["deviceRequest"].parameter[0].hasOwnProperty("code")){
+                if(postBody["deviceRequest"].parameter[0].code.hasOwnProperty("coding")){
+                    if(postBody["deviceRequest"].parameter[0].code.coding.length > 0){
+                        if(postBody["deviceRequest"].parameter[0].code.coding[0].hasOwnProperty("code")){
+                            var hcpc_code  = postBody["deviceRequest"].parameter[0].code.coding[0].code
                             if(hcpc_code == "A0425"){
                                 prior_auth = false
-
                             }
                             if(config.hcpc_template_mapper.hasOwnProperty(hcpc_code)){
                                 template = config.hcpc_template_mapper[hcpc_code]
@@ -47,6 +47,7 @@ exports.getCqlData = function (req, res, ) {
                         }
                     }
                 }
+		}
             }
             res.statusCode = 200;
             res.setHeader('Content-Type', 'application/json');
