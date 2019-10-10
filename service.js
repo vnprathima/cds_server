@@ -30,28 +30,37 @@ exports.getCqlData = function (req, res, ) {
     try{
         req.on('end', function () {
             postBody = JSON.parse(body);
-            var prior_auth = true
+            var prior_auth_obj = {}
             var template = "";
+
             if(postBody["deviceRequest"].hasOwnProperty("parameter")){
-		if(postBody["deviceRequest"].parameter[0].hasOwnProperty("code")){
-                if(postBody["deviceRequest"].parameter[0].code.hasOwnProperty("coding")){
-                    if(postBody["deviceRequest"].parameter[0].code.coding.length > 0){
-                        if(postBody["deviceRequest"].parameter[0].code.coding[0].hasOwnProperty("code")){
-                            var hcpc_code  = postBody["deviceRequest"].parameter[0].code.coding[0].code
-                            if(hcpc_code == "A0425"){
-                                prior_auth = false
+                for(var paramIndex=0; paramIndex < postBody["deviceRequest"].parameter.length;paramIndex++){
+                    var prior_auth = true
+                    var param = postBody["deviceRequest"].parameter[paramIndex]
+                    
+            		if(param.hasOwnProperty("code")){
+                            if(param.code.hasOwnProperty("coding")){
+                                if(param.code.coding.length > 0){
+                                    if(param.code.coding[0].hasOwnProperty("code")){
+
+                                        var hcpc_code  = param.code.coding[0].code
+                                        if(hcpc_code == "A0425"){
+                                            prior_auth = false
+                                        }
+                                        if(config.hcpc_template_mapper.hasOwnProperty(hcpc_code)){
+                                            template = config.hcpc_template_mapper[hcpc_code]
+                                        }
+                                        prior_auth_obj[hcpc_code] = {"value":prior_auth,"title":param.code.coding[0].display}
+                                        
+                                    }
+                                }
                             }
-                            if(config.hcpc_template_mapper.hasOwnProperty(hcpc_code)){
-                                template = config.hcpc_template_mapper[hcpc_code]
-                            }
-                        }
-                    }
+            		}
                 }
-		}
             }
             res.statusCode = 200;
             res.setHeader('Content-Type', 'application/json');
-            res.end(JSON.stringify({"prior_auth":prior_auth,"template":template}))
+            res.end(JSON.stringify({"prior_auth":prior_auth_obj,"template":template}))
        
 
            
