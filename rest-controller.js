@@ -46,8 +46,12 @@ module.exports = http.createServer((req, res) => {
         } 
     } 
     else if(reqUrl.pathname == '/getCqlData' && req.method === 'POST'){
+        console.log('Request Type:' + req.method + ' Endpoint: ' + reqUrl.pathname);
         service.getCqlData(req, res);
-
+    } 
+    else if(reqUrl.pathname == '/getPayers' && req.method === 'GET'){
+        console.log('Request Type:' + req.method + ' Endpoint: ' + reqUrl.pathname);
+        service.getPayers(req, res);
     } 
     else {
         console.log('Request Type:' + req.method + ' Invalid Endpoint: ' + reqUrl.pathname);

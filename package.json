@@ -15,6 +15,7 @@
     "cql-exec-fhir": "^1.0.0",
     "cql-exec-vsac": "^1.0.1",
     "cql-execution": "^1.2.1",
+    "mysql": "github:mysqljs/mysql",
     "node-rest-client": "^3.1.0",
     "server": "^1.0.18"
   },
