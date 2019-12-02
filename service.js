@@ -29,7 +29,7 @@ function Singleton(pat) {
     }
     return Singleton.prototype.myInstance;
 }
-exports.getPayerData = function (req, res, ) {
+exports.getPayers = function (req, res, ) {
     body = '';
     req.on('data', function (chunk) {
         body += chunk.toString();
@@ -38,7 +38,15 @@ exports.getPayerData = function (req, res, ) {
         req.on('end', function () {
             connection.query('SELECT * FROM payers', function (error, results, fields) {
                 if (error) throw error;
-                console.log('The solution is: ', results);
+                console.log('The payer result is: ', results);
+                res.statusCode = 200;
+                res.setHeader('Access-Control-Allow-Origin', '*');
+                res.setHeader('Access-Control-Allow-Credentials', 'true');
+                res.setHeader('Access-Control-Allow-Methods', 'GET');
+                res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+                res.setHeader('Content-Type', 'application/json');
+                console.log("response----", JSON.stringify(results))
+                res.end(JSON.stringify(results));
             });
         });
     } catch (err) {
@@ -48,13 +56,39 @@ exports.getPayerData = function (req, res, ) {
     }
 
 }
+exports.getCodes = function (req, res, ) {
+    body = '';
+    req.on('data', function (chunk) {
+        body += chunk.toString();
+    });
+    try {
+        req.on('end', function () {
+            connection.query('SELECT * FROM codes', function (error, results, fields) {
+                if (error) throw error;
+                console.log('The payer result is: ', results);
+                res.statusCode = 200;
+                res.setHeader('Access-Control-Allow-Origin', '*');
+                res.setHeader('Access-Control-Allow-Credentials', 'true');
+                res.setHeader('Access-Control-Allow-Methods', 'GET');
+                res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+                res.setHeader('Content-Type', 'application/json');
+                console.log("response----", JSON.stringify(results))
+                res.end(JSON.stringify(results));
+            });
+        });
+    } catch (err) {
+        res.statusCode = 400;
+        res.setHeader('Content-Type', 'text/plain');
+        res.end("Unable to retrieve data !!")
+    }
+}
 async function runPriorAuthRule(patient, payer, template, code) {
     var rulefile = "./prior_auth_rules/" + payer + "/" + template + ".js";
-    console.log("rule file---",rulefile)
+    console.log("rule file---", rulefile)
     var includedRule = require(rulefile);
     return await includedRule.priorAuthRule(patient, code);
 }
-async function getTemplate(hcpc_code,payer) {
+async function getTemplate(hcpc_code, payer) {
     return new Promise(function (resolve, reject) {
         connection.query('SELECT template FROM payer_codes where code LIKE "' + hcpc_code + '"',
             function (error, results, fields) {
@@ -65,9 +99,9 @@ async function getTemplate(hcpc_code,payer) {
                     var template = results[0].template;
                     if (template != null || template != undefined) {
                         runPriorAuthRule({}, payer, template, hcpc_code).then((prior_auth) => {
-                            resolve({ "value": prior_auth ,"template":payer+":"+template});
-                        }).catch((error)=>{
-                            reject(new Error('Unable to run Rule for template-'+template));
+                            resolve({ "value": prior_auth, "template": payer + ":" + template });
+                        }).catch((error) => {
+                            reject(new Error('Unable to run Rule for template-' + template));
                         })
                     }
                 }
@@ -93,27 +127,27 @@ exports.getCqlData = function (req, res, ) {
                             res.end('Missing Input : payerName');
                         }
                         /**Get Template for a code from codes DB */
-                        return getTemplate(hcpc_code,payer).then((data) => {
+                        return getTemplate(hcpc_code, payer).then((data) => {
                             data['code'] = hcpc_code;
                             return data;
                         }).catch((err) => {
                             console.log(err);
-                            res.end('Error retieving template for code '+ hcpc_code +' !!', err);
+                            res.end('Error retieving template for code ' + hcpc_code + ' !!', err);
                         });
                     }
                 })
                 Promise.all(promises).then(function (responses) {
                     console.log(responses);
                     res_obj = {};
-                    responses.map((item)=>{
-                        res_obj[item.code] = {"value":item.value};
+                    responses.map((item) => {
+                        res_obj[item.code] = { "value": item.value };
                     })
-                    var final_res = {"prior_auth":res_obj,"template":responses[0].template}
+                    var final_res = { "prior_auth": res_obj, "template": responses[0].template }
                     res.statusCode = 200;
                     res.setHeader('Content-Type', 'application/json');
                     console.log("response----", JSON.stringify(final_res))
                     res.end(JSON.stringify(final_res));
-                }).catch((err)=>{
+                }).catch((err) => {
                     res.end('Error in sending response !!', err);
                 })
             }
@@ -139,7 +173,7 @@ exports.executeCql = function (req, res, ) {
         const cql = require('cql-execution');
         const cqlfhir = require('cql-exec-fhir');
         const cqlvsac = require('cql-exec-vsac');
-        
+
         let vsacUser, vsacPass;
         [vsacUser, vsacPass] = [config.vsac_user, config.vsac_password];
 
