@@ -90,7 +90,7 @@ async function runPriorAuthRule(patient, payer, template, code) {
 }
 async function getTemplate(hcpc_code, payer) {
     return new Promise(function (resolve, reject) {
-        connection.query('SELECT template FROM payer_codes where code LIKE "' + hcpc_code + '"',
+        connection.query('SELECT template FROM codes where code LIKE "' + hcpc_code + '"',
             function (error, results, fields) {
                 if (error) {
                     reject(new Error('Ooops, something broke!'));
