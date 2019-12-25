@@ -59,6 +59,21 @@ module.exports = http.createServer((req, res) => {
         console.log('Request Type:' + req.method + ' Endpoint: ' + reqUrl.pathname);
         service.getCodes(req, res);
     } 
+    else if (reqUrl.pathname == '/getConfig' && (req.method === 'POST' || req.method === 'OPTIONS')) {
+        console.log('Request Type:' + req.method + ' Endpoint: ' + reqUrl.pathname);
+        service.getConfig(req, res);
+    } 
+    else if (reqUrl.pathname == '/updateConfig' && (req.method === 'POST' || req.method === 'OPTIONS')) {
+        console.log('Request Type:' + req.method + ' Endpoint: ' + reqUrl.pathname);
+        service.updateConfig(req, res);
+    } 
+    else if (reqUrl.pathname == '/createConfig' && (req.method === 'POST' || req.method === 'OPTIONS')) {
+        console.log('Request Type:' + req.method + ' Endpoint: ' + reqUrl.pathname);
+        service.createConfig(req, res);
+    } else if (reqUrl.pathname == '/resetConfig' && (req.method === 'POST' || req.method === 'OPTIONS')) {
+        console.log('Request Type:' + req.method + ' Endpoint: ' + reqUrl.pathname);
+        service.resetConfig(req, res);
+    } 
     else {
         console.log('Request Type:' + req.method + ' Invalid Endpoint: ' + reqUrl.pathname);
         service.invalidRequest(req, res);

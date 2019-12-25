@@ -82,6 +82,247 @@ exports.getCodes = function (req, res, ) {
         res.end("Unable to retrieve data !!")
     }
 }
+exports.getConfig = function (req, res, ) {
+    body = '';
+    req.on('data', function (chunk) {
+        body += chunk.toString();
+    });
+    try {
+        req.on('end', function () {
+            postBody = JSON.parse(body);
+            if (postBody.user_name) {
+                connection.query('SELECT * FROM config where user_name = "' + postBody.user_name + '"', function (error, results, fields) {
+                    if (error) throw error;
+                    console.log('The config result is: ', results[0]);
+                    res.statusCode = 200;
+                    res.setHeader('Access-Control-Allow-Origin', '*');
+                    res.setHeader('Access-Control-Allow-Credentials', 'true');
+                    res.setHeader('Access-Control-Allow-Methods', 'POST,OPTIONS');
+                    res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+                    res.setHeader('Content-Type', 'application/json');
+                    console.log("response----", JSON.stringify(results[0]))
+                    res.end(JSON.stringify(results[0]));
+                });
+            } else {
+                res.statusCode = 422;
+                res.setHeader('Content-Type', 'application/json');
+                res.end(JSON.stringify({ "error": "Unable to process as the input is not valid !!" }));
+            }
+
+        });
+    } catch (err) {
+        res.statusCode = 400;
+        res.setHeader('Content-Type', 'text/plain');
+        res.end("Unable to retrieve data !!")
+    }
+}
+exports.updateConfig = function (req, res, ) {
+    body = '';
+    req.on('data', function (chunk) {
+        body += chunk.toString();
+    });
+    try {
+        req.on('end', function () {
+            postBody = JSON.parse(body);
+            console.log("username----",postBody);
+            if (postBody.user_name) {
+                let update_query = "UPDATE config SET ";
+                let update_cols = "";
+                Object.keys(postBody).forEach(function (key) {
+                    if(key != "user_name"){
+                        update_cols += key+"='"+postBody[key]+"',";
+                    }
+                });
+                update_cols = update_cols.substring(0, update_cols.length - 1)
+                update_query += update_cols +" where user_name='"+postBody.user_name+"'"
+                connection.query(update_query, function (error, update_result, fields) {
+                    if (error) {
+                        console.log(error);
+                        res.statusCode = 422;
+                        res.setHeader('Content-Type', 'application/json');
+                        res.end(JSON.stringify({ "error": "Unable to process as the input is not valid !!" }));
+                    }
+                    console.log('The config result is: ', update_result);
+                    res.statusCode = 200;
+                    res.setHeader('Access-Control-Allow-Origin', '*');
+                    res.setHeader('Access-Control-Allow-Credentials', 'true');
+                    res.setHeader('Access-Control-Allow-Methods', 'GET');
+                    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+                    res.setHeader('Content-Type', 'application/json');
+                    res.end(JSON.stringify({"Success":"Config has been updated Successfully for user"+postBody.user_name}));
+                });
+            } else {
+                res.statusCode = 422;
+                res.setHeader('Content-Type', 'application/json');
+                res.end(JSON.stringify({ "error": "Unable to process as the input is not valid !!" }));
+            }
+        });
+    } catch (err) {
+        res.statusCode = 400;
+        res.setHeader('Content-Type', 'text/plain');
+        res.end("Unable to retrieve data !!")
+    }
+}
+exports.createConfig = function (req, res, ) {
+    body = '';
+    req.on('data', function (chunk) {
+        body += chunk.toString();
+    });
+    try {
+        req.on('end', function () {
+            postBody = JSON.parse(body);
+            if (postBody.user_name) {
+                connection.query('SELECT * FROM config where user_name = "mettles_default_user_config"', function (error, result, fields) {
+                    if (error) throw error;
+                    console.log('The config result is: ', result[0]);
+                    let insert_query = "INSERT INTO config "
+                    let columns = "";
+                    let values = "";
+                    let date_ob = new Date();
+                    // current date
+                    // adjust 0 before single digit date
+                    let date = ("0" + date_ob.getDate()).slice(-2);
+
+                    // current month
+                    let month = ("0" + (date_ob.getMonth() + 1)).slice(-2);
+
+                    // current year
+                    let year = date_ob.getFullYear();
+
+                    // current hours
+                    let hours = date_ob.getHours();
+
+                    // current minutes
+                    let minutes = date_ob.getMinutes();
+
+                    // current seconds
+                    let seconds = date_ob.getSeconds();
+                    
+                    let now = year + "-" + month + "-" + date + " " + hours + ":" + minutes + ":" + seconds
+                    console.log("now---", now);
+
+                    Object.keys(result[0]).forEach(function (key) {
+                        if (key != "id") {
+                            columns += key + ",";
+                            var row = result[0][key];
+                            if (key === "user_name") {
+                                values += "'" + postBody.user_name + "',"
+                            } else if (key === "last_updated") {
+                                values += "'" + now + "',"
+                            } else {
+                                values += "'" + row + "',";
+                            }
+                        }
+                    });
+
+                    columns = columns.substring(0, columns.length - 1);
+                    values = values.substring(0, values.length - 1);
+                    console.log("Columns,rows---", columns, values);
+                    insert_query += "(" + columns + ") VALUES (" + values + ")";
+                    console.log("Insert Query---" + insert_query);
+                    connection.query(insert_query, function (err, insert_result, fields) {
+                        if (error) throw error;
+                        console.log('The config result is: ', insert_result);
+                        res.statusCode = 200;
+                        res.setHeader('Access-Control-Allow-Origin', '*');
+                        res.setHeader('Access-Control-Allow-Credentials', 'true');
+                        res.setHeader('Access-Control-Allow-Methods', 'GET');
+                        res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+                        res.setHeader('Content-Type', 'application/json');
+                        res.end(JSON.stringify({"success":"New user config has been created with id"+insert_result.insertId}));
+                    });
+                });
+            } else {
+                res.statusCode = 422;
+                res.setHeader('Content-Type', 'application/json');
+                res.end(JSON.stringify({ "error": "Unable to process as the input is not valid !!" }));
+            }
+
+        });
+    } catch (err) {
+        res.statusCode = 400;
+        res.setHeader('Content-Type', 'text/plain');
+        res.end("Unable to retrieve data !!")
+    }
+}
+exports.resetConfig = function (req, res, ) {
+    body = '';
+    req.on('data', function (chunk) {
+        body += chunk.toString();
+    });
+    try {
+        req.on('end', function () {
+            postBody = JSON.parse(body);
+            if (postBody.user_name) {
+                connection.query('SELECT * FROM config where user_name = "mettles_default_user_config"', function (error, result, fields) {
+                    if (error) throw error;
+                    console.log('The config result is: ', result[0]);
+                    let update_query = "UPDATE config SET "
+                    let update_cols = "";
+                    let date_ob = new Date();
+                    // current date
+                    // adjust 0 before single digit date
+                    let date = ("0" + date_ob.getDate()).slice(-2);
+
+                    // current month
+                    let month = ("0" + (date_ob.getMonth() + 1)).slice(-2);
+
+                    // current year
+                    let year = date_ob.getFullYear();
+
+                    // current hours
+                    let hours = date_ob.getHours();
+
+                    // current minutes
+                    let minutes = date_ob.getMinutes();
+
+                    // current seconds
+                    let seconds = date_ob.getSeconds();
+                    
+                    let now = year + "-" + month + "-" + date + " " + hours + ":" + minutes + ":" + seconds
+                    console.log("now---", now);
+
+                    Object.keys(result[0]).forEach(function (key) {
+                        if (key != "id" && key !== "user_name") {
+                            var row = result[0][key];
+                            if (key === "last_updated") {
+                                update_cols += key+"='"+now+"',";
+                            } else {
+                                update_cols += key+"='"+row+"',";
+                            }
+                        }
+                    });
+
+                    update_cols = update_cols.substring(0, update_cols.length - 1);
+                    console.log("Update statement---", update_cols);
+                    update_query += update_cols +" where user_name='"+postBody.user_name+"'"
+                    console.log("Update Query---" + update_query);
+                    connection.query(update_query, function (err, insert_result, fields) {
+                        if (error) throw error;
+                        console.log('The config result is: ', insert_result);
+                        res.statusCode = 200;
+                        res.setHeader('Access-Control-Allow-Origin', '*');
+                        res.setHeader('Access-Control-Allow-Credentials', 'true');
+                        res.setHeader('Access-Control-Allow-Methods', 'GET');
+                        res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+                        res.setHeader('Content-Type', 'application/json');
+                        result[0]["user_name"] = postBody.user_name;
+                        res.end(JSON.stringify(result[0]));
+                    });
+                });
+            } else {
+                res.statusCode = 422;
+                res.setHeader('Content-Type', 'application/json');
+                res.end(JSON.stringify({ "error": "Unable to process as the input is not valid !!" }));
+            }
+
+        });
+    } catch (err) {
+        res.statusCode = 400;
+        res.setHeader('Content-Type', 'text/plain');
+        res.end("Unable to retrieve data !!")
+    }
+}
 async function runPriorAuthRule(patient, payer, template, code) {
     var rulefile = "./prior_auth_rules/" + payer + "/" + template + ".js";
     console.log("rule file---", rulefile)
