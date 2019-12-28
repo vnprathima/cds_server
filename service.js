@@ -5,7 +5,7 @@ var config = require("./properties.json");
 
 var mysql = require('mysql');
 var connection = mysql.createConnection({
-    host: 'localhost',
+    host: 'cdex.mettles.com',
     user: 'prathima',
     password: 'prathima',
     database: 'payer'
@@ -124,17 +124,17 @@ exports.updateConfig = function (req, res, ) {
     try {
         req.on('end', function () {
             postBody = JSON.parse(body);
-            console.log("username----",postBody);
+            console.log("username----", postBody);
             if (postBody.user_name) {
                 let update_query = "UPDATE config SET ";
                 let update_cols = "";
                 Object.keys(postBody).forEach(function (key) {
-                    if(key != "user_name"){
-                        update_cols += key+"='"+postBody[key]+"',";
+                    if (key != "user_name") {
+                        update_cols += key + "='" + postBody[key] + "',";
                     }
                 });
                 update_cols = update_cols.substring(0, update_cols.length - 1)
-                update_query += update_cols +" where user_name='"+postBody.user_name+"'"
+                update_query += update_cols + " where user_name='" + postBody.user_name + "'"
                 connection.query(update_query, function (error, update_result, fields) {
                     if (error) {
                         console.log(error);
@@ -149,7 +149,7 @@ exports.updateConfig = function (req, res, ) {
                     res.setHeader('Access-Control-Allow-Methods', 'GET');
                     res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
                     res.setHeader('Content-Type', 'application/json');
-                    res.end(JSON.stringify({"Success":"Config has been updated Successfully for user"+postBody.user_name}));
+                    res.end(JSON.stringify({ "Success": "Config has been updated Successfully for user" + postBody.user_name }));
                 });
             } else {
                 res.statusCode = 422;
@@ -197,7 +197,7 @@ exports.createConfig = function (req, res, ) {
 
                     // current seconds
                     let seconds = date_ob.getSeconds();
-                    
+
                     let now = year + "-" + month + "-" + date + " " + hours + ":" + minutes + ":" + seconds
                     console.log("now---", now);
 
@@ -229,7 +229,7 @@ exports.createConfig = function (req, res, ) {
                         res.setHeader('Access-Control-Allow-Methods', 'GET');
                         res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
                         res.setHeader('Content-Type', 'application/json');
-                        res.end(JSON.stringify({"success":"New user config has been created with id"+insert_result.insertId}));
+                        res.end(JSON.stringify({ "success": "New user config has been created with id" + insert_result.insertId }));
                     });
                 });
             } else {
@@ -278,7 +278,7 @@ exports.resetConfig = function (req, res, ) {
 
                     // current seconds
                     let seconds = date_ob.getSeconds();
-                    
+
                     let now = year + "-" + month + "-" + date + " " + hours + ":" + minutes + ":" + seconds
                     console.log("now---", now);
 
@@ -286,16 +286,16 @@ exports.resetConfig = function (req, res, ) {
                         if (key != "id" && key !== "user_name") {
                             var row = result[0][key];
                             if (key === "last_updated") {
-                                update_cols += key+"='"+now+"',";
+                                update_cols += key + "='" + now + "',";
                             } else {
-                                update_cols += key+"='"+row+"',";
+                                update_cols += key + "='" + row + "',";
                             }
                         }
                     });
 
                     update_cols = update_cols.substring(0, update_cols.length - 1);
                     console.log("Update statement---", update_cols);
-                    update_query += update_cols +" where user_name='"+postBody.user_name+"'"
+                    update_query += update_cols + " where user_name='" + postBody.user_name + "'"
                     console.log("Update Query---" + update_query);
                     connection.query(update_query, function (err, insert_result, fields) {
                         if (error) throw error;
@@ -417,31 +417,9 @@ exports.executeCql = function (req, res, ) {
 
         let vsacUser, vsacPass;
         [vsacUser, vsacPass] = [config.vsac_user, config.vsac_password];
-
-        // postBody = JSON.parse(body);
-        let postBodyCql
-        let cqlCode
-        let postBodyPatient
-        if (postBody.hasOwnProperty('entry')) {
-            for (var i = 0; i < postBody.entry.length; i++) {
-                if (postBody.entry[i].resource.resourceType == 'ServiceRequest') {
-                    cqlCode = postBody.entry[i].resource.codeCodeableConcept.coding[0].code
-                }
-                if (postBody.entry[i].resource.resourceType == 'Patient') {
-                    postBodyPatient = postBody.entry[i].resource
-                }
-            }
-        }
-
-        console.log(cqlCode, '=======')
-        let cql_mapping_json = config.cql_mapping_json
-        console.log(cql_mapping_json, '=======')
-        Object.keys(cql_mapping_json).map(function (key, index) {
-            if (cql_mapping_json[key].includes(cqlCode)) {
-                postBodyCql = key
-            }
-        });
-        if (!postBody.hasOwnProperty("cql") && postBodyCql.trim().length === 0 && !postBody.hasOwnProperty("request_for") && postBody.request_for.trim().length === 0 && !postBody.hasOwnProperty("patientFhir") && !config.cqls_list.includes(postBodyCql)) {
+        console.log(postBody);
+  
+        if (!postBody.hasOwnProperty("cql") && postBody.cql.trim().length === 0 && !postBody.hasOwnProperty("patientBundle")) {
             res.statusCode = 400;
             res.setHeader('Content-Type', 'text/plain');
             res.end("Invalid Inputs !!")
@@ -454,41 +432,22 @@ exports.executeCql = function (req, res, ) {
         console.log('\\-------------------------------------------------------------------------------');
 
         // Set up the library
-        var cql_json_file = postBodyCql + '_decision.json';
-        if (postBody.request_for) {
-            cql_json_file = postBodyCql + '_' + postBody.request_for + '.json';
-        }
-        console.log('Json file Given :', cql_json_file, postBody.hasOwnProperty('request_for'));
+        var cql_json_file = postBody.cql + '.json';
         try {
             const elmFile = JSON.parse(fs.readFileSync(path.join(__dirname, 'cqls', cql_json_file), 'utf8'));
             const libraries = {
                 FHIRHelpers: JSON.parse(fs.readFileSync(path.join(__dirname, 'fhir-helpers', 'v1.0.2', 'FHIRHelpers.json'), 'utf8'))
             };
             const library = new cql.Library(elmFile, new cql.Repository(libraries));
-
+            
             // Create the patient source
             const patientSource = cqlfhir.PatientSource.FHIRv400();
-            // const patientSource = new cql.PatientSource();
 
             // Load the patient source with patients
-            let patient = {
-                "resourceType": "Bundle",
-                "type": "collection",
-                "id": "example1",
-                "meta": {
-                    "versionId": "1",
-                    "lastUpdated": "2014-08-18T01:43:30Z"
-                },
-                "base": "http://example.com/base",
-                "entry":
-                    [{
-                        'resource': postBodyPatient
-                    }]
-            };
+            const bundles = [];
+            bundles.push(postBody.patientBundle);
+            patientSource.loadBundles(bundles);
 
-            patientSource.loadBundles([patient]);
-
-            // console.log(patientSource._bundles,'12333')
             // Extract the value sets from the ELM
             let valueSets = [];
             if (elmFile.library && elmFile.library.valueSets && elmFile.library.valueSets.def) {
@@ -497,48 +456,34 @@ exports.executeCql = function (req, res, ) {
 
             // Set up the code service, loading from the cache if it exists
             const codeService = new cqlvsac.CodeService(path.join(__dirname, 'vsac_cache'), true);
-
+            console.log("BEfore Ensure valuesets---", patientSource);
             // Ensure value sets, downloading any missing value sets
             codeService.ensureValueSets(valueSets, vsacUser, vsacPass)
                 .then(() => {
-                    console.log("PAtient fhir---", vsacPass);
+                    console.log("Vsac Password--", vsacPass);
                     // Value sets are loaded, so execute!
                     const executor = new cql.Executor(library, codeService);
-                    // console.log("exectutor initiated---",executor.exec(patientSource));
                     const results = executor.exec(patientSource);
                     console.log("exectutor done--- resultspatientResults", results);
                     for (const id in results.patientResults) {
                         console.log(id, 'what is id')
                         const result = results.patientResults[id];
-                        console.log(`${id}:`, postBody.request_for, result);
+                        console.log(`${id}:`, postBody.cql, result);
                         res.statusCode = 200;
                         res.setHeader('Content-Type', 'application/json');
-                        // if (postBody.request_for == 'requirements'){
-                        //     console.log("\tRequirements:", result.Requirements);
-                        //     if(result.hasOwnProperty("PriorAuthorization")){
-                        //         res.end(JSON.stringify({"requirements":result.Requirements,
-                        //         "prior_authorization":result.PriorAuthorization,
-                        //         "pa_requirements":result.PriorAuthorizationRequirements}) + '\n');
-                        //     } else {
-                        //         res.end(JSON.stringify({"requirements":result.Requirements}) + '\n');
-                        //     }
-                        // } else if (postBody.request_for == 'decision'){
-                        //     console.log(`\tCoverage: ${result.Coverage}`);
-                        //     res.end(JSON.stringify({"Coverage":result.Coverage}) + '\n');
-                        // }
-                        console.log(`\tCoverage: ${result['Coverage Criteria']}`);
-                        res.end(JSON.stringify({ "Coverage": result['Coverage Criteria'] }) + '\n');
+                        console.log(`\t Result: ${result}`);
+                        res.end(JSON.stringify(result) + '\n');
                     }
                 })
                 .catch((err) => {
                     console.log(err);
-                    // There was an error downloading the value sets!
-                    res.end('Error Processing cql !!', err);
+                    res.end('Error Downloading ValueSets !!', err);
                 });
         } catch (err) {
+            console.log(err);
             res.statusCode = 400;
             res.setHeader('Content-Type', 'text/plain');
-            res.end("Invalid Inputs !!")
+            res.end("Unable to execute cql !!")
         }
     });
 
