@@ -5,7 +5,7 @@ var config = require("./properties.json");
 
 var mysql = require('mysql');
 var connection = mysql.createConnection({
-    host: 'cdex.mettles.com',
+    host: 'localhost',
     user: 'prathima',
     password: 'prathima',
     database: 'payer'
