@@ -2,6 +2,7 @@ const url = require('url');
 const fs = require('fs');
 var exec = require('child_process').exec;
 var config = require("./properties.json");
+const axios = require('axios');
 
 var mysql = require('mysql');
 var connection = mysql.createConnection({
@@ -349,6 +350,94 @@ async function getTemplate(hcpc_code, payer) {
             })
     });
 }
+exports.convertBundle = function (req, res, ) {
+    body = '';
+    req.on('data', function (chunk) {
+        body += chunk.toString();
+    });
+    try {
+        req.on('end', function () {
+            postBody = JSON.parse(body);
+            if (postBody.hasOwnProperty("type")) {
+                postBody.type = "transaction"
+            }
+            if (postBody.hasOwnProperty("entry")) {
+                postBody.entry.map((item) => {
+                    item["request"] = {
+                        "method": "POST",
+                        "url": item.resource.resourceType
+                    }
+                });
+                res.statusCode = 200;
+                res.setHeader('Access-Control-Allow-Origin', '*');
+                res.setHeader('Access-Control-Allow-Credentials', 'true');
+                res.setHeader('Access-Control-Allow-Methods', 'GET');
+                res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+                res.setHeader('Content-Type', 'application/json');
+                res.end(JSON.stringify(postBody));
+            }
+
+        });
+    } catch (err) {
+        res.statusCode = 400;
+        res.setHeader('Content-Type', 'text/plain');
+        res.end("Invalid Inputs !!")
+    }
+}
+/**
+ * param 1 : fhir_url : string
+ * param 2 : resource_type : string(FHIR resource type that needs to be deleted)
+ **/
+exports.deleteFHIRResource = function (req, res, ) {
+    body = '';
+    req.on('data', function (chunk) {
+        body += chunk.toString();
+    });
+    try {
+        req.on('end', function () {
+            postBody = JSON.parse(body);
+            var fhir_url;
+            if (postBody.hasOwnProperty("fhir_url")) {
+                fhir_url = postBody.fhir_url;
+            }
+            if (postBody.hasOwnProperty("resource_type")) {
+                axios.get(fhir_url + "/" + postBody.resource_type)
+                    .then(response => {
+                        console.log(response.data.entry);
+                        deleted_resources = 0
+                        not_deleted_resources = 0
+                        var promises = response.data.entry.map(function (param) {
+                            return axios.delete(fhir_url + "/" + param.resource.resourceType + "/" + param.resource.id).then(del_res => {
+                                // console.log("delete Res---",del_res.data);
+                                return deleted_resources += 1;
+                            }).catch((err) => {
+                                console.log("delete err---",err.data);
+                                return not_deleted_resources += 1;
+                            })
+                        });
+                        Promise.all(promises).then(function (responses) {
+                            console.log(responses);
+                            final_res = {"deteled":responses[0],"not_deleted":responses[1]}
+                            res.statusCode = 200;
+                            res.setHeader('Content-Type', 'application/json');
+                            console.log("response----", JSON.stringify(responses))
+                            res.end(JSON.stringify(final_res));
+                        }).catch((err) => {
+                            res.end('Error in sending response !!', err);
+                        })
+                    })
+                    .catch(error => {
+                        console.log(error);
+                    });
+            }
+
+        });
+    } catch (err) {
+        res.statusCode = 400;
+        res.setHeader('Content-Type', 'text/plain');
+        res.end("Invalid Inputs !!")
+    }
+}
 exports.getCqlData = function (req, res, ) {
     body = '';
     req.on('data', function (chunk) {
@@ -418,7 +507,7 @@ exports.executeCql = function (req, res, ) {
         let vsacUser, vsacPass;
         [vsacUser, vsacPass] = [config.vsac_user, config.vsac_password];
         console.log(postBody);
-  
+
         if (!postBody.hasOwnProperty("cql") && postBody.cql.trim().length === 0 && !postBody.hasOwnProperty("patientBundle")) {
             res.statusCode = 400;
             res.setHeader('Content-Type', 'text/plain');
@@ -439,7 +528,7 @@ exports.executeCql = function (req, res, ) {
                 FHIRHelpers: JSON.parse(fs.readFileSync(path.join(__dirname, 'fhir-helpers', 'v1.0.2', 'FHIRHelpers.json'), 'utf8'))
             };
             const library = new cql.Library(elmFile, new cql.Repository(libraries));
-            
+
             // Create the patient source
             const patientSource = cqlfhir.PatientSource.FHIRv400();
 

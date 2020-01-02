@@ -73,6 +73,12 @@ module.exports = http.createServer((req, res) => {
     } else if (reqUrl.pathname == '/resetConfig' && (req.method === 'POST' || req.method === 'OPTIONS')) {
         console.log('Request Type:' + req.method + ' Endpoint: ' + reqUrl.pathname);
         service.resetConfig(req, res);
+    } else if (reqUrl.pathname == '/convertBundle' && (req.method === 'POST' || req.method === 'OPTIONS')) {
+        console.log('Request Type:' + req.method + ' Endpoint: ' + reqUrl.pathname);
+        service.convertBundle(req, res);
+    } else if (reqUrl.pathname == '/deleteFHIRResource' && (req.method === 'POST' || req.method === 'OPTIONS')) {
+        console.log('Request Type:' + req.method + ' Endpoint: ' + reqUrl.pathname);
+        service.deleteFHIRResource(req, res);
     } 
     else {
         console.log('Request Type:' + req.method + ' Invalid Endpoint: ' + reqUrl.pathname);
