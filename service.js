@@ -330,26 +330,39 @@ async function runPriorAuthRule(patient, payer, template, code) {
     var includedRule = require(rulefile);
     return await includedRule.priorAuthRule(patient, code);
 }
-async function getTemplate(hcpc_code, payer) {
+async function getTemplate(hcpc_code, payer, patient) {
     return new Promise(function (resolve, reject) {
-        connection.query('SELECT template FROM codes where code LIKE "' + hcpc_code + '"',
-            function (error, results, fields) {
-                if (error) {
-                    reject(new Error('Ooops, something broke!'));
-                } else {
-                    console.log('The template is: ', results[0].template);
-                    var template = results[0].template;
-                    if (template != null || template != undefined) {
-                        runPriorAuthRule({}, payer, template, hcpc_code).then((prior_auth) => {
-                            resolve({ "value": prior_auth, "template": payer + ":" + template });
-                        }).catch((error) => {
-                            reject(new Error('Unable to run Rule for template-' + template));
-                        })
+        try {
+            connection.query('SELECT template FROM codes where code LIKE "' + hcpc_code + '"',
+                function (error, results) {
+                    console.log(error, results);
+                    if (results.length === 0) {
+                        reject(new Error('Ooops, something broke!'));
+                        return;
+                    } else {
+                        if (results === undefined) {
+                            reject(new Error('Unable to find code'))
+                        }
+                        console.log('The template is: ', results[0].template);
+                        var template = results[0].template;
+                        if (template != null || template != undefined) {
+                            runPriorAuthRule(patient, payer, template, hcpc_code).then((prior_auth) => {
+                                resolve({ "value": prior_auth, "template": payer + ":" + template });
+                            }).catch((error) => {
+                                reject(new Error('Unable to run Rule for template-' + template));
+                            })
+                        }
                     }
-                }
-            })
+                })
+        } catch (err) {
+            reject(new Error('Unable to find code'))
+        }
     });
 }
+/**
+ * Input : FHIR resource bundle of type `collection`
+ * Output : FHIR resource bundle of type `transaction`
+ */
 exports.convertBundle = function (req, res, ) {
     body = '';
     req.on('data', function (chunk) {
@@ -385,8 +398,10 @@ exports.convertBundle = function (req, res, ) {
     }
 }
 /**
+ * Input : {"fhir_url":<param 1>,"resource_type":<param 2>}
  * param 1 : fhir_url : string
  * param 2 : resource_type : string(FHIR resource type that needs to be deleted)
+ * Output : {"deleted":<count of resources not deleted>,"not_deleted":<count of resources not deleted>}
  **/
 exports.deleteFHIRResource = function (req, res, ) {
     body = '';
@@ -403,28 +418,50 @@ exports.deleteFHIRResource = function (req, res, ) {
             if (postBody.hasOwnProperty("resource_type")) {
                 axios.get(fhir_url + "/" + postBody.resource_type)
                     .then(response => {
-                        console.log(response.data.entry);
+                        console.log(response.data.total);
                         deleted_resources = 0
                         not_deleted_resources = 0
-                        var promises = response.data.entry.map(function (param) {
-                            return axios.delete(fhir_url + "/" + param.resource.resourceType + "/" + param.resource.id).then(del_res => {
-                                // console.log("delete Res---",del_res.data);
-                                return deleted_resources += 1;
-                            }).catch((err) => {
-                                console.log("delete err---",err.data);
-                                return not_deleted_resources += 1;
-                            })
+                        promises = [];
+                        response.data.entry.map(function (param) {
+                            setTimeout(function () {
+                                if (["41150", "41151", "41152", "41153", "76896"].indexOf(param.resource.id) === -1) {
+                                    console.log("deleting--", param.resource.id);
+                                    var delete_url = fhir_url + "/" + param.resource.resourceType + "/" + param.resource.id;
+                                    console.log("deleting--", param.resource.id, delete_url);
+                                    promises.push(axios.delete(delete_url).then(del_res => {
+                                        // console.log("delete Res---", del_res.data);
+                                        return deleted_resources += 1;
+                                    }).catch((err) => {
+                                        // console.log("delete err---", err);
+                                        return not_deleted_resources += 1;
+                                    }))
+                                }
+                                if (["41150", "41151", "41152", "41153", "76896"].indexOf(param.resource.id) > 0) {
+                                    console.log("Not deleting id--", param.resource.id);
+                                }
+                            }, 3000);
                         });
-                        Promise.all(promises).then(function (responses) {
-                            console.log(responses);
-                            final_res = {"deteled":responses[0],"not_deleted":responses[1]}
+                        var final_res = {}
+                        axios.all(promises).then(function (results) {
+                            results.forEach(function (response) {
+                                console.log("res---", response);
+                                final_res[response.identifier] = response.value;
+                            })
                             res.statusCode = 200;
                             res.setHeader('Content-Type', 'application/json');
-                            console.log("response----", JSON.stringify(responses))
+                            console.log("response----", JSON.stringify(final_res))
                             res.end(JSON.stringify(final_res));
-                        }).catch((err) => {
-                            res.end('Error in sending response !!', err);
                         })
+                        // Promise.all(promises).then(function (responses) {
+                        //     // console.log(responses);
+                        //     final_res = { "deteled": responses[0], "not_deleted": responses[1] }
+                        //     res.statusCode = 200;
+                        //     res.setHeader('Content-Type', 'application/json');
+                        //     console.log("response----", JSON.stringify(final_res))
+                        //     res.end(JSON.stringify(final_res));
+                        // }).catch((err) => {
+                        //     res.end('Error in sending response !!', err);
+                        // })
                     })
                     .catch(error => {
                         console.log(error);
@@ -438,6 +475,17 @@ exports.deleteFHIRResource = function (req, res, ) {
         res.end("Invalid Inputs !!")
     }
 }
+function getResourceFromBundle(bundle, resourceType) {
+    var filtered_entry = bundle.entry.find(function (entry) {
+        if (entry.resource !== undefined) {
+            return entry.resource.resourceType == resourceType;
+        }
+    });
+    if (filtered_entry !== undefined) {
+        return filtered_entry.resource;
+    }
+    return null
+}
 exports.getCqlData = function (req, res, ) {
     body = '';
     req.on('data', function (chunk) {
@@ -445,24 +493,52 @@ exports.getCqlData = function (req, res, ) {
     });
     try {
         req.on('end', function () {
+            res.statusCode = 400;
+            res.setHeader('Content-Type', 'application/json');
             postBody = JSON.parse(body);
-            if (postBody["serviceRequest"].hasOwnProperty("category")) {
-                var promises = postBody["serviceRequest"].category.map(function (param) {
-                    if (param.hasOwnProperty("code") && param.code.hasOwnProperty("coding") && param.code.coding.length > 0 && param.code.coding[0].hasOwnProperty("code")) {
-                        var hcpc_code = param.code.coding[0].code
-                        var payer = "";
-                        if (postBody.hasOwnProperty("payerName")) {
-                            payer = postBody["payerName"]
-                        } else {
-                            res.end('Missing Input : payerName');
-                        }
+            var serviceRequest = getResourceFromBundle(postBody, "ServiceRequest");
+            var deviceRequest = getResourceFromBundle(postBody, "DeviceRequest");
+            var patient = getResourceFromBundle(postBody, "Patient");
+            var payerOrganization = getResourceFromBundle(postBody, "Organization");
+            if (payerOrganization.hasOwnProperty("id")) {
+                var payer = payerOrganization.id;
+            } else {
+                res.end(JSON.stringify({ "error": 'Missing Input : Payer Organization' }));
+            }
+            var request = {};
+            var code_array = [];
+            if (serviceRequest === null && deviceRequest === null) {
+                res.end(JSON.stringify({ "error": 'Missing Input : Device/ServiceRequest' }));
+            }
+            if (serviceRequest !== null) {
+                request = serviceRequest;
+                if (request.hasOwnProperty("code")) {
+                    if (request.code.hasOwnProperty("coding") && request.code.coding.length > 0) {
+                        code_array = request.code.coding;
+                    }
+                }
+            } else if (deviceRequest !== null) {
+                request = deviceRequest
+                code_key = "codeCodeableConcept"
+                if (request.hasOwnProperty("codeCodeableConcept")) {
+                    if (request.codeCodeableConcept.hasOwnProperty("coding") && request.codeCodeableConcept.coding.length > 0) {
+                        code_array = request.codeCodeableConcept.coding;
+                    }
+                }
+            }
+            if (code_array.length > 0) {
+                var promises = code_array.map(function (param) {
+                    if (param.hasOwnProperty("code")) {
+                        var hcpc_code = param.code
+                        console.log("hcpc code---", hcpc_code)
                         /**Get Template for a code from codes DB */
-                        return getTemplate(hcpc_code, payer).then((data) => {
+                        return getTemplate(hcpc_code, payer, patient).then((data) => {
+                            console.log("data---", data);
                             data['code'] = hcpc_code;
                             return data;
                         }).catch((err) => {
                             console.log(err);
-                            res.end('Error retieving template for code ' + hcpc_code + ' !!', err);
+                            res.end(JSON.stringify({ "error": 'Error retieving template for code ' + hcpc_code + ' !!' }));
                         });
                     }
                 })
@@ -478,19 +554,25 @@ exports.getCqlData = function (req, res, ) {
                     console.log("response----", JSON.stringify(final_res))
                     res.end(JSON.stringify(final_res));
                 }).catch((err) => {
-                    res.end('Error in sending response !!', err);
+                    res.end(JSON.stringify({ "error": 'Error in sending response !!' }));
                 })
+            } else {
+                res.end(JSON.stringify({ "error": "Invalid Service/Device Request !!" }))
             }
         })
     }
     catch (err) {
         res.statusCode = 400;
-        res.setHeader('Content-Type', 'text/plain');
-        res.end("Invalid Inputs !!")
+        res.setHeader('Content-Type', 'application/json');
+        res.end(JSON.stringify({ "error": "Invalid Inputs !!" }))
     }
 
 }
-
+/**
+ * Input: {"cql":<name of cql file added in /cqls>, 
+ *          "patientBundle":<FHIR resource type Bundle with typw collection and all required resources in entry>}
+ * Output: <cql execution response>
+ */
 exports.executeCql = function (req, res, ) {
     body = '';
     req.on('data', function (chunk) {
