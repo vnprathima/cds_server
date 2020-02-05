@@ -325,8 +325,6 @@ exports.resetConfig = function (req, res, ) {
     }
 }
 async function runPriorAuthRule(patient, payer, template, code) {
-    //Hardcoding payer temporary
-    payer = "united_health_care";
     var rulefile = "./prior_auth_rules/" + payer + "/" + template + ".js";
     console.log("rule file---", rulefile)
     var includedRule = require(rulefile);
@@ -506,14 +504,17 @@ exports.getCqlData = function (req, res, ) {
 
 		payerOrganization = {}
 }
-            //payerOrganization["id"] = "united_health_care";
+            //Hardcoding payer temporary
+            if(payerOrganization.id.indexOf("default_") !== -1){
+                payerOrganization["id"] = "default_payer";
+            } else{
+                payerOrganization["id"] = "united_health_care";
+            }
             if (payerOrganization.hasOwnProperty("id")) {
                 var payer = payerOrganization.id;
             } else {
                 res.end(JSON.stringify({ "error": 'Missing Input : Payer Organization' }));
             }
-	    //Hardcoding payer temporary
-	    payer = "united_health_care";
             var request = {};
             var code_array = [];
             if (serviceRequest === null && deviceRequest === null) {
