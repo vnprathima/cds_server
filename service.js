@@ -500,17 +500,14 @@ exports.getCqlData = function (req, res, ) {
             var deviceRequest = getResourceFromBundle(postBody, "DeviceRequest");
             var patient = getResourceFromBundle(postBody, "Patient");
             var payerOrganization = getResourceFromBundle(postBody, "Organization");
-	    if(payerOrganization == null){
-
-		payerOrganization = {}
-}
-            //Hardcoding payer temporary
-            if(payerOrganization.id.indexOf("default_") !== -1){
-                payerOrganization["id"] = "default_payer";
-            } else{
-                payerOrganization["id"] = "united_health_care";
+            if (payerOrganization == null) {
+                payerOrganization = {}
             }
             if (payerOrganization.hasOwnProperty("id")) {
+                //adding default payer
+                if (["cigna", "medicare_fee_for_service", "united_health_care"].indexOf(payerOrganization.id) === -1) {
+                    payerOrganization["id"] = "default_payer";
+                }
                 var payer = payerOrganization.id;
             } else {
                 res.end(JSON.stringify({ "error": 'Missing Input : Payer Organization' }));
