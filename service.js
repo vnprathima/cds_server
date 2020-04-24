@@ -503,15 +503,31 @@ exports.getCqlData = function (req, res, ) {
             if (payerOrganization == null) {
                 payerOrganization = {}
             }
-            if (payerOrganization.hasOwnProperty("id")) {
-                //adding default payer
-                if (["cigna", "medicare_fee_for_service", "united_health_care"].indexOf(payerOrganization.id) === -1) {
+            if (payerOrganization.hasOwnProperty("name") && payerOrganization.hasOwnProperty("id")) {
+                let org_name = payerOrganization.name.toLowerCase();
+                let org_id = payerOrganization.id;
+                if (org_name.includes("medicare") || org_id.includes("medicare")) {
+                    payerOrganization["id"] = "medicare_fee_for_service"
+                } else if (org_name.includes("united") || org_id.includes("united")) {
+                    payerOrganization["id"] = "united_health_care"
+                } else if (org_name.includes("cigna") || org_id.includes("cigna")) {
+                    payerOrganization["id"] = "cigna"
+                } else {
                     payerOrganization["id"] = "default_payer";
                 }
                 var payer = payerOrganization.id;
             } else {
                 res.end(JSON.stringify({ "error": 'Missing Input : Payer Organization' }));
             }
+            // if (payerOrganization.hasOwnProperty("id")) {
+            //     //adding default payer
+            //     if (["cigna", "medicare_fee_for_service", "united_health_care"].indexOf(payerOrganization.id) === -1) {
+            //         payerOrganization["id"] = "default_payer";
+            //     }
+            //     var payer = payerOrganization.id;
+            // } else {
+            //     res.end(JSON.stringify({ "error": 'Missing Input : Payer Organization' }));
+            // }
             var request = {};
             var code_array = [];
             if (serviceRequest === null && deviceRequest === null) {
