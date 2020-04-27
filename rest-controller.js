@@ -80,8 +80,13 @@ module.exports = http.createServer((req, res) => {
         console.log('Request Type:' + req.method + ' Endpoint: ' + reqUrl.pathname);
         service.deleteFHIRResource(req, res);
     } 
+/*     else if (reqUrl.pathname == '/transferDocs' && (req.method === 'POST' || req.method === 'OPTIONS')) {
+        console.log('Request Type:' + req.method + ' Endpoint: ' + reqUrl.pathname);
+        service.transferDocs(req, res);
+    } */
     else {
         console.log('Request Type:' + req.method + ' Invalid Endpoint: ' + reqUrl.pathname);
         service.invalidRequest(req, res);
     }
 });
+

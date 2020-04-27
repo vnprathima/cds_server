@@ -515,6 +515,18 @@ exports.getCqlData = function (req, res, ) {
                 } else {
                     payerOrganization["id"] = "default_payer";
                 }
+		//var payer = payerOrganization.id;
+		if(patient!=undefined){
+			if(patient.hasOwnProperty("name") ){
+				if(patient.name[0].given[0] == "JOE"){
+				   payerOrganization.id = "cigna"
+				}
+				else if(patient.name[0].given[0] == "RISKLD"){
+				 console.log("uhc - RISKLD")
+                                   payerOrganization.id = "united_health_care"
+                                }
+			}
+		}
                 var payer = payerOrganization.id;
             } else {
                 res.end(JSON.stringify({ "error": 'Missing Input : Payer Organization' }));
@@ -682,7 +694,41 @@ exports.executeCql = function (req, res, ) {
     });
 
 };
+/*
+exports.transferDocs = async function (req, res, ) {
+    body = '';
+    req.on('data', function (chunk) {
+        body += chunk.toString();
+    });
+    req.on('end', async function () {
+        try{
+            postBody = JSON.parse(body);
+            let patient = postBody.patient;
+            console.log("parssseee!!",postBody);
+            if(patient != null && patient!= undefined){
+                await shell.mv('/home/ubuntu/cds_server/source/'+patient+'.pdf', '/home/ubuntu/cds_server/des/'+patient+'.pdf');
+                res.statusCode = 200;
+                res.setHeader('Content-Type', 'text/plain');
+                res.end(JSON.stringify("Transferred Successfully!"));
+            }
+            else{
+                res.statusCode = 400;
+                res.setHeader('Content-Type', 'text/plain');
+                res.end(JSON.stringify("Patient ID is mandatory!"));
+            }
+            
 
+        }
+        catch (err) {
+            console.log(err);
+            res.statusCode = 400;
+            res.setHeader('Content-Type', 'text/plain');
+            res.end("Unable to transfer the documents!")
+        }
+    })
+
+}
+*/
 exports.invalidRequest = function (req, res) {
     res.statusCode = 404;
     res.setHeader('Content-Type', 'text/plain');
